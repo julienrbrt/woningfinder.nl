@@ -1,8 +1,9 @@
+// https://nuxtjs.org/docs/2.x/directory-structure/nuxt-config
 export default {
-  ssr: false,   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
-  target: 'static',   // Target: https://go.nuxtjs.dev/config-target
-  head: {   // Global page headers: https://go.nuxtjs.dev/config-head
-    title: 'woningfinder.nl',
+  ssr: false,
+  target: 'static',
+  head: {
+    title: 'WoningFinder - Zoekopdracht voor je droomhuis',
     htmlAttrs: {
       lang: 'nl'
     },
@@ -13,26 +14,21 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap'
-      }
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap' },
     ]
   },  
-  css: [ ], // Global CSS: https://go.nuxtjs.dev/config-css
-  plugins: [ ], // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  components: true, // Auto import components: https://go.nuxtjs.dev/config-components
-  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [
-    '@nuxtjs/tailwindcss', // https://go.nuxtjs.dev/tailwindcss
+  css: [
+      '@/assets/css/main.css',
   ],
-  // Modules: https://go.nuxtjs.dev/config-modules
+  plugins: [],
+  components: true,
+  buildModules: [
+    '@nuxtjs/tailwindcss',
+  ],
   modules: [
-    // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
   ],
-
-  // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
-  // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
   tailwindcss: {
     jit: true
