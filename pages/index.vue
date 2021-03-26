@@ -8,22 +8,8 @@
         >
           <div>
               <WidgetsLogo />
-            <div class="mt-20">
-              <div>
-                <NuxtLink to="start" class="inline-flex space-x-4">
-                  <span
-                    class="rounded bg-wf-orange-lightest px-2.5 py-1 text-xs font-semibold text-wf-orange tracking-wide uppercase"
-                  >
-                    What's new
-                  </span>
-                  <span
-                    class="inline-flex items-center text-sm font-medium text-wf-orange space-x-1"
-                  >
-                    <span>We zijn nu beschikbaar in Enschede</span>
-                    <ChevronRightIcon class="h-5 w-5" />
-                  </span>
-                </NuxtLink>
-              </div>
+            <div class="mt-14 md:mt-20">
+                <WidgetsInfo title="What's new" info="We zijn nu beschikbaar in Enschede" to="start" />
               <div class="mt-6 sm:max-w-xl">
                 <h1
                   class="text-4xl font-extrabold text-gray-900 tracking-tight sm:text-5xl"
@@ -43,7 +29,7 @@
                 <div class="rounded-md shadow">
                   <NuxtLink
                     to="start"
-                    class="btn bg-wf-orange hover:bg-wf-orange-dark hover:ring-wf-orange focus:ring-wf-orange"
+                    class="btn"
                   >
                     Nu starten
                   </NuxtLink>
