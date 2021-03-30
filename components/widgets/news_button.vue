@@ -8,7 +8,7 @@
     <span
       class="inline-flex items-center text-sm font-medium text-wf-orange space-x-1"
     >
-      <span>{{ info }}</span>
+      <span>{{ description }}</span>
       <ChevronRightIcon class="h-5 w-5" />
     </span>
  </NuxtLink>
@@ -18,7 +18,7 @@
 import { ChevronRightIcon } from "@vue-hero-icons/solid"
 
 export default {
-  props: ['title', 'info', 'to'],
+  props: ['title', 'description', 'to'],
   components: {
     ChevronRightIcon,
   },

@@ -11,9 +11,7 @@
           <p class="text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl">
             Transparante prijzen
           </p>
-          <p class="text-xl text-gray-300">
-            Geen maandelijkse kosten.
-          </p>
+          <p class="text-xl text-gray-300">Geen maandelijkse kosten.</p>
         </div>
       </div>
     </div>
@@ -35,7 +33,7 @@
                   </h3>
                 </div>
                 <div class="mt-4 flex items-baseline text-6xl font-extrabold">
-                  €25
+                  €35
                   <span class="ml-1 text-2xl font-medium text-gray-500">
                     eenmalig
                   </span>
@@ -53,6 +51,15 @@
                       <CheckIcon class="h-6 w-6 text-green-500" />
                     </div>
                     <p class="ml-3 text-base text-gray-700">
+                      Persoonlijke zoekopdracht
+                    </p>
+                  </li>
+
+                  <li class="flex items-start">
+                    <div class="flex-shrink-0">
+                      <CheckIcon class="h-6 w-6 text-green-500" />
+                    </div>
+                    <p class="ml-3 text-base text-gray-700">
                       Alle beschikbare woningcorporaties
                     </p>
                   </li>
@@ -63,15 +70,6 @@
                     </div>
                     <p class="ml-3 text-base text-gray-700">
                       Wekelijkse update
-                    </p>
-                  </li>
-
-                  <li class="flex items-start">
-                    <div class="flex-shrink-0">
-                      <CheckIcon class="h-6 w-6 text-green-500" />
-                    </div>
-                    <p class="ml-3 text-base text-gray-700">
-                      Persoonlijke zoekopdracht
                     </p>
                   </li>
                 </ul>
@@ -114,6 +112,15 @@
                       <CheckIcon class="h-6 w-6 text-green-500" />
                     </div>
                     <p class="ml-3 text-base text-gray-700">
+                      Persoonlijke zoekopdracht
+                    </p>
+                  </li>
+
+                  <li class="flex items-start">
+                    <div class="flex-shrink-0">
+                      <CheckIcon class="h-6 w-6 text-green-500" />
+                    </div>
+                    <p class="ml-3 text-base text-gray-700">
                       Alle beschikbare woningcorporaties
                     </p>
                   </li>
@@ -132,15 +139,6 @@
                       <CheckIcon class="h-6 w-6 text-green-500" />
                     </div>
                     <p class="ml-3 text-base text-gray-700">
-                      Persoonlijke zoekopdracht
-                    </p>
-                  </li>
-
-                  <li class="flex items-start">
-                    <div class="flex-shrink-0">
-                      <CheckIcon class="h-6 w-6 text-green-500" />
-                    </div>
-                    <p class="ml-3 text-base text-gray-700">
                       Meerdere zoekopdrachten
                     </p>
                   </li>
@@ -149,9 +147,7 @@
                     <div class="flex-shrink-0">
                       <CheckIcon class="h-6 w-6 text-green-500" />
                     </div>
-                    <p class="ml-3 text-base text-gray-700">
-                      Sneller garantie
-                    </p>
+                    <p class="ml-3 text-base text-gray-700">Sneller garantie</p>
                   </li>
                 </ul>
                 <div class="rounded-md shadow">
@@ -172,11 +168,11 @@
 </template>
 
 <script>
-import { CheckIcon } from "@vue-hero-icons/outline"
+import { CheckIcon } from '@vue-hero-icons/outline'
 
 export default {
   components: {
-    CheckIcon
-  }
+    CheckIcon,
+  },
 }
 </script>
