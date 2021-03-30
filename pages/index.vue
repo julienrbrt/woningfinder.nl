@@ -4,8 +4,8 @@
       <!-- Hero section -->
       <Hero>
         <WidgetsNewsButton
-          title="What's new"
-          description="We zijn nu beschikbaar in Enschede"
+          title="Nieuws"
+          description="We zijn nu live"
           to="start"
         />
         <div class="mt-6 sm:max-w-xl">
