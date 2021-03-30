@@ -141,10 +141,10 @@
             />
           </svg>
           <img
-            class="relative mx-auto"
-            width="490"
-            src="https://tailwindui.com/img/features/feature-example-1.png"
-            alt=""
+            class="relative mx-auto lg:ml-20"
+            width="555"
+            src="~/assets/img/adjustement.svg"
+            alt="adjustement illustration"
           />
         </div>
       </div>
@@ -265,10 +265,10 @@
               />
             </svg>
             <img
-              class="relative mx-auto"
-              width="490"
-              src="https://tailwindui.com/img/features/feature-example-2.png"
-              alt=""
+              class="relative mx-auto lg:mr-20"
+              width="555"
+              src="~/assets/img/subscriber.svg"
+              alt="subscriber illustration"
             />
           </div>
         </div>
