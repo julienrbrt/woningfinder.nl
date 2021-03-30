@@ -8,9 +8,12 @@
         aria-label="Footer"
       >
         <div class="px-5 py-2">
-          <a href="about" class="text-base text-gray-400 hover:text-gray-300">
+          <NuxtLink
+            to="over-ons"
+            class="text-base text-gray-400 hover:text-gray-300"
+          >
             Over ons
-          </a>
+          </NuxtLink>
         </div>
 
         <div class="px-5 py-2">

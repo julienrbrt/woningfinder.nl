@@ -91,7 +91,7 @@
             </div>
             <div class="rounded-md shadow">
               <NuxtLink
-                to="start"
+                to="contact"
                 class="btn bg-wf-purple hover:bg-wf-purple-dark hover:ring-wf-purple focus:ring-wf-purple mt-2 md:mt-0"
               >
                 Contact
