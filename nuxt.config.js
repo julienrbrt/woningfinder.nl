@@ -50,7 +50,7 @@ export default {
     __dangerouslyDisableSanitizers: ['noscript'],
   },
   css: ['@/assets/css/main.css'],
-  plugins: [{ src: '~/plugins/simple_analytics.js', ssr: false }],
+  plugins: [{ src: '~/plugins/simple-analytics.js', ssr: false }],
   components: true,
   buildModules: ['@nuxtjs/tailwindcss'],
   modules: ['@nuxtjs/axios'],
