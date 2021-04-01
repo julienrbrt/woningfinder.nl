@@ -9,14 +9,17 @@
         </div>
 
         <!-- registration components -->
-        <component :is="registrationFlow[currentPage]"></component>
+        <component
+          :is="registrationFlow[currentPage]"
+          :offering="offering"
+        ></component>
 
         <!-- buttons -->
         <div class="items-center w-full inline-flex mt-5 space-x-4">
           <div v-if="currentPage == 0">
             <NuxtLink
               to="/"
-              class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
+              class="cursor-pointer whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
             >
               Terug
             </NuxtLink>
@@ -24,7 +27,7 @@
           <div v-else>
             <a
               @click="previous"
-              class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
+              class="cursor-pointer whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
             >
               Terug
             </a>
@@ -46,9 +49,13 @@
 
 <script>
 export default {
+  async asyncData({ $axios }) {
+    const offering = await $axios.$get('offering')
+    return { offering }
+  },
   methods: {
     nextButtonText() {
-      if (this.registrationFlow[this.currentPage] == 'RegisterStepTwo') {
+      if (this.registrationFlow[this.currentPage] == 'RegisterStep3') {
         return 'Aanmelden'
       }
 
@@ -68,7 +75,7 @@ export default {
   data() {
     return {
       currentPage: 0,
-      registrationFlow: [`RegisterStepOne`, `RegisterStepTwo`],
+      registrationFlow: [`RegisterStep1`, `RegisterStep2`, `RegisterStep3`],
     }
   },
 }
