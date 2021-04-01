@@ -54,7 +54,9 @@ export default {
   components: true,
   buildModules: ['@nuxtjs/tailwindcss'],
   modules: ['@nuxtjs/axios'],
-  axios: {},
+  axios: {
+    baseURL: 'https://woningfinder.nl/api/',
+  },
   build: {},
   tailwindcss: {
     jit: true,

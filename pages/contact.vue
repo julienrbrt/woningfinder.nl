@@ -2,6 +2,18 @@
   <div class="bg-white">
     <main>
       <Hero>
+        <WidgetsAlertOk
+          v-if="submitted"
+          @click="hideAlert"
+          alert="Bericht verstuurd!"
+        />
+
+        <WidgetsAlertError
+          v-if="error"
+          @click="hideAlert"
+          alert="Jouw bericht kan niet verstuurd worden. Controleer het formulier en probeer het nogmaals."
+        />
+
         <div class="mt-6 sm:max-w-xl">
           <h1
             class="text-3xl font-extrabold text-gray-900 tracking-tight sm:text-5xl"
@@ -13,48 +25,43 @@
             Heb je een vraag of wil je iets aan ons kwijt? We helpen je graag!
           </p>
 
-          <form action="#" method="POST" class="mt-6 grid grid-cols-1 gap-y-6">
+          <form class="mt-6 grid grid-cols-1 gap-y-6">
             <div>
-              <label for="full_name" class="sr-only">Naam</label>
+              <label for="name" class="sr-only">Naam</label>
               <input
+                v-model="name"
                 type="text"
-                name="full_name"
-                id="full_name"
+                name="name"
+                id="name"
                 autocomplete="name"
                 class="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-wf-orange focus:border-wf-orange border-gray-300 rounded-md"
                 placeholder="Naam"
+                required
               />
             </div>
             <div>
               <label for="email" class="sr-only">Email</label>
               <input
+                v-model="email"
                 id="email"
                 name="email"
                 type="email"
                 autocomplete="email"
                 class="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-wf-orange focus:border-wf-orange border-gray-300 rounded-md"
                 placeholder="Email"
-              />
-            </div>
-            <div>
-              <label for="phone" class="sr-only">Telefoon (Optioneel)</label>
-              <input
-                type="text"
-                name="phone"
-                id="phone"
-                autocomplete="tel"
-                class="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-wf-orange focus:border-wf-orange border-gray-300 rounded-md"
-                placeholder="Telefoon (Optioneel)"
+                required
               />
             </div>
             <div>
               <label for="message" class="sr-only">Bericht</label>
               <textarea
+                v-model="message"
                 id="message"
                 name="message"
                 rows="4"
                 class="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-wf-orange focus:border-wf-orange border-gray-300 rounded-md"
                 placeholder="Bericht"
+                required
               ></textarea>
             </div>
           </form>
@@ -65,7 +72,14 @@
               class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
               >Terug</NuxtLink
             >
-            <a href="" class="btn">Stuur bericht</a>
+            <button
+              v-bind:disabled="validForm"
+              class="btn disabled:bg-gray-500"
+              type="submit"
+              @click="send"
+            >
+              Stuur bericht
+            </button>
           </div>
         </div>
       </Hero>
@@ -74,3 +88,72 @@
     <Footer />
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      name: '',
+      email: '',
+      message: '',
+      error: false,
+      submitted: false,
+    }
+  },
+
+  methods: {
+    async send(e) {
+      e.preventDefault()
+
+      if (this.validForm) {
+        this.error = true
+        return
+      }
+
+      await this.$axios
+        .post('contact', {
+          name: this.name,
+          email: this.email,
+          message: this.message,
+          // antispam
+          phone: this.antiSpam,
+        })
+        .then(() => {
+          this.submitted = true
+        })
+        .catch(() => {
+          this.error = true
+        })
+    },
+    hideAlert() {
+      this.error = false
+      this.submitted = false
+    },
+  },
+  computed: {
+    antiSpam() {
+      function getStringBytes(s) {
+        var i,
+          a = new Array(s.length)
+        for (i = 0; i < s.length; i++) {
+          a[i] = s.charCodeAt(i)
+        }
+        return a
+      }
+
+      function add(total, num) {
+        return total + num
+      }
+
+      return (
+        374 +
+        getStringBytes(this.email).reduce(add) +
+        getStringBytes(this.message).reduce(add)
+      )
+    },
+    validForm() {
+      return !(this.name && this.email && this.message)
+    },
+  },
+}
+</script>
