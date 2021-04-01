@@ -119,6 +119,9 @@ export default {
           phone: this.antiSpam,
         })
         .then(() => {
+          this.name = ''
+          this.email = ''
+          this.message = ''
           this.submitted = true
         })
         .catch(() => {
