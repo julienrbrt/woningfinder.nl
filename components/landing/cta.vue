@@ -85,6 +85,7 @@
               <NuxtLink
                 to="start"
                 class="btn bg-wf-orange hover:bg-wf-orange-dark hover:ring-wf-orange focus:ring-wf-orange"
+                @click="startClicked"
               >
                 Nu starten
               </NuxtLink>
@@ -93,6 +94,7 @@
               <NuxtLink
                 to="contact"
                 class="btn bg-wf-purple hover:bg-wf-purple-dark hover:ring-wf-purple focus:ring-wf-purple mt-2 md:mt-0"
+                @click="contactClicked"
               >
                 Contact
               </NuxtLink>
@@ -103,3 +105,16 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    startClicked() {
+      this.saEvent('start_cta_button_clicked')
+    },
+    contactClicked() {
+      this.saEvent('contact_cta_button_clicked')
+    },
+  },
+}
+</script>

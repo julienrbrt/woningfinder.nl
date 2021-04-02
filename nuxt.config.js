@@ -53,9 +53,13 @@ export default {
   plugins: [{ src: '~/plugins/simple-analytics.js', ssr: false }],
   components: true,
   buildModules: ['@nuxtjs/tailwindcss'],
-  modules: ['@nuxtjs/axios'],
+  modules: ['@nuxtjs/axios', '@nuxtjs/sitemap'],
   axios: {
     baseURL: 'https://woningfinder.nl/api/',
+  },
+  sitemap: {
+    hostname: 'https://woningfinder.nl',
+    gzip: true,
   },
   build: {},
   tailwindcss: {

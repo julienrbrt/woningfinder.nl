@@ -23,7 +23,9 @@
         </div>
         <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
           <div class="rounded-md shadow">
-            <NuxtLink to="start" class="btn"> Nu starten </NuxtLink>
+            <NuxtLink to="start" @click="startClicked" class="btn">
+              Nu starten
+            </NuxtLink>
           </div>
         </div>
         <div class="sm:flex sm:justify-center lg:justify-start">
@@ -63,6 +65,11 @@ import { ChevronDownIcon } from '@vue-hero-icons/solid'
 export default {
   components: {
     ChevronDownIcon,
+  },
+  methods: {
+    startClicked() {
+      this.saEvent('start_hero_button_clicked')
+    },
   },
 }
 </script>

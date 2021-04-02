@@ -78,6 +78,7 @@
                     <NuxtLink
                       to="start"
                       class="btn bg-wf-orange hover:bg-wf-orange-dark hover:ring-wf-orange focus:ring-wf-orange"
+                      @click="startBasisClicked"
                     >
                       Nu starten
                     </NuxtLink>
@@ -154,6 +155,7 @@
                   <NuxtLink
                     to="start"
                     class="btn bg-wf-orange hover:bg-wf-orange-dark hover:ring-wf-orange focus:ring-wf-orange"
+                    @click="startProClicked"
                   >
                     Nu starten
                   </NuxtLink>
@@ -167,12 +169,21 @@
   </div>
 </template>
 
+
 <script>
 import { CheckIcon } from '@vue-hero-icons/outline'
 
 export default {
   components: {
     CheckIcon,
+  },
+  methods: {
+    startBasisClicked() {
+      this.saEvent('start_pricing_button_clicked_basis')
+    },
+    startProClicked() {
+      this.saEvent('start_pricing_button_clicked_pro')
+    },
   },
 }
 </script>
