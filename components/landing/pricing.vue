@@ -78,7 +78,7 @@
                     <NuxtLink
                       to="start"
                       class="btn bg-wf-orange hover:bg-wf-orange-dark hover:ring-wf-orange focus:ring-wf-orange"
-                      @click="startBasisClicked"
+                      @click.native="startEventBasis"
                     >
                       Nu starten
                     </NuxtLink>
@@ -155,7 +155,7 @@
                   <NuxtLink
                     to="start"
                     class="btn bg-wf-orange hover:bg-wf-orange-dark hover:ring-wf-orange focus:ring-wf-orange"
-                    @click="startProClicked"
+                    @click.native="startEventPro"
                   >
                     Nu starten
                   </NuxtLink>
@@ -178,10 +178,10 @@ export default {
     CheckIcon,
   },
   methods: {
-    startBasisClicked() {
+    startEventBasis() {
       this.saEvent('start_pricing_button_clicked_basis')
     },
-    startProClicked() {
+    startEventPro() {
       this.saEvent('start_pricing_button_clicked_pro')
     },
   },

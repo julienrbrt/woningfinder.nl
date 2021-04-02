@@ -34,13 +34,6 @@ export default {
           'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap',
       },
     ],
-    script: [
-      {
-        hid: 'sa',
-        src: 'https://sa.woningfinder.nl/latest.js',
-        defer: true,
-      },
-    ],
     noscript: [
       {
         innerHTML:

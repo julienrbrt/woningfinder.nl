@@ -23,7 +23,7 @@
         </div>
         <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
           <div class="rounded-md shadow">
-            <NuxtLink to="start" @click="startClicked" class="btn">
+            <NuxtLink to="start" @click.native="startEvent" class="btn">
               Nu starten
             </NuxtLink>
           </div>
@@ -67,7 +67,7 @@ export default {
     ChevronDownIcon,
   },
   methods: {
-    startClicked() {
+    startEvent() {
       this.saEvent('start_hero_button_clicked')
     },
   },
