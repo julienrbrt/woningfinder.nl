@@ -1,6 +1,7 @@
 <template>
   <div>
     <Nuxt />
+    <Footer />
   </div>
 </template>
 
@@ -16,6 +17,6 @@ html {
 }
 
 body {
-    font-family: 'Inter', 'Roboto', sans-serif;
+  font-family: 'Inter', 'Roboto', sans-serif;
 }
 </style>

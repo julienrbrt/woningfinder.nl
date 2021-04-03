@@ -17,9 +17,12 @@
         </div>
 
         <div class="px-5 py-2">
-          <a hreaf="#" class="text-base text-gray-400 hover:text-gray-300">
-            Jobs
-          </a>
+          <NuxtLink
+            to="contact"
+            class="text-base text-gray-400 hover:text-gray-300"
+          >
+            Contact
+          </NuxtLink>
         </div>
 
         <div class="px-5 py-2">

@@ -67,43 +67,25 @@
           </p>
 
           <dl class="mt-10 space-y-10">
-            <div class="relative">
-              <dt>
-                <div
-                  class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-wf-orange text-white"
-                >
-                  <GlobeIcon class="h-6 w-6" />
-                </div>
-                <p class="ml-16 text-lg leading-6 font-medium text-gray-900">
-                  Alle beschikbare woningcorporaties van jouw stad
-                </p>
-              </dt>
-              <dd class="mt-2 ml-16 text-base text-gray-500">
-                Als je een stad kiest, reageren we op het aanbod van alle
+            <LandingFeatureItem
+              title=" Alle beschikbare woningcorporaties van jouw stad"
+              description="Als je een stad kiest, reageren we op het aanbod van alle
                 woningcorporaties van deze stad. Dit vergroot jouw kansen. We
                 zijn ook altijd bezig meer woningcorporaties van andere steden
-                toe te voegen in WoningFinder.
-              </dd>
-            </div>
+                toe te voegen in WoningFinder."
+            >
+              <FastForwardIcon class="h-6 w-6" />
+            </LandingFeatureItem>
 
-            <div class="relative">
-              <dt>
-                <div
-                  class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-wf-orange text-white"
-                >
-                  <FastForwardIcon class="h-6 w-6" />
-                </div>
-                <p class="ml-16 text-lg leading-6 font-medium text-gray-900">
-                  Altijd eerst
-                </p>
-              </dt>
-              <dd class="mt-2 ml-16 text-base text-gray-500">
-                Sommige woningcorporaties werken met „Wie het eerst komt, die
+            <LandingFeatureItem
+              title=" Altijd eerst"
+              description="Sommige woningcorporaties werken met „Wie het eerst komt, die
                 het eerst maalt”. WoningFinder zal precies na dat het aanbod is
                 gepubliceerd reageren voor jou. Je hebt zo dus heel veel kans
-                dat jij de eerste bent. Handig toch?
-              </dd>
-            </div>
+                dat jij de eerste bent. Handig toch?"
+            >
+              <FastForwardIcon class="h-6 w-6" />
+            </LandingFeatureItem>
           </dl>
         </div>
 
@@ -200,33 +182,24 @@
             </p>
 
             <dl class="mt-10 space-y-10">
-              <WidgetsFeature
+              <LandingFeatureItem
                 title="Wekelijkse update"
                 description="Je krijgt van ons een wekelijkse email update waarin je kan
                   zien op welke passende woningen WoningFinder heeft gereageerd.
                   Geen dagelijkse spam."
               >
                 <BellIcon class="h-6 w-6" />
-              </WidgetsFeature>
+              </LandingFeatureItem>
 
-              <div class="relative">
-                <dt>
-                  <div
-                    class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-wf-orange text-white"
-                  >
-                    <ThumbUpIcon class="h-6 w-6" />
-                  </div>
-                  <p class="ml-16 text-lg leading-6 font-medium text-gray-900">
-                    Sneller garantie
-                  </p>
-                </dt>
-                <dd class="mt-2 ml-16 text-base text-gray-500">
-                  Met ons Sneller garantie, als jij niet de eerste bent geworden
+              <LandingFeatureItem
+                title="Sneller garantie"
+                description=" Met ons Sneller garantie, als jij niet de eerste bent geworden
                   op een woning met „Wie het eerst komt, die het eerst maalt”
                   (dus iemand was sneller dan WoningFinder) dan krijg je je geld
-                  terug (zie meer in onze voorwaarden).
-                </dd>
-              </div>
+                  terug (zie meer in onze voorwaarden)."
+              >
+                <ThumbUpIcon class="h-6 w-6" />
+              </LandingFeatureItem>
             </dl>
           </div>
 

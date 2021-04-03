@@ -9,14 +9,14 @@
         </div>
 
         <!-- registration steps -->
-        <RegisterStep1 v-show="currentStep == 1" />
+        <RegisterPlan v-show="currentStep == 1" />
 
-        <RegisterStep2
+        <RegisterCity
           v-show="currentStep == 2"
           :supported_cities="offering.supported_cities"
         />
 
-        <RegisterStep3
+        <RegisterCityDistrict
           v-show="currentStep == 3"
           :supported_cities="offering.supported_cities"
         />
@@ -25,6 +25,7 @@
         <div class="items-center w-full inline-flex mt-5 space-x-4">
           <div v-if="currentStep == 1">
             <NuxtLink
+              @click.native="resetForm"
               to="/"
               class="cursor-pointer whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
             >
@@ -49,18 +50,20 @@
         </div>
       </Hero>
     </main>
-
-    <Footer />
   </div>
 </template>
 
 <script>
-import step1 from '~/components/register/step-1.vue'
 export default {
-  components: { step1 },
   async asyncData({ $axios }) {
     const offering = await $axios.$get('offering')
     return { offering }
+  },
+  data() {
+    return {
+      currentStep: 1,
+      totalStep: 5,
+    }
   },
   methods: {
     nextButtonText() {
@@ -80,12 +83,9 @@ export default {
         this.currentStep--
       }
     },
-  },
-  data() {
-    return {
-      currentStep: 1,
-      totalStep: 5,
-    }
+    resetForm() {
+      this.$store.commit('register/reset')
+    },
   },
 }
 </script>

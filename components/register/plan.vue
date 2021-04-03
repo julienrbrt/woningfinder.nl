@@ -4,8 +4,6 @@
       <p class="mt-6 text-lg text-gray-500">Welke plan wil je?</p>
       <p class="mt-6 text-base text-gray-500">
         Het enige verschil tussen ons Basis en Pro plan is ons sneller garantie.
-        Als je dat niet nodig hebt, kies maar het basis plan, die is toch
-        goedkoper.
       </p>
     </div>
 

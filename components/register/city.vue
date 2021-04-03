@@ -27,7 +27,9 @@
               Je hebt geen steden geselecteerd
             </p>
             <p class="text-sm font-medium text-red-800">
-              Staat je stad niet tussen? Neem contact me ons op
+              Staat je stad er niet tussen? Neem dan
+              <NuxtLink to="contact" class="underline">contact</NuxtLink> met
+              ons op.
             </p>
           </div>
         </div>
@@ -81,10 +83,10 @@ export default {
         this.selected = ''
       }
     },
-    removeCity(city) {
-      if (city) {
-        this.$store.commit('register/removeCity', city)
-        this.citiesList.push(city)
+    removeCity(selected) {
+      if (selected) {
+        this.$store.commit('register/removeCity', selected)
+        this.citiesList.push(selected)
         this.citiesList = this.citiesList.sort((a, b) =>
           a.name > b.name ? 1 : -1
         )

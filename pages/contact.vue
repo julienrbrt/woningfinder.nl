@@ -2,13 +2,13 @@
   <div class="bg-white">
     <main>
       <Hero>
-        <WidgetsAlertOk
+        <AlertOk
           v-if="submitted"
           @click="hideAlert"
           alert="Bericht verstuurd!"
         />
 
-        <WidgetsAlertError
+        <AlertError
           v-if="error"
           @click="hideAlert"
           alert="Jouw bericht kan niet verstuurd worden. Controleer het formulier en probeer het nogmaals."
@@ -70,8 +70,8 @@
             <NuxtLink
               to="/"
               class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
-              >Terug</NuxtLink
-            >
+              >Terug
+            </NuxtLink>
             <button
               v-bind:disabled="validForm"
               class="btn disabled:bg-gray-500"
@@ -84,8 +84,6 @@
         </div>
       </Hero>
     </main>
-
-    <Footer />
   </div>
 </template>
 

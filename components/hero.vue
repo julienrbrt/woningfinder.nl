@@ -6,7 +6,7 @@
         class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl lg:grid lg:grid-cols-2 lg:gap-24"
       >
         <div>
-          <WidgetsLogo />
+          <Logo />
           <div class="mt-14 md:mt-20">
             <slot></slot>
           </div>

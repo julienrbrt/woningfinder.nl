@@ -3,11 +3,7 @@
     <main>
       <!-- Hero section -->
       <Hero>
-        <WidgetsNewsButton
-          title="Nieuws"
-          description="We zijn nu live"
-          to="start"
-        />
+        <AlertNews title="Nieuws" description="We zijn nu live" to="start" />
         <div class="mt-6 sm:max-w-xl">
           <h1
             class="text-4xl font-extrabold text-gray-900 tracking-tight sm:text-5xl"
@@ -54,8 +50,6 @@
       <!-- CTA section -->
       <LandingCta id="contact" />
     </main>
-
-    <Footer />
   </div>
 </template>
 

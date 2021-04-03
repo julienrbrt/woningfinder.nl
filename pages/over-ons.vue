@@ -41,8 +41,6 @@
         </div>
       </Hero>
     </main>
-
-    <Footer />
   </div>
 </template>
 
