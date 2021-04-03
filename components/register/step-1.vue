@@ -51,10 +51,6 @@
                 <span class="hidden sm:inline sm:mx-1" aria-hidden="true"
                   >&middot;</span
                 >
-                <p class="sm:inline">Meerdere zoekopdracht</p>
-                <span class="hidden sm:inline sm:mx-1" aria-hidden="true"
-                  >&middot;</span
-                >
                 <p class="sm:inline">Sneller garantie</p>
               </div>
             </div>

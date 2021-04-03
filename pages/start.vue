@@ -8,15 +8,22 @@
           </h1>
         </div>
 
-        <!-- registration components -->
-        <component
-          :is="registrationFlow[currentPage]"
-          :offering="offering"
-        ></component>
+        <!-- registration steps -->
+        <RegisterStep1 v-show="currentStep == 1" />
+
+        <RegisterStep2
+          v-show="currentStep == 2"
+          :supported_cities="offering.supported_cities"
+        />
+
+        <RegisterStep3
+          v-show="currentStep == 3"
+          :supported_cities="offering.supported_cities"
+        />
 
         <!-- buttons -->
         <div class="items-center w-full inline-flex mt-5 space-x-4">
-          <div v-if="currentPage == 0">
+          <div v-if="currentStep == 1">
             <NuxtLink
               to="/"
               class="cursor-pointer whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
@@ -37,7 +44,7 @@
           <p
             class="flex-1 whitespace-nowrap text-sm font-medium text-gray-400 text-right self-end"
           >
-            {{ currentPage + 1 }} / {{ registrationFlow.length }}
+            {{ currentStep }} / {{ totalStep }}
           </p>
         </div>
       </Hero>
@@ -48,34 +55,36 @@
 </template>
 
 <script>
+import step1 from '~/components/register/step-1.vue'
 export default {
+  components: { step1 },
   async asyncData({ $axios }) {
     const offering = await $axios.$get('offering')
     return { offering }
   },
   methods: {
     nextButtonText() {
-      if (this.registrationFlow[this.currentPage] == 'RegisterStep3') {
+      if (this.currentStep == this.totalStep) {
         return 'Aanmelden'
       }
 
       return 'Volgende'
     },
     next() {
-      if (this.currentPage + 1 < this.registrationFlow.length) {
-        this.currentPage++
+      if (this.currentStep < this.totalStep) {
+        this.currentStep++
       }
     },
     previous() {
-      if (this.currentPage > 0) {
-        this.currentPage--
+      if (this.currentStep > 1) {
+        this.currentStep--
       }
     },
   },
   data() {
     return {
-      currentPage: 0,
-      registrationFlow: [`RegisterStep1`, `RegisterStep2`, `RegisterStep3`],
+      currentStep: 1,
+      totalStep: 5,
     }
   },
 }

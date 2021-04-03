@@ -139,15 +139,6 @@
                     <div class="flex-shrink-0">
                       <CheckIcon class="h-6 w-6 text-green-500" />
                     </div>
-                    <p class="ml-3 text-base text-gray-700">
-                      Meerdere zoekopdrachten
-                    </p>
-                  </li>
-
-                  <li class="flex items-start">
-                    <div class="flex-shrink-0">
-                      <CheckIcon class="h-6 w-6 text-green-500" />
-                    </div>
                     <p class="ml-3 text-base text-gray-700">Sneller garantie</p>
                   </li>
                 </ul>

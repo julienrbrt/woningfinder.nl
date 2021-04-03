@@ -28,31 +28,37 @@
 
 <script>
 export default {
-    data() {
-            return {
-                qa: [
-            {
-                question: 'Hoe werkt het eigenlijk?',
-                answer: 'WoningFinder zoekt elke dag in elke woningcorporaties hun nieuwe aanbod. Daarnaast matcht WoningFinder het aanbod met jouw zoekopdracht en reageert op passende woningen.'
-            },
-            {
-                question: 'Hoe kan WoningFinder voor mij reageren?',
-                answer: 'Na dat je jouw zoekopdracht(en) hebt gemaakt, sturen we een email met de passende woningcorporaties. Je kunt via deze email inloggen op elke woningcorporatie waarin je wilt reageren. Daarna gebruikt WoningFinder je inlog gegevens om voor jou te reageren.'
-            },
-            {
-                question: 'Is dat veilig?',
-                answer: 'We zijn echt privacy freaks (kijk ons privacy voorwaarden). We gebruiken end-to-end versleuteling om je gegevens veilig te houden. Dat betekent dat we je inlog gegevens zelf ook niet kunnen zien.'
-            },
-            {
-                question: 'Ik heb mijn (droom)huis gevonden hoe stop ik WoningFinder?',
-                answer: 'Allereerst, gefeliciteerd! Je betaalt WoningFinder alleen één keer voor één zoekopdracht, dus je hoeft niets te annuleren. Stuur ons een email en we gaan jouw account helemaal verwijderen. Let op: je zoekopdracht word automatisch verwijderd zodra je de eerste bent geworden voor een huis.'
-            },
-            {
-                question: 'Mijn stad staat er niet tussen.',
-                answer: 'Dat is jammer. We zijn heel druk met alle woningcorporaties in Nederland toe te voegen voor WoningFinder. Stuur ons een email zodat we kunnen kijken welke woningcorporaties toegevoegd moeten worden voor jouw stad. Je krijgt een email zodra we klaar zijn.'
-            }
-            ]
-        }
+  data() {
+    return {
+      qa: [
+        {
+          question: 'Hoe werkt het eigenlijk?',
+          answer:
+            'WoningFinder zoekt elke dag in elke woningcorporaties hun nieuwe aanbod. Daarnaast matcht WoningFinder het aanbod met jouw zoekopdracht en reageert op passende woningen.',
+        },
+        {
+          question: 'Hoe kan WoningFinder voor mij reageren?',
+          answer:
+            'Na dat je jouw zoekopdracht hebt gemaakt, sturen we een email met de passende woningcorporaties. Je kunt via deze email inloggen op elke woningcorporatie waarin je wilt reageren. Daarna gebruikt WoningFinder je inlog gegevens om voor jou te reageren.',
+        },
+        {
+          question: 'Is dat veilig?',
+          answer:
+            'We zijn echt privacy freaks (kijk ons privacy voorwaarden). We gebruiken end-to-end versleuteling om je gegevens veilig te houden. Dat betekent dat we je inlog gegevens zelf ook niet kunnen zien.',
+        },
+        {
+          question:
+            'Ik heb mijn (droom)huis gevonden hoe stop ik WoningFinder?',
+          answer:
+            'Allereerst, gefeliciteerd! Je betaalt WoningFinder alleen één keer voor één zoekopdracht, dus je hoeft niets te annuleren. Stuur ons een email en we gaan jouw account helemaal verwijderen. Let op: je zoekopdracht word automatisch verwijderd zodra je de eerste bent geworden voor een huis.',
+        },
+        {
+          question: 'Mijn stad staat er niet tussen.',
+          answer:
+            'Dat is jammer. We zijn heel druk met alle woningcorporaties in Nederland toe te voegen voor WoningFinder. Stuur ons een email zodat we kunnen kijken welke woningcorporaties toegevoegd moeten worden voor jouw stad. Je krijgt een email zodra we klaar zijn.',
+        },
+      ],
     }
+  },
 }
 </script>
