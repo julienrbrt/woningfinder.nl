@@ -54,9 +54,9 @@
               />
             </svg>
           </div>
-          <div class="relative sm:px-0 sm:pl-0 lg:h-full lg:pl-32">
+          <div class="relative sm:px-0 sm:pl-0 lg:h-full lg:pl-36">
             <img
-              class="w-full lg:h-full lg:w-auto lg:max-w-none"
+              class="w-full lg:pb-28 lg:h-screen lg:w-auto lg:max-w-screen-2xl"
               src="~/assets/img/mascotte.svg"
               alt="mascotte"
             />

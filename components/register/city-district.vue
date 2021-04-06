@@ -5,7 +5,7 @@
       voorkeur hebt, kun je dat nu invullen, anders kun je deze stap overslaan.
     </p>
 
-    <div class="md:overflow-scroll md:max-h-96 mt-6 space-y-4">
+    <div class="mt-6 space-y-4">
       <div v-for="city in citiesSelection" :key="city.name">
         <h2 class="text-base font-medium text-gray-900">
           {{ city.name }}

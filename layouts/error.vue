@@ -3,9 +3,10 @@
     <Hero>
       <div class="mt-6 sm:max-w-xl">
         <div v-if="error.statusCode === 404">
-          <h1>
-            class="text-lg font-extrabold text-gray-900 tracking-tight
-            sm:text-5xl" > Pagina niet gevonden
+          <h1
+            class="text-lg font-extrabold text-gray-900 tracking-tight sm:text-5xl"
+          >
+            Pagina niet gevonden
           </h1>
           <p class="mt-6 text-lg text-gray-500">
             We zijn beter in het vinden van woningen

@@ -6,7 +6,7 @@
         id="city-districts"
         name="city-districts"
         class="mt-4 block w-full pl-3 pr-10 py-2 text-sm border-gray-300 focus:outline-none focus:ring-wf-orange focus:border-wf-orange rounded-md"
-        v-on:change="addCityDistrict"
+        @change="addCityDistrict"
       >
         <option disabled value="">
           Beschikbare wijken ({{ districtsList.length }})
@@ -21,7 +21,7 @@
         <div
           v-for="district in getCity.district"
           :key="district.name"
-          class="relative flex items-center rounded-lg border border-gray-400 bg-white shadow-sm px-6 py-2 sm:justify-between"
+          class="relative flex items-center rounded-lg border border-gray-400 bg-white shadow-sm px-6 py-2 justify-between"
         >
           <p class="text-sm font-medium text-gray-900">
             {{ district.name }}
@@ -43,7 +43,7 @@
 
     <AlertInfo
       v-else
-      description="Er is geen wijk selectie mogelijk voor dit stad"
+      description="Er is geen wijk selectie mogelijk voor deze stad"
     >
       <InformationCircleIcon class="h-5 w-5 text-gray-400" />
     </AlertInfo>

@@ -6,7 +6,7 @@
       id="location"
       name="location"
       class="mt-4 block w-full pl-3 pr-10 py-2 text-sm border-gray-300 focus:outline-none focus:ring-wf-orange focus:border-wf-orange rounded-md"
-      v-on:change="addCity"
+      @change="addCity(selected)"
     >
       <option disabled value="">
         Beschikbare steden ({{ citiesList.length }})
@@ -16,7 +16,7 @@
       </option>
     </select>
 
-    <div class="md:overflow-scroll md:max-h-72 mt-6 space-y-4">
+    <div class="mt-6 space-y-4">
       <div v-if="!hasSelection" class="rounded-md bg-red-50 p-4">
         <div class="flex">
           <div class="flex-shrink-0">
@@ -39,7 +39,7 @@
       <div
         v-for="city in citiesSelection"
         :key="city.name"
-        class="relative flex items-center rounded-lg border border-gray-400 bg-white shadow-sm px-6 py-2 sm:justify-between"
+        class="relative flex items-center rounded-lg border border-gray-400 bg-white shadow-sm px-6 py-2 justify-between"
       >
         <p class="text-sm font-medium text-gray-900">
           {{ city.name }}
@@ -75,22 +75,16 @@ export default {
   },
   methods: {
     addCity() {
-      if (this.selected) {
-        this.$store.commit('register/addCity', this.selected)
-        this.citiesList = this.citiesList.filter(
-          (c) => c.name !== this.selected
-        )
-        this.selected = ''
-      }
+      this.$store.commit('register/addCity', this.selected)
+      this.citiesList = this.citiesList.filter((c) => c.name !== this.selected)
+      this.selected = ''
     },
     removeCity(selected) {
-      if (selected) {
-        this.$store.commit('register/removeCity', selected)
-        this.citiesList.push(selected)
-        this.citiesList = this.citiesList.sort((a, b) =>
-          a.name > b.name ? 1 : -1
-        )
-      }
+      this.$store.commit('register/removeCity', selected)
+      this.citiesList.push(selected)
+      this.citiesList = this.citiesList.sort((a, b) =>
+        a.name > b.name ? 1 : -1
+      )
     },
   },
   computed: {

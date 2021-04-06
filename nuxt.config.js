@@ -34,6 +34,13 @@ export default {
           'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap',
       },
     ],
+    script: [
+      {
+        // Stripe recommends loading the script on every page 'to best leverage Stripe's advanced fraud functionality'
+        src: 'https://js.stripe.com/v3',
+        defer: true,
+      },
+    ],
     noscript: [
       {
         innerHTML:
@@ -48,14 +55,22 @@ export default {
   buildModules: ['@nuxtjs/tailwindcss'],
   modules: ['@nuxtjs/axios', '@nuxtjs/sitemap'],
   axios: {
-    baseURL: 'https://woningfinder.nl/api/',
+    baseURL: 'http://localhost:8080',
+    // baseURL: 'https://woningfinder.nl/api/',
   },
   sitemap: {
     hostname: 'https://woningfinder.nl',
     gzip: true,
   },
-  build: {},
   tailwindcss: {
     jit: true,
   },
+  loading: {
+    color: '#e46948',
+    height: '5px',
+  },
+  env: {
+    stripeKey: process.env.STRIPE_PUBLISHABLE_KEY,
+  },
+  build: {},
 }

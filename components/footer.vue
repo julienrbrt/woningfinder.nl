@@ -27,7 +27,7 @@
 
         <div class="px-5 py-2">
           <a
-            href="legal/algemene_voorwaarden.pdf"
+            href="voorwaarden.pdf"
             class="text-base text-gray-400 hover:text-gray-300"
           >
             Voorwaarden
@@ -36,7 +36,7 @@
 
         <div class="px-5 py-2">
           <a
-            href="legal/privacy_voorwaarden.pdf"
+            href="privacybeleid.pdf"
             class="text-base text-gray-400 hover:text-gray-300"
           >
             Privacy
@@ -45,7 +45,7 @@
 
         <div class="px-5 py-2">
           <a
-            href="legal/gebruiksvoorwaarden.pdf"
+            href="gebruiksvoorwaarden.pdf"
             class="text-base text-gray-400 hover:text-gray-300"
           >
             Gebruiksvoorwaarden

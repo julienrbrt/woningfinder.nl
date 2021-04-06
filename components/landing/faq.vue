@@ -57,6 +57,11 @@ export default {
           answer:
             'Dat is jammer. We zijn heel druk met alle woningcorporaties in Nederland toe te voegen voor WoningFinder. Stuur ons een email zodat we kunnen kijken welke woningcorporaties toegevoegd moeten worden voor jouw stad. Je krijgt een email zodra we klaar zijn.',
         },
+        {
+          question: 'Ik wil meerdere zoekopdrachten hebben. Hoe werkt dat?',
+          answer:
+            'Bij WoningFinder betaal je per zoekopdracht, als jij meer dan één zoekopdracht wilt, moet je een nieuw account aanmaken. Let op: Je kan alleen één account aanmaken per e-mailadres.',
+        },
       ],
     }
   },
