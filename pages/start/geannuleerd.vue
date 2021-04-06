@@ -9,7 +9,7 @@
           <p class="mt-6 text-lg text-gray-500">
             Je zoekopdracht is niet helemaal voltooid omdat we jouw betaling
             niet hebben ontvangen. Je zoekopdracht word automatisch verwijderd
-            over 2 dagen. Wil je nog steeds gebruik maken van WoningFinder? Neem
+            over 24 uur. Wil je nog steeds gebruik maken van WoningFinder? Neem
             dan contact met ons op.
           </p>
         </div>

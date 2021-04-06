@@ -36,14 +36,17 @@
         </div>
       </div>
 
-      <AlertInfo v-else description="Je hebt nog geen wijk voorkeur">
+      <AlertInfo
+        v-else
+        description="Je hebt nog geen wijk voorkeur. We reageren daarom over de hele stad."
+      >
         <InformationCircleIcon class="h-5 w-5 text-gray-400" />
       </AlertInfo>
     </div>
 
     <AlertInfo
       v-else
-      description="Er is geen wijk selectie mogelijk voor deze stad"
+      description="Er is geen wijk selectie mogelijk voor deze stad. We reageren daarom over  de hele stad."
     >
       <InformationCircleIcon class="h-5 w-5 text-gray-400" />
     </AlertInfo>
