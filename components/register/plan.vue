@@ -5,6 +5,13 @@
       Het enige verschil tussen ons Basis en Pro plan is ons sneller garantie.
     </p>
 
+    <AlertError
+      class="mt-4"
+      v-if="error"
+      @click="hideAlert"
+      alert="Selecteer een plan."
+    />
+
     <fieldset>
       <legend class="sr-only">Plan</legend>
       <div class="mt-6 space-y-4">
@@ -52,7 +59,23 @@
 <script>
 export default {
   props: ['plan'],
+  data() {
+    return {
+      error: false,
+    }
+  },
   methods: {
+    validate() {
+      if (this.$store.getters['register/getPlan'].name == '') {
+        this.error = true
+        return false
+      }
+
+      return true
+    },
+    hideAlert() {
+      this.error = false
+    },
     planTitle: (name) => {
       return name.charAt(0).toUpperCase() + name.slice(1)
     },

@@ -6,6 +6,13 @@
       vragen om meer te weten over de woning die jij zoekt.
     </p>
 
+    <AlertError
+      class="mt-4"
+      v-if="error"
+      @click="hideAlert"
+      alert="Selecteer een woningtype."
+    />
+
     <fieldset>
       <legend class="sr-only">Woningtype</legend>
       <div class="mt-6 space-y-4">
@@ -42,7 +49,23 @@
 <script>
 export default {
   props: ['supported_housing'],
+  data() {
+    return {
+      error: false,
+    }
+  },
   methods: {
+    validate() {
+      if (this.$store.getters['register/getHousingType'].length == 0) {
+        this.error = true
+        return false
+      }
+
+      return true
+    },
+    hideAlert() {
+      this.error = false
+    },
     housingTitle: (name) => {
       if (name == 'house') {
         // translate house to huis

@@ -1,6 +1,4 @@
-function initialState() {}
-
-export const state = {
+export const state = () => ({
   register: {
     name: '',
     email: '',
@@ -23,7 +21,7 @@ export const state = {
       is_accessible: false,
     },
   },
-}
+})
 
 export const getters = {
   getPlan: (state) => {
@@ -70,13 +68,6 @@ export const getters = {
 }
 
 export const mutations = {
-  reset(state) {
-    // acquire initial state
-    const s = initialState()
-    Object.keys(s).forEach((key) => {
-      state[key] = s[key]
-    })
-  },
   setPlan(state, plan) {
     this._vm.$set(state.register.plan, 'name', plan)
   },

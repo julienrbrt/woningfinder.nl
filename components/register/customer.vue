@@ -3,6 +3,14 @@
     <p class="mt-6 text-lg text-gray-500">
       Laten we het meer persoonlijk maken
     </p>
+
+    <AlertError
+      class="mt-4"
+      v-if="error"
+      @click="hideAlert"
+      alert="We hebben al je gegevens nodig. Controleer het formulier nogmaals."
+    />
+
     <div class="mt-6 space-y-4">
       <div class="grid grid-cols-6 gap-6">
         <div class="col-span-6 sm:col-span-3">
@@ -154,6 +162,7 @@ export default {
   },
   data() {
     return {
+      error: false,
       customer: this.$store.getters['register/getCustomer'],
     }
   },
@@ -167,9 +176,25 @@ export default {
     validate() {
       this.customer.yearly_income = parseInt(this.customer.yearly_income)
       this.customer.family_size = parseInt(this.customer.family_size)
+
+      // check error
+      if (
+        isNaN(this.customer.yearly_income) ||
+        isNaN(this.customer.family_size) ||
+        this.customer.name == '' ||
+        this.customer.email == '' ||
+        this.customer.birth_year == 0
+      ) {
+        this.error = true
+        return false
+      }
+
       this.$store.commit('register/setCustomer', this.customer)
 
       return true
+    },
+    hideAlert() {
+      this.error = false
     },
   },
   computed: {

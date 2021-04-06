@@ -17,16 +17,29 @@
     </select>
 
     <div class="mt-6 space-y-4">
-      <div v-if="!hasSelection" class="rounded-md bg-red-50 p-4">
+      <div
+        v-if="!hasSelection"
+        class="rounded-md p-4"
+        v-bind:class="error ? 'bg-red-50' : 'bg-gray-50'"
+      >
         <div class="flex">
           <div class="flex-shrink-0">
-            <InformationCircleIcon class="h-5 w-5 text-red-400" />
+            <InformationCircleIcon
+              class="h-5 w-5"
+              v-bind:class="error ? 'text-red-400' : 'text-gray-400'"
+            />
           </div>
           <div class="ml-3">
-            <p class="text-sm font-medium text-red-800">
+            <p
+              class="text-sm font-medium"
+              v-bind:class="error ? 'text-red-800' : 'text-gray-800'"
+            >
               Je hebt geen steden geselecteerd
             </p>
-            <p class="text-sm font-medium text-red-800">
+            <p
+              class="text-sm font-medium"
+              v-bind:class="error ? 'text-red-800' : 'text-gray-800'"
+            >
               Staat je stad er niet tussen? Neem dan
               <NuxtLink to="contact" class="underline">contact</NuxtLink> met
               ons op.
@@ -71,6 +84,7 @@ export default {
       citiesList: this.supported_cities.sort((a, b) =>
         a.name > b.name ? 1 : -1
       ),
+      error: false,
     }
   },
   methods: {
@@ -85,6 +99,14 @@ export default {
       this.citiesList = this.citiesList.sort((a, b) =>
         a.name > b.name ? 1 : -1
       )
+    },
+    validate() {
+      if (this.$store.getters['register/getCities'].length == 0) {
+        this.error = true
+        return false
+      }
+
+      return true
     },
   },
   computed: {

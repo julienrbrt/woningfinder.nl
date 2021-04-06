@@ -8,6 +8,13 @@
       dus goed na.
     </p>
 
+    <AlertError
+      class="mt-4"
+      v-if="error"
+      @click="hideAlert"
+      :alert="errorMsg"
+    />
+
     <div class="mt-6 space-y-4">
       <!-- binnen -->
       <h2 class="text-base font-medium text-gray-900">Binnen</h2>
@@ -21,7 +28,7 @@
         name="bedroom"
         min="0"
         max="8"
-        placeholder="1"
+        placeholder="0"
         class="shadow-sm focus:ring-wf-orange focus:border-wf-orange block w-full sm:text-sm border-gray-300 rounded-md"
       />
       <div class="relative flex items-start">
@@ -198,21 +205,44 @@ export default {
   },
   data() {
     return {
+      error: false,
+      errorMsg: '',
       preferences: this.$store.getters['register/getHousingPreferences'],
     }
   },
   methods: {
     // called from parent component
     validate() {
+      if (this.preferences.maximum_price <= 0) {
+        this.error = true
+        this.errorMsg = 'De maximale huurprijs moet hoger dan €0,- zijn.'
+
+        return false
+      }
+
       this.preferences.number_bedroom = parseInt(
         this.preferences.number_bedroom
       )
       this.preferences.maximum_price = parseFloat(
         this.preferences.maximum_price
       )
+
+      if (
+        isNaN(this.preferences.number_bedroom) ||
+        isNaN(this.preferences.maximum_price)
+      ) {
+        this.error = true
+        this.errorMsg =
+          'Het aantal slaapkamers en de maximale huurprijs moeten een getal zijn.'
+        return false
+      }
+
       this.$store.commit('register/setHousingPreferences', this.preferences)
 
       return true
+    },
+    hideAlert() {
+      this.error = false
     },
   },
 }

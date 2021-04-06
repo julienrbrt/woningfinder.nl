@@ -46,7 +46,6 @@
         <div class="items-center w-full inline-flex mt-5 space-x-4">
           <div v-if="currentStep == 1">
             <NuxtLink
-              @click.native="resetForm"
               to="/"
               class="cursor-pointer whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
             >
@@ -124,12 +123,22 @@ export default {
 
       switch (this.currentStep) {
         case 1:
+          if (!this.$refs.registerPlan.validate()) {
+            return
+          }
           break
         case 2:
+          if (!this.$refs.registerCity.validate()) {
+            return
+          }
           break
         case 3:
+          // no need to validate because city district
           break
         case 4:
+          if (!this.$refs.registerHousing.validate()) {
+            return
+          }
           break
         case 5:
           if (!this.$refs.registerHousingPreferences.validate()) {
@@ -176,9 +185,6 @@ export default {
         .catch(function (error) {
           console.error('Error:', error)
         })
-    },
-    resetForm() {
-      this.$store.commit('register/reset')
     },
   },
 }
