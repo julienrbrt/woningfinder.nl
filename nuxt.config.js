@@ -55,8 +55,7 @@ export default {
   buildModules: ['@nuxtjs/tailwindcss'],
   modules: ['@nuxtjs/axios', '@nuxtjs/sitemap'],
   axios: {
-    baseURL: 'http://localhost:8080',
-    // baseURL: 'https://woningfinder.nl/api/',
+    baseURL: 'https://woningfinder.nl/api/',
   },
   sitemap: {
     hostname: 'https://woningfinder.nl',
