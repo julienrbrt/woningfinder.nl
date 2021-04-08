@@ -74,7 +74,7 @@
                 zijn ook altijd bezig meer woningcorporaties van andere steden
                 toe te voegen in WoningFinder."
             >
-              <FastForwardIcon class="h-6 w-6" />
+              <GlobeIcon class="h-6 w-6" />
             </LandingFeatureItem>
 
             <LandingFeatureItem

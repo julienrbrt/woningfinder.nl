@@ -44,7 +44,7 @@ export default {
         {
           question: 'Is dat veilig?',
           answer:
-            'We zijn echt privacy freaks (kijk ons privacy voorwaarden). We gebruiken end-to-end versleuteling om je gegevens veilig te houden. Dat betekent dat we je inlog gegevens zelf ook niet kunnen zien.',
+            'We zijn echt privacy freaks (kijk ons privacy voorwaarden). We gebruiken versleuteling om je gegevens veilig te houden. Dat betekent dat we je inlog gegevens zelf ook niet kunnen zien.',
         },
         {
           question:
