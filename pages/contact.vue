@@ -68,7 +68,7 @@
             >Terug
           </NuxtLink>
           <button
-            v-bind:disabled="validForm"
+            v-bind:disabled="!validForm"
             class="btn disabled:bg-gray-500"
             type="submit"
             @click="send"
@@ -97,7 +97,7 @@ export default {
     async send(e) {
       e.preventDefault()
 
-      if (this.validForm) {
+      if (!this.validForm) {
         this.error = true
         return
       }
@@ -147,7 +147,7 @@ export default {
       )
     },
     validForm() {
-      return !(this.name && this.email && this.message)
+      return this.name && this.email && this.message
     },
   },
 }

@@ -1,6 +1,20 @@
 <template>
   <Hero>
     <div class="mt-6 sm:max-w-xl">
+      <AlertOk
+        class="mx-4"
+        v-if="submitted"
+        @click="hideAlert"
+        alert="Login link succesvol verstuurd!"
+      />
+
+      <AlertError
+        class="mx-4"
+        v-if="error"
+        @click="hideAlert"
+        alert="Er is iets misgegaan. Controleer je e-mailadres of probeer nogmaals."
+      />
+
       <h1
         class="text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl"
       >
@@ -22,7 +36,11 @@
       class="my-4 py-4 shadow-sm focus:ring-wf-orange focus:border-wf-orange w-full text-base border-gray-300 rounded-md"
     />
 
-    <button type="submit" class="btn group relative">
+    <button
+      @click="send"
+      type="submit"
+      class="btn group relative md:w-min pl-12"
+    >
       <span class="absolute left-0 inset-y-0 flex items-center pl-3">
         <LockClosedIcon
           class="h-5 w-5 text-wf-orange-light group-hover:text-wf-orange-lightest"
@@ -43,10 +61,40 @@ export default {
   data() {
     return {
       email: '',
+      error: false,
+      submitted: false,
     }
   },
-  method: {
-    login() {},
+  methods: {
+    async send(e) {
+      e.preventDefault()
+
+      if (!this.validForm) {
+        this.error = true
+        return
+      }
+
+      await this.$axios
+        .$post('login', {
+          email: this.email,
+        })
+        .then(() => {
+          this.email = ''
+          this.submitted = true
+        })
+        .catch(() => {
+          this.error = true
+        })
+    },
+    hideAlert() {
+      this.error = false
+      this.submitted = false
+    },
+  },
+  computed: {
+    validForm() {
+      return this.email.length > 0
+    },
   },
 }
 </script>

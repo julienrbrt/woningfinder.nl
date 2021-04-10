@@ -1,6 +1,6 @@
 <template>
   <div class="bg-white">
-    <Hero v-if="!mustLogin">
+    <Hero>
       <div class="mt-6 sm:max-w-xl">
         <h1
           class="text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl"
@@ -83,9 +83,6 @@
         </NuxtLink>
       </div>
     </Hero>
-
-    <!-- show login page if cannot login -->
-    <SettingsLogin v-else />
   </div>
 </template>
 
@@ -150,6 +147,12 @@ export default {
     this.getCorporationCredentials(params).then(() => {
       this.mustLogin = false
     })
+  },
+  middleware({ route, redirect }) {
+    // If the customer is not authenticated return to login
+    if (!route.query.jwt || route.query.jwt == '') {
+      return redirect('/login')
+    }
   },
 }
 </script>
