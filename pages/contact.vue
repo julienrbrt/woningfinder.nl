@@ -103,7 +103,7 @@ export default {
       }
 
       await this.$axios
-        .post('contact', {
+        .$post('contact', {
           name: this.name,
           email: this.email,
           message: this.message,

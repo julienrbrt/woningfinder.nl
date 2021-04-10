@@ -72,4 +72,7 @@ export default {
     stripeKey: process.env.STRIPE_PUBLISHABLE_KEY,
   },
   build: {},
+  generate: {
+    fallback: '404.html',
+  },
 }

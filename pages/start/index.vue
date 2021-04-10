@@ -86,7 +86,7 @@
 <script>
 export default {
   async asyncData({ $axios }) {
-    const offering = await $axios.$get('offering', { progress: false })
+    const offering = await $axios.$get('offering', { progress: true })
     return { offering }
   },
   data() {

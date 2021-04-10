@@ -1,5 +1,64 @@
-<template></template>
+<template>
+  <a @click="$emit('click')" class="block hover:bg-gray-50 cursor-pointer">
+    <div class="px-4 py-4 flex items-center sm:px-6">
+      <div class="min-w-0 flex-1 sm:flex sm:items-center sm:justify-between">
+        <div class="truncate">
+          <div class="flex text-sm">
+            <p class="font-medium text-wf-orange truncate">
+              {{ credentials.corporation_name }}
+            </p>
+          </div>
+          <div class="mt-2 flex">
+            <div class="flex items-center text-sm text-gray-500">
+              <GlobeAltIcon
+                class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400"
+              />
+              <a
+                :href="credentials.corporation_url"
+                target="_blank"
+                class="text-sm"
+                >{{ corporationTitle(credentials.corporation_url) }}
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          v-if="!credentials.is_known"
+          class="mt-4 flex-shrink-0 sm:mt-0 sm:ml-5"
+        >
+          <p class="text-sm text-gray-500">Inloggen</p>
+        </div>
+      </div>
+      <div class="ml-5 flex-shrink-0">
+        <CheckCircleIcon
+          v-if="credentials.is_known"
+          size="2x"
+          class="text-green-400"
+        />
+        <ChevronRightIcon v-else class="h-5 w-5 text-gray-400" />
+      </div>
+    </div>
+  </a>
+</template>
 
 <script>
-export default {}
+import {
+  GlobeAltIcon,
+  ChevronRightIcon,
+  CheckCircleIcon,
+} from '@vue-hero-icons/outline'
+
+export default {
+  components: {
+    GlobeAltIcon,
+    ChevronRightIcon,
+    CheckCircleIcon,
+  },
+  props: ['credentials'],
+  methods: {
+    corporationTitle(url) {
+      return url.substring('https://'.length)
+    },
+  },
+}
 </script>
