@@ -2,14 +2,14 @@
   <Hero>
     <div class="mt-6 sm:max-w-xl">
       <AlertOk
-        class="mx-4"
+        class="my-4"
         v-if="submitted"
         @click="hideAlert"
         alert="Login link succesvol verstuurd!"
       />
 
       <AlertError
-        class="mx-4"
+        class="my-4"
         v-if="error"
         @click="hideAlert"
         alert="Er is iets misgegaan. Controleer je e-mailadres of probeer nogmaals."
