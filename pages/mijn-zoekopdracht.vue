@@ -1,6 +1,6 @@
 <template>
   <div class="bg-white">
-    <Hero>
+    <Hero v-if="!mustLogin">
       <div class="mt-6 sm:max-w-xl">
         <h1
           class="text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl"
@@ -83,6 +83,9 @@
         </NuxtLink>
       </div>
     </Hero>
+
+    <!-- show login page if cannot login -->
+    <SettingsLogin v-else />
   </div>
 </template>
 
@@ -96,6 +99,7 @@ export default {
       numberCity: 0,
       showModal: '',
       showHasPaidAlert: false,
+      mustLogin: true,
     }
   },
   methods: {
@@ -129,15 +133,23 @@ export default {
     },
   },
   created() {
-    const params = {
-      jwt: this.$route.query.jwt,
+    // check jwt and do not make request if not provided or empty
+    var jwt = this.$route.query.jwt
+    if (!jwt || jwt == '') {
+      return
     }
 
-    this.getCustomerInfo(params)
-    // TODO catch error
+    const params = {
+      jwt: jwt,
+    }
 
-    this.getCorporationCredentials(params)
-    // TODO catch error
+    this.getCustomerInfo(params).then(() => {
+      this.mustLogin = false
+    })
+
+    this.getCorporationCredentials(params).then(() => {
+      this.mustLogin = false
+    })
   },
 }
 </script>
