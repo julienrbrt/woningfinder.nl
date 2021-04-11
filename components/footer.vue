@@ -9,7 +9,7 @@
       >
         <div class="px-5 py-2">
           <NuxtLink
-            to="over-ons"
+            to="/over-ons"
             class="text-base text-gray-400 hover:text-gray-300"
           >
             Over ons
@@ -18,7 +18,7 @@
 
         <div class="px-5 py-2">
           <NuxtLink
-            to="contact"
+            to="/contact"
             class="text-base text-gray-400 hover:text-gray-300"
           >
             Contact
@@ -27,7 +27,7 @@
 
         <div class="px-5 py-2">
           <a
-            href="voorwaarden.pdf"
+            href="/voorwaarden.pdf"
             class="text-base text-gray-400 hover:text-gray-300"
           >
             Voorwaarden
@@ -36,7 +36,7 @@
 
         <div class="px-5 py-2">
           <a
-            href="privacybeleid.pdf"
+            href="/privacybeleid.pdf"
             class="text-base text-gray-400 hover:text-gray-300"
           >
             Privacy
@@ -45,7 +45,7 @@
 
         <div class="px-5 py-2">
           <a
-            href="gebruiksvoorwaarden.pdf"
+            href="/gebruiksvoorwaarden.pdf"
             class="text-base text-gray-400 hover:text-gray-300"
           >
             Gebruiksvoorwaarden

@@ -8,7 +8,7 @@
         <li class="text-gray-500">
           Hoi {{ customer.name }}, binnenkort kun je hier je zoekopdracht
           bijwerken. Wil je nu al iets wijzigen aan je zoekopdracht? Neem dan
-          <NuxtLink to="contact" class="underline">contact</NuxtLink> met ons
+          <NuxtLink to="/contact" class="underline">contact</NuxtLink> met ons
           op.
         </li>
       </ul>

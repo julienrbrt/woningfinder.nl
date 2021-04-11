@@ -134,11 +134,19 @@ export default {
           if (!this.$refs.registerPlan.validate()) {
             return
           }
+
+          // register event
+          this.saEvent('start_step_1_button_clicked')
+
           break
         case 2:
           if (!this.$refs.registerCity.validate()) {
             return
           }
+
+          // register event
+          this.saEvent('start_step_2_button_clicked')
+
           break
         case 3:
           // no need to validate because city district
@@ -147,52 +155,57 @@ export default {
           if (!this.$refs.registerHousing.validate()) {
             return
           }
+
+          // register event
+          this.saEvent('start_step_3_button_clicked')
+
           break
         case 5:
           if (!this.$refs.registerHousingPreferences.validate()) {
             return
           }
+
+          // register event
+          this.saEvent('start_step_5_button_clicked')
+
           break
         case 6:
           if (!this.$refs.registerCustomer.validate()) {
             return
           }
+
+          // register event
+          this.saEvent('start_step_6_button_clicked')
+
           break
         case 7:
           // start loading bar
           this.$nuxt.$loading.start()
 
-          // The view model.
-          var vm = this
-
           // send request
-          this.submit(vm)
+          this.submit()
 
           // register event
-          this.saEvent('subscribe_button_clicked')
+          this.saEvent('start_pay_button_clicked')
 
           return
       }
 
       this.next()
     },
-    async submit(vm) {
+    async submit() {
       var stripe = Stripe(process.env.stripeKey)
       await this.$axios
-        .post('signup', this.$store.getters['register/getRegister'])
-        .then(function (response) {
-          return response.data
+        .$post('signup', this.$store.getters['register/getRegister'])
+        .then((response) => {
+          return response
         })
-        .then(function (session) {
+        .then((session) => {
           return stripe.redirectToCheckout({ sessionId: session.id })
         })
-        .catch(function (error) {
-          vm.errorMsg =
-            'Er is iets misgegaan: "' +
-            error +
-            '". Controleer het formulier nogmaals. Blijf dit gebeuren? Neem dan contact met ons op.'
-          vm.error = true
-          console.error('error:', error)
+        .catch((error) => {
+          this.errorMsg = 'Er is iets misgegaan: "' + error + '".'
+          this.error = true
         })
     },
     hideAlert() {

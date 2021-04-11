@@ -187,7 +187,7 @@
         <div class="ml-3">
           <p class="text-sm font-medium text-gray-800">
             Heb jij een wens dat niet in ons formulier staat? Neem dan
-            <NuxtLink to="contact" class="underline">contact</NuxtLink> met ons
+            <NuxtLink to="/contact" class="underline">contact</NuxtLink> met ons
             op.
           </p>
         </div>

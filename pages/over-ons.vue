@@ -32,7 +32,7 @@
           >Terug</NuxtLink
         >
         <NuxtLink
-          to="contact"
+          to="/contact"
           class="btn bg-wf-purple hover:bg-wf-purple-dark hover:ring-wf-purple focus:ring-wf-purple"
         >
           Contact

@@ -73,11 +73,11 @@ export default {
 
       return true
     },
-    hideAlert() {
-      this.error = false
-    },
     planTitle: (name) => {
       return name.charAt(0).toUpperCase() + name.slice(1)
+    },
+    hideAlert() {
+      this.error = false
     },
   },
   computed: {

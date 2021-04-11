@@ -76,7 +76,7 @@
                 <div class="rounded-md shadow">
                   <div class="rounded-md shadow">
                     <NuxtLink
-                      to="start"
+                      to="/start"
                       class="btn bg-wf-orange hover:bg-wf-orange-dark hover:ring-wf-orange focus:ring-wf-orange"
                       @click.native="startEventBasis"
                     >
@@ -144,7 +144,7 @@
                 </ul>
                 <div class="rounded-md shadow">
                   <NuxtLink
-                    to="start"
+                    to="/start"
                     class="btn bg-wf-orange hover:bg-wf-orange-dark hover:ring-wf-orange focus:ring-wf-orange"
                     @click.native="startEventPro"
                   >
@@ -170,10 +170,10 @@ export default {
   },
   methods: {
     startEventBasis() {
-      this.saEvent('start_pricing_button_clicked_basis')
+      this.saEvent('pricing_button_clicked_start_basis')
     },
     startEventPro() {
-      this.saEvent('start_pricing_button_clicked_pro')
+      this.saEvent('pricing_button_clicked_start_pro')
     },
   },
 }

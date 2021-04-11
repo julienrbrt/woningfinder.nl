@@ -41,7 +41,7 @@
               v-bind:class="error ? 'text-red-800' : 'text-gray-800'"
             >
               Staat je stad er niet tussen? Neem dan
-              <NuxtLink to="contact" class="underline">contact</NuxtLink> met
+              <NuxtLink to="/contact" class="underline">contact</NuxtLink> met
               ons op.
             </p>
           </div>

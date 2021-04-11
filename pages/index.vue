@@ -2,7 +2,7 @@
   <div class="bg-white">
     <!-- Hero section -->
     <Hero>
-      <AlertNews title="Nieuws" description="We zijn nu live" to="start" />
+      <AlertNews title="Nieuws" description="We zijn nu live" to="/start" />
       <div class="mt-6 sm:max-w-xl">
         <h1
           class="text-4xl font-extrabold text-gray-900 tracking-tight sm:text-5xl"
@@ -18,7 +18,7 @@
       </div>
       <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
         <div class="rounded-md shadow">
-          <NuxtLink to="start" @click.native="startEvent" class="btn">
+          <NuxtLink to="/start" @click.native="startEvent" class="btn">
             Nu starten
           </NuxtLink>
         </div>
@@ -57,7 +57,7 @@ export default {
   },
   methods: {
     startEvent() {
-      this.saEvent('start_hero_button_clicked')
+      this.saEvent('hero_button_clicked_start')
     },
   },
 }
