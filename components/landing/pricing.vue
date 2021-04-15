@@ -33,7 +33,7 @@
                   </h3>
                 </div>
                 <div class="mt-4 flex items-baseline text-6xl font-extrabold">
-                  €35
+                  €25
                   <span class="ml-1 text-2xl font-medium text-gray-500">
                     eenmalig
                   </span>
@@ -98,7 +98,7 @@
                   </h3>
                 </div>
                 <div class="mt-4 flex items-baseline text-6xl font-extrabold">
-                  €75
+                  €45
                   <span class="ml-1 text-2xl font-medium text-gray-500">
                     eenmalig
                   </span>
