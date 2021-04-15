@@ -170,6 +170,10 @@ export default {
         })
         .catch((error) => {
           this.error = true
+          if (error.response.status == 404) {
+            error = 'gebruiker niet gevonden'
+          }
+
           this.errorMsg = 'Er is iets misgegaan: "' + error + '".'
         })
 
