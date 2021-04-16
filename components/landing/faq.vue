@@ -55,7 +55,7 @@ export default {
         {
           question: 'Mijn stad staat er niet tussen.',
           answer:
-            'Dat is jammer. We zijn heel druk met alle woningcorporaties in Nederland toe te voegen voor WoningFinder. Stuur ons een email zodat we kunnen kijken welke woningcorporaties toegevoegd moeten worden voor jouw stad. Je krijgt een email zodra we klaar zijn.',
+            'Dat is jammer. We zijn hard bezig alle woningcorporaties in Nederland toe te voegen aan WoningFinder. Stuur ons een email zodat we kunnen kijken welke woningcorporaties toegevoegd moeten worden voor jouw stad. Je krijgt een email zodra we klaar zijn.',
         },
         {
           question: 'Ik wil meerdere zoekopdrachten hebben. Hoe werkt dat?',

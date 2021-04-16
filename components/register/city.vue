@@ -34,15 +34,21 @@
               class="text-sm font-medium"
               v-bind:class="error ? 'text-red-800' : 'text-gray-800'"
             >
-              Je hebt geen steden geselecteerd
+              Je hebt geen steden geselecteerd.
             </p>
             <p
               class="text-sm font-medium"
               v-bind:class="error ? 'text-red-800' : 'text-gray-800'"
             >
-              Staat je stad er niet tussen? Neem dan
-              <NuxtLink to="/contact" class="underline">contact</NuxtLink> met
-              ons op.
+              Staat je stad er niet tussen? Schrijf je in op onze
+              <a
+                href="https://forms.gle/J3qWevwRZq6qVCE57"
+                target="_blank"
+                class="underline"
+                @click.native="waitingList"
+                >wachtlijst</a
+              >
+              en we laten je weten wanneer we jouw stad toegevoegd hebben.
             </p>
           </div>
         </div>
@@ -107,6 +113,9 @@ export default {
       }
 
       return true
+    },
+    waitingList() {
+      this.saEvent('waiting_list_form_clicked')
     },
   },
   computed: {
