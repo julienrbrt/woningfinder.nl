@@ -150,6 +150,10 @@ export default {
           break
         case 3:
           // no need to validate because city district
+
+          // register event
+          this.saEvent('start_step_3_button_clicked')
+
           break
         case 4:
           if (!this.$refs.registerHousing.validate()) {
@@ -157,7 +161,7 @@ export default {
           }
 
           // register event
-          this.saEvent('start_step_3_button_clicked')
+          this.saEvent('start_step_4_button_clicked')
 
           break
         case 5:
@@ -186,7 +190,7 @@ export default {
           this.submit()
 
           // register event
-          this.saEvent('start_pay_button_clicked')
+          this.saEvent('start_step_pay_button_clicked')
 
           return
       }
