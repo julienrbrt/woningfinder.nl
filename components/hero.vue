@@ -1,7 +1,7 @@
 <template>
   <div class="bg-white">
     <!-- Hero section -->
-    <div class="min-h-screen pt-8 overflow-hidden lg:relative lg:py-44">
+    <div class="pt-8 overflow-hidden lg:min-h-screen lg:relative lg:py-44">
       <div
         class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl lg:grid lg:grid-cols-2 lg:gap-24"
       >

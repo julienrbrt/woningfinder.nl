@@ -45,7 +45,7 @@
                 href="https://forms.gle/J3qWevwRZq6qVCE57"
                 target="_blank"
                 class="underline"
-                @click.native="waitingList"
+                @click="waitingList"
                 >wachtlijst</a
               >
               en we laten je weten wanneer we jouw stad toegevoegd hebben.
