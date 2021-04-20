@@ -60,6 +60,7 @@ export default {
   sitemap: {
     hostname: 'https://woningfinder.nl',
     gzip: true,
+    exclude: ['/start/**'],
   },
   tailwindcss: {
     jit: true,
