@@ -124,8 +124,8 @@
           </svg>
           <img
             class="relative mx-auto lg:ml-20"
-            width="555"
-            src="~/assets/img/adjustement.svg"
+            width="700"
+            src="~/assets/img/adjustement.png"
             alt="adjustement illustration"
           />
         </div>
@@ -239,7 +239,6 @@
             </svg>
             <img
               class="relative mx-auto lg:mr-20"
-              width="555"
               src="~/assets/img/subscriber.svg"
               alt="subscriber illustration"
             />
