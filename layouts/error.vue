@@ -31,7 +31,6 @@
         </div>
       </div>
     </Hero>
-    <Footer />
   </div>
 </template>
 
