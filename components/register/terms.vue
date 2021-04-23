@@ -31,15 +31,13 @@
 
     <p class="mt-4 text-sm text-gray-900">
       Door op Aanmelden te klikken, ga je akkoord met onze
-      <a class="underline" href="/voorwaarden.pdf" target="_blank"
-        >Voorwaarden</a
-      >
+      <a class="underline" href="/voorwaarden" target="_blank">Voorwaarden</a>
       en
-      <a class="underline" href="/gebruiksvoorwaarden.pdf" target="_blank"
+      <a class="underline" href="/voorwaarden/gebruiks" target="_blank"
         >Gebruiksvoorwaarden</a
       >. Meer informatie over hoe we je gegevens gebruiken (en nooit delen),
       vind je in ons
-      <a class="underline" href="/privacybeleid.pdf" target="_blank"
+      <a class="underline" href="/voorwaarden/privacy" target="_blank"
         >Privacybeleid</a
       >.
     </p>

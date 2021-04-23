@@ -26,30 +26,30 @@
         </div>
 
         <div class="px-5 py-2">
-          <a
-            href="/voorwaarden.pdf"
+          <NuxtLink
+            to="/voorwaarden"
             class="text-base text-gray-400 hover:text-gray-300"
           >
             Voorwaarden
-          </a>
+          </NuxtLink>
         </div>
 
         <div class="px-5 py-2">
-          <a
-            href="/privacybeleid.pdf"
-            class="text-base text-gray-400 hover:text-gray-300"
-          >
-            Privacy
-          </a>
-        </div>
-
-        <div class="px-5 py-2">
-          <a
-            href="/gebruiksvoorwaarden.pdf"
+          <NuxtLink
+            to="/voorwaarden/gebruiks"
             class="text-base text-gray-400 hover:text-gray-300"
           >
             Gebruiksvoorwaarden
-          </a>
+          </NuxtLink>
+        </div>
+
+        <div class="px-5 py-2">
+          <NuxtLink
+            to="/voorwaarden/privacy"
+            class="text-base text-gray-400 hover:text-gray-300"
+          >
+            Privacy
+          </NuxtLink>
         </div>
       </nav>
       <div class="mt-8 flex justify-center space-x-6">
