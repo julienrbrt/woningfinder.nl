@@ -191,7 +191,7 @@
               </LandingFeatureItem>
               <LandingFeatureItem
                 title="Toegankelijk"
-                description="Een WoningFinder zoekopdracht is maar €2,- als je een sociale huurwoning zoekt. Ons missie is het makkelijker maken voor iedereen, we weten al dat het moeilijk is om een sociale huurwoning te vinden in Nederland."
+                description="Een WoningFinder zoekopdracht is slechts €5,- als je een sociale huurwoning zoekt. Ons missie is het makkelijker maken voor iedereen, we weten al dat het moeilijk is om een sociale huurwoning te vinden in Nederland."
               >
                 <CurrencyEuroIcon class="h-6 w-6" />
               </LandingFeatureItem>
