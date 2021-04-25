@@ -174,7 +174,7 @@
             name="price"
             id="price"
             class="focus:ring-wf-orange focus:border-wf-orange block w-full pl-7 pr-12 sm:text-sm border-gray-300 rounded-md"
-            placeholder="0.00"
+            placeholder="1000"
           />
           <div
             class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none"
