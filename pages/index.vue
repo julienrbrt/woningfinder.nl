@@ -1,7 +1,11 @@
 <template>
   <div class="bg-white">
     <Hero>
-      <AlertNews title="Nieuws" description="We zijn nu live" to="/start" />
+      <AlertNews
+        title="Nieuws"
+        description="Nieuwe steden zijn toegevoegd"
+        to="/start"
+      />
       <div class="mt-6 sm:max-w-xl">
         <h1
           class="text-4xl font-extrabold text-wf-purple tracking-tight sm:text-5xl"
