@@ -44,7 +44,11 @@
         v-show="currentStep == 5"
       />
 
-      <RegisterCustomer ref="registerCustomer" v-show="currentStep == 6" />
+      <RegisterCustomer
+        ref="registerCustomer"
+        v-show="currentStep == 6"
+        :plan="offering.plan"
+      />
 
       <RegisterTerms ref="registerTerms" v-show="currentStep == 7" />
 

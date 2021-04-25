@@ -223,7 +223,7 @@ export default {
     validate() {
       var plan = this.$store.getters['register/getPlan'].name
 
-      if (plan != 'basis' && this.preferences.maximum_price <= 0) {
+      if (plan == 'pro' && this.preferences.maximum_price <= 0) {
         this.error = true
         this.errorMsg = 'De maximale huurprijs moet hoger dan €0,- zijn.'
 
@@ -239,7 +239,7 @@ export default {
 
       if (
         isNaN(this.preferences.number_bedroom) ||
-        (plan != 'basis' && isNaN(this.preferences.maximum_price))
+        (plan == 'pro' && isNaN(this.preferences.maximum_price))
       ) {
         this.error = true
         this.errorMsg =

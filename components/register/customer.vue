@@ -8,7 +8,7 @@
       class="mt-4"
       v-if="error"
       @click="hideAlert"
-      alert="We hebben al je gegevens nodig. Controleer het formulier nogmaals."
+      :alert="errorMsg"
     />
 
     <div class="mt-6 space-y-4">
@@ -160,9 +160,11 @@ export default {
   components: {
     InformationCircleIcon,
   },
+  props: ['plan'],
   data() {
     return {
       error: false,
+      errorMsg: '',
       customer: this.$store.getters['register/getCustomer'],
     }
   },
@@ -177,6 +179,17 @@ export default {
       this.customer.yearly_income = parseInt(this.customer.yearly_income)
       this.customer.family_size = parseInt(this.customer.family_size)
 
+      if (
+        this.$store.getters['register/getPlan'].name == 'basis' &&
+        this.customer.yearly_income >
+          this.plan.find((p) => p.name === 'basis').maximum_income
+      ) {
+        this.error = true
+        this.errorMsg =
+          'Je verdient te veel voor sociale huurwonigen en dus kun je ons Basis plan niet gebruiken. Kies voor ons Pro plan.'
+        return false
+      }
+
       // check error
       if (
         isNaN(this.customer.yearly_income) ||
@@ -186,6 +199,8 @@ export default {
         this.customer.birth_year == 0
       ) {
         this.error = true
+        this.errorMsg =
+          'We hebben al je gegevens nodig. Controleer het formulier nogmaals.'
         return false
       }
 
