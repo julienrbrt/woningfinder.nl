@@ -143,8 +143,8 @@
                 href="https://www.woningmarktbeleid.nl/onderwerpen/daeb/toewijzen-door-woningcorporaties/regels-voor-toewijzen"
                 >passende woningen</a
               >. We hebben dus extra gegevens nodig zoals het aantal
-              medebewoners of je jaarlijks inkomen. Al je gegevens blijven
-              altijd privé en worden nooit gedeeld.
+              medebewoners of je (gezamelijk) jaarlijks inkomen. Al je gegevens
+              blijven altijd privé en worden nooit gedeeld.
             </p>
           </div>
         </div>
@@ -204,8 +204,7 @@ export default {
     showHasChildren() {
       return (
         this.fullYear - this.customer.birth_year < 23 &&
-        this.$store.getters['register/getHousingPreferences']
-          .has_housing_allowance
+        this.$store.getters['register/getPlan'].name == 'basis'
       )
     },
   },

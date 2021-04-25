@@ -62,6 +62,11 @@ export default {
               en we laten je weten wanneer we jouw stad toegevoegd hebben.`,
         },
         {
+          question: 'Waarom hebben jullie eenmalige kosten en geen abonnement?',
+          answer:
+            'De kosten zijn eenmalig bij WoningFinder omdat we abonnementen niet prettig vinden. Een huis vinden is al moeilijk in Nederland, dus we willen er niet van profiteren. Met eenmalige kosten weet je dat we ons best gaan doen om een woning voor jou te vinden: je weet dan dat hoe langer je zoekt hoe minder interessant het is voor jou en voor ons. Dat is niet het geval met een abonnement: hoe langer je zoekt, des te meer we eraan zouden verdienen — dat vinden we niet fijn.',
+        },
+        {
           question: 'Ik wil meerdere zoekopdrachten hebben. Hoe werkt dat?',
           answer:
             'Bij WoningFinder kun je één zoekopdracht hebben per e-mailadres, als jij meer dan één zoekopdracht wilt, moet je een nieuw account aanmaken met een ander e-mailadres.',

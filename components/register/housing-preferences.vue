@@ -19,18 +19,22 @@
       <!-- binnen -->
       <h2 class="text-base font-medium text-gray-900">Binnen</h2>
       <label for="bedroom" class="block text-sm font-medium text-gray-900"
-        >Minimum aantal slaapkamer</label
+        >Aantal slaapkamers</label
       >
-      <input
+      <select
         v-model="preferences.number_bedroom"
-        type="number"
-        id="bedroom"
         name="bedroom"
-        min="0"
-        max="8"
-        placeholder="0"
-        class="shadow-sm focus:ring-wf-orange focus:border-wf-orange block w-full sm:text-sm border-gray-300 rounded-md"
-      />
+        class="mt-2 shadow-sm focus:ring-wf-orange focus:border-wf-orange block w-full sm:text-sm border-gray-300 rounded-md"
+      >
+        <option
+          v-for="bedroom in [0, 1, 2, 3, 4, 5]"
+          :key="bedroom"
+          :value="bedroom"
+        >
+          {{ bedroom }}+
+        </option>
+      </select>
+
       <div class="relative flex items-start">
         <div class="flex items-center h-5">
           <input
@@ -136,45 +140,48 @@
       <!-- geld -->
       <h2 class="text-base font-medium text-gray-900">Geld</h2>
 
-      <label for="price" class="block text-sm font-medium text-gray-900"
-        >Maximaal huurprijs</label
-      >
-      <div class="relative rounded-md shadow-sm">
-        <div
-          class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
-        >
-          <span class="text-gray-500 sm:text-sm"> € </span>
-        </div>
-        <input
-          v-model="preferences.maximum_price"
-          type="number"
-          name="price"
-          id="price"
-          class="focus:ring-wf-orange focus:border-wf-orange block w-full pl-7 pr-12 sm:text-sm border-gray-300 rounded-md"
-          placeholder="0.00"
-        />
-        <div
-          class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none"
-        >
-          <span class="text-gray-500 sm:text-sm"> per maand </span>
+      <div v-if="this.$store.getters['register/getPlan'].name == 'basis'">
+        <div class="rounded-md bg-gray-50 p-4">
+          <div class="flex">
+            <div class="flex-shrink-0">
+              <CurrencyEuroIcon class="h-5 w-5 text-gray-400" />
+            </div>
+            <div class="ml-3">
+              <p class="text-sm font-medium text-gray-800">
+                Omdat je een sociale huurwoning zoekt, kun je geen maximale
+                huurprijs invullen. Je maximale huurprijs is afhankelijk van
+                jouw jaarlijks inkomen. Maak je geen zorgen we reageren altijd
+                alleen op passend woningen.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="relative flex items-start">
-        <div class="flex items-center h-5">
-          <input
-            v-model="preferences.has_housing_allowance"
-            id="allowance"
-            name="allowance"
-            type="checkbox"
-            class="focus:ring-wf-orange h-4 w-4 text-wf-orange-dark border-gray-300 rounded"
-          />
-        </div>
-        <label
-          for="allowance"
-          class="block text-sm font-medium text-gray-900 ml-3"
-          >Woning met huurtoeslag</label
+      <div v-else>
+        <label for="price" class="block text-sm font-medium text-gray-900"
+          >Maximaal huurprijs</label
         >
+        <div class="relative mt-4 rounded-md shadow-sm">
+          <div
+            class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
+          >
+            <span class="text-gray-500 sm:text-sm"> € </span>
+          </div>
+          <input
+            v-model="preferences.maximum_price"
+            type="number"
+            name="price"
+            id="price"
+            class="focus:ring-wf-orange focus:border-wf-orange block w-full pl-7 pr-12 sm:text-sm border-gray-300 rounded-md"
+            placeholder="0.00"
+          />
+          <div
+            class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none"
+          >
+            <span class="text-gray-500 sm:text-sm"> per maand </span>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -197,11 +204,12 @@
 </template>
 
 <script>
-import { InformationCircleIcon } from '@vue-hero-icons/solid'
+import { InformationCircleIcon, CurrencyEuroIcon } from '@vue-hero-icons/solid'
 
 export default {
   components: {
     InformationCircleIcon,
+    CurrencyEuroIcon,
   },
   data() {
     return {
@@ -213,7 +221,9 @@ export default {
   methods: {
     // called from parent component
     validate() {
-      if (this.preferences.maximum_price <= 0) {
+      var plan = this.$store.getters['register/getPlan'].name
+
+      if (plan != 'basis' && this.preferences.maximum_price <= 0) {
         this.error = true
         this.errorMsg = 'De maximale huurprijs moet hoger dan €0,- zijn.'
 
@@ -229,11 +239,11 @@ export default {
 
       if (
         isNaN(this.preferences.number_bedroom) ||
-        isNaN(this.preferences.maximum_price)
+        (plan != 'basis' && isNaN(this.preferences.maximum_price))
       ) {
         this.error = true
         this.errorMsg =
-          'Het aantal slaapkamers en de maximale huurprijs moeten een getal zijn.'
+          'Het aantal slaapkamers en/of de maximale huurprijs moeten een getal zijn.'
         return false
       }
 
