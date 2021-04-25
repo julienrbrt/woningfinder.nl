@@ -915,10 +915,7 @@
           </li>
           <li>
             WoningFinder garandeert nimmer dat Opdrachtgever een woning
-            toegewezen krijgt. In het geval Opdrachtgever met een "Pro" Aanbod
-            na 1 jaar geen woning toegewezen heeft gekregen, zal WoningFinder
-            het door Opdrachtgever betaalde geld terugstorten. Dit geldt enkel
-            indien Opdrachtgever zich heeft aangemeld voor de Pro-versie.
+            toegewezen krijgt.
           </li>
           <li>
             Indien enig resultaat dat is vastgelegd in de Overeenkomst niet

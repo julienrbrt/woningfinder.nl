@@ -54,12 +54,12 @@
         </div>
         <ul class="divide-y divide-gray-200">
           <li v-for="creds in credentials" :key="creds.corporation_name">
-            <SettingsCorporationCredentialsList
+            <DashboardCorporationCredentialsList
               @click="showModal = creds.corporation_name"
               :credentials="creds"
             />
 
-            <SettingsCorporationCredentialsModal
+            <DashboardCorporationCredentialsModal
               @close="showModal = ''"
               v-if="showModal == creds.corporation_name"
               :credentials="creds"
@@ -69,8 +69,8 @@
         </ul>
       </div>
 
-      <!-- settings -->
-      <SettingsPreferences :customer="customer" />
+      <!-- preferences -->
+      <DashboardPreferences :customer="customer" />
 
       <!-- buttons -->
       <div

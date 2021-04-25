@@ -33,13 +33,14 @@
                   </h3>
                 </div>
                 <div class="mt-4 flex items-baseline text-6xl font-extrabold">
-                  €20
+                  €2
                   <span class="ml-1 text-2xl font-medium text-gray-500">
                     eenmalig
                   </span>
                 </div>
                 <p class="mt-5 text-lg text-gray-500">
-                  Alles wat je nodig hebt om op alle woningen te reageren
+                  Alles wat je nodig hebt om op alle sociale huurwoningen te
+                  reageren
                 </p>
               </div>
               <div
@@ -60,7 +61,7 @@
                       <CheckIcon class="h-6 w-6 text-green-500" />
                     </div>
                     <p class="ml-3 text-base text-gray-700">
-                      Alle beschikbare woningcorporaties
+                      Wekelijkse update
                     </p>
                   </li>
 
@@ -69,7 +70,7 @@
                       <CheckIcon class="h-6 w-6 text-green-500" />
                     </div>
                     <p class="ml-3 text-base text-gray-700">
-                      Wekelijkse update
+                      Alle sociale huurwoningen van woningcorporaties
                     </p>
                   </li>
                 </ul>
@@ -98,11 +99,14 @@
                   </h3>
                 </div>
                 <div class="mt-4 flex items-baseline text-6xl font-extrabold">
-                  €30
+                  €35
                   <span class="ml-1 text-2xl font-medium text-gray-500">
                     eenmalig
                   </span>
                 </div>
+                <p class="mt-5 text-lg text-gray-500">
+                  Reageert op alle sociale en vrije sector huurwoningen
+                </p>
               </div>
               <div
                 class="flex-1 flex flex-col justify-between px-6 pt-6 pb-8 bg-gray-50 space-y-6 sm:p-10 sm:pt-6"
@@ -122,15 +126,6 @@
                       <CheckIcon class="h-6 w-6 text-green-500" />
                     </div>
                     <p class="ml-3 text-base text-gray-700">
-                      Alle beschikbare woningcorporaties
-                    </p>
-                  </li>
-
-                  <li class="flex items-start">
-                    <div class="flex-shrink-0">
-                      <CheckIcon class="h-6 w-6 text-green-500" />
-                    </div>
-                    <p class="ml-3 text-base text-gray-700">
                       Wekelijkse update
                     </p>
                   </li>
@@ -139,7 +134,18 @@
                     <div class="flex-shrink-0">
                       <CheckIcon class="h-6 w-6 text-green-500" />
                     </div>
-                    <p class="ml-3 text-base text-gray-700">Sneller garantie</p>
+                    <p class="ml-3 text-base text-gray-700">
+                      Alle sociale huurwoningen van woningcorporaties
+                    </p>
+                  </li>
+
+                  <li class="flex items-start">
+                    <div class="flex-shrink-0">
+                      <CheckIcon class="h-6 w-6 text-green-500" />
+                    </div>
+                    <p class="ml-3 text-base text-gray-700">
+                      Alle vrije sector huurwoningen van woningcorporaties
+                    </p>
                   </li>
                 </ul>
                 <div class="rounded-md shadow">

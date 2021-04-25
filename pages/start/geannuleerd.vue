@@ -62,16 +62,6 @@
                   <p class="font-medium text-gray-900">
                     {{ planTitle(plan.name) }}
                   </p>
-                  <div
-                    v-if="planTitle(plan.name) == 'Pro'"
-                    class="text-gray-500"
-                  >
-                    <p class="sm:inline">Basis</p>
-                    <span class="hidden sm:inline sm:mx-1" aria-hidden="true"
-                      >&middot;</span
-                    >
-                    <p class="sm:inline">Sneller garantie</p>
-                  </div>
                 </div>
               </div>
               <div

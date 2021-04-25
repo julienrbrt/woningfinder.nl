@@ -16,9 +16,7 @@
             {{ faq.question }}
           </dt>
           <dd class="mt-2 md:mt-0 md:col-span-7">
-            <p class="text-base text-gray-500">
-              {{ faq.answer }}
-            </p>
+            <p v-html="faq.answer" class="text-base text-gray-500" />
           </dd>
         </div>
       </dl>
@@ -54,13 +52,19 @@ export default {
         },
         {
           question: 'Mijn stad staat er niet tussen.',
-          answer:
-            'Dat is jammer. We zijn hard bezig alle woningcorporaties in Nederland toe te voegen aan WoningFinder. Stuur ons een email zodat we kunnen kijken welke woningcorporaties toegevoegd moeten worden voor jouw stad. Je krijgt een email zodra we klaar zijn.',
+          answer: `Dat is jammer. We zijn hard bezig alle woningcorporaties in Nederland toe te voegen. Schrijf je in op onze
+              <a
+                href="https://forms.gle/J3qWevwRZq6qVCE57"
+                target="_blank"
+                class="underline"
+                @click="waitingList"
+                >wachtlijst</a>
+              en we laten je weten wanneer we jouw stad toegevoegd hebben.`,
         },
         {
           question: 'Ik wil meerdere zoekopdrachten hebben. Hoe werkt dat?',
           answer:
-            'Bij WoningFinder betaal je per zoekopdracht, als jij meer dan één zoekopdracht wilt, moet je een nieuw account aanmaken. Let op: Je kan alleen één account aanmaken per e-mailadres.',
+            'Bij WoningFinder kun je één zoekopdracht hebben per e-mailadres, als jij meer dan één zoekopdracht wilt, moet je een nieuw account aanmaken met een ander e-mailadres.',
         },
       ],
     }

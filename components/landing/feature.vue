@@ -173,12 +173,11 @@
             <h3
               class="text-2xl font-extrabold text-gray-900 tracking-tight sm:text-3xl"
             >
-              Je blijft op de hoogte
+              Meer dan een automatiseringsdienst
             </h3>
             <p class="mt-3 text-lg text-gray-500">
-              Met WoningFinder wekelijkse update en sneller garantie kun je
-              relaxen. We doen ons best om een huis voor jou te vinden. We
-              houden jou op de hoogte.
+              Met WoningFinder kun je relaxen. We doen ons best om een huis voor
+              jou te vinden en we houden jou op de hoogte.
             </p>
 
             <dl class="mt-10 space-y-10">
@@ -190,15 +189,11 @@
               >
                 <BellIcon class="h-6 w-6" />
               </LandingFeatureItem>
-
               <LandingFeatureItem
-                title="Sneller garantie"
-                description=" Met ons Sneller garantie, als jij niet de eerste bent geworden
-                  op een woning met „Wie het eerst komt, die het eerst maalt”
-                  (dus iemand was sneller dan WoningFinder) dan krijg je je geld
-                  terug (zie meer in onze voorwaarden)."
+                title="Toegankelijk"
+                description="Een WoningFinder zoekopdracht is maar €2,- als je een sociale huurwoning zoekt. Ons missie is het makkelijker maken voor iedereen, we weten al dat het moeilijk is om een sociale huurwoning te vinden in Nederland."
               >
-                <ThumbUpIcon class="h-6 w-6" />
+                <CurrencyEuroIcon class="h-6 w-6" />
               </LandingFeatureItem>
             </dl>
           </div>
@@ -250,16 +245,20 @@
 </template>
 
 <script>
-import { ChevronRightIcon, GlobeIcon } from '@vue-hero-icons/solid'
-import { BellIcon, FastForwardIcon, ThumbUpIcon } from '@vue-hero-icons/outline'
+import {
+  ChevronRightIcon,
+  GlobeIcon,
+  CurrencyEuroIcon,
+} from '@vue-hero-icons/solid'
+import { BellIcon, FastForwardIcon } from '@vue-hero-icons/outline'
 
 export default {
   components: {
     ChevronRightIcon,
     GlobeIcon,
+    CurrencyEuroIcon,
     BellIcon,
     FastForwardIcon,
-    ThumbUpIcon,
   },
 }
 </script>
