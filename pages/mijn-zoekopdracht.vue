@@ -52,7 +52,7 @@
         <p class="px-4 mt-2 mb-4 sm:px-6 text-sm text-gray-500">
           Zodra je inlogt op een woningcorporatie via WoningFinder, ga je
           akkoord met deze
-          <span @click="showVolmacht" class="underline cursor-pointer"
+          <span @click="showModal = 'volmacht'" class="underline cursor-pointer"
             >volmacht</span
           >. Hierdoor kunnen wij voor jou reageren.
         </p>
@@ -122,9 +122,6 @@ export default {
     },
     hideAlert() {
       this.showHasPaidAlert = false
-    },
-    showVolmacht() {
-      this.showModal = 'volmacht'
     },
     planTitle: (name) => {
       return name.charAt(0).toUpperCase() + name.slice(1)
