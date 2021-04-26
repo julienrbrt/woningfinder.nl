@@ -18,28 +18,10 @@
 
       <!-- stats -->
       <div>
-        <dl class="mt-5 grid grid-cols-2 gap-5">
-          <div
-            class="px-4 py-5 bg-white shadow rounded-lg overflow-hidden sm:p-6"
-          >
-            <dt class="text-sm font-medium text-gray-500 truncate">
-              Aantal reacties
-            </dt>
-            <dd class="mt-1 text-3xl font-semibold text-gray-900">
-              {{ numberReaction }}
-            </dd>
-          </div>
-
-          <div
-            class="px-4 py-5 bg-white shadow rounded-lg overflow-hidden sm:p-6"
-          >
-            <dt class="text-sm font-medium text-gray-500 truncate">
-              Aantal steden
-            </dt>
-            <dd class="mt-1 text-3xl font-semibold text-gray-900">
-              {{ numberCity }}
-            </dd>
-          </div>
+        <dl class="mt-5 grid grid-cols-3 gap-5">
+          <DashboardStats title="Plan" :text="stats.plan" />
+          <DashboardStats title="Aantal reacties" :text="stats.reactions" />
+          <DashboardStats title="Aantal steden" :text="stats.cities" />
         </dl>
       </div>
 
@@ -67,6 +49,19 @@
             />
           </li>
         </ul>
+        <p class="px-4 mt-2 mb-4 sm:px-6 text-sm text-gray-500">
+          Zodra je inlogt op een woningcorporatie via WoningFinder, ga je
+          akkoord met deze
+          <span @click="showVolmacht" class="underline cursor-pointer"
+            >volmacht</span
+          >. Hierdoor kunnen wij voor jou reageren.
+        </p>
+
+        <DashboardVoorwaardenVolmachtModal
+          @close="showModal = ''"
+          v-if="showModal == 'volmacht'"
+          :customer="customer"
+        />
       </div>
 
       <!-- preferences -->
@@ -92,8 +87,7 @@ export default {
     return {
       customer: {},
       credentials: [],
-      numberReaction: 0,
-      numberCity: 0,
+      stats: { plan: '', reactions: 0, cities: 0 },
       showModal: '',
       showHasPaidAlert: false,
       mustLogin: true,
@@ -116,17 +110,24 @@ export default {
         params,
       })
       this.customer = customer
-      this.numberCity = customer.housing_preferences.city.length
+      this.stats.cities = customer.housing_preferences.city.length
+      this.stats.plan = this.planTitle(customer.plan.name)
       if (customer.plan.name.length <= 0) {
         this.showHasPaidAlert = true
       }
 
       if (customer.housing_preferences_match) {
-        this.numberReaction = customer.housing_preferences_match.length
+        this.stats.reactions = customer.housing_preferences_match.length
       }
     },
     hideAlert() {
       this.showHasPaidAlert = false
+    },
+    showVolmacht() {
+      this.showModal = 'volmacht'
+    },
+    planTitle: (name) => {
+      return name.charAt(0).toUpperCase() + name.slice(1)
     },
   },
   created() {

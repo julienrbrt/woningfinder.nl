@@ -26,7 +26,7 @@
           v-if="!credentials.is_known"
           class="mt-4 flex-shrink-0 sm:mt-0 sm:ml-5"
         >
-          <p class="text-sm text-gray-500">Inloggen</p>
+          <p class="text-sm text-gray-700">Inloggen</p>
         </div>
       </div>
       <div class="ml-5 flex-shrink-0">
@@ -35,7 +35,7 @@
           size="2x"
           class="text-green-400"
         />
-        <ChevronRightIcon v-else class="h-5 w-5 text-gray-400" />
+        <ChevronRightIcon v-else class="h-5 w-5 text-gray-500" />
       </div>
     </div>
   </a>

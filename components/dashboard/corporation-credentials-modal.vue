@@ -30,12 +30,12 @@
             type="button"
             class="bg-white rounded-md text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-bg-wf-orange"
           >
-            <span class="sr-only">Sluit</span>
+            <span class="sr-only">Sluiten</span>
             <XIcon class="h-6 w-6" />
           </button>
         </div>
         <div class="sm:flex items-start">
-          <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+          <div class="text-left sm:ml-4">
             <h3
               v-if="!credentials.is_known"
               class="text-xl py-2 leading-6 font-medium text-gray-900"
@@ -50,7 +50,7 @@
             >
               Opnieuw inloggen op {{ credentials.corporation_name }}
             </h3>
-            <p class="py-2 text-sm text-gray-500">
+            <p class="py-2 text-gray-500">
               We hebben je {{ credentials.corporation_name }} inloggegevens
               nodig. Je inloggegevens worden met versluiting opgeslagen op
               WoningFinder. We kunnen zelf je gegevens niet zien.
@@ -91,14 +91,14 @@
             type="button"
             class="btn w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-wf-orange text-base font-medium text-white hover:bg-orange-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:ml-3 sm:w-auto sm:text-sm"
           >
-            Login
+            Inloggen
           </button>
           <button
             @click="$emit('close')"
             type="button"
             class="btn mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white hover:bg-white text-base font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-bg-wf-orange sm:mt-0 sm:w-auto sm:text-sm"
           >
-            Cancel
+            Sluiten
           </button>
         </div>
       </div>

@@ -5,9 +5,9 @@
     </div>
     <div class="-mt-2 px-4 py-4 flex items-center sm:px-6">
       <ul>
-        <li class="text-gray-500">
-          Hoi {{ customer.name }}, binnenkort kun je hier je zoekopdracht
-          bijwerken. Wil je nu al iets wijzigen aan je zoekopdracht? Neem dan
+        <li class="text-gray-500 text-base">
+          Binnenkort kun je hier je zoekopdracht bijwerken. Wil je nu al iets
+          wijzigen aan je zoekopdracht? Neem dan
           <NuxtLink to="/contact" class="underline">contact</NuxtLink> met ons
           op.
         </li>
