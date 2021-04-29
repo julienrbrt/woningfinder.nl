@@ -13,7 +13,7 @@
         class="mt-4"
         v-if="showHasPaidAlert"
         @click="hideAlert"
-        alert="Let op: Je hebt nog niet betaald. We reageren dus nog niet voor jou."
+        alert="Let op: Je hebt nog niet je zoekopdracht voltooid. We reageren dus nog niet voor jou."
       />
 
       <!-- stats -->
