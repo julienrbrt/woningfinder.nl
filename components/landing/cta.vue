@@ -1,5 +1,5 @@
 <template>
-  <div class="relative mt-24 sm:mt-32 sm:py-16">
+  <div class="relative mt-12 sm:py-16">
     <div aria-hidden="true" class="hidden sm:block">
       <div
         class="absolute inset-y-0 left-0 w-1/2 bg-gray-50 rounded-r-3xl"

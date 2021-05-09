@@ -16,13 +16,12 @@
           van woningcorporaties.
         </p>
 
-        <div class="mt-6 flex items-center space-x-2">
-          <InformationCircleIcon size="2.5x" class="text-gray-500" />
-          <p class="text-base text-gray-500">
-            Wist je dat ons oprichter, Julien, zelf gebruik heeft gemaakt van
-            WoningFinder en zo zijn huis heeft gevonden in zijn gewenste wijk?
-          </p>
-        </div>
+        <AlertInfo
+          description=" Wist je dat ons oprichter, Julien, zelf gebruik heeft gemaakt van
+            WoningFinder en zo zijn huis heeft gevonden in zijn gewenste wijk?"
+        >
+          <InformationCircleIcon class="h-5 w-5 text-gray-400" />
+        </AlertInfo>
       </div>
 
       <div class="items-center inline-flex mt-5 space-x-4">

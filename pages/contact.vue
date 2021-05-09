@@ -68,7 +68,7 @@
             >Terug
           </NuxtLink>
           <button
-            v-bind:disabled="!validForm"
+            v-bind:disabled="error"
             class="btn disabled:bg-gray-500"
             type="submit"
             @click="send"
