@@ -171,6 +171,8 @@
         </div>
         <p class="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
           &copy; {{ new Date().getFullYear() }} WoningFinder B.V.
+          <br />
+          <span class="text-sm">KVK nr. 81619766</span>
         </p>
       </div>
     </div>
