@@ -1,6 +1,6 @@
 <template>
   <div class="bg-white">
-    <Hero>
+    <Hero landing="yes">
       <AlertNews
         title="Nieuws"
         description="Nieuwe steden zijn toegevoegd"
@@ -33,12 +33,15 @@
       </div>
     </Hero>
 
-    <NuxtLink to="#feature" class="hidden lg:flex -mt-10 place-content-center">
-      <ChevronDownIcon size="2x" class="animate-bounce self-center" />
-    </NuxtLink>
+    <a @click="scroll()" class="flex -mt-10 place-content-center">
+      <ChevronDownIcon
+        size="2x"
+        class="cursor-pointer animate-bounce self-center"
+      />
+    </a>
 
     <!-- Features section -->
-    <LandingFeature id="feature" />
+    <LandingFeature ref="feature" id="feature" />
 
     <!-- Pricing section -->
     <LandingPricing id="pricing" />
@@ -61,6 +64,12 @@ export default {
   methods: {
     startEvent() {
       this.saEvent('hero_button_clicked_start')
+    },
+    scroll() {
+      this.$refs.feature.$el.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      })
     },
   },
 }

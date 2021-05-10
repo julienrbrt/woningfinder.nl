@@ -54,7 +54,11 @@
               />
             </svg>
           </div>
-          <div class="relative sm:px-0 sm:pl-0 lg:h-full lg:pl-36">
+          <!-- do not show mascotte on mobile landing page because does not look right -->
+          <div
+            v-bind:class="landing ? 'hidden sm:block' : ''"
+            class="relative sm:px-0 sm:pl-0 lg:h-full lg:pl-36"
+          >
             <img
               class="w-full lg:pb-28 lg:h-screen lg:w-auto lg:max-w-screen-2xl"
               src="~/assets/img/mascotte.svg"
@@ -68,5 +72,7 @@
 </template>
 
 <script>
-export default {}
+export default {
+  props: ['landing'],
+}
 </script>
