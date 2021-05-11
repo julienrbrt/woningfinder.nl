@@ -9,11 +9,11 @@
         </h1>
         <p class="mt-6 text-lg text-gray-500">
           Het is onze missie mensen te helpen een huis te vinden zonder het
-          gedoe en de stress eromheen. We waren het zat om elke dag naar
-          websites van meerdere woningcorporaties te gaan om een huis te vinden.
-          Elke dag duizenden emails met het nieuwe aanbod. Dus hebben we een
-          oplossing gecreëerd door het automatiseren van reacties op het aanbod
-          van woningcorporaties.
+          gedoe en de stress eromheen. Het is irritant om elke dag naar websites
+          van meerdere woningcorporaties te gaan om een huis te zoeken. Elke dag
+          duizenden e-mails met het nieuwe aanbod. Daarom hebben we WoningFinder
+          gemaakt voor het automatiseren van reacties op het aanbod van
+          woningcorporaties.
         </p>
 
         <AlertInfo

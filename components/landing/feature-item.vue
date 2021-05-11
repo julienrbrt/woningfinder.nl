@@ -11,7 +11,7 @@
       </p>
     </dt>
     <dd class="mt-2 ml-16 text-base text-gray-500">
-      {{ description }}
+      <p v-html="description" />
     </dd>
   </div>
 </template>

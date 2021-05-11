@@ -68,11 +68,10 @@
 
           <dl class="mt-10 space-y-10">
             <LandingFeatureItem
-              title=" Alle beschikbare woningcorporaties van jouw stad"
-              description="Als je een stad kiest, reageren we op het aanbod van alle
-                woningcorporaties van deze stad. Dit vergroot jouw kansen. We
-                zijn ook altijd bezig meer woningcorporaties van andere steden
-                toe te voegen in WoningFinder."
+              title="Alle beschikbare woningcorporaties van jouw stad"
+              description='Als je een stad kiest, reageren we op het aanbod van <a
+                href="/woningcorporaties" target="_blank" class="underline">alle
+                woningcorporaties</a> van deze stad. Dit vergroot jouw kansen.'
             >
               <GlobeIcon class="h-6 w-6" />
             </LandingFeatureItem>
@@ -81,8 +80,7 @@
               title=" Altijd eerst"
               description="Sommige woningcorporaties werken met „Wie het eerst komt, die
                 het eerst maalt”. WoningFinder zal precies na dat het aanbod is
-                gepubliceerd reageren voor jou. Je hebt zo dus heel veel kans
-                dat jij de eerste bent. Handig toch?"
+                gepubliceerd reageren voor jou. Je wordt dus sowieso eerste. Handig toch?"
             >
               <FastForwardIcon class="h-6 w-6" />
             </LandingFeatureItem>
@@ -191,7 +189,7 @@
               </LandingFeatureItem>
               <LandingFeatureItem
                 title="Toegankelijk"
-                description="Een WoningFinder zoekopdracht is slechts €10,- als je een sociale huurwoning zoekt. Ons missie is het makkelijker maken voor iedereen, we weten al dat het moeilijk is om een sociale huurwoning te vinden in Nederland."
+                description="Een WoningFinder zoekopdracht is slechts eenmalig €10,- als je een sociale huurwoning zoekt. Ons missie is het eenvoudiger maken voor iedereen, we weten al dat het moeilijk is om een sociale huurwoning te vinden in Nederland."
               >
                 <CurrencyEuroIcon class="h-6 w-6" />
               </LandingFeatureItem>
