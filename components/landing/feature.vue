@@ -67,6 +67,7 @@
           </p>
 
           <dl class="mt-10 space-y-10">
+            <!-- using html tag here -->
             <LandingFeatureItem
               title="Alle beschikbare woningcorporaties van jouw stad"
               description='Als je een stad kiest, reageren we op het aanbod van <a

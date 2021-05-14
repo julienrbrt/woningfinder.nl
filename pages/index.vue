@@ -3,8 +3,8 @@
     <Hero landing="yes">
       <AlertNews
         title="Nieuws"
-        description="Nieuwe steden zijn toegevoegd"
-        to="/start"
+        description="Nieuwe woningcorporaties zijn toegevoegd 🎉"
+        to="/woningcorporaties"
       />
       <div class="mt-6 sm:max-w-xl">
         <h1
