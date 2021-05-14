@@ -14,8 +14,7 @@
 
       <p class="mt-6 text-lg text-gray-500">
         Disclaimer: WoningFinder is zelf geen woningcorporatie, alle namen en
-        logo's op deze pagina zijn eigeindom van de hierna benoemde
-        woningcorporaties.
+        logo's op deze pagina zijn eigendom van de woningcorporaties zelf.
       </p>
 
       <h2 class="mt-4 mb-2 text-xl text-gray-900">Overijssel</h2>
