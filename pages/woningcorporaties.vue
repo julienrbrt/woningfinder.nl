@@ -29,9 +29,8 @@
         <LandingHousingCorporationLogo
           name="De Veste"
           image="deveste.png"
-          website="https://www.veste.nl/"
+          website="https://www.veste.nl"
         />
-
         <LandingHousingCorporationLogo
           name="Domijn"
           image="domijn.png"
@@ -40,12 +39,22 @@
         <LandingHousingCorporationLogo
           name="OnsHuis"
           image="onshuis.png"
-          website="https://www.onshuis.com/"
+          website="https://www.onshuis.com"
         />
         <LandingHousingCorporationLogo
           name="SJHT"
           image="sjht.png"
-          website="https://www.sjht.nl/"
+          website="https://www.sjht.nl"
+        />
+        <LandingHousingCorporationLogo
+          name="Twinta"
+          image="twinta.png"
+          website="https://www.twinta.nl"
+        />
+        <LandingHousingCorporationLogo
+          name="Welbions"
+          image="welbions.png"
+          website="https://www.welbions.nl"
         />
       </div>
 
