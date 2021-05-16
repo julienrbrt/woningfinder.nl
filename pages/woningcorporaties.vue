@@ -57,7 +57,7 @@
           </div>
           <div class="ml-3">
             <p class="text-sm font-medium text-gray-800">
-              Heb jij een woningcorporatie die hier (nog) niet staat? Neem dan
+              Zoek je een woningcorporatie die hier (nog) niet staat? Neem dan
               <NuxtLink to="/contact" class="underline">contact</NuxtLink> met
               ons op.
             </p>
