@@ -9,10 +9,10 @@
         @change="addCityDistrict"
       >
         <option disabled value="">
-          Beschikbare wijken ({{ districtsList.length }})
+          Voorgestelde wijken ({{ districtsList.length }})
         </option>
-        <option v-for="district in districtsList" :key="district.name">
-          {{ district.name }}
+        <option v-for="district in districtsList" :key="district">
+          {{ district }}
         </option>
       </select>
 
@@ -20,14 +20,14 @@
         <!-- district selection-->
         <div
           v-for="district in getCity.district"
-          :key="district.name"
+          :key="district"
           class="relative flex items-center rounded-lg border border-gray-400 bg-white shadow-sm px-6 py-2 justify-between"
         >
           <p class="text-sm font-medium text-gray-900">
-            {{ district.name }}
+            {{ district }}
           </p>
           <button
-            @click="removeCityDistrict(district.name)"
+            @click="removeCityDistrict(district)"
             type="button"
             class="inline-flex rounded-md p-1.5 text-gray-300 hover:text-red-300 focus:outline-none"
           >
@@ -76,7 +76,7 @@ export default {
           district: this.selected,
         })
         this.districtsList = this.districtsList.filter(
-          (c) => c.name !== this.selected
+          (d) => d !== this.selected
         )
         this.selected = ''
       }
@@ -87,9 +87,9 @@ export default {
           city: this.city,
           district: selected,
         })
-        this.districtsList.push({ name: selected })
-        this.districtsList = this.districtsList.sort((a, b) =>
-          a.name > b.name ? 1 : -1
+        this.districtsList.push(selected)
+        this.districtsList = this.districtsList.sort((d1, d2) =>
+          d1 > d2 ? 1 : -1
         )
       }
     },

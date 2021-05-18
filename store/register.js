@@ -8,7 +8,7 @@ export const state = () => ({
     has_children_same_housing: false,
     plan: { name: '' },
     housing_preferences: {
-      city: [], // { name: '', district: [{name: ''}] }
+      city: [], // { name: '', district: [''] }
       type: [],
       maximum_price: 0,
       number_bedroom: 0,
@@ -87,9 +87,9 @@ export const mutations = {
     )
 
     // add district
-    state.register.housing_preferences.city[cityIdx].district.push({
-      name: cityDistrict.district,
-    })
+    state.register.housing_preferences.city[cityIdx].district.push(
+      cityDistrict.district
+    )
   },
   removeCityDistrict(state, cityDistrict) {
     // find city index
@@ -102,7 +102,7 @@ export const mutations = {
       cityIdx
     ].district = state.register.housing_preferences.city[
       cityIdx
-    ].district.filter((d) => d.name !== cityDistrict.district)
+    ].district.filter((d) => d !== cityDistrict.district)
   },
   setHousingType(state, type) {
     state.register.housing_preferences.type = type
