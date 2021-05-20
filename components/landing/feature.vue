@@ -124,7 +124,7 @@
           <img
             class="relative mx-auto lg:ml-20"
             width="700"
-            src="~/assets/img/adjustement.png"
+            src="~/assets/img/adjustement.svg"
             alt="adjustement illustration"
           />
         </div>
