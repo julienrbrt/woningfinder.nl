@@ -7,6 +7,7 @@
         >
           Privacybeleid
         </h1>
+
         <p class="mt-6 text-xl text-gray-500">
           WoningFinder B.V, gevestigd aan Stroinksbleekweg 27, 7523ZK Enschede,
           is verantwoordelijk voor de verwerking van persoonsgegevens zoals
@@ -145,6 +146,14 @@
         </p>
 
         <p class="mt-4 text-sm">Versie: 1.0, 24 april 2021</p>
+      </div>
+
+      <div class="items-center inline-flex mt-5 space-x-4">
+        <NuxtLink
+          to="/"
+          class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
+          >Terug
+        </NuxtLink>
       </div>
     </Hero>
   </div>
