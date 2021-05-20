@@ -41,12 +41,12 @@
               v-bind:class="error ? 'text-red-800' : 'text-gray-800'"
             >
               Staat je stad er niet tussen? Schrijf je in op onze
-              <a
-                href="https://forms.gle/J3qWevwRZq6qVCE57"
+              <NuxtLink
+                to="/contact"
                 target="_blank"
                 class="underline"
                 @click="waitingList"
-                >wachtlijst</a
+                >wachtlijst</NuxtLink
               >
               en we laten je weten wanneer we jouw stad toegevoegd hebben.
             </p>
