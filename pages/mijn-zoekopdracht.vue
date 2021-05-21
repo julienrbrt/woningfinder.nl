@@ -85,12 +85,12 @@
 export default {
   data() {
     return {
+      loginURL: '/login',
       customer: {},
       credentials: [],
       stats: { plan: '', reactions: 0, cities: 0 },
       showModal: '',
       showHasPaidAlert: false,
-      mustLogin: true,
     }
   },
   methods: {
@@ -102,6 +102,11 @@ export default {
           params,
         }
       )
+
+      if (!credentials) {
+        throw 'must login'
+      }
+
       this.credentials = credentials
     },
     async getCustomerInfo(params) {
@@ -109,6 +114,11 @@ export default {
         progress: true,
         params,
       })
+
+      if (!customer) {
+        throw 'must login'
+      }
+
       this.customer = customer
       this.stats.cities = customer.housing_preferences.city.length
       this.stats.plan = this.planTitle(customer.plan.name)
@@ -138,18 +148,21 @@ export default {
       jwt: jwt,
     }
 
-    this.getCustomerInfo(params).then(() => {
-      this.mustLogin = false
-    })
-
-    this.getCorporationCredentials(params).then(() => {
-      this.mustLogin = false
-    })
+    // get informations
+    this.getCustomerInfo(params)
+      .then(() => {
+        this.getCorporationCredentials(params).catch(() => {
+          this.$router.push(this.loginURL)
+        })
+      })
+      .catch(() => {
+        this.$router.push(this.loginURL)
+      })
   },
   middleware({ route, redirect }) {
     // If the customer is not authenticated return to login
     if (!route.query.jwt || route.query.jwt == '') {
-      return redirect('/login')
+      return redirect(this.loginURL)
     }
   },
 }
