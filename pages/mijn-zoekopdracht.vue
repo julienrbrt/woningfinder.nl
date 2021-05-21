@@ -85,7 +85,6 @@
 export default {
   data() {
     return {
-      loginURL: '/login',
       customer: {},
       credentials: [],
       stats: { plan: '', reactions: 0, cities: 0 },
@@ -152,17 +151,17 @@ export default {
     this.getCustomerInfo(params)
       .then(() => {
         this.getCorporationCredentials(params).catch(() => {
-          this.$router.push(this.loginURL)
+          this.$router.push('/login')
         })
       })
       .catch(() => {
-        this.$router.push(this.loginURL)
+        this.$router.push('/login')
       })
   },
   middleware({ route, redirect }) {
     // If the customer is not authenticated return to login
     if (!route.query.jwt || route.query.jwt == '') {
-      return redirect(this.loginURL)
+      return redirect('/login')
     }
   },
 }
