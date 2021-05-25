@@ -1,12 +1,204 @@
 <template>
-  <div>
-    <!-- We zijn hard bezig alle woningcorporaties in Nederland toe te voegen aan WoningFinder. Maar we vinden het wel fijn om te weten in welke stad je zou willen zoeken om daar aan te werken. -->
+  <div class="bg-white">
+    <Hero>
+      <AlertOk
+        v-if="submitted"
+        @click="hideAlert"
+        alert="Je staat nu op ons wachtlijst 🎉. We houden jou op de hoogte!"
+      />
+
+      <AlertError v-if="error" @click="hideAlert" :alert="errorMsg" />
+
+      <div class="mt-6 sm:max-w-xl">
+        <h1
+          class="text-4xl font-extrabold text-gray-900 tracking-tight sm:text-5xl"
+        >
+          Steden wachtlijst
+        </h1>
+        <p class="mt-6 text-lg text-gray-500">
+          We zijn hard bezig alle woningcorporaties in Nederland toe te voegen
+          aan WoningFinder. Je kunt je hier aanmelden zodat jij weet wanneer we
+          voor jou kunnen reageren in jouw stad.
+        </p>
+
+        <form class="mt-6 grid grid-cols-1 gap-y-6">
+          <div>
+            <label for="email" class="sr-only">E-mailadres</label>
+            <input
+              v-model="email"
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              class="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-wf-orange focus:border-wf-orange border-gray-300 rounded-md"
+              placeholder="E-mailadres"
+              required
+            />
+          </div>
+          <autocomplete
+            :search="search"
+            ref="city"
+            type="text"
+            placeholder="Gewenste steden"
+            aria-label="Gewenste steden"
+            :get-result-value="cityWithoutCountry"
+            :debounce-time="500"
+            @submit="selectCity"
+            auto-select
+          ></autocomplete>
+        </form>
+
+        <div class="items-center inline-flex mt-5 space-x-4">
+          <NuxtLink
+            to="/"
+            class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
+            >Terug
+          </NuxtLink>
+          <button
+            v-bind:disabled="error"
+            class="btn disabled:bg-gray-500"
+            type="submit"
+            @click="send"
+          >
+            Sturen
+          </button>
+        </div>
+      </div>
+    </Hero>
   </div>
 </template>
 
 <script>
-export default {}
+import { PlusIcon } from '@vue-hero-icons/outline'
+
+const mbxGeocoding = require('@mapbox/mapbox-sdk/services/geocoding')
+const geocodingService = mbxGeocoding({ accessToken: process.env.mapboxKey })
+
+export default {
+  components: {
+    PlusIcon,
+  },
+  data() {
+    return {
+      email: '',
+      city: '',
+      errorMsg:
+        'Er is iets misgegaan. Controleer het formulier en probeer het nogmaals.',
+      error: false,
+      submitted: false,
+    }
+  },
+  methods: {
+    async search(input) {
+      var result = []
+
+      if (input.length < 2) {
+        return result
+      }
+
+      // mapbox query
+      const response = await geocodingService
+        .forwardGeocode({
+          query: input,
+          countries: ['nl'],
+          types: ['place'],
+          autocomplete: true,
+          limit: 3,
+          language: ['nl-NL'],
+        })
+        .send()
+
+      const match = response.body
+      for (var i = 0; i < match.features.length; i++) {
+        result[i] = match.features[i].place_name
+      }
+
+      return result
+    },
+    cityWithoutCountry(name) {
+      return name.replaceAll(', Nederland', '')
+    },
+    selectCity(result) {
+      this.city = this.cityWithoutCountry(result)
+    },
+    async send(e) {
+      e.preventDefault()
+
+      if (!this.validForm) {
+        this.errorMsg =
+          'We hebben al je gegevens nodig. Controleer het formulier nogmaals.'
+
+        this.error = true
+        return
+      }
+
+      await this.$axios
+        .$post('waitinglist', {
+          email: this.email,
+          city: this.city,
+          // antispam
+          phone: this.antiSpam,
+        })
+        .then(() => {
+          this.email = ''
+          this.city = ''
+          this.$refs.city.setValue('')
+          this.submitted = true
+        })
+        .catch(() => {
+          this.errorMsg =
+            'Er is iets misgegaan. Controleer het formulier en probeer het nogmaals.'
+          this.error = true
+        })
+    },
+    hideAlert() {
+      this.error = false
+      this.submitted = false
+    },
+  },
+  computed: {
+    antiSpam() {
+      function getStringBytes(s) {
+        var i,
+          a = new Array(s.length)
+        for (i = 0; i < s.length; i++) {
+          a[i] = s.charCodeAt(i)
+        }
+        return a
+      }
+
+      function add(total, num) {
+        return total + num
+      }
+
+      return (
+        374 +
+        getStringBytes(this.email).reduce(add) +
+        getStringBytes(this.city).reduce(add)
+      )
+    },
+    validForm() {
+      return this.email && this.city
+    },
+  },
+}
 </script>
 
 <style>
+/* autocomplete style */
+.autocomplete-input {
+  @apply block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-wf-orange focus:border-wf-orange border-gray-300 rounded-md;
+}
+
+.autocomplete-result-list {
+  @apply origin-top-right absolute right-0 mt-2 mb-2 w-56 rounded-md shadow-md bg-white ring-1 ring-black ring-opacity-5 focus:outline-none;
+}
+
+.autocomplete-result {
+  @apply cursor-pointer text-gray-500 block px-4 py-2 text-base hover:text-gray-900 hover:bg-gray-100;
+}
+
+.autocomplete-result[aria-selected='true'] {
+  @apply text-gray-900 bg-gray-100;
+}
 </style>

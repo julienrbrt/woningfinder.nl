@@ -41,11 +41,7 @@
               v-bind:class="error ? 'text-red-800' : 'text-gray-800'"
             >
               Staat je stad er niet tussen? Schrijf je in op onze
-              <NuxtLink
-                to="/contact"
-                target="_blank"
-                class="underline"
-                @click="waitingList"
+              <NuxtLink to="/wachtlijst" class="underline" @click="waitingList"
                 >wachtlijst</NuxtLink
               >
               en we laten je weten wanneer we jouw stad toegevoegd hebben.

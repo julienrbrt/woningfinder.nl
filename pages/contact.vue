@@ -28,7 +28,7 @@
               type="text"
               name="name"
               id="name"
-              autocomplete="name"
+              autocomplete="given-name"
               class="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-wf-orange focus:border-wf-orange border-gray-300 rounded-md"
               placeholder="Naam"
               required
@@ -43,7 +43,7 @@
               type="email"
               autocomplete="email"
               class="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-wf-orange focus:border-wf-orange border-gray-300 rounded-md"
-              placeholder="Email"
+              placeholder="E-mailadres"
               required
             />
           </div>
@@ -92,7 +92,6 @@ export default {
       submitted: false,
     }
   },
-
   methods: {
     async send(e) {
       e.preventDefault()

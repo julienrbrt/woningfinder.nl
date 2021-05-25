@@ -50,7 +50,10 @@ export default {
     __dangerouslyDisableSanitizers: ['noscript'],
   },
   css: ['@/assets/css/main.css'],
-  plugins: [{ src: '~/plugins/simple-analytics.js', ssr: false }],
+  plugins: [
+    { src: '~/plugins/simple-analytics.js', ssr: false },
+    { src: '~/plugins/vue-autocomplete.js', ssr: false },
+  ],
   components: true,
   buildModules: ['@nuxtjs/tailwindcss'],
   modules: ['@nuxtjs/axios', '@nuxtjs/sitemap'],
@@ -71,6 +74,7 @@ export default {
   },
   env: {
     stripeKey: process.env.STRIPE_PUBLISHABLE_KEY,
+    mapboxKey: process.env.MAPBOX_API_KEY,
   },
   build: {},
   generate: {

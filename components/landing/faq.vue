@@ -53,7 +53,7 @@ export default {
         {
           question: 'Mijn stad staat er niet tussen.',
           answer: `Dat is jammer. We zijn hard bezig alle woningcorporaties in Nederland toe te voegen. Schrijf je in op onze
-              <a href="/contact" target="_blank" class="underline">wachtlijst</a>
+              <a href="/wachtlijst" target="_blank" class="underline">wachtlijst</a>
               en we laten je weten wanneer we jouw stad toegevoegd hebben.`,
         },
         {
