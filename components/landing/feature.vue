@@ -1,10 +1,24 @@
 <template>
   <div
-    class="mt-5 py-16 bg-gray-50 overflow-hidden lg:py-24 rounded-l-3xl rounded-r-3xl"
+    class="
+      mt-5
+      py-16
+      bg-gray-50
+      overflow-hidden
+      lg:py-24
+      rounded-l-3xl rounded-r-3xl
+    "
   >
     <div class="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
       <svg
-        class="hidden lg:block absolute left-full transform -translate-x-1/2 -translate-y-1/4"
+        class="
+          hidden
+          lg:block
+          absolute
+          left-full
+          transform
+          -translate-x-1/2 -translate-y-1/4
+        "
         width="404"
         height="784"
         fill="none"
@@ -39,7 +53,14 @@
 
       <div class="relative">
         <h2
-          class="text-center text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
+          class="
+            text-center text-3xl
+            leading-8
+            font-extrabold
+            tracking-tight
+            text-gray-900
+            sm:text-4xl
+          "
         >
           Bespaar tijd met WoningFinder
         </h2>
@@ -51,11 +72,24 @@
       </div>
 
       <div
-        class="relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center"
+        class="
+          relative
+          mt-12
+          lg:mt-24
+          lg:grid lg:grid-cols-2
+          lg:gap-8
+          lg:items-center
+        "
       >
         <div class="relative">
           <h3
-            class="text-2xl font-extrabold text-gray-900 tracking-tight sm:text-3xl"
+            class="
+              text-2xl
+              font-extrabold
+              text-gray-900
+              tracking-tight
+              sm:text-3xl
+            "
           >
             Persoonlijke zoekopdracht
           </h3>
@@ -81,7 +115,8 @@
               title=" Altijd eerst"
               description="Sommige woningcorporaties werken met „Wie het eerst komt, die
                 het eerst maalt”. WoningFinder zal precies na dat het aanbod is
-                gepubliceerd reageren voor jou. Je wordt dus sowieso eerste. Handig toch?"
+                gepubliceerd reageren voor jou. Je hebt zo dus heel veel kans
+                 dat je de eerste bent. Handig toch?"
             >
               <FastForwardIcon class="h-6 w-6" />
             </LandingFeatureItem>
@@ -90,7 +125,14 @@
 
         <div class="mt-10 -mx-4 relative lg:mt-0" aria-hidden="true">
           <svg
-            class="absolute left-1/2 transform -translate-x-1/2 translate-y-16 lg:hidden"
+            class="
+              absolute
+              left-1/2
+              transform
+              -translate-x-1/2
+              translate-y-16
+              lg:hidden
+            "
             width="784"
             height="404"
             fill="none"
@@ -131,7 +173,14 @@
       </div>
 
       <svg
-        class="hidden lg:block absolute right-full transform translate-x-1/2 translate-y-12"
+        class="
+          hidden
+          lg:block
+          absolute
+          right-full
+          transform
+          translate-x-1/2 translate-y-12
+        "
         width="404"
         height="784"
         fill="none"
@@ -166,11 +215,21 @@
 
       <div class="relative mt-12 sm:mt-16 lg:mt-24">
         <div
-          class="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center"
+          class="
+            lg:grid lg:grid-flow-row-dense lg:grid-cols-2
+            lg:gap-8
+            lg:items-center
+          "
         >
           <div class="lg:col-start-2">
             <h3
-              class="text-2xl font-extrabold text-gray-900 tracking-tight sm:text-3xl"
+              class="
+                text-2xl
+                font-extrabold
+                text-gray-900
+                tracking-tight
+                sm:text-3xl
+              "
             >
               Meer dan een automatiseringsdienst
             </h3>
@@ -199,7 +258,14 @@
 
           <div class="mt-10 -mx-4 relative lg:mt-0 lg:col-start-1">
             <svg
-              class="absolute left-1/2 transform -translate-x-1/2 translate-y-16 lg:hidden"
+              class="
+                absolute
+                left-1/2
+                transform
+                -translate-x-1/2
+                translate-y-16
+                lg:hidden
+              "
               width="784"
               height="404"
               fill="none"
