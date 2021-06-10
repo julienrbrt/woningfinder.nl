@@ -57,7 +57,14 @@
         <div v-if="currentStep == 1">
           <NuxtLink
             to="/"
-            class="cursor-pointer whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
+            class="
+              cursor-pointer
+              whitespace-nowrap
+              text-base
+              font-medium
+              text-gray-500
+              hover:text-gray-900
+            "
           >
             Terug
           </NuxtLink>
@@ -65,7 +72,14 @@
         <div v-else>
           <a
             @click="previous"
-            class="cursor-pointer whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
+            class="
+              cursor-pointer
+              whitespace-nowrap
+              text-base
+              font-medium
+              text-gray-500
+              hover:text-gray-900
+            "
           >
             Terug
           </a>
@@ -78,7 +92,14 @@
           >{{ nextButtonText() }}</a
         >
         <p
-          class="flex-1 whitespace-nowrap text-sm font-medium text-gray-400 text-right self-end"
+          class="
+            flex-1
+            whitespace-nowrap
+            text-sm
+            font-medium
+            text-gray-400 text-right
+            self-end
+          "
         >
           {{ currentStep }} / {{ totalStep }}
         </p>
@@ -138,25 +159,15 @@ export default {
           if (!this.$refs.registerPlan.validate()) {
             return
           }
-
-          // register event
-          this.saEvent('start_step_1_button_clicked')
-
           break
         case 2:
           if (!this.$refs.registerCity.validate()) {
             return
           }
 
-          // register event
-          this.saEvent('start_step_2_button_clicked')
-
           break
         case 3:
           // no need to validate because city district
-
-          // register event
-          this.saEvent('start_step_3_button_clicked')
 
           break
         case 4:
@@ -164,26 +175,17 @@ export default {
             return
           }
 
-          // register event
-          this.saEvent('start_step_4_button_clicked')
-
           break
         case 5:
           if (!this.$refs.registerHousingPreferences.validate()) {
             return
           }
 
-          // register event
-          this.saEvent('start_step_5_button_clicked')
-
           break
         case 6:
           if (!this.$refs.registerCustomer.validate()) {
             return
           }
-
-          // register event
-          this.saEvent('start_step_6_button_clicked')
 
           break
         case 7:
@@ -192,9 +194,6 @@ export default {
 
           // send request
           this.submit()
-
-          // register event
-          this.saEvent('start_step_pay_button_clicked')
 
           return
       }

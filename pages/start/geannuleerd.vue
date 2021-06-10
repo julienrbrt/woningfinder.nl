@@ -34,7 +34,17 @@
           type="email"
           autocomplete="email"
           placeholder="E-mailadres"
-          class="my-4 py-4 shadow-sm focus:ring-wf-orange focus:border-wf-orange w-full text-base border-gray-300 rounded-md"
+          class="
+            my-4
+            py-4
+            shadow-sm
+            focus:ring-wf-orange
+            focus:border-wf-orange
+            w-full
+            text-base
+            border-gray-300
+            rounded-md
+          "
         />
 
         <fieldset>
@@ -43,7 +53,23 @@
             <label
               v-for="plan in offering.plan"
               :key="plan.name"
-              class="relative block rounded-lg border bg-white shadow-sm px-6 py-4 cursor-pointer hover:border-wf-orange sm:flex sm:justify-between focus-within:ring-1 focus-within:ring-offset-2 focus-within:ring-wf-orange"
+              class="
+                relative
+                block
+                rounded-lg
+                border
+                bg-white
+                shadow-sm
+                px-6
+                py-4
+                cursor-pointer
+                hover:border-wf-orange
+                sm:flex
+                sm:justify-between
+                focus-within:ring-1
+                focus-within:ring-offset-2
+                focus-within:ring-wf-orange
+              "
               v-bind:class="[
                 selectedPlan === plan.name
                   ? 'border-wf-orange '
@@ -79,14 +105,26 @@
         <NuxtLink
           to="/"
           @click.native="cancelled"
-          class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
+          class="
+            whitespace-nowrap
+            text-base
+            font-medium
+            text-gray-500
+            hover:text-gray-900
+          "
           >Terug
         </NuxtLink>
         <div class="rounded-md shadow">
           <button
             @click="send"
             type="submit"
-            class="btn bg-wf-purple hover:bg-wf-purple-dark hover:ring-wf-purple focus:ring-wf-purple"
+            class="
+              btn
+              bg-wf-purple
+              hover:bg-wf-purple-dark
+              hover:ring-wf-purple
+              focus:ring-wf-purple
+            "
           >
             {{ buttonText() }}
           </button>
@@ -166,8 +204,6 @@ export default {
 
           this.errorMsg = 'Er is iets misgegaan: "' + error + '".'
         })
-
-      this.saEvent('retry_payment_button_clicked')
     },
   },
   computed: {
