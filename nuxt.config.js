@@ -3,7 +3,7 @@ export default {
   ssr: false,
   target: 'static',
   head: {
-    title: 'WoningFinder - Zoekopdracht voor je droomhuis',
+    title: 'WoningFinder - Reageer automatisch op woningen',
     htmlAttrs: {
       lang: 'nl',
     },
@@ -66,7 +66,7 @@ export default {
     exclude: ['/start/**', '/voorwaarden/**'],
   },
   tailwindcss: {
-    jit: true,
+    mode: 'jit',
   },
   loading: {
     color: '#e46948',

@@ -1,84 +1,86 @@
 <template>
-  <div class="bg-white">
-    <Hero>
-      <div class="mt-6 sm:max-w-xl">
-        <h1
-          class="text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl"
-        >
-          Je zoekopdracht
-        </h1>
-      </div>
-
-      <AlertError
-        class="mt-4"
-        v-if="showHasPaidAlert"
-        @click="hideAlert"
-        alert="Let op: Je hebt nog niet je zoekopdracht voltooid. We reageren dus nog niet voor jou."
-      />
-
-      <!-- stats -->
-      <div>
-        <dl class="mt-5 grid grid-cols-3 gap-5">
-          <DashboardStats title="Plan" :text="stats.plan" />
-          <DashboardStats title="Aantal reacties" :text="stats.reactions" />
-          <DashboardStats title="Aantal steden" :text="stats.cities" />
-        </dl>
-      </div>
-
-      <!-- housing credentials -->
-      <div class="mt-6 bg-white overflow-hidden shadow rounded-lg">
-        <div class="px-4 mt-4 mb-2 sm:px-6">
-          <h1 class="text-xl text-gray-900">Beschikbare woningcorporaties</h1>
-          <p class="mt-2 text-base text-gray-500">
-            Om meer kans te hebben op een woning, adviseren we jou om in te
-            loggen op alle woningcorporaties.
-          </p>
-        </div>
-        <ul class="divide-y divide-gray-200">
-          <li v-for="creds in credentials" :key="creds.corporation_name">
-            <DashboardCorporationCredentialsList
-              @click="showModal = creds.corporation_name"
-              :credentials="creds"
-            />
-
-            <DashboardCorporationCredentialsModal
-              @close="showModal = ''"
-              v-if="showModal == creds.corporation_name"
-              :credentials="creds"
-              :jwt="$route.query.jwt"
-            />
-          </li>
-        </ul>
-        <p class="px-4 mt-2 mb-4 sm:px-6 text-sm text-gray-500">
-          Zodra je inlogt op een woningcorporatie via WoningFinder, ga je
-          akkoord met deze
-          <span @click="showModal = 'volmacht'" class="underline cursor-pointer"
-            >volmacht</span
-          >. Hierdoor kunnen wij voor jou reageren.
-        </p>
-
-        <DashboardVoorwaardenVolmachtModal
-          @close="showModal = ''"
-          v-if="showModal == 'volmacht'"
-          :customer="customer"
-        />
-      </div>
-
-      <!-- preferences -->
-      <DashboardPreferences :customer="customer" />
-
-      <!-- buttons -->
-      <div
-        class="items-center inline-flex justify-center mt-5 space-x-4 w-full"
+  <Hero>
+    <div class="mt-6 sm:max-w-xl">
+      <h1
+        class="text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl"
       >
-        <NuxtLink
-          to="/"
-          class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
-          >Afmelden
-        </NuxtLink>
+        Je zoekopdracht
+      </h1>
+    </div>
+
+    <AlertError
+      class="mt-4"
+      v-if="showHasPaidAlert"
+      @click="hideAlert"
+      alert="Let op: Je hebt nog niet je zoekopdracht voltooid. We reageren dus nog niet voor jou."
+    />
+
+    <!-- stats -->
+    <div>
+      <dl class="mt-5 grid grid-cols-3 gap-5">
+        <DashboardStats title="Plan" :text="stats.plan" />
+        <DashboardStats title="Aantal reacties" :text="stats.reactions" />
+        <DashboardStats title="Aantal steden" :text="stats.cities" />
+      </dl>
+    </div>
+
+    <!-- housing credentials -->
+    <div class="mt-6 bg-white overflow-hidden shadow rounded-lg">
+      <div class="px-4 mt-4 mb-2 sm:px-6">
+        <h1 class="text-xl text-gray-900">Beschikbare woningcorporaties</h1>
+        <p class="mt-2 text-base text-gray-500">
+          Om meer kans te hebben op een woning, adviseren we jou om in te loggen
+          op alle woningcorporaties.
+        </p>
       </div>
-    </Hero>
-  </div>
+      <ul class="divide-y divide-gray-200">
+        <li v-for="creds in credentials" :key="creds.corporation_name">
+          <DashboardCorporationCredentialsList
+            @click="showModal = creds.corporation_name"
+            :credentials="creds"
+          />
+
+          <DashboardCorporationCredentialsModal
+            @close="showModal = ''"
+            v-if="showModal == creds.corporation_name"
+            :credentials="creds"
+            :jwt="$route.query.jwt"
+          />
+        </li>
+      </ul>
+      <p class="px-4 mt-2 mb-4 sm:px-6 text-sm text-gray-500">
+        Zodra je inlogt op een woningcorporatie via WoningFinder, ga je akkoord
+        met deze
+        <span @click="showModal = 'volmacht'" class="underline cursor-pointer"
+          >volmacht</span
+        >. Hierdoor kunnen wij voor jou reageren.
+      </p>
+
+      <DashboardVoorwaardenVolmachtModal
+        @close="showModal = ''"
+        v-if="showModal == 'volmacht'"
+        :customer="customer"
+      />
+    </div>
+
+    <!-- preferences -->
+    <DashboardPreferences :customer="customer" />
+
+    <!-- buttons -->
+    <div class="items-center inline-flex justify-center mt-5 space-x-4 w-full">
+      <NuxtLink
+        to="/"
+        class="
+          whitespace-nowrap
+          text-base
+          font-medium
+          text-gray-500
+          hover:text-gray-900
+        "
+        >Afmelden
+      </NuxtLink>
+    </div>
+  </Hero>
 </template>
 
 <script>

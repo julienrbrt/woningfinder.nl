@@ -1,84 +1,121 @@
 <template>
-  <div class="bg-white">
-    <Hero>
-      <AlertOk v-if="submitted" @click="hideAlert" alert="Bericht verstuurd!" />
+  <Hero>
+    <AlertOk v-if="submitted" @click="hideAlert" alert="Bericht verstuurd!" />
 
-      <AlertError
-        v-if="error"
-        @click="hideAlert"
-        alert="Jouw bericht kan niet verstuurd worden. Controleer het formulier en probeer het nogmaals."
-      />
+    <AlertError
+      v-if="error"
+      @click="hideAlert"
+      alert="Jouw bericht kan niet verstuurd worden. Controleer het formulier en probeer het nogmaals."
+    />
 
-      <div class="mt-6 sm:max-w-xl">
-        <h1
-          class="text-3xl font-extrabold text-gray-900 tracking-tight sm:text-5xl"
-        >
-          Contact
-        </h1>
+    <div class="mt-6 sm:max-w-xl">
+      <h1
+        class="text-3xl font-extrabold text-gray-900 tracking-tight sm:text-5xl"
+      >
+        Contact
+      </h1>
 
-        <p class="mt-6 text-lg text-gray-500">
-          Heb je een vraag of wil je iets aan ons kwijt? We helpen je graag!
-        </p>
+      <p class="mt-6 text-lg text-gray-500">
+        Heb je een vraag of wil je iets aan ons kwijt? We helpen je graag!
+      </p>
 
-        <form class="mt-6 grid grid-cols-1 gap-y-6">
-          <div>
-            <label for="name" class="sr-only">Naam</label>
-            <input
-              v-model="name"
-              type="text"
-              name="name"
-              id="name"
-              autocomplete="given-name"
-              class="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-wf-orange focus:border-wf-orange border-gray-300 rounded-md"
-              placeholder="Naam"
-              required
-            />
-          </div>
-          <div>
-            <label for="email" class="sr-only">Email</label>
-            <input
-              v-model="email"
-              id="email"
-              name="email"
-              type="email"
-              autocomplete="email"
-              class="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-wf-orange focus:border-wf-orange border-gray-300 rounded-md"
-              placeholder="E-mailadres"
-              required
-            />
-          </div>
-          <div>
-            <label for="message" class="sr-only">Bericht</label>
-            <textarea
-              v-model="message"
-              id="message"
-              name="message"
-              rows="4"
-              class="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-wf-orange focus:border-wf-orange border-gray-300 rounded-md"
-              placeholder="Bericht"
-              required
-            ></textarea>
-          </div>
-        </form>
-
-        <div class="items-center inline-flex mt-5 space-x-4">
-          <NuxtLink
-            to="/"
-            class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
-            >Terug
-          </NuxtLink>
-          <button
-            v-bind:disabled="error"
-            class="btn disabled:bg-gray-500"
-            type="submit"
-            @click="send"
-          >
-            Stuur bericht
-          </button>
+      <form class="mt-6 grid grid-cols-1 gap-y-6">
+        <div>
+          <label for="name" class="sr-only">Naam</label>
+          <input
+            v-model="name"
+            type="text"
+            name="name"
+            id="name"
+            autocomplete="given-name"
+            class="
+              block
+              w-full
+              shadow-sm
+              py-3
+              px-4
+              placeholder-gray-500
+              focus:ring-wf-orange
+              focus:border-wf-orange
+              border-gray-300
+              rounded-md
+            "
+            placeholder="Naam"
+            required
+          />
         </div>
+        <div>
+          <label for="email" class="sr-only">Email</label>
+          <input
+            v-model="email"
+            id="email"
+            name="email"
+            type="email"
+            autocomplete="email"
+            class="
+              block
+              w-full
+              shadow-sm
+              py-3
+              px-4
+              placeholder-gray-500
+              focus:ring-wf-orange
+              focus:border-wf-orange
+              border-gray-300
+              rounded-md
+            "
+            placeholder="E-mailadres"
+            required
+          />
+        </div>
+        <div>
+          <label for="message" class="sr-only">Bericht</label>
+          <textarea
+            v-model="message"
+            id="message"
+            name="message"
+            rows="4"
+            class="
+              block
+              w-full
+              shadow-sm
+              py-3
+              px-4
+              placeholder-gray-500
+              focus:ring-wf-orange
+              focus:border-wf-orange
+              border-gray-300
+              rounded-md
+            "
+            placeholder="Bericht"
+            required
+          ></textarea>
+        </div>
+      </form>
+
+      <div class="items-center inline-flex mt-5 space-x-4">
+        <NuxtLink
+          to="/"
+          class="
+            whitespace-nowrap
+            text-base
+            font-medium
+            text-gray-500
+            hover:text-gray-900
+          "
+          >Terug
+        </NuxtLink>
+        <button
+          v-bind:disabled="error"
+          class="btn disabled:bg-gray-500"
+          type="submit"
+          @click="send"
+        >
+          Stuur bericht
+        </button>
       </div>
-    </Hero>
-  </div>
+    </div>
+  </Hero>
 </template>
 
 <script>

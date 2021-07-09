@@ -33,6 +33,10 @@ module.exports = {
     extend: {
       backgroundColor: ['checked'],
       borderColor: ['checked'],
+      ringWidth: ['hover'],
+      ringOffsetWidth: ['hover'],
+      ringColor: ['hover'],
+      ringOffsetColor: ['hover'],
     },
   },
   plugins: [require('@tailwindcss/forms')],

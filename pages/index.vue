@@ -1,6 +1,6 @@
 <template>
   <div class="bg-white">
-    <Hero landing="yes">
+    <Hero>
       <AlertNews
         title="Nieuws"
         description="Nieuwe woningcorporaties zijn toegevoegd 🎉"
@@ -8,9 +8,15 @@
       />
       <div class="mt-6 sm:max-w-xl">
         <h1
-          class="text-4xl font-extrabold text-wf-purple tracking-tight sm:text-5xl"
+          class="
+            text-4xl
+            font-extrabold
+            text-wf-purple
+            tracking-tight
+            sm:text-5xl
+          "
         >
-          Zoekopdracht voor je droomhuis
+          Reageer automatisch op woningen
         </h1>
         <p class="mt-6 text-xl text-gray-500">
           Bij WoningFinder creëer je één keer een zoekopdracht voor je
@@ -33,13 +39,6 @@
       </div>
     </Hero>
 
-    <a @click="scroll()" class="flex -mt-10 place-content-center">
-      <ChevronDownIcon
-        size="2x"
-        class="cursor-pointer animate-bounce self-center"
-      />
-    </a>
-
     <!-- Features section -->
     <LandingFeature ref="feature" id="feature" />
 
@@ -55,12 +54,7 @@
 </template>
 
 <script>
-import { ChevronDownIcon } from '@vue-hero-icons/solid'
-
 export default {
-  components: {
-    ChevronDownIcon,
-  },
   methods: {
     startEvent() {
       this.saEvent('hero_button_clicked_start')
