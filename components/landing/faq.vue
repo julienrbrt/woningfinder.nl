@@ -1,6 +1,15 @@
 <template>
   <div
-    class="max-w-7xl mx-auto py-12 px-4 divide-y-2 divide-gray-200 sm:px-6 lg:py-16 lg:px-8"
+    class="
+      max-w-7xl
+      mx-auto
+      py-12
+      px-4
+      divide-y-2 divide-gray-200
+      sm:px-6
+      lg:py-16
+      lg:px-8
+    "
   >
     <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
       Veelgestelde vragen
@@ -42,7 +51,7 @@ export default {
         {
           question: 'Is dat veilig?',
           answer:
-            'We zijn echt privacy freaks (kijk ons privacy voorwaarden). We gebruiken versleuteling om je gegevens veilig te houden. Dat betekent dat we je inlog gegevens zelf ook niet kunnen zien.',
+            'Zeker! We gebruiken versleuteling om je gegevens veilig te houden. Dat betekent dat we je inlog gegevens zelf ook niet kunnen zien.',
         },
         {
           question:

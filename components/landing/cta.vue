@@ -41,7 +41,17 @@
       class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8"
     >
       <div
-        class="relative rounded-2xl px-6 py-10 bg-wf-orange-light overflow-hidden shadow-xl sm:px-12 sm:py-20"
+        class="
+          relative
+          rounded-2xl
+          px-6
+          py-10
+          bg-wf-orange-light
+          overflow-hidden
+          shadow-xl
+          sm:px-12
+          sm:py-20
+        "
       >
         <div
           aria-hidden="true"
@@ -69,7 +79,13 @@
         <div class="relative">
           <div class="sm:text-center">
             <h2
-              class="text-3xl font-extrabold text-white tracking-tight sm:text-4xl"
+              class="
+                text-3xl
+                font-extrabold
+                text-white
+                tracking-tight
+                sm:text-4xl
+              "
             >
               Allemaal duidelijk?
             </h2>
@@ -84,7 +100,13 @@
             <div class="rounded-md shadow">
               <NuxtLink
                 to="/start"
-                class="btn bg-wf-orange hover:bg-wf-orange-dark hover:ring-wf-orange focus:ring-wf-orange"
+                class="
+                  btn
+                  bg-wf-orange
+                  hover:bg-wf-orange-dark
+                  hover:ring-wf-orange
+                  focus:ring-wf-orange
+                "
                 @click.native="startEvent"
               >
                 Nu starten
@@ -93,7 +115,15 @@
             <div class="rounded-md shadow">
               <NuxtLink
                 to="/contact"
-                class="btn bg-wf-purple hover:bg-wf-purple-dark hover:ring-wf-purple focus:ring-wf-purple mt-2 md:mt-0"
+                class="
+                  btn
+                  bg-wf-purple
+                  hover:bg-wf-purple-dark
+                  hover:ring-wf-purple
+                  focus:ring-wf-purple
+                  mt-2
+                  md:mt-0
+                "
                 @click.native="contactEvent"
               >
                 Contact
@@ -110,10 +140,10 @@
 export default {
   methods: {
     startEvent() {
-      this.saEvent('cta_button_clicked_start')
+      this.$ga.event('cta', 'click', 'button_start', 1)
     },
     contactEvent() {
-      this.saEvent('cta_button_clicked_contact')
+      this.$ga.event('cta', 'click', 'button_contact', 1)
     },
   },
 }

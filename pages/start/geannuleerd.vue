@@ -162,7 +162,7 @@ export default {
       this.error = false
     },
     cancelled() {
-      this.saEvent('cancelled_payment_button_clicked')
+      this.$ga.event('payment', 'click', 'cancelled_payment_button_clicked', 1)
     },
     async send() {
       if (!this.retry) {

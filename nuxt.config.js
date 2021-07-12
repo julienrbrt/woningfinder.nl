@@ -43,19 +43,15 @@ export default {
     ],
     noscript: [
       {
-        innerHTML:
-          'This website requires JavaScript. <img src="https://sa.woningfinder.nl/noscript.gif" alt=""/>',
+        innerHTML: 'This website requires JavaScript.',
       },
     ],
     __dangerouslyDisableSanitizers: ['noscript'],
   },
   css: ['@/assets/css/main.css'],
-  plugins: [
-    { src: '~/plugins/simple-analytics.js', ssr: false },
-    { src: '~/plugins/vue-autocomplete.js', ssr: false },
-  ],
+  plugins: [{ src: '~/plugins/vue-autocomplete.js', ssr: false }],
   components: true,
-  buildModules: ['@nuxtjs/tailwindcss'],
+  buildModules: ['@nuxtjs/tailwindcss', '@nuxtjs/google-analytics'],
   modules: ['@nuxtjs/axios', '@nuxtjs/sitemap'],
   axios: {
     baseURL: 'https://woningfinder.nl/api/',
@@ -67,6 +63,9 @@ export default {
   },
   tailwindcss: {
     mode: 'jit',
+  },
+  googleAnalytics: {
+    id: 'UA-202002328-1',
   },
   loading: {
     color: '#e46948',

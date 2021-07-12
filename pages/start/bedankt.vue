@@ -23,7 +23,7 @@
 export default {
   methods: {
     success() {
-      this.saEvent('successful_payment_button_clicked')
+      this.$ga.event('payment', 'click', 'successful_payment_button_clicked', 1)
     },
   },
 }

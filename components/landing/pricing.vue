@@ -4,7 +4,14 @@
       <div class="max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8">
         <div class="max-w-3xl mx-auto space-y-2 lg:max-w-none">
           <h2
-            class="text-lg leading-6 font-semibold text-gray-300 uppercase tracking-wider"
+            class="
+              text-lg
+              leading-6
+              font-semibold
+              text-gray-300
+              uppercase
+              tracking-wider
+            "
           >
             Kosten
           </h2>
@@ -20,13 +27,32 @@
         <div class="absolute inset-0 h-3/4 bg-wf-purple"></div>
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div
-            class="max-w-md mx-auto space-y-4 lg:max-w-5xl lg:grid lg:grid-cols-2 lg:gap-5 lg:space-y-0"
+            class="
+              max-w-md
+              mx-auto
+              space-y-4
+              lg:max-w-5xl
+              lg:grid lg:grid-cols-2
+              lg:gap-5
+              lg:space-y-0
+            "
           >
             <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
               <div class="px-6 py-8 bg-white sm:p-10 sm:pb-6">
                 <div>
                   <h3
-                    class="inline-flex px-4 py-1 rounded-full text-sm font-semibold tracking-wide uppercase bg-wf-orange-lightest text-wf-orange"
+                    class="
+                      inline-flex
+                      px-4
+                      py-1
+                      rounded-full
+                      text-sm
+                      font-semibold
+                      tracking-wide
+                      uppercase
+                      bg-wf-orange-lightest
+                      text-wf-orange
+                    "
                     id="tier-basis"
                   >
                     Basis
@@ -44,7 +70,17 @@
                 </p>
               </div>
               <div
-                class="flex-1 flex flex-col justify-between px-6 pt-6 pb-8 bg-gray-50 space-y-6 sm:p-10 sm:pt-6"
+                class="
+                  flex-1 flex flex-col
+                  justify-between
+                  px-6
+                  pt-6
+                  pb-8
+                  bg-gray-50
+                  space-y-6
+                  sm:p-10
+                  sm:pt-6
+                "
               >
                 <ul class="space-y-4">
                   <li class="flex items-start">
@@ -78,7 +114,13 @@
                   <div class="rounded-md shadow">
                     <NuxtLink
                       to="/start"
-                      class="btn bg-wf-orange hover:bg-wf-orange-dark hover:ring-wf-orange focus:ring-wf-orange"
+                      class="
+                        btn
+                        bg-wf-orange
+                        hover:bg-wf-orange-dark
+                        hover:ring-wf-orange
+                        focus:ring-wf-orange
+                      "
                       @click.native="startEventBasis"
                     >
                       Nu starten
@@ -92,7 +134,18 @@
               <div class="px-6 py-8 bg-white sm:p-10 sm:pb-6">
                 <div>
                   <h3
-                    class="inline-flex px-4 py-1 rounded-full text-sm font-semibold tracking-wide uppercase bg-wf-orange-lightest text-wf-orange"
+                    class="
+                      inline-flex
+                      px-4
+                      py-1
+                      rounded-full
+                      text-sm
+                      font-semibold
+                      tracking-wide
+                      uppercase
+                      bg-wf-orange-lightest
+                      text-wf-orange
+                    "
                     id="tier-pro"
                   >
                     Pro
@@ -109,7 +162,17 @@
                 </p>
               </div>
               <div
-                class="flex-1 flex flex-col justify-between px-6 pt-6 pb-8 bg-gray-50 space-y-6 sm:p-10 sm:pt-6"
+                class="
+                  flex-1 flex flex-col
+                  justify-between
+                  px-6
+                  pt-6
+                  pb-8
+                  bg-gray-50
+                  space-y-6
+                  sm:p-10
+                  sm:pt-6
+                "
               >
                 <ul class="space-y-4">
                   <li class="flex items-start">
@@ -151,7 +214,13 @@
                 <div class="rounded-md shadow">
                   <NuxtLink
                     to="/start"
-                    class="btn bg-wf-orange hover:bg-wf-orange-dark hover:ring-wf-orange focus:ring-wf-orange"
+                    class="
+                      btn
+                      bg-wf-orange
+                      hover:bg-wf-orange-dark
+                      hover:ring-wf-orange
+                      focus:ring-wf-orange
+                    "
                     @click.native="startEventPro"
                   >
                     Nu starten
@@ -176,10 +245,10 @@ export default {
   },
   methods: {
     startEventBasis() {
-      this.saEvent('pricing_button_clicked_start_basis')
+      this.$ga.event('pricing', 'click', 'button_start_basis', 1)
     },
     startEventPro() {
-      this.saEvent('pricing_button_clicked_start_pro')
+      this.$ga.event('pricing', 'click', 'button_start_pro', 1)
     },
   },
 }

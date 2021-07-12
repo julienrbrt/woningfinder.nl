@@ -27,13 +27,13 @@ We however use some addons:
 
 ### Modules
 
-- _axios_ in order to make HTTP requests
-- _sitemap_ for automatically generate a sitemap
+- _axios_ in order to make HTTP requests.
+- _sitemap_ for automatically generate a sitemap.
 
 ### CSS
 
-- _tailwindcss_ for all of our css
+- _tailwindcss_ for all of our css.
 
 ### Plugins
 
-- _simpleanalytics_ for website analytics
+- _vueautocomplete_ for auto completion of city names.

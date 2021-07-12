@@ -57,7 +57,7 @@
 export default {
   methods: {
     startEvent() {
-      this.saEvent('hero_button_clicked_start')
+      this.$ga.event('landing', 'click', 'button_start', 1)
     },
     scroll() {
       this.$refs.feature.$el.scrollIntoView({
