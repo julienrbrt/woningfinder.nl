@@ -143,6 +143,14 @@
         <span class="underline">contact@woningfinder.nl</span>.
       </p>
 
+      <h2>Cookiesbeleid</h2>
+      <script
+        id="CookieDeclaration"
+        src="https://consent.cookiebot.com/7df61b83-2819-4bae-9f32-86971fea4bc5/cd.js"
+        type="text/javascript"
+        async
+      ></script>
+
       <p class="mt-4 text-sm">Versie: 1.0, 24 april 2021</p>
     </div>
 

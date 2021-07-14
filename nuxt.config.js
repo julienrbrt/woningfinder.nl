@@ -40,6 +40,14 @@ export default {
         src: 'https://js.stripe.com/v3',
         defer: true,
       },
+      {
+        // Cookiebot consent banner
+        id: 'Cookiebot',
+        src: 'https://consent.cookiebot.com/uc.js',
+        'data-cbid': '7df61b83-2819-4bae-9f32-86971fea4bc5',
+        type: 'text/javascript',
+        async: true,
+      },
     ],
     noscript: [
       {
