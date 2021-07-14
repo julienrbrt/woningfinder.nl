@@ -231,7 +231,7 @@
                 sm:text-3xl
               "
             >
-              Meer dan een automatiseringsdienst
+              Meer dan gewoon automatische reacties
             </h3>
             <p class="mt-3 text-lg text-gray-500">
               Met WoningFinder kun je relaxen. We doen ons best om een huis voor
