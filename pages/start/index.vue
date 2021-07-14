@@ -87,7 +87,10 @@
       <a
         @click="validate"
         class="btn"
-        v-bind:class="currentStep == totalStep ? 'flex-1' : 'max-w-min'"
+        v-bind:class="[
+          currentStep == totalStep ? 'flex-1' : 'max-w-min',
+          submitted ? 'bg-gray-500' : '',
+        ]"
         >{{ nextButtonText() }}</a
       >
       <p
@@ -114,6 +117,7 @@ export default {
   },
   data() {
     return {
+      submitted: false,
       error: false,
       errorMsg:
         'Er is iets misgegaan. Controleer het formulier nogmaals. Blijf dit gebeuren? Neem dan contact met ons op.',
@@ -187,11 +191,14 @@ export default {
 
           break
         case 7:
-          // start loading bar
-          this.$nuxt.$loading.start()
+          if (!this.submitted) {
+            // start loading bar
+            this.$nuxt.$loading.start()
 
-          // send request
-          this.submit()
+            // send request
+            this.submit()
+            this.submitted = true
+          }
 
           return
       }
@@ -214,6 +221,7 @@ export default {
         })
     },
     hideAlert() {
+      this.submitted = false
       this.error = false
     },
   },

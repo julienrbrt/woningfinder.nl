@@ -31,7 +31,7 @@ module.exports = {
   },
   variants: {
     extend: {
-      backgroundColor: ['checked'],
+      backgroundColor: ['checked', 'disabled'],
       borderColor: ['checked'],
       ringWidth: ['hover'],
       ringOffsetWidth: ['hover'],
