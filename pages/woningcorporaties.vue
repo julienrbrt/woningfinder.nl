@@ -13,13 +13,22 @@
       </p>
 
       <p class="mt-6 text-lg text-gray-500">
-        Disclaimer: WoningFinder is zelf geen woningcorporatie, alle namen en
-        logo's op deze pagina zijn eigendom van de woningcorporaties zelf.
+        Dat betekent dat WoningFinder kan automatisch reageren op alle
+        huurwoningen in Aalten, Almelo, Apeldoorn, Borne, Bredevoort, Bussum, De
+        Lutte, Dinxperlo, Enschede, Groenlo, Haaksbergen, Hengelo (OV), Hertme,
+        Losser, Neede, Overdinkel, Ulft, Wehl, Winterswijk, en Zwolle 🙂.
       </p>
 
       <h2 class="mt-4 mb-2 text-xl text-gray-900">Overijssel</h2>
       <div
-        class="mt-8 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-0 lg:grid-cols-2"
+        class="
+          mt-8
+          grid grid-cols-2
+          gap-0.5
+          md:grid-cols-3
+          lg:mt-0
+          lg:grid-cols-2
+        "
       >
         <LandingHousingCorporationLogo
           name="De Woonplaats"
@@ -74,10 +83,24 @@
         </div>
       </div>
 
+      <AlertInfo
+        description="Let op: WoningFinder is zelf geen woningcorporatie, alle namen en
+        logo's op deze pagina zijn eigendom van de woningcorporaties
+        zelf."
+      >
+        <InformationCircleIcon class="h-5 w-5 text-gray-400" />
+      </AlertInfo>
+
       <div class="items-center inline-flex mt-5 space-x-4">
         <NuxtLink
           to="/"
-          class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
+          class="
+            whitespace-nowrap
+            text-base
+            font-medium
+            text-gray-500
+            hover:text-gray-900
+          "
           >Terug
         </NuxtLink>
       </div>
