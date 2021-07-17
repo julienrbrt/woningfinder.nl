@@ -96,15 +96,15 @@
           <p class="mt-3 text-lg text-gray-500">
             Wil je een tuin hebben, of in een appartement wonen? Zoek je een
             huis met 6 slaapkamers? Met WoningFinder kun je een persoonlijke
-            zoekopdracht creëren, zodat wij kunnen reageren op elke woning die
-            jij wilt.
+            zoekopdracht creëren, zodat jij automatisch reageert op elke woning
+            die aan je zoekopdracht voldoen.
           </p>
 
           <dl class="mt-10 space-y-10">
             <!-- using html tag here -->
             <LandingFeatureItem
               title="Alle beschikbare woningcorporaties van jouw stad"
-              description='Als je een stad kiest, reageren we op het aanbod van <a
+              description='Als je een stad kiest, reageert WoningFinder op het aanbod van <a
                 href="/woningcorporaties" target="_blank" class="underline">alle
                 woningcorporaties</a> van deze stad. Dit vergroot jouw kansen.'
             >
@@ -115,7 +115,7 @@
               title=" Altijd eerst"
               description="Sommige woningcorporaties werken met „Wie het eerst komt, die
                 het eerst maalt”. WoningFinder zal precies na dat het aanbod is
-                gepubliceerd reageren voor jou. Je hebt zo dus heel veel kans
+                gepubliceerd automatisch reageren. Je hebt zo dus heel veel kans
                  dat je de eerste bent. Handig toch?"
             >
               <FastForwardIcon class="h-6 w-6" />
@@ -249,7 +249,7 @@
               </LandingFeatureItem>
               <LandingFeatureItem
                 title="Toegankelijk"
-                description="Een WoningFinder zoekopdracht is slechts eenmalig €10,- als je een sociale huurwoning zoekt. Ons missie is het eenvoudiger maken voor iedereen, we weten al dat het moeilijk is om een sociale huurwoning te vinden in Nederland."
+                description="Een WoningFinder zoekopdracht is slechts eenmalig €10,- als je een sociale huurwoning zoekt. Ons missie is het eenvoudiger maken voor iedereen, we weten dat het moeilijk is om een (sociale) huurwoning te vinden in Nederland."
               >
                 <CurrencyEuroIcon class="h-6 w-6" />
               </LandingFeatureItem>

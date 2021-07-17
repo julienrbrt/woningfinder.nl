@@ -20,7 +20,7 @@
         </h1>
         <p class="mt-6 text-xl text-gray-500">
           Bij WoningFinder creëer je één keer een zoekopdracht voor je
-          droomhuis. Daarna reageert WoningFinder voor jou op alle aanbod van
+          droomhuis. Daarna reageert WoningFinder automatisch op alle aanbod van
           woningcorporaties dat matcht met je zoekopdracht. Jij hoeft verder
           niets meer te doen, makkelijk toch?
         </p>

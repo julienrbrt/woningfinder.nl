@@ -1,8 +1,9 @@
 <template>
   <div class="sm:max-w-xl">
     <p class="mt-6 text-lg text-gray-500">
-      We kunnen reageren op woningen in de wijk die je wilt. Als je een wijk
-      voorkeur hebt, kun je dat nu invullen, anders kun je deze stap overslaan.
+      Je kan WoningFinder laten reageren op woningen in de wijk die je wilt. Als
+      je een wijk voorkeur hebt, kun je dat nu invullen, anders kun je deze stap
+      overslaan.
     </p>
 
     <div class="mt-6 space-y-4">

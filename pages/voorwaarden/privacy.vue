@@ -76,7 +76,7 @@
         nodig is om de doelen te realiseren waarvoor je gegevens worden
         verzameld. We verwijderen je persoonsgegevens zodra je een woning hebt
         gevonden met WoningFinder of als je je zoekopdracht hebt verwijdert. De
-        bewaartermijn hangt af van hoe snel we een woning voor jou vinden.
+        bewaartermijn hangt af van hoe snel je een woning vindt.
       </p>
 
       <h2>Delen van persoonsgegevens met derden</h2>

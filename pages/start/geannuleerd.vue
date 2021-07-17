@@ -2,7 +2,7 @@
   <Hero>
     <div class="mt-6 sm:max-w-xl">
       <h1 class="text-4xl font-extrabold text-gray-900 tracking-tight">
-        Er is iets misgegaan met je betaling
+        Er is iets misgegaan met je zoekopdracht
       </h1>
       <p class="mt-6 text-lg text-gray-500">
         Je zoekopdracht is niet helemaal voltooid omdat we jouw betaling niet

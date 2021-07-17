@@ -15,9 +15,9 @@
         Steden wachtlijst
       </h1>
       <p class="mt-6 text-lg text-gray-500">
-        We zijn hard bezig alle woningcorporaties in Nederland toe te voegen aan
-        WoningFinder. Je kunt je hier aanmelden zodat jij weet wanneer we voor
-        jou kunnen reageren in jouw stad.
+        We zijn hard bezig met alle Nederlandse steden toe te voegen aan
+        WoningFinder. Schrijf je in op onze wachtlijst en we laten je weten
+        wanneer we jouw stad toegevoegd hebben.
       </p>
 
       <form class="mt-6 grid grid-cols-1 gap-y-6">

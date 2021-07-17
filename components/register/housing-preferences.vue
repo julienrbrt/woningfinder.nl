@@ -4,8 +4,8 @@
       Vertel ons meer over jouw droomhuis
     </p>
     <p class="mt-6 text-base text-gray-500">
-      We reageren niet op woningen die niet aan jouw voorkeuren voldoen. Denk
-      dus goed na.
+      WoningFinder reageert niet op woningen die niet aan jouw voorkeuren
+      voldoen. Denk dus goed na.
     </p>
 
     <AlertError
@@ -24,7 +24,17 @@
       <select
         v-model="preferences.number_bedroom"
         name="bedroom"
-        class="mt-2 shadow-sm focus:ring-wf-orange focus:border-wf-orange block w-full sm:text-sm border-gray-300 rounded-md"
+        class="
+          mt-2
+          shadow-sm
+          focus:ring-wf-orange
+          focus:border-wf-orange
+          block
+          w-full
+          sm:text-sm
+          border-gray-300
+          rounded-md
+        "
       >
         <option
           v-for="bedroom in [0, 1, 2, 3, 4, 5]"
@@ -42,7 +52,14 @@
             id="attic"
             name="attic"
             type="checkbox"
-            class="focus:ring-wf-orange h-4 w-4 text-wf-orange-dark border-gray-300 rounded"
+            class="
+              focus:ring-wf-orange
+              h-4
+              w-4
+              text-wf-orange-dark
+              border-gray-300
+              rounded
+            "
           />
         </div>
         <label for="attic" class="block text-sm font-medium text-gray-900 ml-3"
@@ -57,7 +74,14 @@
             id="accessible"
             name="accessible"
             type="checkbox"
-            class="focus:ring-wf-orange h-4 w-4 text-wf-orange-dark border-gray-300 rounded"
+            class="
+              focus:ring-wf-orange
+              h-4
+              w-4
+              text-wf-orange-dark
+              border-gray-300
+              rounded
+            "
           />
         </div>
         <label
@@ -78,7 +102,14 @@
               id="balcony"
               name="balcony"
               type="checkbox"
-              class="focus:ring-wf-orange h-4 w-4 text-wf-orange-dark border-gray-300 rounded"
+              class="
+                focus:ring-wf-orange
+                h-4
+                w-4
+                text-wf-orange-dark
+                border-gray-300
+                rounded
+              "
             />
           </div>
           <label
@@ -94,7 +125,14 @@
               id="garden"
               name="garden"
               type="checkbox"
-              class="focus:ring-wf-orange h-4 w-4 text-wf-orange-dark border-gray-300 rounded"
+              class="
+                focus:ring-wf-orange
+                h-4
+                w-4
+                text-wf-orange-dark
+                border-gray-300
+                rounded
+              "
             />
           </div>
           <label
@@ -110,7 +148,14 @@
               id="garage"
               name="garage"
               type="checkbox"
-              class="focus:ring-wf-orange h-4 w-4 text-wf-orange-dark border-gray-300 rounded"
+              class="
+                focus:ring-wf-orange
+                h-4
+                w-4
+                text-wf-orange-dark
+                border-gray-300
+                rounded
+              "
             />
           </div>
           <label
@@ -126,7 +171,14 @@
               id="elevator"
               name="elevator"
               type="checkbox"
-              class="focus:ring-wf-orange h-4 w-4 text-wf-orange-dark border-gray-300 rounded"
+              class="
+                focus:ring-wf-orange
+                h-4
+                w-4
+                text-wf-orange-dark
+                border-gray-300
+                rounded
+              "
             />
           </div>
           <label
@@ -150,7 +202,7 @@
               <p class="text-sm font-medium text-gray-800">
                 Omdat je een sociale huurwoning zoekt, kun je geen maximale
                 huurprijs invullen. Je maximale huurprijs is afhankelijk van
-                jouw jaarlijks inkomen. Maak je geen zorgen we reageren altijd
+                jouw jaarlijks inkomen. Maak je geen zorgen je reageert altijd
                 alleen op passend woningen.
               </p>
             </div>
@@ -164,7 +216,15 @@
         >
         <div class="relative mt-4 rounded-md shadow-sm">
           <div
-            class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
+            class="
+              absolute
+              inset-y-0
+              left-0
+              pl-3
+              flex
+              items-center
+              pointer-events-none
+            "
           >
             <span class="text-gray-500 sm:text-sm"> € </span>
           </div>
@@ -173,11 +233,29 @@
             type="number"
             name="price"
             id="price"
-            class="focus:ring-wf-orange focus:border-wf-orange block w-full pl-7 pr-12 sm:text-sm border-gray-300 rounded-md"
+            class="
+              focus:ring-wf-orange
+              focus:border-wf-orange
+              block
+              w-full
+              pl-7
+              pr-12
+              sm:text-sm
+              border-gray-300
+              rounded-md
+            "
             placeholder="1000"
           />
           <div
-            class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none"
+            class="
+              absolute
+              inset-y-0
+              right-0
+              pr-3
+              flex
+              items-center
+              pointer-events-none
+            "
           >
             <span class="text-gray-500 sm:text-sm"> per maand </span>
           </div>

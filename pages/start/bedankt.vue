@@ -6,8 +6,8 @@
       </h1>
       <p class="mt-6 text-lg text-gray-500">
         Welkom bij WoningFinder. Je zoekopdracht is zojuist ingesteld, je
-        ontvangt van ons binnenkort een email met instructies om ons te laten
-        reageren voor jou.
+        ontvangt van ons binnenkort een email met instructies over hoe je kunt
+        beginnen met automatisch reageren.
       </p>
     </div>
 

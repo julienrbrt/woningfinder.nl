@@ -8,8 +8,8 @@
       </h1>
 
       <p class="mt-6 text-lg text-gray-500">
-        Hier zijn de woningcorporaties waarin WoningFinder voor jou kan zoeken
-        en reageren.
+        Hier zijn de woningcorporaties waarin je automatisch kan reageren met
+        WoningFinder.
       </p>
 
       <p class="mt-6 text-lg text-gray-500">

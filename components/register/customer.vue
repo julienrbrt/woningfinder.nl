@@ -23,7 +23,17 @@
             name="name"
             id="name"
             autocomplete="given-name"
-            class="mt-2 shadow-sm focus:ring-wf-orange focus:border-wf-orange block w-full sm:text-sm border-gray-300 rounded-md"
+            class="
+              mt-2
+              shadow-sm
+              focus:ring-wf-orange
+              focus:border-wf-orange
+              block
+              w-full
+              sm:text-sm
+              border-gray-300
+              rounded-md
+            "
           />
         </div>
 
@@ -37,7 +47,17 @@
           <select
             v-model="customer.birth_year"
             name="birth_year"
-            class="mt-2 shadow-sm focus:ring-wf-orange focus:border-wf-orange block w-full sm:text-sm border-gray-300 rounded-md"
+            class="
+              mt-2
+              shadow-sm
+              focus:ring-wf-orange
+              focus:border-wf-orange
+              block
+              w-full
+              sm:text-sm
+              border-gray-300
+              rounded-md
+            "
           >
             <option
               v-for="year in range(1920, this.fullYear - 16).reverse()"
@@ -59,7 +79,16 @@
         name="email"
         type="email"
         autocomplete="email"
-        class="shadow-sm focus:ring-wf-orange focus:border-wf-orange block w-full sm:text-sm border-gray-300 rounded-md"
+        class="
+          shadow-sm
+          focus:ring-wf-orange
+          focus:border-wf-orange
+          block
+          w-full
+          sm:text-sm
+          border-gray-300
+          rounded-md
+        "
       />
 
       <div class="grid grid-cols-6 gap-6">
@@ -69,7 +98,15 @@
           >
           <div class="mt-2 relative rounded-md shadow-sm">
             <div
-              class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
+              class="
+                absolute
+                inset-y-0
+                left-0
+                pl-3
+                flex
+                items-center
+                pointer-events-none
+              "
             >
               <span class="text-gray-500 sm:text-sm"> € </span>
             </div>
@@ -79,11 +116,29 @@
               name="income"
               id="income"
               min="0"
-              class="focus:ring-wf-orange focus:border-wf-orange block w-full pl-7 pr-12 sm:text-sm border-gray-300 rounded-md"
+              class="
+                focus:ring-wf-orange
+                focus:border-wf-orange
+                block
+                w-full
+                pl-7
+                pr-12
+                sm:text-sm
+                border-gray-300
+                rounded-md
+              "
               placeholder="0"
             />
             <div
-              class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none"
+              class="
+                absolute
+                inset-y-0
+                right-0
+                pr-3
+                flex
+                items-center
+                pointer-events-none
+              "
             >
               <span class="text-gray-500 sm:text-sm"> per jaar </span>
             </div>
@@ -102,7 +157,17 @@
             min="1"
             max="12"
             placeholder="1"
-            class="mt-2 shadow-sm focus:ring-wf-orange focus:border-wf-orange block w-full sm:text-sm border-gray-300 rounded-md"
+            class="
+              mt-2
+              shadow-sm
+              focus:ring-wf-orange
+              focus:border-wf-orange
+              block
+              w-full
+              sm:text-sm
+              border-gray-300
+              rounded-md
+            "
           />
         </div>
       </div>
@@ -119,7 +184,14 @@
             id="children"
             name="children"
             type="checkbox"
-            class="focus:ring-wf-orange h-4 w-4 text-wf-orange-dark border-gray-300 rounded"
+            class="
+              focus:ring-wf-orange
+              h-4
+              w-4
+              text-wf-orange-dark
+              border-gray-300
+              rounded
+            "
           />
           <label
             for="children"
@@ -136,7 +208,7 @@
           </div>
           <div class="ml-3">
             <p class="text-sm font-medium text-gray-800">
-              We reageren alleen op
+              WoningFinder reageert alleen op
               <a
                 class="underline text-gray-700"
                 target="_blank"

@@ -12,7 +12,7 @@
       class="mt-4"
       v-if="showHasPaidAlert"
       @click="hideAlert"
-      alert="Let op: Je hebt nog niet je zoekopdracht voltooid. We reageren dus nog niet voor jou."
+      alert="Let op: Je hebt je zoekopdracht nog niet voltooid. Je reageert dus nog niet automatisch op woningen."
     />
 
     <!-- stats -->
@@ -53,7 +53,7 @@
         met deze
         <span @click="showModal = 'volmacht'" class="underline cursor-pointer"
           >volmacht</span
-        >. Hierdoor kunnen wij voor jou reageren.
+        >. Hierdoor kan je automatisch reageren.
       </p>
 
       <DashboardVoorwaardenVolmachtModal
