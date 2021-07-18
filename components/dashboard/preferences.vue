@@ -3,13 +3,15 @@
     <div class="px-4 mt-4 mb-2 sm:px-6">
       <h1 class="text-xl text-gray-900">Instellingen</h1>
     </div>
-    <div class="-mt-2 px-4 py-4 flex items-center sm:px-6">
-      <ul>
-        <li class="text-gray-500 text-base">
-          Binnenkort kun je hier je zoekopdracht bijwerken. Wil je nu al iets
-          wijzigen aan je zoekopdracht? Neem dan
+    <div class="mt-2 mb-4 px-4 flex items-center sm:px-6">
+      <ul class="text-gray-500 text-base">
+        <li class="mb-2">👤 {{ customer.name }}</li>
+        <li class="mb-2">✉️ {{ customer.email }}</li>
+        <li class="mb-2">🗓 {{ customer.birth_year }}</li>
+        <li class="text-sm">
+          Binnenkort kun je hier je zoekopdracht bijwerken. Neem
           <NuxtLink to="/contact" class="underline">contact</NuxtLink> met ons
-          op.
+          op om iets nu te wijzigen.
         </li>
       </ul>
     </div>
