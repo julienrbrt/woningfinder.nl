@@ -44,9 +44,13 @@
           >
             Geboorte jaar
           </label>
-          <select
+          <input
             v-model="customer.birth_year"
             name="birth_year"
+            type="number"
+            min="1920"
+            :max="currentYear"
+            step="1"
             class="
               mt-2
               shadow-sm
@@ -58,15 +62,7 @@
               border-gray-300
               rounded-md
             "
-          >
-            <option
-              v-for="year in range(1920, this.fullYear - 16).reverse()"
-              :key="year"
-              :value="year"
-            >
-              {{ year }}
-            </option>
-          </select>
+          />
         </div>
       </div>
 
@@ -241,15 +237,11 @@ export default {
     }
   },
   methods: {
-    range(start, end) {
-      return Array(end - start + 1)
-        .fill()
-        .map((_, idx) => start + idx)
-    },
     // called from parent component
     validate() {
       this.customer.yearly_income = parseInt(this.customer.yearly_income)
       this.customer.family_size = parseInt(this.customer.family_size)
+      this.customer.birth_year = parseInt(this.customer.birth_year)
 
       if (
         this.$store.getters['register/getPlan'].name == 'basis' &&
@@ -268,7 +260,7 @@ export default {
         isNaN(this.customer.family_size) ||
         this.customer.name == '' ||
         this.customer.email == '' ||
-        this.customer.birth_year == 0
+        this.customer.birth_year < 1920
       ) {
         this.error = true
         this.errorMsg =
@@ -285,12 +277,12 @@ export default {
     },
   },
   computed: {
-    fullYear: () => {
+    currentYear: () => {
       return new Date().getFullYear()
     },
     showHasChildren() {
       return (
-        this.fullYear - this.customer.birth_year < 23 &&
+        this.currentYear - this.customer.birth_year < 23 &&
         this.$store.getters['register/getPlan'].name == 'basis'
       )
     },

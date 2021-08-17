@@ -8,7 +8,7 @@ export const state = () => ({
     has_children_same_housing: false,
     plan: { name: '' },
     housing_preferences: {
-      city: [], // { name: '', district: [''] }
+      city: [], // { name: '', district: { "" : null } }
       type: [],
       maximum_price: 0,
       number_bedroom: 0,
@@ -72,7 +72,7 @@ export const mutations = {
     this._vm.$set(
       state.register.housing_preferences.city,
       state.register.housing_preferences.city.length,
-      { name: city, district: [] }
+      { name: city, district: {} }
     )
   },
   removeCity(state, city) {
@@ -87,9 +87,9 @@ export const mutations = {
     )
 
     // add district
-    state.register.housing_preferences.city[cityIdx].district.push(
+    state.register.housing_preferences.city[cityIdx].district[
       cityDistrict.district
-    )
+    ] = null
   },
   removeCityDistrict(state, cityDistrict) {
     // find city index
@@ -98,11 +98,9 @@ export const mutations = {
     )
 
     // remove district
-    state.register.housing_preferences.city[
-      cityIdx
-    ].district = state.register.housing_preferences.city[
-      cityIdx
-    ].district.filter((d) => d !== cityDistrict.district)
+    delete state.register.housing_preferences.city[cityIdx].district[
+      cityDistrict.district
+    ]
   },
   setHousingType(state, type) {
     state.register.housing_preferences.type = type

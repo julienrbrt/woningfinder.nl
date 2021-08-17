@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-if="districtsList">
+    <div v-if="city.district">
       <select
         v-model="selected"
         id="city-districts"
@@ -22,17 +22,20 @@
         @change="addCityDistrict"
       >
         <option disabled value="">
-          Voorgestelde wijken ({{ districtsList.length }})
+          Voorgestelde wijken ({{ getCityDistrict().length }})
         </option>
-        <option v-for="district in districtsList" :key="district">
+        <option v-for="district in getCityDistrict()" :key="district">
           {{ district }}
         </option>
       </select>
 
-      <div v-if="hasSelection" class="mt-6 space-y-4">
+      <div
+        v-if="Object.keys(getCity.district).length > 0"
+        class="mt-6 space-y-4"
+      >
         <!-- district selection-->
         <div
-          v-for="district in getCity.district"
+          v-for="district in Object.keys(getCity.district)"
           :key="district"
           class="
             relative
@@ -92,23 +95,38 @@ export default {
     InformationCircleIcon,
     XIcon,
   },
-  props: ['city'],
+  props: ['city', 'advanced'],
   data() {
     return {
       selected: '',
-      districtsList: this.city.district,
     }
   },
   methods: {
+    getCityDistrict() {
+      if (!this.city.district) {
+        return null
+      }
+
+      if (this.advanced) {
+        var neighbourhood = [
+          ...new Set(Object.values(this.city.district).flat()),
+        ].filter(function (el) {
+          return el != null
+        })
+
+        if (neighbourhood.length > 0) {
+          return neighbourhood
+        }
+      }
+
+      return Object.keys(this.city.district)
+    },
     addCityDistrict() {
       if (this.selected) {
         this.$store.commit('register/addCityDistrict', {
           city: this.city,
           district: this.selected,
         })
-        this.districtsList = this.districtsList.filter(
-          (d) => d !== this.selected
-        )
         this.selected = ''
       }
     },
@@ -118,19 +136,16 @@ export default {
           city: this.city,
           district: selected,
         })
-        this.districtsList.push(selected)
-        this.districtsList = this.districtsList.sort((d1, d2) =>
-          d1 > d2 ? 1 : -1
-        )
+
+        // small trick to force re-rendering after districts removed from vuex
+        this.selected = 'removed'
+        this.selected = ''
       }
     },
   },
   computed: {
     getCity() {
       return this.$store.getters['register/getCity'](this.city)
-    },
-    hasSelection() {
-      return this.getCity.district.length > 0
     },
   },
 }
