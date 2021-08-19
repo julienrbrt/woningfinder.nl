@@ -74,10 +74,14 @@
             <InformationCircleIcon class="h-5 w-5 text-gray-400" />
           </div>
           <div class="ml-3">
-            <p class="text-sm font-medium text-gray-800">
+            <p class="text-sm font-medium text-gray-900">
               Zoek je een woningcorporatie die hier (nog) niet staat? Neem dan
-              <NuxtLink to="/contact" class="underline">contact</NuxtLink> met
-              ons op.
+              <NuxtLink
+                to="/contact"
+                class="underline text-gray-700 hover:text-gray-900"
+                >contact</NuxtLink
+              >
+              met ons op.
             </p>
           </div>
         </div>

@@ -60,14 +60,14 @@ export default {
   plugins: [{ src: '~/plugins/vue-autocomplete.js', ssr: false }],
   components: true,
   buildModules: ['@nuxtjs/tailwindcss', '@nuxtjs/google-analytics'],
-  modules: ['@nuxtjs/axios', '@nuxtjs/sitemap'],
+  modules: ['@nuxtjs/axios', '@nuxtjs/sitemap', '@nuxt/content'],
   axios: {
     baseURL: 'https://woningfinder.nl/api/',
   },
   sitemap: {
     hostname: 'https://woningfinder.nl',
     gzip: true,
-    exclude: ['/start/**', '/voorwaarden/**'],
+    exclude: ['/start/**', '/voorwaarden', '/voorwaarden/**'],
   },
   tailwindcss: {
     mode: 'jit',

@@ -10,8 +10,10 @@
         <li class="mb-2">🗓 {{ customer.birth_year }}</li>
         <li class="text-sm">
           Binnenkort kun je hier je zoekopdracht bijwerken. Neem
-          <NuxtLink to="/contact" class="underline">contact</NuxtLink> met ons
-          op om iets nu te wijzigen.
+          <NuxtLink to="/contact" class="underline hover:text-gray-900"
+            >contact</NuxtLink
+          >
+          met ons op om iets nu te wijzigen.
         </li>
       </ul>
     </div>

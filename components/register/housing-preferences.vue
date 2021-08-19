@@ -199,7 +199,7 @@
               <CurrencyEuroIcon class="h-5 w-5 text-gray-400" />
             </div>
             <div class="ml-3">
-              <p class="text-sm font-medium text-gray-800">
+              <p class="text-sm font-medium text-gray-900">
                 Omdat je een sociale huurwoning zoekt, kun je geen maximale
                 huurprijs invullen. Je maximale huurprijs is afhankelijk van
                 jouw jaarlijks inkomen. Maak je geen zorgen je reageert altijd
@@ -270,7 +270,7 @@
           <InformationCircleIcon class="h-5 w-5 text-gray-400" />
         </div>
         <div class="ml-3">
-          <p class="text-sm font-medium text-gray-800">
+          <p class="text-sm font-medium text-gray-900">
             Heb jij een wens dat niet in ons zoekopdracht staat? Neem dan
             <NuxtLink to="/contact" class="underline">contact</NuxtLink> met ons
             op.

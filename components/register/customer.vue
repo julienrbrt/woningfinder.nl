@@ -203,10 +203,10 @@
             <InformationCircleIcon class="h-5 w-5 text-gray-400" />
           </div>
           <div class="ml-3">
-            <p class="text-sm font-medium text-gray-800">
+            <p class="text-sm font-medium text-gray-900">
               WoningFinder reageert alleen op
               <a
-                class="underline text-gray-700"
+                class="underline text-gray-700 hover:text-gray-900"
                 target="_blank"
                 href="https://www.woningmarktbeleid.nl/onderwerpen/daeb/toewijzen-door-woningcorporaties/regels-voor-toewijzen"
                 >passende woningen</a

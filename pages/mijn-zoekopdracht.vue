@@ -125,7 +125,7 @@
               akkoord met deze
               <span
                 @click="showModal = 'volmacht'"
-                class="underline cursor-pointer"
+                class="underline hover:text-gray-900 cursor-pointer"
                 >volmacht</span
               >. Hierdoor kan je automatisch reageren.
             </p>

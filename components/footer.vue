@@ -65,13 +65,12 @@
               </li>
 
               <li>
-                <a
-                  href="https://blog.woningfinder.nl"
-                  target="_blank"
+                <NuxtLink
+                  to="/nieuws"
                   class="text-base text-gray-400 hover:text-gray-300"
                 >
-                  Blog
-                </a>
+                  Nieuws
+                </NuxtLink>
               </li>
 
               <li>
@@ -141,12 +140,12 @@
       >
         <div class="flex space-x-6 md:order-2">
           <a
-            href="https://blog.woningfinder.nl"
+            href="https://woningfinder.nl/nieuws"
             target="_blank"
             rel="noopener noreferrer"
             class="text-gray-400 hover:text-gray-300"
           >
-            <span class="sr-only">Medium</span>
+            <span class="sr-only">Nieuws</span>
             <svg
               class="h-6 w-6"
               fill="currentColor"

@@ -45,16 +45,19 @@
           <div class="ml-3">
             <p
               class="text-sm font-medium"
-              v-bind:class="error ? 'text-red-800' : 'text-gray-800'"
+              v-bind:class="error ? 'text-red-800' : 'text-gray-900'"
             >
               Je hebt geen steden geselecteerd.
             </p>
             <p
               class="text-sm font-medium"
-              v-bind:class="error ? 'text-red-800' : 'text-gray-800'"
+              v-bind:class="error ? 'text-red-800' : 'text-gray-900'"
             >
               Staat je stad er niet tussen? Schrijf je in op onze
-              <NuxtLink to="/wachtlijst" class="underline" @click="waitingList"
+              <NuxtLink
+                to="/wachtlijst"
+                class="underline text-gray-700 hover:text-gray-900"
+                @click="waitingList"
                 >wachtlijst</NuxtLink
               >
               en we laten je weten wanneer we jouw stad toegevoegd hebben.

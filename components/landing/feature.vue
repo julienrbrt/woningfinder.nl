@@ -105,7 +105,7 @@
             <LandingFeatureItem
               title="Alle beschikbare woningcorporaties van jouw stad"
               description='Als je een stad kiest, reageert WoningFinder op het aanbod van <a
-                href="/woningcorporaties" target="_blank" class="underline">alle
+                href="/woningcorporaties" target="_blank" class="underline hover:text-gray-900">alle
                 woningcorporaties</a> van deze stad. Dit vergroot jouw kansen.'
             >
               <GlobeIcon class="h-6 w-6" />

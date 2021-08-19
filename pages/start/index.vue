@@ -1,7 +1,7 @@
 <template>
   <Hero>
     <div class="mt-6 sm:max-w-xl">
-      <h1 class="text-3xl font-extrabold text-gray-900 tracking-tight">
+      <h1 class="text-3xl font-extrabold text-wf-purple tracking-tight">
         Je WoningFinder zoekopdracht
       </h1>
     </div>
@@ -99,7 +99,7 @@
           whitespace-nowrap
           text-sm
           font-medium
-          text-gray-400 text-right
+          text-gray-500 text-right
           self-end
         "
       >

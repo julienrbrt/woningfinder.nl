@@ -40,23 +40,7 @@
             <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
               <div class="px-6 py-8 bg-white sm:p-10 sm:pb-6">
                 <div>
-                  <h3
-                    class="
-                      inline-flex
-                      px-4
-                      py-1
-                      rounded-full
-                      text-sm
-                      font-semibold
-                      tracking-wide
-                      uppercase
-                      bg-wf-orange-lightest
-                      text-wf-orange
-                    "
-                    id="tier-basis"
-                  >
-                    Basis
-                  </h3>
+                  <h3 class="badge" id="tier-basis">Basis</h3>
                 </div>
                 <div class="mt-4 flex items-baseline text-6xl font-extrabold">
                   €10
@@ -133,23 +117,7 @@
             <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
               <div class="px-6 py-8 bg-white sm:p-10 sm:pb-6">
                 <div>
-                  <h3
-                    class="
-                      inline-flex
-                      px-4
-                      py-1
-                      rounded-full
-                      text-sm
-                      font-semibold
-                      tracking-wide
-                      uppercase
-                      bg-wf-orange-lightest
-                      text-wf-orange
-                    "
-                    id="tier-pro"
-                  >
-                    Pro
-                  </h3>
+                  <h3 class="badge" id="tier-pro">Pro</h3>
                 </div>
                 <div class="mt-4 flex items-baseline text-6xl font-extrabold">
                   €25

@@ -8,6 +8,8 @@
         Welkom bij WoningFinder. Je zoekopdracht is zojuist ingesteld, je
         ontvangt van ons binnenkort een email met instructies over hoe je kunt
         beginnen met automatisch reageren.
+        <br />
+        Krijgt je geen mail binnen? Kijk dan ook even bij jouw ongewenste mail.
       </p>
     </div>
 
