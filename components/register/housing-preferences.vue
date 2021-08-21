@@ -3,7 +3,7 @@
     <p class="mt-6 text-lg text-gray-500">
       Vertel ons meer over jouw droomhuis
     </p>
-    <p class="mt-6 text-base text-gray-500">
+    <p class="mt-2 text-base text-gray-500">
       WoningFinder reageert niet op woningen die niet aan jouw voorkeuren
       voldoen. Denk dus goed na.
     </p>
@@ -203,7 +203,7 @@
                 Omdat je een sociale huurwoning zoekt, kun je geen maximale
                 huurprijs invullen. Je maximale huurprijs is afhankelijk van
                 jouw jaarlijks inkomen. Maak je geen zorgen je reageert altijd
-                alleen op passend woningen.
+                alleen op passende woningen.
               </p>
             </div>
           </div>
@@ -264,16 +264,20 @@
     </div>
 
     <!-- info alert -->
-    <div class="mt-6 rounded-md bg-gray-50 p-4">
+    <div class="mt-4 rounded-md bg-gray-50 p-4">
       <div class="flex">
         <div class="flex-shrink-0">
           <InformationCircleIcon class="h-5 w-5 text-gray-400" />
         </div>
         <div class="ml-3">
           <p class="text-sm font-medium text-gray-900">
-            Heb jij een wens dat niet in ons zoekopdracht staat? Neem dan
-            <NuxtLink to="/contact" class="underline">contact</NuxtLink> met ons
-            op.
+            Heb jij een wens die niet in ons zoekopdracht staat? Neem dan
+            <NuxtLink
+              to="/contact"
+              class="underline text-gray-700 hover:text-gray-900"
+              >contact</NuxtLink
+            >
+            met ons op.
           </p>
         </div>
       </div>

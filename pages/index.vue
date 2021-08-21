@@ -34,7 +34,7 @@
       </div>
       <div class="sm:flex sm:justify-center lg:justify-start">
         <div class="min-w-0 text-sm text-gray-500 py-2">
-          Geen maandelijkse kosten.
+          Probeer 14 dagen gratis.
         </div>
       </div>
     </Hero>

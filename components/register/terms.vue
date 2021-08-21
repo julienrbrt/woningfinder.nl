@@ -4,25 +4,22 @@
       Je zoekopdracht is bijna ingesteld, hier is wat jij moet weten
     </p>
 
+    <AlertInfo class="mt-6" :description="descriptionFreeTrialTerms">
+      <InformationCircleIcon class="h-5 w-5 text-gray-400" />
+    </AlertInfo>
+
     <AlertInfo
-      class="mt-6"
       description="WoningFinder kan alleen op beschikbare woningen reageren. Zijn er geen woningen
-        beschikbaar die matchen met jouw zoekopdracht, kan WoningFinder ook nergens op
+        beschikbaar die matchen met jouw zoekopdracht dan kan WoningFinder ook nergens op
         reageren. Je ontvangt wel altijd een wekelijkse update van ons."
     >
       <InformationCircleIcon class="h-5 w-5 text-gray-400" />
     </AlertInfo>
 
     <AlertInfo
-      description="Je zoekopdracht is onbeperkt geldig, je blijft automatisch reageren tot dat je een huis vindt. Je hoeft alleen maar één keer te betalen."
-    >
-      <InformationCircleIcon class="h-5 w-5 text-gray-400" />
-    </AlertInfo>
-
-    <AlertInfo
       description="WoningFinder reageert op de woningen die je zou willen (je
-        zoekopdracht). Maar uiteraard kunnen we niet garanderen dat jij een huis
-        sneller krijgt, je reageert wel automatisch, maar het zijn altijd de
+        zoekopdracht). Maar uiteraard kunnen we niet garanderen dat jij sneller een huis
+        krijgt, je reageert wel automatisch, maar het zijn altijd de
         woningcorporaties die de selecties doen (loting, wie eerst komt wie
         eerst maalt of inschrijfperiode)."
     >
@@ -50,6 +47,28 @@ import { InformationCircleIcon } from '@vue-hero-icons/solid'
 export default {
   components: {
     InformationCircleIcon,
+  },
+  props: ['plan'],
+  data() {
+    return {
+      descriptionFreeTrialTerms:
+        'Je zoekopdracht is 14 dagen gratis. Daarna hoeft je maar één keer €' +
+        this.planPrice() +
+        ' te betalen en je blijft automatisch onbeperkt reageren tot je een huis vindt.',
+    }
+  },
+  methods: {
+    planPrice() {
+      for (var i = 0; i < this.plan.length; i++) {
+        // TODO CHECK PRICE REACTIVELY OTHERWISE IT WILL STAY 0 euro
+
+        if (this.plan[i].name == this.$store.getters['register/getPlan'].name) {
+          return this.plan[i].price
+        }
+      }
+
+      return 0
+    },
   },
 }
 </script>
