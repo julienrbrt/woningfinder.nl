@@ -1,6 +1,16 @@
 <template>
   <Hero>
     <div class="mt-6 sm:max-w-xl">
+      <!-- payment validation alert -->
+      <AlertOk
+        class="mb-6"
+        v-if="alert && $route.query.thanks"
+        @click="hideAlert"
+        alert=" Bedankt jouw betaling is gelukt! Je blijft automatisch reageren tot je
+        een huis vindt!"
+      >
+      </AlertOk>
+
       <AlertOk
         class="my-4"
         v-if="submitted"
@@ -76,6 +86,7 @@ export default {
   data() {
     return {
       email: '',
+      alert: true,
       error: false,
       submitted: false,
     }
@@ -102,6 +113,7 @@ export default {
         })
     },
     hideAlert() {
+      this.alert = false
       this.error = false
       this.submitted = false
     },

@@ -4,10 +4,10 @@
       Gefeliciteerd, je zoekopdracht is ingesteld 🎉
     </p>
     <p class="mt-2 text-base text-gray-500">
-      Je zoekopdracht is zojuist ingesteld, je ontvangt binnenkort van ons een
-      email om je zoekopdracht te activeren en met instructies over hoe je kunt
-      beginnen met automatisch reageren. Krijgt je geen mail binnen? Kijk dan
-      ook even bij jouw ongewenste mail.
+      Je zoekopdracht is zojuist ingesteld, je ontvangt binnenkort een e-mail
+      van ons om je zoekopdracht te activeren en met instructies over hoe je
+      kunt beginnen met automatisch reageren. Krijg je geen mail binnen? Kijk
+      dan ook even bij jouw ongewenste mail.
     </p>
   </div>
 </template>

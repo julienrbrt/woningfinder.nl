@@ -1,15 +1,15 @@
 <template>
   <Hero>
     <!-- payment flow -->
-    <div v-if="!$route.query.geannuleerd" class="mt-6 sm:max-w-xl">
+    <div v-if="!$route.query.cancelled" class="mt-6 sm:max-w-xl">
       <h1 class="text-4xl font-extrabold text-gray-900 tracking-tight">
-        Blijf automatisch reageren tot je een huis vind
+        Blijf automatisch reageren tot je een huis vindt
       </h1>
 
       <p class="mt-6 text-lg text-gray-500">
-        Jouw 14 dagen gratis lopen af. Met WoningFinder kan je automatisch
-        blijven reageren tot je een huis vindt tegen een eenmalig bedrag. Geen
-        maandelijkse kosten 👌
+        Jouw gratis 14 dagen lopen af. Tegen een eenmalig bedrag kun je
+        automatisch blijven reageren tot je een huis vindt. Geen maandelijkse
+        kosten 👌
       </p>
     </div>
 
@@ -20,8 +20,8 @@
       </h1>
 
       <p class="mt-6 text-lg text-gray-500">
-        Je zoekopdracht is niet helemaal voltooid omdat er is misgegaan met je
-        betaling. Probeer opnieuw om jouw zoekopdracht te voltooien.
+        Je zoekopdracht is niet helemaal voltooid omdat er iets is misgegaan met
+        je betaling. Probeer het opnieuw om jouw zoekopdracht te voltooien.
       </p>
     </div>
 
@@ -60,7 +60,7 @@
         </div>
         <div class="ml-3">
           <p class="text-sm font-medium text-gray-900">
-            Niet tevreden van je 14 dagen gratis? Neem dan
+            Niet tevreden met WoningFinder? Neem dan
             <NuxtLink
               to="/contact"
               class="underline text-gray-700 hover:text-gray-900"
