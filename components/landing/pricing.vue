@@ -16,9 +16,12 @@
             Kosten
           </h2>
           <p class="text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl">
-            Transparante prijzen
+            Probeer 14 dagen gratis
           </p>
-          <p class="text-xl text-gray-300">Geen maandelijkse kosten.</p>
+          <p class="text-xl text-gray-300">
+            Daarna een eenmalig bedrag om onbeperkt automatisch te reageren tot
+            je een huis vindt.
+          </p>
         </div>
       </div>
     </div>

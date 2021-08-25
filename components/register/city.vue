@@ -1,6 +1,9 @@
 <template>
   <div class="sm:max-w-xl">
     <p class="mt-6 text-lg text-gray-500">Waar zoek je jouw woning?</p>
+    <p class="mt-2 text-base text-gray-500">
+      Je kunt meerdere steden selecteren.
+    </p>
     <select
       v-model="selected"
       id="location"

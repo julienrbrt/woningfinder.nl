@@ -19,7 +19,23 @@
         <label
           v-for="housing in supported_housing"
           :key="housing"
-          class="relative block rounded-lg border bg-white shadow-sm px-6 py-4 cursor-pointer md:hover:border-wf-orange sm:flex sm:justify-between focus-within:ring-1 focus-within:ring-offset-2 focus-within:ring-wf-orange"
+          class="
+            relative
+            block
+            rounded-lg
+            border
+            bg-white
+            shadow-sm
+            px-6
+            py-4
+            cursor-pointer
+            md:hover:border-wf-orange
+            sm:flex
+            sm:justify-between
+            focus-within:ring-1
+            focus-within:ring-offset-2
+            focus-within:ring-wf-orange
+          "
           v-bind:class="[
             selectedType.indexOf(housing) > -1
               ? 'border-wf-orange '

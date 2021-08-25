@@ -1,8 +1,6 @@
 <template>
   <div class="sm:max-w-xl">
-    <p class="mt-6 text-lg text-gray-500">
-      Laten we het meer persoonlijk maken
-    </p>
+    <p class="mt-6 text-lg text-gray-500">Laten we het persoonlijker maken</p>
 
     <AlertError
       class="mt-4"
