@@ -4,7 +4,7 @@
       Je zoekopdracht is bijna ingesteld, hier is wat jij moet weten
     </p>
 
-    <AlertInfo class="mt-6" :description="descriptionFreeTrialTerms">
+    <AlertInfo class="mt-6" :description="descriptionPrice()">
       <InformationCircleIcon class="h-5 w-5 text-gray-400" />
     </AlertInfo>
 
@@ -49,25 +49,17 @@ export default {
     InformationCircleIcon,
   },
   props: ['plan'],
-  data() {
-    return {
-      descriptionFreeTrialTerms:
-        'Je zoekopdracht is 14 dagen gratis. Daarna hoeft je maar één keer €' +
-        this.planPrice() +
-        ' te betalen en je blijft automatisch onbeperkt reageren tot je een huis vindt.',
-    }
-  },
   methods: {
-    planPrice() {
+    descriptionPrice() {
       for (var i = 0; i < this.plan.length; i++) {
-        // TODO CHECK PRICE REACTIVELY OTHERWISE IT WILL STAY 0 euro
-
         if (this.plan[i].name == this.$store.getters['register/getPlan'].name) {
-          return this.plan[i].price
+          return (
+            'Je zoekopdracht is 14 dagen gratis. Daarna hoeft je maar één keer €' +
+            this.plan[i].price +
+            ' te betalen en je blijft automatisch onbeperkt reageren tot je een huis vindt.'
+          )
         }
       }
-
-      return 0
     },
   },
 }

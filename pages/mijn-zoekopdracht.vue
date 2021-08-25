@@ -80,9 +80,9 @@
 
           <AlertError
             class="mt-4"
-            v-if="showHasPaidAlert"
+            v-if="showInvalidPlanAlert"
             @click="hideAlert"
-            alert="Let op: Je hebt je zoekopdracht nog niet voltooid. Je reageert dus nog niet automatisch op woningen."
+            alert="Let op: Je hebt je zoekopdracht nog niet voltooid. Je reageert dus niet (meer) automatisch op woningen."
           />
 
           <!-- stats -->
@@ -177,7 +177,7 @@ export default {
       credentials: [],
       stats: { plan: '', reactions: 0, cities: 0 },
       showModal: '',
-      showHasPaidAlert: false,
+      showInvalidPlanAlert: false,
     }
   },
   methods: {
@@ -209,8 +209,8 @@ export default {
       this.customer = customer
       this.stats.cities = customer.housing_preferences.city.length
       this.stats.plan = this.planTitle(customer.plan.name)
-      if (customer.plan.name.length <= 0) {
-        this.showHasPaidAlert = true
+      if (!customer.valid_plan) {
+        this.showInvalidPlanAlert = true
       }
 
       if (customer.housing_preferences_match) {
@@ -218,7 +218,7 @@ export default {
       }
     },
     hideAlert() {
-      this.showHasPaidAlert = false
+      this.showInvalidPlanAlert = false
     },
     planTitle: (name) => {
       return name.charAt(0).toUpperCase() + name.slice(1)

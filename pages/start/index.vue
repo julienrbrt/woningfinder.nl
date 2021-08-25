@@ -151,7 +151,7 @@ export default {
         this.currentStep--
       }
     },
-    validate(e) {
+    async validate(e) {
       e.preventDefault()
 
       switch (this.currentStep) {
@@ -195,11 +195,11 @@ export default {
             this.$nuxt.$loading.start()
 
             // send request
-            // TODO
-            // this.submit()
+            await this.submit()
             this.submitted = true
 
             if (!this.error) {
+              this.$nuxt.$loading.finish()
               break
             }
           }
@@ -213,18 +213,15 @@ export default {
       this.next()
     },
     async submit() {
-      var stripe = Stripe(process.env.stripeKey)
       await this.$axios
         .$post('register', this.$store.getters['register/getRegister'])
         .then((response) => {
           return response
         })
-        .then((session) => {
-          return stripe.redirectToCheckout({ sessionId: session.id })
-        })
         .catch((error) => {
-          this.errorMsg = 'Er is iets misgegaan: "' + error + '".'
           this.error = true
+          this.errorMsg =
+            'Er is iets misgegaan: "' + error.response.data.message + '".'
         })
     },
     planTitle: (name) => {

@@ -93,13 +93,20 @@
 </template>
 
 <script>
+import { InformationCircleIcon } from '@vue-hero-icons/solid'
+
 export default {
+  components: {
+    InformationCircleIcon,
+  },
   async asyncData({ $axios }) {
     const offering = await $axios.$get('offering', { progress: true })
     return { offering }
   },
   data() {
     return {
+      paymentMethod: ['stripe', 'crypto'],
+      selectedPaymentMethod: 'stripe',
       email: '',
       error: false,
       errorMsg: '',
@@ -113,7 +120,7 @@ export default {
       if (!this.validForm) {
         this.error = true
         this.errorMsg =
-          'We hebben al je gegevens nodig. Controleer het formulier nogmaals.'
+          'We hebben je e-mail nodig. Controleer het formulier nogmaals.'
         return
       }
 
@@ -123,6 +130,7 @@ export default {
       await this.$axios
         .$post('payment', {
           email: this.email,
+          method: this.selectedPaymentMethod,
         })
         .then((response) => {
           this.email = ''
@@ -143,8 +151,15 @@ export default {
   },
   computed: {
     validForm() {
-      return this.email.length > 0
+      if (this.email) {
+        return this.email.length > 0
+      }
+
+      return false
     },
+  },
+  mounted() {
+    this.email = this.$route.query.email
   },
 }
 </script>
