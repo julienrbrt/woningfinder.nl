@@ -227,7 +227,6 @@ export default {
         return
       }
 
-      var stripe = Stripe(process.env.stripeKey)
       // send request
       await this.$axios
         .$post('payment', {
@@ -240,7 +239,9 @@ export default {
         })
         .then((data) => {
           // redirect to stripe
-          if (data.data.stripe_session_id) {
+          if (data.stripe_session_id) {
+            var stripe = Stripe(process.env.stripeKey)
+
             return stripe.redirectToCheckout({
               sessionId: data.stripe_session_id,
             })
@@ -257,7 +258,8 @@ export default {
             error = 'gebruiker niet gevonden'
           }
 
-          this.errorMsg = 'Er is iets misgegaan: "' + error + '".'
+          this.errorMsg =
+            'Er is iets misgegaan: "' + error.response.data.message + '".'
         })
     },
   },
