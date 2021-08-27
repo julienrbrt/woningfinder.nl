@@ -106,7 +106,7 @@
             sm:inline-block
             rounded-lg
             border
-            bg-cdc
+            bg-crypto-com
             shadow-sm
             px-4
             py-2
@@ -116,7 +116,7 @@
           "
           :class="
             selectedPaymentMethod === paymentMethodCrypto
-              ? 'border-cdc'
+              ? 'border-crypto-com'
               : 'border-gray-300'
           "
         >
@@ -176,7 +176,7 @@
           class="btn"
           :class="
             selectedPaymentMethod == 'crypto'
-              ? ' bg-cdc hover:bg-cdc hover:ring-cdc focus:ring-cdc'
+              ? ' bg-crypto-com hover:bg-crypto-com hover:ring-crypto-com focus:ring-crypto-com'
               : ''
           "
         >
@@ -227,33 +227,38 @@ export default {
         return
       }
 
-      switch (this.selectedPaymentMethod) {
-        case this.paymentMethodStripe:
-          var stripe = Stripe(process.env.stripeKey)
+      var stripe = Stripe(process.env.stripeKey)
+      // send request
+      await this.$axios
+        .$post('payment', {
+          email: this.email,
+          method: this.selectedPaymentMethod,
+        })
+        .then((response) => {
+          this.email = ''
+          return response
+        })
+        .then((data) => {
+          // redirect to stripe
+          if (data.data.stripe_session_id) {
+            return stripe.redirectToCheckout({
+              sessionId: data.stripe_session_id,
+            })
+          }
 
-          // send request
-          await this.$axios
-            .$post('payment', {
-              email: this.email,
-              method: this.selectedPaymentMethod,
-            })
-            .then((response) => {
-              this.email = ''
-              return response
-            })
-            .then((session) => {
-              return stripe.redirectToCheckout({ sessionId: session.id })
-            })
-            .catch((error) => {
-              this.error = true
-              if (error.response.status == 404) {
-                error = 'gebruiker niet gevonden'
-              }
+          // redirect to crypto.com
+          if (data.crypto_payment_url) {
+            window.location.href = data.crypto_payment_url
+          }
+        })
+        .catch((error) => {
+          this.error = true
+          if (error.response.status == 404) {
+            error = 'gebruiker niet gevonden'
+          }
 
-              this.errorMsg = 'Er is iets misgegaan: "' + error + '".'
-            })
-        case this.paymentMethodCrypto:
-      }
+          this.errorMsg = 'Er is iets misgegaan: "' + error + '".'
+        })
     },
   },
   computed: {

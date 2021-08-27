@@ -59,12 +59,6 @@ export default {
     startEvent() {
       this.$ga.event('landing', 'click', 'button_start', 1)
     },
-    scroll() {
-      this.$refs.feature.$el.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-      })
-    },
   },
 }
 </script>

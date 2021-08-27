@@ -26,7 +26,7 @@ module.exports = {
           light: '#eb927a',
           lightest: '#f8dbd3',
         },
-        cdc: {
+        'crypto-com': {
           DEFAULT: '#1e3f6f',
         },
       },
