@@ -26,6 +26,9 @@ module.exports = {
           light: '#eb927a',
           lightest: '#f8dbd3',
         },
+        cdc: {
+          DEFAULT: '#1e3f6f',
+        },
       },
     },
   },
