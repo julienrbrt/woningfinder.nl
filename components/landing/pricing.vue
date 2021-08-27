@@ -216,10 +216,10 @@ export default {
   },
   methods: {
     startEventBasis() {
-      this.$ga.event('pricing', 'click', 'button_start_basis', 1)
+      this.$ga.event('landing', 'click', 'button_start_basis', 1)
     },
     startEventPro() {
-      this.$ga.event('pricing', 'click', 'button_start_pro', 1)
+      this.$ga.event('landing', 'click', 'button_start_pro', 1)
     },
   },
 }

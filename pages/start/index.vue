@@ -199,6 +199,10 @@ export default {
             this.submitted = true
 
             if (!this.error) {
+              // register event
+              this.$ga.event('start', 'signup', 'successful', 1)
+
+              // end loading bar
               this.$nuxt.$loading.finish()
               break
             }

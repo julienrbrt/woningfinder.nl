@@ -259,7 +259,7 @@ export default {
   computed: {
     validForm() {
       if (this.email) {
-        return this.email.length > 0
+        return this.email.length > 0 && this.selectedPaymentMethod != ''
       }
 
       return false

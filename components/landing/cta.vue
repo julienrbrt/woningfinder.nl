@@ -140,10 +140,10 @@
 export default {
   methods: {
     startEvent() {
-      this.$ga.event('cta', 'click', 'button_start', 1)
+      this.$ga.event('landing', 'click', 'button_start', 1)
     },
     contactEvent() {
-      this.$ga.event('cta', 'click', 'button_contact', 1)
+      this.$ga.event('landing', 'click', 'button_contact', 1)
     },
   },
 }
