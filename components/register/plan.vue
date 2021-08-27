@@ -32,9 +32,7 @@
             hover:border-wf-orange
             sm:flex
             sm:justify-between
-            focus-within:ring-1
-            focus-within:ring-offset-2
-            focus-within:ring-wf-orange
+            focus-within:ring-1 focus-within:ring-wf-orange
           "
           v-bind:class="[
             selectedPlan.name === plan.name

@@ -52,8 +52,92 @@
       "
     />
 
+    <h2 class="mb-2 text-base text-gray-900">Betalingsmethode</h2>
+    <fieldset>
+      <legend class="sr-only">Betalingsmethode</legend>
+      <div
+        class="
+          block
+          sm:flex
+          sm:justify-start
+          sm:items-center
+          space-y-2
+          sm:space-y-0 sm:space-x-2
+        "
+      >
+        <label
+          class="
+            block
+            sm:inline-block
+            rounded-lg
+            border
+            bg-white
+            shadow-sm
+            px-4
+            py-2
+            cursor-pointer
+            hover:border-wf-orange
+            focus-within:ring-1 focus-within:ring-wf-orange
+          "
+          :class="
+            selectedPaymentMethod === paymentMethodStripe
+              ? 'border-wf-orange'
+              : 'border-gray-300'
+          "
+        >
+          <input
+            type="radio"
+            name="method"
+            v-model="selectedPaymentMethod"
+            :value="paymentMethodStripe"
+            class="sr-only"
+          />
+          <img
+            class="inline h-8 w-auto"
+            v-for="img in ['ideal', 'visa', 'mastercard']"
+            :key="img"
+            :src="require(`~/assets/img/${img}.png`)"
+            :alt="img"
+          />
+        </label>
+        <label
+          class="
+            block
+            sm:inline-block
+            rounded-lg
+            border
+            bg-crypto-com
+            shadow-sm
+            px-4
+            py-2
+            cursor-pointer
+            hover:border-wf-orange
+            focus-within:ring-1 focus-within:ring-wf-orange
+          "
+          :class="
+            selectedPaymentMethod === paymentMethodCrypto
+              ? 'border-crypto-com'
+              : 'border-gray-300'
+          "
+        >
+          <input
+            type="radio"
+            name="method"
+            v-model="selectedPaymentMethod"
+            :value="paymentMethodCrypto"
+            class="sr-only"
+          />
+          <img
+            class="h-auto w-auto"
+            src="~/assets/img/crypto.svg"
+            alt="crypto"
+          />
+        </label>
+      </div>
+    </fieldset>
+
     <!-- info alert -->
-    <div class="mt-2 rounded-md bg-gray-50 p-4">
+    <div class="mt-4 rounded-md bg-gray-50 p-4">
       <div class="flex">
         <div class="flex-shrink-0">
           <InformationCircleIcon class="h-5 w-5 text-gray-400" />
@@ -86,7 +170,18 @@
         >Terug
       </NuxtLink>
       <div class="rounded-md shadow">
-        <button @click="send" type="submit" class="btn">Activeer</button>
+        <button
+          @click="send"
+          type="submit"
+          class="btn"
+          :class="
+            selectedPaymentMethod == 'crypto'
+              ? ' bg-crypto-com hover:bg-crypto-com hover:ring-crypto-com focus:ring-crypto-com'
+              : ''
+          "
+        >
+          Betalen {{ selectedPaymentMethodTitle() }}
+        </button>
       </div>
     </div>
   </Hero>
@@ -105,8 +200,9 @@ export default {
   },
   data() {
     return {
-      paymentMethod: ['stripe', 'crypto'],
-      selectedPaymentMethod: 'stripe',
+      paymentMethodStripe: 'stripe',
+      paymentMethodCrypto: 'crypto',
+      selectedPaymentMethod: 'stripe', // default to stripe
       email: '',
       error: false,
       errorMsg: '',
@@ -115,6 +211,13 @@ export default {
   methods: {
     hideAlert() {
       this.error = false
+    },
+    selectedPaymentMethodTitle() {
+      if (this.selectedPaymentMethod == this.paymentMethodCrypto) {
+        return 'met Crypto'
+      }
+
+      return ''
     },
     async send() {
       if (!this.validForm) {
@@ -125,8 +228,6 @@ export default {
       }
 
       // send request
-      var stripe = Stripe(process.env.stripeKey)
-
       await this.$axios
         .$post('payment', {
           email: this.email,
@@ -136,8 +237,20 @@ export default {
           this.email = ''
           return response
         })
-        .then((session) => {
-          return stripe.redirectToCheckout({ sessionId: session.id })
+        .then((data) => {
+          // redirect to stripe
+          if (data.stripe_session_id) {
+            var stripe = Stripe(process.env.stripeKey)
+
+            return stripe.redirectToCheckout({
+              sessionId: data.stripe_session_id,
+            })
+          }
+
+          // redirect to crypto.com
+          if (data.crypto_payment_url) {
+            window.location.href = data.crypto_payment_url
+          }
         })
         .catch((error) => {
           this.error = true
@@ -145,14 +258,15 @@ export default {
             error = 'gebruiker niet gevonden'
           }
 
-          this.errorMsg = 'Er is iets misgegaan: "' + error + '".'
+          this.errorMsg =
+            'Er is iets misgegaan: "' + error.response.data.message + '".'
         })
     },
   },
   computed: {
     validForm() {
       if (this.email) {
-        return this.email.length > 0
+        return this.email.length > 0 && this.selectedPaymentMethod != ''
       }
 
       return false
