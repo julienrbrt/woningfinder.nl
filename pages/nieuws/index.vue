@@ -10,10 +10,10 @@
 
     <div v-for="post in posts" :key="post.title" class="mt-6">
       <div class="inline-block">
-        <span class="badge px-2 text-xs"> {{ post.topic }} </span>
         <span class="badge px-2 text-xs bg-gray-200 text-gray-900">
           {{ new Date(post.date).toISOString().slice(0, 10) }}
         </span>
+        <span class="badge px-2 text-xs"> {{ post.topic }} </span>
       </div>
       <NuxtLink :to="'nieuws/' + post.slug" class="block mt-2">
         <p
@@ -27,7 +27,7 @@
         >
           {{ post.title }}
         </p>
-        <p class="mt-3 text-base text-gray-500">
+        <p class="mt-3 text-sm text-gray-500">
           {{ post.description }}
         </p>
       </NuxtLink>

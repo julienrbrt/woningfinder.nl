@@ -3,8 +3,8 @@
     <Hero>
       <AlertNews
         title="Nieuws"
-        description="Nieuwe woningcorporaties zijn toegevoegd 🎉"
-        to="/woningcorporaties"
+        description="Nieuwe steden, 14 dagen gratis, crypt... ➡️"
+        to="/nieuws/3-whats-up-woningfinder"
       />
       <div class="mt-6 sm:max-w-xl">
         <h1

@@ -1,7 +1,7 @@
 <template>
   <Hero>
     <article>
-      <h1 class="text-3xl font-extrabold text-gray-900 tracking-tight">
+      <h1 class="text-3xl font-extrabold text-wf-purple tracking-tight mb-6">
         {{ post.title }}
       </h1>
       <nuxt-content :document="post" />
@@ -44,9 +44,18 @@ export default {
   @apply text-gray-700 mt-2 mb-2;
 }
 .nuxt-content a {
-  @apply underline hover:text-gray-900;
+  @apply underline hover:text-wf-purple;
 }
 .nuxt-content img {
   @apply py-2;
+}
+.nuxt-content ul {
+  @apply list-inside text-gray-700 mb-2;
+}
+.nuxt-content li {
+  @apply list-disc;
+}
+.nuxt-content strong {
+  @apply text-wf-purple;
 }
 </style>
