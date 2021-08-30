@@ -1,8 +1,8 @@
 ---
-title: "What's up WoningFinder"
+title: "What's up WoningFinder #1"
 topic: woningfinder
 date: 2021-09-1
-description: 'Allerlaatste WoningFinder nieuws op een rij.'
+description: 'Het laatste WoningFinder nieuws op een rij.'
 ---
 
 Dit is de eerste editie van **_What's up WoningFinder_**. Hier vindt je wat er is gebeurd met WoningFinder in de laatste maanden.
