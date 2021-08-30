@@ -3,7 +3,7 @@
     <Hero>
       <AlertNews
         title="Nieuws"
-        description="Nieuwe steden, 14 dagen gratis, crypt... ➡️"
+        description="Nieuwe steden, 14 dagen gratis, cr... 🎉"
         to="/nieuws/3-whats-up-woningfinder"
       />
       <div class="mt-6 sm:max-w-xl">

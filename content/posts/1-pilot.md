@@ -1,8 +1,8 @@
 ---
 title: Zoek je een huis in Enschede?
-topic: WoningFinder
+topic: woningfinder
 date: 2021-05-01
-description: 'Een woning vinden in Nederland duurt erg lang. Je moet dagelijks blijven reageren totdat je word geselecteerd. Saai en vervelend toch?'
+description: 'Een woning vinden in Nederland duurt erg lang 😢'
 ---
 
 Een woning vinden in Nederland duurt erg lang. Je moet dagelijks blijven reageren totdat je word geselecteerd. Saai en vervelend toch?
