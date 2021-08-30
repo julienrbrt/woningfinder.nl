@@ -1,6 +1,6 @@
 ---
 title: Wachten, wachten, wachten en blijven reageren
-topic: WoningFinder
+topic: huurwoningmarkt
 description: De huurwoning situatie in Nederland uitgelegd bij NOS.
 date: 2021-06-15
 ---

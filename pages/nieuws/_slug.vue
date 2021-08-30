@@ -1,13 +1,31 @@
 <template>
   <Hero>
     <article>
-      <h1 class="text-3xl font-extrabold text-gray-900 tracking-tight">
+      <h1 class="text-3xl font-extrabold text-wf-purple tracking-tight mb-6">
         {{ post.title }}
       </h1>
       <nuxt-content :document="post" />
     </article>
 
-    <div class="items-center inline-flex mt-5 space-x-4">
+    <div class="inline-flex w-max items-center">
+      <p class="text-gray-600">Reageer je nog steeds niet automatisch?</p>
+      <NuxtLink
+        class="
+          ml-4
+          w-auto
+          btn
+          bg-wf-purple
+          hover:bg-wf-purple-dark
+          hover:ring-wf-purple
+          focus:ring-wf-purple
+        "
+        to="/start"
+      >
+        Begin nu
+      </NuxtLink>
+    </div>
+
+    <div class="w-max items-center mt-5 space-x-4">
       <NuxtLink
         to="/nieuws"
         class="
@@ -35,18 +53,27 @@ export default {
 
 <style>
 .nuxt-content h2 {
-  @apply text-2xl font-bold;
+  @apply text-xl text-wf-purple py-2;
 }
 .nuxt-content h3 {
-  @apply text-xl font-bold;
+  @apply text-lg;
 }
 .nuxt-content p {
   @apply text-gray-700 mt-2 mb-2;
 }
 .nuxt-content a {
-  @apply underline hover:text-gray-900;
+  @apply underline text-wf-purple hover:text-wf-orange;
 }
 .nuxt-content img {
   @apply py-2;
+}
+.nuxt-content ul {
+  @apply list-inside text-gray-700 mb-2;
+}
+.nuxt-content li {
+  @apply list-disc;
+}
+.nuxt-content strong {
+  @apply text-wf-purple;
 }
 </style>
