@@ -46,7 +46,7 @@
                   <h3 class="badge" id="tier-basis">Basis</h3>
                 </div>
                 <div class="mt-4 flex items-baseline text-6xl font-extrabold">
-                  €10
+                  €12
                   <span class="ml-1 text-2xl font-medium text-gray-500">
                     eenmalig
                   </span>
