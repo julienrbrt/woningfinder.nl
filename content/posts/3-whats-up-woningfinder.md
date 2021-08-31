@@ -15,7 +15,7 @@ Dit is de eerste editie van **_What's up WoningFinder_**. Hier vindt je wat er i
 
 ![houses](https://static.woningfinder.nl/news/houses.jpg)
 
-- We zijn druk bezig geweest de laatste maanden en gaan we binnenkort veel steden toevoegen: Hengelo, Amsterdam, Rotterdam, Groningen.. kortom: alles dat met [WoningNet](https://www.woningnet.nl/) werkt. Hoef je dus straks daar zelf niet meer elke dag te zoeken 🎉 Je kunt de hele stedenlijst [hier](https://woningfinder.nl/woningcorporaties) bekijken.
+- We zijn druk bezig geweest in de laatste maanden en we gaan binnenkort veel steden toevoegen: Hengelo, Amsterdam, Rotterdam, Groningen.. kortom: alles dat met [WoningNet](https://www.woningnet.nl/) werkt. Hoef je dus straks daar zelf niet meer elke dag te zoeken 🎉 Je kunt de hele stedenlijst [hier](https://woningfinder.nl/woningcorporaties) bekijken.
 
 ## Crypto Pay
 
