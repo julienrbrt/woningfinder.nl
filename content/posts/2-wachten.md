@@ -1,8 +1,8 @@
 ---
 title: Wachten, wachten, wachten en blijven reageren
 topic: huurwoningmarkt
-description: De huurwoning situatie in Nederland uitgelegd bij NOS.
 date: 2021-06-15
+description: De huurwoning situatie in Nederland uitgelegd bij NOS.
 ---
 
 Dit is precies waarom we met WoningFinder zijn begonnen. Zelf maandenlang blijven reageren is echt vervelend, daarom hebben we de woningreacties geautomatiseerd. Dat is minder vervelend, het bespaart je wat tijd en maakt soms ook je wachttijd korter.
