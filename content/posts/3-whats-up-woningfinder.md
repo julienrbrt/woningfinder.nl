@@ -1,5 +1,5 @@
 ---
-title: "What's up WoningFinder #1"
+title: "What's up WoningFinder #1 🎉"
 topic: woningfinder
 date: 2021-09-01
 description: 'Het laatste WoningFinder nieuws op een rij.'

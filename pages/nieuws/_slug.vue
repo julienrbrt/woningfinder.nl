@@ -7,11 +7,23 @@
       <nuxt-content :document="post" />
     </article>
 
-    <div class="inline-flex w-max items-center">
+    <div
+      class="
+        inline-flex
+        flex-col
+        sm:flex-row
+        w-max
+        items-start
+        sm:items-center
+        justify-center
+      "
+    >
       <p class="text-gray-600">Reageer je nog steeds niet automatisch?</p>
       <NuxtLink
         class="
-          ml-4
+          mt-2
+          sm:mt-0
+          sm:ml-4
           w-auto
           btn
           bg-wf-purple

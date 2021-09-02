@@ -3,8 +3,8 @@
     <Hero>
       <AlertNews
         title="Nieuws"
-        description="Nieuwe steden, 14 dagen gratis, cr... 🎉"
-        to="/nieuws/3-whats-up-woningfinder"
+        :description="post[0].title"
+        :to="'nieuws/' + post[0].slug"
       />
       <div class="mt-6 sm:max-w-xl">
         <h1
@@ -55,6 +55,16 @@
 
 <script>
 export default {
+  async asyncData({ $content, params }) {
+    // fetch latest news and display it
+    const post = await $content('posts')
+      .sortBy('date', 'desc')
+      .limit(1)
+      .only(['title', 'slug'])
+      .fetch()
+
+    return { post }
+  },
   methods: {
     startEvent() {
       this.$ga.event('landing', 'click', 'button_start', 1)
