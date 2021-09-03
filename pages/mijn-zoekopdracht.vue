@@ -69,7 +69,7 @@
               class="
                 text-3xl
                 font-extrabold
-                text-gray-900
+                text-wf-purple
                 tracking-tight
                 sm:text-4xl
               "
@@ -194,7 +194,7 @@ export default {
         throw 'must login'
       }
 
-      this.credentials = credentials
+      return credentials
     },
     async getCustomerInfo(params) {
       const customer = await this.$axios.$get('/me', {
@@ -206,45 +206,40 @@ export default {
         throw 'must login'
       }
 
-      this.customer = customer
-      this.stats.cities = customer.housing_preferences.city.length
-      this.stats.plan = this.planTitle(customer.plan.name)
       if (!customer.valid_plan) {
         this.showInvalidPlanAlert = true
       }
 
+      // build stats
       if (customer.housing_preferences_match) {
         this.stats.reactions = customer.housing_preferences_match.length
       }
+      this.stats.cities = customer.housing_preferences.city.length
+      this.stats.plan =
+        customer.plan.name.charAt(0).toUpperCase() + customer.plan.name.slice(1)
+
+      return customer
     },
     hideAlert() {
       this.showInvalidPlanAlert = false
     },
-    planTitle: (name) => {
-      return name.charAt(0).toUpperCase() + name.slice(1)
-    },
   },
-  created() {
+  async created() {
     // check jwt and do not make request if not provided or empty
     var jwt = this.$route.query.jwt
     if (!jwt || jwt == '') {
       return
     }
 
-    const params = {
-      jwt: jwt,
-    }
+    this.customer = await this.getCustomerInfo({ jwt: jwt }).catch(() => {
+      this.$router.push('/login')
+    })
 
-    // get informations
-    this.getCustomerInfo(params)
-      .then(() => {
-        this.getCorporationCredentials(params).catch(() => {
-          this.$router.push('/login')
-        })
-      })
-      .catch(() => {
+    this.credentials = await this.getCorporationCredentials({ jwt: jwt }).catch(
+      () => {
         this.$router.push('/login')
-      })
+      }
+    )
   },
   middleware({ route, redirect }) {
     // If the customer is not authenticated return to login

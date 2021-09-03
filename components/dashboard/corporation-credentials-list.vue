@@ -3,14 +3,12 @@
     <div class="px-4 py-4 flex items-center sm:px-6">
       <div class="min-w-0 flex-1 sm:flex sm:items-center sm:justify-between">
         <div class="truncate">
-          <div class="flex text-sm">
-            <p class="font-medium text-wf-orange truncate">
-              {{ credentials.corporation_name }}
-            </p>
-          </div>
+          <p class="font-medium text-wf-orange truncate">
+            {{ credentials.corporation_name }}
+          </p>
           <div class="mt-2 flex">
             <div class="flex items-center text-sm text-gray-500">
-              <GlobeAltIcon
+              <ExternalLinkIcon
                 class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400"
               />
               <a
@@ -24,7 +22,7 @@
         </div>
         <div
           v-if="!credentials.is_known"
-          class="mt-4 flex-shrink-0 sm:mt-0 sm:ml-5"
+          class="hidden sm:block flex-shrink-0 mt-0 ml-5"
         >
           <p class="text-sm text-gray-700">Inloggen</p>
         </div>
@@ -43,14 +41,14 @@
 
 <script>
 import {
-  GlobeAltIcon,
+  ExternalLinkIcon,
   ChevronRightIcon,
   CheckCircleIcon,
 } from '@vue-hero-icons/outline'
 
 export default {
   components: {
-    GlobeAltIcon,
+    ExternalLinkIcon,
     ChevronRightIcon,
     CheckCircleIcon,
   },
