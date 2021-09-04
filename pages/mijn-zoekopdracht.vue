@@ -138,7 +138,7 @@
           </div>
 
           <!-- preferences -->
-          <DashboardPreferences :customer="customer" />
+          <DashboardPreferences v-if="customer" :customer="customer" />
 
           <!-- buttons -->
           <div

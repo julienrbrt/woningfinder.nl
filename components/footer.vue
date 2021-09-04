@@ -26,10 +26,10 @@
               </li>
               <li>
                 <NuxtLink
-                  to="/mijn-zoekopdracht"
+                  to="/login"
                   class="text-base text-gray-400 hover:text-gray-300"
                 >
-                  Mijn zoekopdracht
+                  Inloggen
                 </NuxtLink>
               </li>
               <li>
