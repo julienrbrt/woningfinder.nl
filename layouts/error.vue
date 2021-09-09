@@ -35,7 +35,7 @@
 
       <div class="items-center inline-flex mt-5 space-x-4">
         <NuxtLink
-          to="/"
+          :to="getRoute()"
           class="
             whitespace-nowrap
             text-base
@@ -53,5 +53,15 @@
 <script>
 export default {
   props: ['error'],
+  methods: {
+    getRoute() {
+      var from = this.$nuxt.context.from
+      if (!from) {
+        return '/'
+      }
+
+      return from
+    },
+  },
 }
 </script>
