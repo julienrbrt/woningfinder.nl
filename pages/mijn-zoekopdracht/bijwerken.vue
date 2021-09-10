@@ -1,0 +1,205 @@
+<template>
+  <Hero>
+    <div class="mt-6 sm:max-w-xl">
+      <h1 class="text-3xl font-extrabold text-wf-purple tracking-tight">
+        Zoekopdracht bijwerken
+      </h1>
+    </div>
+
+    <AlertError
+      class="mt-4"
+      v-if="error"
+      @click="hideAlert"
+      :alert="errorMsg"
+    />
+
+    <!-- registration steps -->
+    <RegisterCity
+      ref="registerCity"
+      v-show="currentStep == 1"
+      :supported_cities="offering.supported_cities"
+    />
+
+    <RegisterCityDistrict
+      ref="registerCityDistrict"
+      v-show="currentStep == 2"
+      :supported_cities="offering.supported_cities"
+    />
+
+    <RegisterHousing
+      ref="registerHousing"
+      v-show="currentStep == 3"
+      :supported_housing="offering.supported_housing_type"
+    />
+
+    <RegisterHousingPreferences
+      ref="registerHousingPreferences"
+      v-show="currentStep == 4"
+    />
+
+    <!-- buttons -->
+    <div class="items-center w-full inline-flex mt-5">
+      <div class="mr-4">
+        <div v-if="currentStep == 1">
+          <BackButton />
+        </div>
+        <div v-else>
+          <a
+            @click="previous"
+            class="
+              cursor-pointer
+              whitespace-nowrap
+              text-base
+              font-medium
+              text-gray-500
+              hover:text-gray-900
+            "
+          >
+            Terug
+          </a>
+        </div>
+      </div>
+
+      <a
+        @click="validate"
+        class="btn max-w-min"
+        v-bind:class="
+          currentStep == totalStep
+            ? 'bg-wf-purple hover:bg-wf-purple-dark hover:ring-wf-purple focus:ring-wf-purple'
+            : ''
+        "
+        >{{ nextButtonText() }}</a
+      >
+      <p
+        class="
+          flex-1
+          whitespace-nowrap
+          text-sm
+          font-medium
+          text-gray-500 text-right
+        "
+      >
+        {{ currentStep }} / {{ totalStep }}
+      </p>
+    </div>
+  </Hero>
+</template>
+
+<script>
+export default {
+  async asyncData({ $axios }) {
+    const offering = await $axios.$get('offering', { progress: true })
+    return { offering }
+  },
+  data() {
+    return {
+      submitted: false,
+      error: false,
+      errorMsg:
+        'Er is iets misgegaan. Controleer het formulier nogmaals. Blijf dit gebeuren? Neem dan contact met ons op.',
+      currentStep: 1,
+      totalStep: 4,
+    }
+  },
+  methods: {
+    nextButtonText() {
+      if (this.currentStep == this.totalStep) {
+        return 'Bijwerken'
+      }
+
+      return 'Volgende'
+    },
+    next() {
+      if (this.currentStep <= this.totalStep) {
+        this.currentStep++
+      }
+    },
+    previous() {
+      if (this.currentStep > 1) {
+        this.currentStep--
+      }
+    },
+    async validate(e) {
+      e.preventDefault()
+
+      switch (this.currentStep) {
+        case 1:
+          if (!this.$refs.registerCity.validate()) {
+            return
+          }
+          break
+
+        case 2:
+          // no need to validate because city district
+          break
+
+        case 3:
+          if (!this.$refs.registerHousing.validate()) {
+            return
+          }
+          break
+
+        case 4:
+          if (!this.$refs.registerHousingPreferences.validate()) {
+            return
+          }
+
+          if (!this.submitted) {
+            // start loading bar
+            this.$nuxt.$loading.start()
+
+            // send request
+            await this.submit()
+            this.submitted = true
+
+            if (!this.error) {
+              // end loading bar
+              this.$nuxt.$loading.finish()
+
+              // push to route
+              this.$router.push({
+                path: '/mijn-zoekopdracht',
+                query: { jwt: this.$route.query.jwt },
+              })
+              break
+            }
+          }
+
+          return
+      }
+
+      this.next()
+    },
+    async submit() {
+      const params = {
+        jwt: this.$route.query.jwt,
+      }
+
+      await this.$axios
+        .$post(
+          'me',
+          this.$store.getters['register/getRegister'].housing_preferences,
+          { params }
+        )
+        .then((response) => {
+          return response
+        })
+        .catch((error) => {
+          this.error = true
+          this.errorMsg =
+            'Er is iets misgegaan: "' + error.response.data.message + '".'
+        })
+    },
+    hideAlert() {
+      this.submitted = false
+      this.error = false
+    },
+  },
+  middleware({ route, redirect }) {
+    // If the customer is not authenticated return to login
+    if (!route.query.jwt || route.query.jwt == '') {
+      return redirect('/login')
+    }
+  },
+}
+</script>

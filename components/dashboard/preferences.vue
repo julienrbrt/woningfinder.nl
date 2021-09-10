@@ -29,22 +29,6 @@
           🪴 Extras zoals {{ translateTitle() }}
         </li>
       </ul>
-      <NuxtLink
-        to="/mijn-zoekopdracht/bijwerken"
-        class="
-          self-center
-          mt-2
-          btn
-          w-min
-          bg-wf-purple
-          hover:bg-wf-purple-dark
-          hover:ring-wf-purple
-          focus:ring-wf-purple
-          py-2
-        "
-      >
-        Bijwerken
-      </NuxtLink>
     </div>
   </div>
 </template>

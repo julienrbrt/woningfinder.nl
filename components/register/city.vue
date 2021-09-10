@@ -159,5 +159,18 @@ export default {
       return this.citiesSelection.length > 0
     },
   },
+  created() {
+    var cities = this.$store.getters['register/getCities']
+    if (
+      cities.length > 0 &&
+      this.citiesList.length == this.supported_cities.length
+    ) {
+      for (var i = 0; i < cities.length; i++) {
+        this.citiesList = this.citiesList.filter(
+          (c) => c.name !== cities[i].name
+        )
+      }
+    }
+  },
 }
 </script>

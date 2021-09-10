@@ -143,20 +143,28 @@
             :customer="customer"
             :housing_preferences="customer.housing_preferences"
           />
+
           <!-- buttons -->
-          <div
-            class="
-              items-center
-              inline-flex
-              justify-center
-              mt-5
-              space-x-4
-              w-full
-            "
-          >
+          <div class="items-center flex flex-col justify-center mt-5">
+            <a
+              @click="edit()"
+              class="
+                cursor-pointer
+                btn
+                w-min
+                bg-wf-purple
+                hover:bg-wf-purple-dark
+                hover:ring-wf-purple
+                focus:ring-wf-purple
+                py-2
+              "
+            >
+              Bijwerken
+            </a>
             <NuxtLink
               to="/"
               class="
+                mt-2
                 whitespace-nowrap
                 text-base
                 font-medium
@@ -200,7 +208,7 @@ export default {
       return credentials
     },
     async getCustomerInfo(params) {
-      const customer = await this.$axios.$get('/me', {
+      const customer = await this.$axios.$get('me', {
         progress: true,
         params,
       })
@@ -222,6 +230,31 @@ export default {
         customer.plan.name.charAt(0).toUpperCase() + customer.plan.name.slice(1)
 
       return customer
+    },
+    edit() {
+      // set housing preferences in storage (so prefilled)
+      for (var i = 0; i < this.customer.housing_preferences.city.length; i++) {
+        this.$store.commit(
+          'register/addCity',
+          this.customer.housing_preferences.city[i].name
+        )
+      }
+
+      this.$store.commit(
+        'register/setHousingType',
+        this.customer.housing_preferences.type
+      )
+
+      this.$store.commit(
+        'register/setHousingPreferences',
+        this.customer.housing_preferences
+      )
+
+      // push to route
+      this.$router.push({
+        path: '/mijn-zoekopdracht/bijwerken',
+        query: { jwt: this.$route.query.jwt },
+      })
     },
     hideAlert() {
       this.showInvalidPlanAlert = false
