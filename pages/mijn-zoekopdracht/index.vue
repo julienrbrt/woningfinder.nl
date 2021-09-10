@@ -246,7 +246,7 @@ export default {
       )
 
       this.$store.commit(
-        'register/setHousingPreferences',
+        'register/setHousingPreferencesDetails',
         this.customer.housing_preferences
       )
 

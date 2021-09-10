@@ -37,7 +37,7 @@ export const getters = {
   getHousingType: (state) => {
     return state.register.housing_preferences.type
   },
-  getHousingPreferences: (state) => {
+  getHousingPreferencesDetails: (state) => {
     return {
       maximum_price: state.register.housing_preferences.maximum_price,
       number_bedroom: state.register.housing_preferences.number_bedroom,
@@ -105,7 +105,7 @@ export const mutations = {
   setHousingType(state, type) {
     state.register.housing_preferences.type = type
   },
-  setHousingPreferences(state, preferences) {
+  setHousingPreferencesDetails(state, preferences) {
     state.register.housing_preferences.maximum_price = preferences.maximum_price
     state.register.housing_preferences.number_bedroom =
       preferences.number_bedroom

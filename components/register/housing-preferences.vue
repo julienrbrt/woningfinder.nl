@@ -297,7 +297,7 @@ export default {
     return {
       error: false,
       errorMsg: '',
-      preferences: this.$store.getters['register/getHousingPreferences'],
+      preferences: this.$store.getters['register/getHousingPreferencesDetails'],
     }
   },
   methods: {
@@ -329,7 +329,10 @@ export default {
         return false
       }
 
-      this.$store.commit('register/setHousingPreferences', this.preferences)
+      this.$store.commit(
+        'register/setHousingPreferencesDetails',
+        this.preferences
+      )
 
       return true
     },
