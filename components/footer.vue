@@ -40,6 +40,14 @@
                   Woningcorporaties
                 </NuxtLink>
               </li>
+              <li>
+                <NuxtLink
+                  to="/wachtlijst"
+                  class="text-base text-gray-400 hover:text-gray-300"
+                >
+                  Wachtlijst
+                </NuxtLink>
+              </li>
             </ul>
           </div>
           <div class="mt-12 md:mt-0">

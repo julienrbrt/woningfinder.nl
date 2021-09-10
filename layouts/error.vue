@@ -34,17 +34,7 @@
       </div>
 
       <div class="items-center inline-flex mt-5 space-x-4">
-        <NuxtLink
-          :to="getRoute()"
-          class="
-            whitespace-nowrap
-            text-base
-            font-medium
-            text-gray-500
-            hover:text-gray-900
-          "
-          >Terug
-        </NuxtLink>
+        <BackButton />
       </div>
     </div>
   </Hero>
@@ -53,15 +43,5 @@
 <script>
 export default {
   props: ['error'],
-  methods: {
-    getRoute() {
-      var from = this.$nuxt.context.from
-      if (!from) {
-        return '/'
-      }
-
-      return from
-    },
-  },
 }
 </script>

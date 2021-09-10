@@ -138,8 +138,11 @@
           </div>
 
           <!-- preferences -->
-          <DashboardPreferences v-if="customer" :customer="customer" />
-
+          <DashboardPreferences
+            v-if="customer && customer.housing_preferences"
+            :customer="customer"
+            :housing_preferences="customer.housing_preferences"
+          />
           <!-- buttons -->
           <div
             class="

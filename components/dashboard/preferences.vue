@@ -19,17 +19,18 @@
         <li class="mb-2">🏠 {{ housingTypeTitle() }}</li>
         <li class="mb-2">📍 {{ cityTitle() }}</li>
         <li class="mb-2">
-          💰 €{{ customer.housing_preferences.maximum_price }} p/m maximum
+          💰 €{{ housing_preferences.maximum_price }} p/m maximum
         </li>
         <li class="mb-2">
           🛏 Minimaal
-          {{ customer.housing_preferences.number_bedroom }} slaapkamer(s)
+          {{ housing_preferences.number_bedroom }} slaapkamer(s)
         </li>
         <li v-if="hasExtras()" class="mb-2">
           🪴 Extras zoals {{ translateTitle() }}
         </li>
       </ul>
-      <div
+      <NuxtLink
+        to="/mijn-zoekopdracht/bijwerken"
         class="
           self-center
           mt-2
@@ -43,19 +44,19 @@
         "
       >
         Bijwerken
-      </div>
+      </NuxtLink>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  props: ['customer'],
+  props: ['customer', 'housing_preferences'],
   methods: {
     housingTypeTitle() {
       var result = []
-      for (var i = 0; i < this.customer.housing_preferences.type.length; i++) {
-        switch (this.customer.housing_preferences.type[i]) {
+      for (var i = 0; i < this.housing_preferences.type.length; i++) {
+        switch (this.housing_preferences.type[i]) {
           case 'house':
             result.push('Huis')
             break
@@ -68,44 +69,44 @@ export default {
     },
     cityTitle() {
       var result = []
-      for (var i = 0; i < this.customer.housing_preferences.city.length; i++) {
-        result.push(this.customer.housing_preferences.city[i].name)
+      for (var i = 0; i < this.housing_preferences.city.length; i++) {
+        result.push(this.housing_preferences.city[i].name)
       }
 
       return result.join(', ')
     },
     hasExtras() {
       return (
-        this.customer.housing_preferences.has_attic ||
-        this.customer.housing_preferences.is_accessible ||
-        this.customer.housing_preferences.has_balcony ||
-        this.customer.housing_preferences.has_garden ||
-        this.customer.housing_preferences.has_elevator
+        this.housing_preferences.has_attic ||
+        this.housing_preferences.is_accessible ||
+        this.housing_preferences.has_balcony ||
+        this.housing_preferences.has_garden ||
+        this.housing_preferences.has_elevator
       )
     },
     translateTitle() {
       var result = []
-      if (this.customer.housing_preferences.has_attic) {
+      if (this.housing_preferences.has_attic) {
         result.push('zolder')
       }
 
-      if (this.customer.housing_preferences.is_accessible) {
+      if (this.housing_preferences.is_accessible) {
         result.push('woning toegankelijkheid')
       }
 
-      if (this.customer.housing_preferences.has_balcony) {
+      if (this.housing_preferences.has_balcony) {
         result.push('balkon')
       }
 
-      if (this.customer.housing_preferences.has_garden) {
+      if (this.housing_preferences.has_garden) {
         result.push('tuin')
       }
 
-      if (this.customer.housing_preferences.has_garage) {
+      if (this.housing_preferences.has_garage) {
         result.push('garage')
       }
 
-      if (this.customer.housing_preferences.has_elevator) {
+      if (this.housing_preferences.has_elevator) {
         result.push('lift')
       }
 
