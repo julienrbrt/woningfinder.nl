@@ -69,7 +69,7 @@
               class="
                 text-3xl
                 font-extrabold
-                text-gray-900
+                text-wf-purple
                 tracking-tight
                 sm:text-4xl
               "
@@ -138,22 +138,33 @@
           </div>
 
           <!-- preferences -->
-          <DashboardPreferences :customer="customer" />
+          <DashboardPreferences
+            v-if="customer && customer.housing_preferences"
+            :customer="customer"
+            :housing_preferences="customer.housing_preferences"
+          />
 
           <!-- buttons -->
-          <div
-            class="
-              items-center
-              inline-flex
-              justify-center
-              mt-5
-              space-x-4
-              w-full
-            "
-          >
+          <div class="items-center flex flex-col justify-center mt-5">
+            <a
+              @click="edit()"
+              class="
+                cursor-pointer
+                btn
+                w-min
+                bg-wf-purple
+                hover:bg-wf-purple-dark
+                hover:ring-wf-purple
+                focus:ring-wf-purple
+                py-2
+              "
+            >
+              Bijwerken
+            </a>
             <NuxtLink
               to="/"
               class="
+                mt-2
                 whitespace-nowrap
                 text-base
                 font-medium
@@ -194,10 +205,10 @@ export default {
         throw 'must login'
       }
 
-      this.credentials = credentials
+      return credentials
     },
     async getCustomerInfo(params) {
-      const customer = await this.$axios.$get('/me', {
+      const customer = await this.$axios.$get('me', {
         progress: true,
         params,
       })
@@ -206,45 +217,65 @@ export default {
         throw 'must login'
       }
 
-      this.customer = customer
-      this.stats.cities = customer.housing_preferences.city.length
-      this.stats.plan = this.planTitle(customer.plan.name)
       if (!customer.valid_plan) {
         this.showInvalidPlanAlert = true
       }
 
+      // build stats
       if (customer.housing_preferences_match) {
         this.stats.reactions = customer.housing_preferences_match.length
       }
+      this.stats.cities = customer.housing_preferences.city.length
+      this.stats.plan =
+        customer.plan.name.charAt(0).toUpperCase() + customer.plan.name.slice(1)
+
+      return customer
+    },
+    edit() {
+      // set housing preferences in storage (so prefilled)
+      for (var i = 0; i < this.customer.housing_preferences.city.length; i++) {
+        this.$store.commit(
+          'register/addCity',
+          this.customer.housing_preferences.city[i].name
+        )
+      }
+
+      this.$store.commit(
+        'register/setHousingType',
+        this.customer.housing_preferences.type
+      )
+
+      this.$store.commit(
+        'register/setHousingPreferences',
+        this.customer.housing_preferences
+      )
+
+      // push to route
+      this.$router.push({
+        path: '/mijn-zoekopdracht/bijwerken',
+        query: { jwt: this.$route.query.jwt },
+      })
     },
     hideAlert() {
       this.showInvalidPlanAlert = false
     },
-    planTitle: (name) => {
-      return name.charAt(0).toUpperCase() + name.slice(1)
-    },
   },
-  created() {
+  async created() {
     // check jwt and do not make request if not provided or empty
     var jwt = this.$route.query.jwt
     if (!jwt || jwt == '') {
       return
     }
 
-    const params = {
-      jwt: jwt,
-    }
+    this.customer = await this.getCustomerInfo({ jwt: jwt }).catch(() => {
+      this.$router.push('/login')
+    })
 
-    // get informations
-    this.getCustomerInfo(params)
-      .then(() => {
-        this.getCorporationCredentials(params).catch(() => {
-          this.$router.push('/login')
-        })
-      })
-      .catch(() => {
+    this.credentials = await this.getCorporationCredentials({ jwt: jwt }).catch(
+      () => {
         this.$router.push('/login')
-      })
+      }
+    )
   },
   middleware({ route, redirect }) {
     // If the customer is not authenticated return to login

@@ -2,7 +2,7 @@
   <Hero>
     <div class="mt-6 sm:max-w-xl">
       <h1 class="text-3xl font-extrabold text-wf-purple tracking-tight">
-        Je WoningFinder zoekopdracht
+        Zoekopdracht bijwerken
       </h1>
     </div>
 
@@ -14,54 +14,34 @@
     />
 
     <!-- registration steps -->
-    <RegisterPlan
-      ref="registerPlan"
-      v-show="currentStep == 1"
-      :plan="offering.plan"
-    />
-
     <RegisterCity
       ref="registerCity"
-      v-show="currentStep == 2"
+      v-show="currentStep == 1"
       :supported_cities="offering.supported_cities"
     />
 
     <RegisterCityDistrict
       ref="registerCityDistrict"
-      v-show="currentStep == 3"
+      v-show="currentStep == 2"
       :supported_cities="offering.supported_cities"
     />
 
     <RegisterHousing
       ref="registerHousing"
-      v-show="currentStep == 4"
+      v-show="currentStep == 3"
       :supported_housing="offering.supported_housing_type"
     />
 
     <RegisterHousingPreferences
       ref="registerHousingPreferences"
-      v-show="currentStep == 5"
+      v-show="currentStep == 4"
     />
-
-    <RegisterCustomer
-      ref="registerCustomer"
-      v-show="currentStep == 6"
-      :plan="offering.plan"
-    />
-
-    <RegisterTerms
-      ref="registerTerms"
-      v-show="currentStep == 7"
-      :plan="offering.plan"
-    />
-
-    <RegisterConfirm ref="registerConfirm" v-show="currentStep == 8" />
 
     <!-- buttons -->
     <div class="items-center w-full inline-flex mt-5">
-      <div v-show="currentStep < this.totalStep" class="mr-4">
+      <div class="mr-4">
         <div v-if="currentStep == 1">
-          <BackButton overwrite="/" />
+          <BackButton />
         </div>
         <div v-else>
           <a
@@ -82,8 +62,12 @@
 
       <a
         @click="validate"
-        class="btn"
-        v-bind:class="currentStep == totalStep ? 'flex-1' : 'max-w-min'"
+        class="btn max-w-min"
+        v-bind:class="
+          currentStep == totalStep
+            ? 'bg-wf-purple hover:bg-wf-purple-dark hover:ring-wf-purple focus:ring-wf-purple'
+            : ''
+        "
         >{{ nextButtonText() }}</a
       >
       <p
@@ -114,17 +98,13 @@ export default {
       errorMsg:
         'Er is iets misgegaan. Controleer het formulier nogmaals. Blijf dit gebeuren? Neem dan contact met ons op.',
       currentStep: 1,
-      totalStep: 8,
+      totalStep: 4,
     }
   },
   methods: {
     nextButtonText() {
-      if (this.currentStep == this.totalStep - 1) {
-        return 'Aanmelden'
-      }
-
       if (this.currentStep == this.totalStep) {
-        return 'Begrijp ik'
+        return 'Bijwerken'
       }
 
       return 'Volgende'
@@ -144,40 +124,26 @@ export default {
 
       switch (this.currentStep) {
         case 1:
-          if (!this.$refs.registerPlan.validate()) {
-            return
-          }
-          break
-
-        case 2:
           if (!this.$refs.registerCity.validate()) {
             return
           }
           break
 
-        case 3:
+        case 2:
           // no need to validate because city district
           break
 
-        case 4:
+        case 3:
           if (!this.$refs.registerHousing.validate()) {
             return
           }
           break
 
-        case 5:
+        case 4:
           if (!this.$refs.registerHousingPreferences.validate()) {
             return
           }
-          break
 
-        case 6:
-          if (!this.$refs.registerCustomer.validate()) {
-            return
-          }
-          break
-
-        case 7:
           if (!this.submitted) {
             // start loading bar
             this.$nuxt.$loading.start()
@@ -187,26 +153,34 @@ export default {
             this.submitted = true
 
             if (!this.error) {
-              // register event
-              this.$ga.event('start', 'signup', 'successful', 1)
-
               // end loading bar
               this.$nuxt.$loading.finish()
+
+              // push to route
+              this.$router.push({
+                path: '/mijn-zoekopdracht',
+                query: { jwt: this.$route.query.jwt },
+              })
               break
             }
           }
 
-          return
-        case 8:
-          this.$router.push('/')
           return
       }
 
       this.next()
     },
     async submit() {
+      const params = {
+        jwt: this.$route.query.jwt,
+      }
+
       await this.$axios
-        .$post('register', this.$store.getters['register/getRegister'])
+        .$post(
+          'me',
+          this.$store.getters['register/getRegister'].housing_preferences,
+          { params }
+        )
         .then((response) => {
           return response
         })
@@ -216,13 +190,16 @@ export default {
             'Er is iets misgegaan: "' + error.response.data.message + '".'
         })
     },
-    planTitle: (name) => {
-      return name.charAt(0).toUpperCase() + name.slice(1)
-    },
     hideAlert() {
       this.submitted = false
       this.error = false
     },
+  },
+  middleware({ route, redirect }) {
+    // If the customer is not authenticated return to login
+    if (!route.query.jwt || route.query.jwt == '') {
+      return redirect('/login')
+    }
   },
 }
 </script>

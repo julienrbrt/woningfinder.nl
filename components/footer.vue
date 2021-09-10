@@ -26,10 +26,10 @@
               </li>
               <li>
                 <NuxtLink
-                  to="/mijn-zoekopdracht"
+                  to="/login"
                   class="text-base text-gray-400 hover:text-gray-300"
                 >
-                  Mijn zoekopdracht
+                  Inloggen
                 </NuxtLink>
               </li>
               <li>
@@ -38,6 +38,14 @@
                   class="text-base text-gray-400 hover:text-gray-300"
                 >
                   Woningcorporaties
+                </NuxtLink>
+              </li>
+              <li>
+                <NuxtLink
+                  to="/wachtlijst"
+                  class="text-base text-gray-400 hover:text-gray-300"
+                >
+                  Wachtlijst
                 </NuxtLink>
               </li>
             </ul>
