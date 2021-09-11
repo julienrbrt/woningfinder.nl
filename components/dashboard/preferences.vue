@@ -18,7 +18,7 @@
       <ul class="text-base grid grid-rows-2 grid-cols-2">
         <li class="mb-2">🏠 {{ housingTypeTitle() }}</li>
         <li class="mb-2">📍 {{ cityTitle() }}</li>
-        <li class="mb-2">
+        <li v-if="housing_preferences.maximum_price > 0" class="mb-2">
           💰 €{{ housing_preferences.maximum_price }} p/m maximum
         </li>
         <li class="mb-2">
