@@ -174,11 +174,9 @@
         />
       </div>
 
-      <p class="mt-6 text-lg text-gray-500">
+      <p v-if="offering" class="mt-6 text-lg text-gray-500">
         Dat betekent dat WoningFinder kan automatisch reageren op alle
-        huurwoningen in Aalten, Almelo, Apeldoorn, Borne, Bredevoort, Bussum, De
-        Lutte, Dinxperlo, Enschede, Groenlo, Haaksbergen, Hengelo (OV), Hertme,
-        Losser, Neede, Overdinkel, Ulft, Wehl, Winterswijk, en Zwolle 🙂.
+        huurwoningen in {{ cityList() }} 🙂.
       </p>
 
       <!-- info alert -->
@@ -220,8 +218,27 @@
 import { InformationCircleIcon } from '@vue-hero-icons/solid'
 
 export default {
+  async asyncData({ $axios }) {
+    const offering = await $axios.$get('offering', { progress: true })
+    return { offering }
+  },
   components: {
     InformationCircleIcon,
+  },
+  methods: {
+    cityList() {
+      var cities
+
+      for (var i = 0; i < this.offering.supported_cities.length; i++) {
+        if (i == 0) {
+          cities = ' en ' + this.offering.supported_cities[i].name
+        } else {
+          cities = this.offering.supported_cities[i].name + ', ' + cities
+        }
+      }
+
+      return cities
+    },
   },
 }
 </script>
