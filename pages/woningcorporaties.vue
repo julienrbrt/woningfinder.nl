@@ -12,14 +12,7 @@
         WoningFinder.
       </p>
 
-      <p class="mt-6 text-lg text-gray-500">
-        Dat betekent dat WoningFinder kan automatisch reageren op alle
-        huurwoningen in Aalten, Almelo, Apeldoorn, Borne, Bredevoort, Bussum, De
-        Lutte, Dinxperlo, Enschede, Groenlo, Haaksbergen, Hengelo (OV), Hertme,
-        Losser, Neede, Overdinkel, Ulft, Wehl, Winterswijk, en Zwolle 🙂.
-      </p>
-
-      <h2 class="mt-4 mb-2 text-xl text-gray-900">Overijssel</h2>
+      <h2 class="mt-4 mb-2 text-xl text-gray-900">Regio Overijssel</h2>
       <div
         class="
           mt-8
@@ -66,6 +59,127 @@
           website="https://www.welbions.nl"
         />
       </div>
+
+      <h2 class="mt-4 mb-2 text-xl text-gray-900">Regio Utrecht</h2>
+      <div
+        class="
+          mt-8
+          grid grid-cols-2
+          gap-0.5
+          md:grid-cols-3
+          lg:mt-0
+          lg:grid-cols-2
+        "
+      >
+        <LandingHousingCorporationLogo
+          name="BO-EX"
+          image="boex.png"
+          website="https://www.boex.nl"
+        />
+
+        <LandingHousingCorporationLogo
+          name="LEKSTEDEwonen"
+          image="lekstedewonen.png"
+          website="https://www.lekstedewonen.nl"
+        />
+
+        <LandingHousingCorporationLogo
+          name="Woningbouwstichting Cothen"
+          image="wscothen.jpg"
+          website="https://www.wscothen.nl"
+        />
+
+        <LandingHousingCorporationLogo
+          name="Groenwest"
+          image="groenwest.png"
+          website="https://www.groenwest.nl"
+        />
+
+        <LandingHousingCorporationLogo
+          name="Heuvelrug Wonen"
+          image="heuvelrug-wonen.png"
+          website="https://www.heuvelrugwonen.nl"
+        />
+
+        <LandingHousingCorporationLogo
+          name="Jutphaas Wonen"
+          image="jutphaas-wonen.png"
+          website="https://www.jutphaas.nl"
+        />
+
+        <LandingHousingCorporationLogo
+          name="Woningbouwvereniging Maarn"
+          image="wbvmaarn.png"
+          website="https://www.wbvmaarn.nl"
+        />
+
+        <LandingHousingCorporationLogo
+          name="Mitros"
+          image="mitros.png"
+          website="https://www.mitros.nl"
+        />
+
+        <LandingHousingCorporationLogo
+          name="De Woningraat"
+          image="dewoningraat.png"
+          website="https://www.dewoningraat.nl"
+        />
+
+        <LandingHousingCorporationLogo
+          name="Portaal Utrecht"
+          image="portaal-utrecht.png"
+          website="https://www.portaal.nl"
+        />
+
+        <LandingHousingCorporationLogo
+          name="Provides"
+          image="provides.png"
+          website="https://www.provides.nl"
+        />
+
+        <LandingHousingCorporationLogo
+          name="RK Woningbouwvereniging Zeist"
+          image="rkwbv.png"
+          website="https://www.rkwbv.nl"
+        />
+
+        <LandingHousingCorporationLogo
+          name="Woonstichting SSW"
+          image="ssw.png"
+          website="https://www.ssw.nl"
+        />
+
+        <LandingHousingCorporationLogo
+          name="Woningstichting Vecht en Omstreken"
+          image="vechtenomstreken.png"
+          website="https://www.vechtenomstreken.nl"
+        />
+
+        <LandingHousingCorporationLogo
+          name="Viveste"
+          image="viveste.png"
+          website="https://wwww.viveste.nl"
+        />
+
+        <LandingHousingCorporationLogo
+          name="Woningstichting Wuta"
+          image="wuta.png"
+          website="https://www.wuta-nigtevecht.nl"
+        />
+
+        <LandingHousingCorporationLogo
+          name="Woongoed Zeist"
+          image="woongoedzeist.png"
+          website="https://www.woongoedzeist.nl"
+        />
+      </div>
+
+      <p class="mt-6 text-lg text-gray-500">
+        Dat betekent dat WoningFinder kan automatisch reageren op alle
+        huurwoningen in Aalten, Almelo, Apeldoorn, Borne, Bredevoort, Bussum, De
+        Lutte, Dinxperlo, Enschede, Groenlo, Haaksbergen, Hengelo (OV), Hertme,
+        Losser, Neede, Overdinkel, Ulft, Wehl, Winterswijk, en Zwolle 🙂.
+      </p>
 
       <!-- info alert -->
       <div class="mt-6 rounded-md bg-gray-50 p-4">
