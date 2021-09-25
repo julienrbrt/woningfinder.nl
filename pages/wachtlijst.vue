@@ -188,22 +188,3 @@ export default {
   },
 }
 </script>
-
-<style>
-/* autocomplete style */
-.autocomplete-input {
-  @apply block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-wf-orange focus:border-wf-orange border-gray-300 rounded-md;
-}
-
-.autocomplete-result-list {
-  @apply origin-top-right absolute right-0 mt-2 mb-2 w-56 rounded-md shadow-md bg-white ring-1 ring-black ring-opacity-5 focus:outline-none;
-}
-
-.autocomplete-result {
-  @apply cursor-pointer text-gray-500 block px-4 py-2 text-base hover:text-gray-900 hover:bg-gray-100;
-}
-
-.autocomplete-result[aria-selected='true'] {
-  @apply text-gray-900 bg-gray-100;
-}
-</style>

@@ -4,33 +4,18 @@
     <p class="mt-2 text-base text-gray-500">
       Je kunt meerdere steden selecteren.
     </p>
-    <select
-      v-model="selected"
-      id="location"
-      name="location"
-      class="
-        mt-4
-        block
-        w-full
-        pl-3
-        pr-10
-        py-2
-        text-sm
-        border-gray-300
-        focus:outline-none
-        focus:ring-wf-orange
-        focus:border-wf-orange
-        rounded-md
-      "
-      @change="addCity(selected)"
-    >
-      <option disabled value="">
-        Beschikbare steden ({{ citiesList.length }})
-      </option>
-      <option v-for="city in citiesList" :key="city.name">
-        {{ city.name }}
-      </option>
-    </select>
+
+    <autocomplete
+      class="mt-4"
+      :search="selectCity"
+      ref="city"
+      type="text"
+      :placeholder="'Beschikbare steden (' + citiesList.length + ')'"
+      aria-label="Beschikbare steden"
+      :debounce-time="200"
+      @submit="addCity"
+      auto-select
+    ></autocomplete>
 
     <div class="mt-6 space-y-4">
       <div
@@ -119,7 +104,6 @@ export default {
   props: ['supported_cities'],
   data() {
     return {
-      selected: '',
       citiesList: this.supported_cities.sort((a, b) =>
         a.name > b.name ? 1 : -1
       ),
@@ -127,10 +111,33 @@ export default {
     }
   },
   methods: {
-    addCity() {
-      this.$store.commit('register/addCity', this.selected)
-      this.citiesList = this.citiesList.filter((c) => c.name !== this.selected)
-      this.selected = ''
+    selectCity(input) {
+      var result = []
+
+      // add every city
+      if (input.length == 0) {
+        for (var i = 0; i < this.citiesList.length; i++) {
+          result.push(this.citiesList[i].name)
+        }
+      } else {
+        // show selection only
+        for (var i = 0; i < this.citiesList.length; i++) {
+          if (
+            this.citiesList[i].name
+              .toLowerCase()
+              .startsWith(input.toLowerCase())
+          ) {
+            result.push(this.citiesList[i].name)
+          }
+        }
+      }
+
+      return result
+    },
+    addCity(selected) {
+      this.$store.commit('register/addCity', selected)
+      this.citiesList = this.citiesList.filter((c) => c.name !== selected)
+      this.$refs.city.setValue('')
     },
     removeCity(selected) {
       this.$store.commit('register/removeCity', selected)

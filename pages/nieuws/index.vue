@@ -29,7 +29,7 @@
           <span class="badge px-2 text-xs"> {{ post.topic }} </span>
         </div>
 
-        <p class="mt-3 text-sm text-gray-500">
+        <p class="mt-3 text-base text-gray-500">
           {{ post.description }}
         </p>
         <p
