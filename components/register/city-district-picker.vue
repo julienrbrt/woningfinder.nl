@@ -1,41 +1,26 @@
 <template>
   <div>
     <div v-if="city.district">
-      <select
-        v-model="selected"
-        id="city-districts"
-        name="city-districts"
-        class="
-          mt-4
-          block
-          w-full
-          pl-3
-          pr-10
-          py-2
-          text-sm
-          border-gray-300
-          focus:outline-none
-          focus:ring-wf-orange
-          focus:border-wf-orange
-          rounded-md
+      <autocomplete
+        class="mt-4"
+        :search="selectDistrict"
+        ref="autocomplete"
+        type="text"
+        :placeholder="
+          districtsList.length == 0
+            ? 'Voorgestelde wijken'
+            : 'Voorgestelde wijken (' + districtsList.length + ')'
         "
-        @change="addCityDistrict"
-      >
-        <option disabled value="">
-          Voorgestelde wijken ({{ getCityDistrict().length }})
-        </option>
-        <option v-for="district in getCityDistrict()" :key="district">
-          {{ district }}
-        </option>
-      </select>
+        aria-label="Voorgestelde wijken"
+        :debounce-time="200"
+        @submit="addCityDistrict"
+        auto-select
+      ></autocomplete>
 
-      <div
-        v-if="Object.keys(getCity.district).length > 0"
-        class="mt-6 space-y-4"
-      >
+      <div v-if="getCity.district.length > 0" class="mt-6 space-y-4">
         <!-- district selection-->
         <div
-          v-for="district in Object.keys(getCity.district)"
+          v-for="district in getCity.district"
           :key="district"
           class="
             relative
@@ -95,40 +80,28 @@ export default {
     InformationCircleIcon,
     XIcon,
   },
-  props: ['city', 'advanced'],
+  props: ['city'],
   data() {
     return {
-      selected: '',
+      districtsList: this.city.district,
     }
   },
   methods: {
-    getCityDistrict() {
-      if (!this.city.district) {
-        return null
-      }
+    async selectDistrict(input) {
+      // get city districts from api
+      var result = this.districtsList
 
-      if (this.advanced) {
-        var neighbourhood = [
-          ...new Set(Object.values(this.city.district).flat()),
-        ].filter(function (el) {
-          return el != null
-        })
+      // enrinch with mapbox
 
-        if (neighbourhood.length > 0) {
-          return neighbourhood
-        }
-      }
-
-      return Object.keys(this.city.district)
+      return result
     },
-    addCityDistrict() {
-      if (this.selected) {
-        this.$store.commit('register/addCityDistrict', {
-          city: this.city,
-          district: this.selected,
-        })
-        this.selected = ''
-      }
+    addCityDistrict(selected) {
+      this.$store.commit('register/addCityDistrict', {
+        city: this.city,
+        district: selected,
+      })
+      this.districtsList = this.districtsList.filter((d) => d !== selected)
+      this.$refs.autocomplete.setValue('')
     },
     removeCityDistrict(selected) {
       if (selected) {
@@ -137,9 +110,10 @@ export default {
           district: selected,
         })
 
-        // small trick to force re-rendering after districts removed from vuex
-        this.selected = 'removed'
-        this.selected = ''
+        this.districtsList.push(selected)
+        this.districtsList = this.districtsList.sort((d1, d2) =>
+          d1 > d2 ? 1 : -1
+        )
       }
     },
   },

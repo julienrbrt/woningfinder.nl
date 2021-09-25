@@ -47,7 +47,7 @@
         </div>
         <autocomplete
           :search="search"
-          ref="city"
+          ref="autocomplete"
           type="text"
           placeholder="Gewenste steden"
           aria-label="Gewenste steden"
@@ -147,7 +147,7 @@ export default {
         .then(() => {
           this.email = ''
           this.city = ''
-          this.$refs.city.setValue('')
+          this.$refs.autocomplete.setValue('')
           this.submitted = true
         })
         .catch(() => {

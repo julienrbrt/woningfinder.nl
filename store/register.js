@@ -98,9 +98,11 @@ export const mutations = {
     )
 
     // remove district
-    delete state.register.housing_preferences.city[cityIdx].district[
-      cityDistrict.district
-    ]
+    state.register.housing_preferences.city[
+      cityIdx
+    ].district = state.register.housing_preferences.city[
+      cityIdx
+    ].district.filter((d) => d !== cityDistrict.district)
   },
   setHousingType(state, type) {
     state.register.housing_preferences.type = type

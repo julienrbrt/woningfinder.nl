@@ -15,33 +15,8 @@
           {{ city.name }}
         </h2>
 
-        <RegisterCityDistrictPicker
-          :city="getCityFromOffering(city)"
-          :advanced="advanced"
-        />
+        <RegisterCityDistrictPicker :city="getCityFromOffering(city)" />
       </div>
-    </div>
-
-    <div class="mt-4 inline-flex">
-      <input
-        v-model="advanced"
-        id="advanced-district-display"
-        name="advanced-district-display"
-        type="checkbox"
-        class="
-          focus:ring-wf-orange
-          h-4
-          w-4
-          text-wf-orange-dark
-          border-gray-300
-          rounded
-        "
-      />
-      <label
-        for="advanced-district-display"
-        class="block text-sm font-medium text-gray-900 ml-3"
-        >Bekijk buurten i.p.v. wijken indien beschikbaar</label
-      >
     </div>
   </div>
 </template>
@@ -49,11 +24,6 @@
 <script>
 export default {
   props: ['supported_cities'],
-  data() {
-    return {
-      advanced: false,
-    }
-  },
   methods: {
     getCityFromOffering(city) {
       return this.supported_cities.find((c) => c.name === city.name)

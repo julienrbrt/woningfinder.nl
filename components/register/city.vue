@@ -8,7 +8,7 @@
     <autocomplete
       class="mt-4"
       :search="selectCity"
-      ref="city"
+      ref="autocomplete"
       type="text"
       :placeholder="'Beschikbare steden (' + citiesList.length + ')'"
       aria-label="Beschikbare steden"
@@ -137,7 +137,7 @@ export default {
     addCity(selected) {
       this.$store.commit('register/addCity', selected)
       this.citiesList = this.citiesList.filter((c) => c.name !== selected)
-      this.$refs.city.setValue('')
+      this.$refs.autocomplete.setValue('')
     },
     removeCity(selected) {
       this.$store.commit('register/removeCity', selected)
