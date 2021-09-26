@@ -48,16 +48,16 @@
             class="sr-only"
           />
           <div class="flex items-center">
-            <div class="text-sm">
+            <div class="text-base">
               <p class="font-medium text-gray-900">
                 {{ planTitle(plan.name) }}
               </p>
-              <div class="text-xs text-gray-500">14 dagen gratis</div>
+              <div class="text-sm text-gray-500">14 dagen gratis</div>
             </div>
           </div>
           <div class="mt-2 flex text-sm sm:mt-0 sm:block sm:ml-4 sm:text-right">
             <div class="font-medium text-gray-900">€{{ plan.price }}</div>
-            <div class="text-xs ml-1 text-gray-500 sm:ml-0">eenmalig</div>
+            <div class="text-sm ml-1 text-gray-500 sm:ml-0">eenmalig</div>
           </div>
         </label>
       </div>

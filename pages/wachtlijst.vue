@@ -47,11 +47,10 @@
         </div>
         <autocomplete
           :search="search"
-          ref="city"
+          ref="autocomplete"
           type="text"
           placeholder="Gewenste steden"
           aria-label="Gewenste steden"
-          :get-result-value="cityWithoutCountry"
           :debounce-time="500"
           @submit="selectCity"
           auto-select
@@ -115,7 +114,7 @@ export default {
 
       const match = response.body
       for (var i = 0; i < match.features.length; i++) {
-        result[i] = match.features[i].place_name
+        result.push(this.cityWithoutCountry(match.features[i].place_name))
       }
 
       return result
@@ -123,8 +122,10 @@ export default {
     cityWithoutCountry(name) {
       return name.replaceAll(', Nederland', '')
     },
-    selectCity(result) {
-      this.city = this.cityWithoutCountry(result)
+    selectCity(selected) {
+      if (selected) {
+        this.city = selected
+      }
     },
     async send(e) {
       e.preventDefault()
@@ -147,7 +148,7 @@ export default {
         .then(() => {
           this.email = ''
           this.city = ''
-          this.$refs.city.setValue('')
+          this.$refs.autocomplete.setValue('')
           this.submitted = true
         })
         .catch(() => {
@@ -188,22 +189,3 @@ export default {
   },
 }
 </script>
-
-<style>
-/* autocomplete style */
-.autocomplete-input {
-  @apply block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-wf-orange focus:border-wf-orange border-gray-300 rounded-md;
-}
-
-.autocomplete-result-list {
-  @apply origin-top-right absolute right-0 mt-2 mb-2 w-56 rounded-md shadow-md bg-white ring-1 ring-black ring-opacity-5 focus:outline-none;
-}
-
-.autocomplete-result {
-  @apply cursor-pointer text-gray-500 block px-4 py-2 text-base hover:text-gray-900 hover:bg-gray-100;
-}
-
-.autocomplete-result[aria-selected='true'] {
-  @apply text-gray-900 bg-gray-100;
-}
-</style>
