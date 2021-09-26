@@ -135,9 +135,11 @@ export default {
       return result
     },
     addCity(selected) {
-      this.$store.commit('register/addCity', selected)
-      this.citiesList = this.citiesList.filter((c) => c.name !== selected)
-      this.$refs.autocomplete.setValue('')
+      if (selected) {
+        this.$store.commit('register/addCity', selected)
+        this.citiesList = this.citiesList.filter((c) => c.name !== selected)
+        this.$refs.autocomplete.setValue('')
+      }
     },
     removeCity(selected) {
       this.$store.commit('register/removeCity', selected)

@@ -51,7 +51,6 @@
           type="text"
           placeholder="Gewenste steden"
           aria-label="Gewenste steden"
-          :get-result-value="cityWithoutCountry"
           :debounce-time="500"
           @submit="selectCity"
           auto-select
@@ -115,7 +114,7 @@ export default {
 
       const match = response.body
       for (var i = 0; i < match.features.length; i++) {
-        result[i] = match.features[i].place_name
+        result.push(this.cityWithoutCountry(match.features[i].place_name))
       }
 
       return result
@@ -123,8 +122,10 @@ export default {
     cityWithoutCountry(name) {
       return name.replaceAll(', Nederland', '')
     },
-    selectCity(result) {
-      this.city = this.cityWithoutCountry(result)
+    selectCity(selected) {
+      if (selected) {
+        this.city = selected
+      }
     },
     async send(e) {
       e.preventDefault()
