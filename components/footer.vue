@@ -65,15 +65,6 @@
             <ul class="mt-4 space-y-4">
               <li>
                 <NuxtLink
-                  to="/over-ons"
-                  class="text-base text-gray-400 hover:text-gray-300"
-                >
-                  Over ons
-                </NuxtLink>
-              </li>
-
-              <li>
-                <NuxtLink
                   to="/nieuws"
                   class="text-base text-gray-400 hover:text-gray-300"
                 >
@@ -87,6 +78,15 @@
                   class="text-base text-gray-400 hover:text-gray-300"
                 >
                   Contact
+                </NuxtLink>
+              </li>
+
+              <li>
+                <NuxtLink
+                  to="/over-ons"
+                  class="text-base text-gray-400 hover:text-gray-300"
+                >
+                  Over ons
                 </NuxtLink>
               </li>
             </ul>

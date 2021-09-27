@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white pt-8 lg:relative lg:py-24">
+  <div class="bg-white overflow-y-visible pt-8 lg:relative lg:py-24">
     <div
       class="
         mx-auto
@@ -34,19 +34,6 @@
         lg:w-1/2
       "
     >
-      <div
-        class="
-          absolute
-          inset-y-0
-          left-1/2
-          w-screen
-          bg-gray-50
-          rounded-l-3xl
-          lg:left-80
-          lg:right-0
-          lg:w-full
-        "
-      ></div>
       <svg
         class="absolute top-8 right-1/2 -mr-3 lg:m-0 lg:left-0"
         width="404"
