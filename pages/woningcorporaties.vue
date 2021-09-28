@@ -58,6 +58,11 @@
           image="welbions.png"
           website="https://www.welbions.nl"
         />
+        <LandingHousingCorporationLogo
+          name="Mijande Wonen"
+          image="mijande_wonen.png"
+          website="https://www.mijande.nl"
+        />
       </div>
 
       <h2 class="mt-4 mb-2 text-xl text-gray-900">Regio Utrecht</h2>
