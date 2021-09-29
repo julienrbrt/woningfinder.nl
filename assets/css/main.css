@@ -14,7 +14,7 @@
 }
 
 .autocomplete-result-list {
-  @apply origin-top-right absolute right-0 mt-2 mb-2 w-56 rounded-md shadow-md bg-white ring-1 ring-black ring-opacity-5 focus:outline-none max-h-52 overflow-y-auto;
+  @apply origin-top-right absolute right-0 mt-2 mb-2 w-56 rounded-md shadow-md bg-white ring-1 ring-black ring-opacity-5 focus:outline-none max-h-60 overflow-y-auto;
 }
 
 .autocomplete-result {

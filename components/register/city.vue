@@ -2,7 +2,8 @@
   <div class="sm:max-w-xl">
     <p class="mt-6 text-lg text-gray-500">Waar zoek je jouw woning?</p>
     <p class="mt-2 text-base text-gray-500">
-      Je kunt meerdere steden selecteren.
+      Je kunt één of meer steden selecteren en invullen tussen ons
+      {{ supported_cities.length }} beschikbare steden.
     </p>
 
     <autocomplete
@@ -10,51 +11,28 @@
       :search="selectCity"
       ref="autocomplete"
       type="text"
-      :placeholder="'Beschikbare steden (' + citiesList.length + ')'"
-      aria-label="Beschikbare steden"
+      placeholder="Steden selecteren of invullen"
+      aria-label="Steden selecteren of invullen"
       :debounce-time="200"
       @submit="addCity"
       auto-select
     ></autocomplete>
 
-    <div class="mt-6 space-y-4">
-      <div
-        v-if="!hasSelection"
-        class="rounded-md p-4"
-        v-bind:class="error ? 'bg-red-50' : 'bg-gray-50'"
-      >
-        <div class="flex">
-          <div class="flex-shrink-0">
-            <InformationCircleIcon
-              class="h-5 w-5"
-              v-bind:class="error ? 'text-red-400' : 'text-gray-400'"
-            />
-          </div>
-          <div class="ml-3">
-            <p
-              class="text-sm font-medium"
-              v-bind:class="error ? 'text-red-800' : 'text-gray-900'"
-            >
-              Je hebt geen steden geselecteerd.
-            </p>
-            <p
-              class="text-sm font-medium"
-              v-bind:class="error ? 'text-red-800' : 'text-gray-900'"
-            >
-              Staat je stad er niet tussen? Schrijf je in op onze
-              <NuxtLink
-                to="/wachtlijst"
-                class="underline text-gray-700 hover:text-gray-900"
-                @click="waitingList"
-                >wachtlijst</NuxtLink
-              >
-              en we laten je weten wanneer we jouw stad toegevoegd hebben.
-            </p>
-          </div>
-        </div>
-      </div>
+    <!-- alert info -->
+    <AlertInfo
+      v-if="!hasSelection"
+      class="mt-4"
+      v-bind:class="error ? 'bg-red-50' : 'bg-gray-50'"
+      description="Je hebt geen steden geselecteerd."
+    >
+      <InformationCircleIcon
+        class="h-5 w-5"
+        v-bind:class="error ? 'text-red-400' : 'text-gray-400'"
+      />
+    </AlertInfo>
 
-      <!-- city selection-->
+    <!-- city selection-->
+    <div class="mt-4 space-y-4">
       <div
         v-for="city in citiesSelection"
         :key="city.name"
@@ -88,6 +66,29 @@
         >
           <XIcon size="1.5x" />
         </button>
+      </div>
+    </div>
+
+    <!-- alert info-->
+    <div class="mt-4 space-y-4">
+      <div class="rounded-md p-4 bg-gray-50">
+        <div class="flex">
+          <div class="flex-shrink-0">
+            <InformationCircleIcon class="h-5 w-5 text-gray-400" />
+          </div>
+          <div class="ml-3">
+            <p class="text-sm font-medium text-gray-900">
+              Staat je stad er niet tussen? Schrijf je in op onze
+              <NuxtLink
+                to="/wachtlijst"
+                class="underline text-gray-700 hover:text-gray-900"
+                @click="waitingList"
+                >wachtlijst</NuxtLink
+              >
+              en we laten je weten wanneer we jouw stad toegevoegd hebben.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>

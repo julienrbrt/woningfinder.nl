@@ -1,11 +1,11 @@
 <template>
   <div class="sm:max-w-xl">
     <p class="mt-6 text-lg text-gray-500">
-      Je kan WoningFinder laten reageren op woningen in de wijk en/of buurt die
-      je wilt.
+      Je kan WoningFinder automatisch laten reageren op woningen in de wijk
+      en/of buurt die je wilt.
     </p>
     <p class="mt-2 text-base text-gray-500">
-      Als je een wijk voorkeur hebt, kun je dat nu invullen, anders kun je deze
+      Als je een wijk voorkeur hebt, kun je dat nu zoeken, anders kun je deze
       stap overslaan.
     </p>
 
