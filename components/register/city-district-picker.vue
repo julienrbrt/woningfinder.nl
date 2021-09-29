@@ -1,16 +1,16 @@
 <template>
   <div>
+    <p v-if="city.district" class="mt-2 text-base text-gray-500">
+      Er is {{ city.district.length }} voorgestelde wijken voor dit stad.
+    </p>
+
     <autocomplete
       class="mt-4"
       :search="selectDistrict"
       ref="autocomplete"
       type="text"
-      :placeholder="
-        !districtsList
-          ? 'Geen voorgestelde wijken'
-          : 'Voorgestelde wijken (' + districtsList.length + ')'
-      "
-      aria-label="Voorgestelde wijken"
+      placeholder="Zoek buurt, wijk, etc."
+      aria-label="Zoek buurt, wijk, etc."
       :debounce-time="200"
       @submit="addCityDistrict"
       auto-select
@@ -144,6 +144,7 @@ export default {
         }
 
         this.$refs.autocomplete.setValue('')
+        document.activeElement.blur() // remove focus
       }
     },
     removeCityDistrict(selected) {
