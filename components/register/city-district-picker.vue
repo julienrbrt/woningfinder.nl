@@ -144,6 +144,7 @@ export default {
         }
 
         this.$refs.autocomplete.setValue('')
+        document.activeElement.blur() // remove focus
       }
     },
     removeCityDistrict(selected) {

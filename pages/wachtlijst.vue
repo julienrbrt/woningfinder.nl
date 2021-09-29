@@ -149,6 +149,7 @@ export default {
           this.email = ''
           this.city = ''
           this.$refs.autocomplete.setValue('')
+          document.activeElement.blur() // remove focus
           this.submitted = true
         })
         .catch(() => {

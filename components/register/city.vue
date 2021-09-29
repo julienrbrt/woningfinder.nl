@@ -140,6 +140,7 @@ export default {
         this.$store.commit('register/addCity', selected)
         this.citiesList = this.citiesList.filter((c) => c.name !== selected)
         this.$refs.autocomplete.setValue('')
+        document.activeElement.blur() // remove focus
       }
     },
     removeCity(selected) {
