@@ -65,9 +65,9 @@
           Bespaar tijd met WoningFinder
         </h2>
         <p class="mt-4 max-w-3xl mx-auto text-center text-xl text-gray-500">
-          Je kunt nu al snel en eenvoudig je zoekopdracht creëren voor je
-          droomhuis, wij regelen de rest. Je hoeft dus niet zelf te zoeken en
-          reageren.
+          Stop met elke dag zoeken en reageren. Creëer een zoekopdracht en vind
+          je nieuwe huurwoning zonder verder iets te doen. Je reageert
+          automatisch met WoningFinder.
         </p>
       </div>
 
@@ -91,7 +91,7 @@
               sm:text-3xl
             "
           >
-            Persoonlijke zoekopdracht
+            Reageer op alle passende woningen
           </h3>
           <p class="mt-3 text-lg text-gray-500">
             Wil je een tuin hebben, of in een appartement wonen? Zoek je een
@@ -103,22 +103,22 @@
           <dl class="mt-10 space-y-10">
             <!-- using html tag here -->
             <LandingFeatureItem
-              title="Alle beschikbare woningcorporaties van jouw stad"
-              description='Als je een stad kiest, reageert WoningFinder op het aanbod van <a
-                href="/woningcorporaties" target="_blank" class="underline hover:text-gray-900">alle
-                woningcorporaties</a> van deze stad. Dit vergroot jouw kansen.'
-            >
-              <GlobeIcon class="h-6 w-6" />
-            </LandingFeatureItem>
-
-            <LandingFeatureItem
-              title=" Altijd eerst"
+              title=" Reageer eerst"
               description="Sommige woningcorporaties werken met „Wie het eerst komt, die
                 het eerst maalt”. WoningFinder zal precies na dat het aanbod is
                 gepubliceerd automatisch reageren. Je hebt zo dus heel veel kans
                  dat je de eerste bent. Handig toch?"
             >
               <FastForwardIcon class="h-6 w-6" />
+            </LandingFeatureItem>
+
+            <LandingFeatureItem
+              title="Alle beschikbare woningcorporaties van jouw stad"
+              description='Als je een stad kiest, reageert WoningFinder op het aanbod van <a
+                href="/woningcorporaties" target="_blank" class="underline hover:text-gray-900">alle
+                woningcorporaties</a> van deze stad. Dit vergroot jouw kansen.'
+            >
+              <GlobeIcon class="h-6 w-6" />
             </LandingFeatureItem>
           </dl>
         </div>
@@ -231,11 +231,11 @@
                 sm:text-3xl
               "
             >
-              Meer dan gewoon automatische reacties
+              Met WoningFinder kun je relaxen
             </h3>
             <p class="mt-3 text-lg text-gray-500">
-              Met WoningFinder kun je relaxen. We doen ons best om een huis voor
-              jou te vinden en we houden jou op de hoogte.
+              We doen ons best om een huis voor jou te vinden en we houden jou
+              elke week op de hoogte.
             </p>
 
             <dl class="mt-10 space-y-10">
@@ -243,13 +243,13 @@
                 title="Wekelijkse update"
                 description="Je krijgt van ons een wekelijkse email update waarin je kan
                   zien op welke passende woningen WoningFinder heeft gereageerd.
-                  Geen dagelijkse spam."
+                  Geen dagelijkse spam!"
               >
                 <BellIcon class="h-6 w-6" />
               </LandingFeatureItem>
               <LandingFeatureItem
                 title="Toegankelijk"
-                description="Een WoningFinder zoekopdracht is slechts eenmalig €12,- als je een sociale huurwoning zoekt. Ons missie is het eenvoudiger maken voor iedereen, we weten dat het moeilijk is om een (sociale) huurwoning te vinden in Nederland."
+                description="Een WoningFinder zoekopdracht is slechts eenmalig €12,- als je een sociale huurwoning zoekt. Ons missie is het eenvoudiger maken voor iedereen, we weten dat het moeilijk is om een (sociale) huurwoning te vinden in Nederland, we willen er niet van profiteren."
               >
                 <CurrencyEuroIcon class="h-6 w-6" />
               </LandingFeatureItem>

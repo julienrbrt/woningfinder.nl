@@ -1,7 +1,7 @@
 <template>
   <div>
     <p v-if="city.district" class="mt-2 text-base text-gray-500">
-      Er is {{ city.district.length }} voorgestelde wijken voor dit stad.
+      Er zijn {{ city.district.length }} voorgestelde wijken voor deze stad.
     </p>
 
     <autocomplete
