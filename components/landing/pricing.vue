@@ -19,8 +19,8 @@
             Probeer 14 dagen gratis
           </p>
           <p class="text-xl text-gray-300">
-            Daarna een eenmalig bedrag om onbeperkt automatisch te reageren tot
-            je een huis vindt.
+            Daarna een eenmalig bedrag om te blijven reageren tot je een huis
+            vindt.
           </p>
         </div>
       </div>
@@ -93,7 +93,7 @@
                       <CheckIcon class="h-6 w-6 text-green-500" />
                     </div>
                     <p class="ml-3 text-base text-gray-700">
-                      Alle sociale huurwoningen van woningcorporaties
+                      Sociale huurwoningen reacties
                     </p>
                   </li>
                 </ul>
@@ -169,7 +169,7 @@
                       <CheckIcon class="h-6 w-6 text-green-500" />
                     </div>
                     <p class="ml-3 text-base text-gray-700">
-                      Alle sociale huurwoningen van woningcorporaties
+                      Sociale huurwoningen reacties
                     </p>
                   </li>
 
@@ -178,7 +178,7 @@
                       <CheckIcon class="h-6 w-6 text-green-500" />
                     </div>
                     <p class="ml-3 text-base text-gray-700">
-                      Alle vrije sector huurwoningen van woningcorporaties
+                      Vrije sector huurwoningen reacties
                     </p>
                   </li>
                 </ul>
