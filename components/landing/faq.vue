@@ -41,7 +41,7 @@ export default {
         {
           question: 'Hoe werkt het eigenlijk?',
           answer:
-            'WoningFinder zoekt elke dag in elke woningcorporaties hun nieuwe aanbod. Daarnaast matcht WoningFinder het aanbod met jouw zoekopdracht en reageert op passende woningen.',
+            'WoningFinder zoekt elke dag in elke woningcorporaties websites hun nieuwe aanbod. Daarnaast matcht WoningFinder het aanbod met jouw zoekopdracht en reageert op passende woningen.',
         },
         {
           question: 'Hoe kan WoningFinder voor mij reageren?',
@@ -61,7 +61,7 @@ export default {
         },
         {
           question: 'Mijn stad staat er niet tussen.',
-          answer: `Dat is jammer. We zijn hard bezig alle woningcorporaties in Nederland toe te voegen. Schrijf je in op onze
+          answer: `Dat is jammer. We zijn hard bezig alle steden van Nederland toe te voegen. Schrijf je in op onze
               <a href="/wachtlijst" class="underline hover:text-gray-900">wachtlijst</a>
               en we laten je weten wanneer we jouw stad toegevoegd hebben.`,
         },
