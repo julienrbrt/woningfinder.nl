@@ -1,5 +1,5 @@
 <template>
-  <Hero>
+  <HeroNoImg>
     <div class="mt-6 sm:max-w-xl">
       <!-- payment validation alert -->
       <AlertOk
@@ -79,7 +79,7 @@
       </span>
       Inloggen
     </button>
-  </Hero>
+  </HeroNoImg>
 </template>
 
 <script>
