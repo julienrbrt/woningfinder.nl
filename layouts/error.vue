@@ -1,14 +1,14 @@
 <template>
-  <Hero>
+  <HeroNoImg>
     <div class="mt-6 sm:max-w-xl">
       <div v-if="error.statusCode === 404">
         <h1
           class="
-            text-lg
+            text-3xl
             font-extrabold
-            text-gray-900
+            text-wf-purple
             tracking-tight
-            sm:text-5xl
+            sm:text-4xl
           "
         >
           Pagina niet gevonden
@@ -21,11 +21,11 @@
       <div v-else>
         <h1
           class="
-            text-lg
+            text-3xl
             font-extrabold
-            text-gray-900
+            text-wf-purple
             tracking-tight
-            sm:text-5xl
+            sm:text-4xl
           "
         >
           Er is iets misgegaan
@@ -37,7 +37,7 @@
         <BackButton />
       </div>
     </div>
-  </Hero>
+  </HeroNoImg>
 </template>
 
 <script>

@@ -18,7 +18,7 @@
         justify-center
       "
     >
-      <p class="text-gray-600">Reageer je nog steeds niet automatisch?</p>
+      <p class="text-gray-500">Reageer je nog steeds niet automatisch?</p>
       <NuxtLink
         class="
           mt-2
@@ -61,7 +61,7 @@ export default {
   @apply text-lg;
 }
 .nuxt-content p {
-  @apply text-gray-700 mt-2 mb-2;
+  @apply text-gray-500 mt-2 mb-2;
 }
 .nuxt-content a {
   @apply underline text-wf-purple hover:text-wf-orange;
@@ -70,7 +70,7 @@ export default {
   @apply py-2;
 }
 .nuxt-content ul {
-  @apply list-inside text-gray-700 mb-2;
+  @apply list-inside text-gray-500 mb-2;
 }
 .nuxt-content li {
   @apply list-disc;

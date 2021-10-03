@@ -10,7 +10,13 @@
 
     <div class="mt-6 sm:max-w-xl">
       <h1
-        class="text-3xl font-extrabold text-gray-900 tracking-tight sm:text-5xl"
+        class="
+          text-3xl
+          font-extrabold
+          text-wf-purple
+          tracking-tight
+          sm:text-4xl
+        "
       >
         Contact
       </h1>
@@ -19,7 +25,7 @@
         Heb je een vraag of wil je iets aan ons kwijt? We helpen je graag!
       </p>
 
-      <form class="mt-6 grid grid-cols-1 gap-y-6">
+      <form class="mt-6 grid grid-cols-1 gap-y-4">
         <div>
           <label for="name" class="sr-only">Naam</label>
           <input

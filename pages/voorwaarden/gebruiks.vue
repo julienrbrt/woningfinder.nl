@@ -2,7 +2,13 @@
   <Hero>
     <div class="mt-6 sm:max-w-xl">
       <h1
-        class="text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl"
+        class="
+          text-3xl
+          font-extrabold
+          text-wf-purple
+          tracking-tight
+          sm:text-4xl
+        "
       >
         Gebruiksvoorwaarden
       </h1>

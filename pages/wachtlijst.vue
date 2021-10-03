@@ -10,7 +10,13 @@
 
     <div class="mt-6 sm:max-w-xl">
       <h1
-        class="text-4xl font-extrabold text-gray-900 tracking-tight sm:text-5xl"
+        class="
+          text-3xl
+          font-extrabold
+          text-wf-purple
+          tracking-tight
+          sm:text-4xl
+        "
       >
         Steden wachtlijst
       </h1>
@@ -20,7 +26,7 @@
         wanneer we jouw stad toegevoegd hebben.
       </p>
 
-      <form class="mt-6 grid grid-cols-1 gap-y-6">
+      <form class="mt-6 grid grid-cols-1 gap-y-4">
         <div>
           <label for="email" class="sr-only">E-mailadres</label>
           <input

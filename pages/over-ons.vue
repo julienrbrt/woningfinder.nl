@@ -2,7 +2,13 @@
   <Hero>
     <div class="mt-6 sm:max-w-xl">
       <h1
-        class="text-4xl font-extrabold text-gray-900 tracking-tight sm:text-5xl"
+        class="
+          text-3xl
+          font-extrabold
+          text-wf-purple
+          tracking-tight
+          sm:text-4xl
+        "
       >
         Wie zijn wij
       </h1>
@@ -16,6 +22,7 @@
       </p>
 
       <AlertInfo
+        class="mt-4"
         description=" Wist je dat ons oprichter, Julien, zelf gebruik heeft gemaakt van
             WoningFinder en zo zijn huis heeft gevonden in zijn gewenste wijk?"
       >
