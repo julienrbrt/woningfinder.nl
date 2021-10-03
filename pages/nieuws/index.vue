@@ -1,11 +1,13 @@
 <template>
   <Hero>
-    <h1 class="text-3xl font-extrabold text-wf-purple tracking-tight">
+    <h1
+      class="text-3xl font-extrabold text-wf-purple tracking-tight sm:text-4xl"
+    >
       Nieuws
     </h1>
 
     <p class="mt-4 text-lg text-gray-500">
-      Hier vind je al het nieuws over WoningFinder en de huurwoningmarkt.
+      Hier vind je al het nieuws over WoningFinder.
     </p>
 
     <div v-for="post in posts" :key="post.title" class="mt-6">

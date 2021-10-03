@@ -1,8 +1,14 @@
 <template>
-  <Hero>
+  <HeroNoImg>
     <div class="mt-6 sm:max-w-xl">
       <h1
-        class="text-3xl font-extrabold text-gray-900 tracking-tight sm:text-5xl"
+        class="
+          text-3xl
+          font-extrabold
+          text-wf-purple
+          tracking-tight
+          sm:text-4xl
+        "
       >
         Woningcorporaties
       </h1>
@@ -216,7 +222,7 @@
         <BackButton />
       </div>
     </div>
-  </Hero>
+  </HeroNoImg>
 </template>
 
 <script>
