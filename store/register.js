@@ -76,9 +76,10 @@ export const mutations = {
     )
   },
   removeCity(state, city) {
-    state.register.housing_preferences.city = state.register.housing_preferences.city.filter(
-      (c) => c.name !== city.name
-    )
+    state.register.housing_preferences.city =
+      state.register.housing_preferences.city.filter(
+        (c) => c.name !== city.name
+      )
   },
   addCityDistrict(state, cityDistrict) {
     // find city index
@@ -98,11 +99,10 @@ export const mutations = {
     )
 
     // remove district
-    state.register.housing_preferences.city[
-      cityIdx
-    ].district = state.register.housing_preferences.city[
-      cityIdx
-    ].district.filter((d) => d !== cityDistrict.district)
+    state.register.housing_preferences.city[cityIdx].district =
+      state.register.housing_preferences.city[cityIdx].district.filter(
+        (d) => d !== cityDistrict.district
+      )
   },
   setHousingType(state, type) {
     state.register.housing_preferences.type = type
@@ -113,7 +113,7 @@ export const mutations = {
       preferences.number_bedroom
     state.register.housing_preferences.has_balcony = preferences.has_balcony
     state.register.housing_preferences.has_garage = preferences.has_garage
-    state.register.housing_preferences.has_garden = preferences.has_garage
+    state.register.housing_preferences.has_garden = preferences.has_garden
     state.register.housing_preferences.has_elevator = preferences.has_elevator
     state.register.housing_preferences.has_attic = preferences.has_attic
     state.register.housing_preferences.is_accessible = preferences.is_accessible
