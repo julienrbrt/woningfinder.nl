@@ -18,6 +18,70 @@
         WoningFinder.
       </p>
 
+      <h2 class="mt-4 mb-2 text-xl text-gray-900">Regio Noord-Holland</h2>
+      <div
+        class="
+          mt-8
+          grid grid-cols-2
+          gap-0.5
+          md:grid-cols-3
+          lg:mt-0
+          lg:grid-cols-2
+        "
+      >
+        <LandingHousingCorporationLogo
+          name="De Alliantie"
+          image="dealliantie.png"
+          website="https://www.de-alliantie.nl"
+        />
+        <LandingHousingCorporationLogo
+          name="Ymere"
+          image="ymere.png"
+          website="https://www.ymere.nl"
+        />
+        <LandingHousingCorporationLogo
+          name="Woonzorg Nederland"
+          image="woonzorg.png"
+          website="https://www.woonzorg.nl"
+        />
+        <LandingHousingCorporationLogo
+          name="Rochdale"
+          image="rochdale.png"
+          website="https://wwww.rochdale.nl"
+        />
+        <LandingHousingCorporationLogo
+          name="Eigen Haard"
+          image="eigenhaard.png"
+          website="https://www.eigenhaard.nl"
+        />
+        <LandingHousingCorporationLogo
+          name="Stadgenoot"
+          image="stadgenoot.png"
+          website="https://www.stadgenoot.nl"
+        />
+
+        <LandingHousingCorporationLogo
+          name="Parteon"
+          image="parteon.png"
+          website="https://www.parteon.nl"
+        />
+        <LandingHousingCorporationLogo
+          name="WormerWonen"
+          image="wormerwonen.png"
+          website="https://www.wormerwonen.nl"
+        />
+        <LandingHousingCorporationLogo
+          name="De Key"
+          image="dekey.png"
+          website="https://www.dekey.nl"
+        />
+        <LandingHousingCorporationLogo
+          name="ZVH"
+          image="zvh.jpg"
+          website="https://www.zvh.nl"
+        />
+      </div>
+
       <h2 class="mt-4 mb-2 text-xl text-gray-900">Regio Overijssel</h2>
       <div
         class="
