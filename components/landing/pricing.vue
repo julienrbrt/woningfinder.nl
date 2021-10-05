@@ -46,7 +46,7 @@
                   <h3 class="badge" id="tier-basis">Basis</h3>
                 </div>
                 <div class="mt-4 flex items-baseline text-6xl font-extrabold">
-                  €12
+                  €20
                   <span class="ml-1 text-2xl font-medium text-gray-500">
                     eenmalig
                   </span>
@@ -123,7 +123,7 @@
                   <h3 class="badge" id="tier-pro">Pro</h3>
                 </div>
                 <div class="mt-4 flex items-baseline text-6xl font-extrabold">
-                  €25
+                  €30
                   <span class="ml-1 text-2xl font-medium text-gray-500">
                     eenmalig
                   </span>
