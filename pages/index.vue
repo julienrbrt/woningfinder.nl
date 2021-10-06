@@ -20,8 +20,8 @@
           huurwoningen
         </h1>
         <p class="mt-6 text-xl text-gray-500">
-          Gebruik WoningFinder en vind je perfecte huurwoning zonder hoeven elke
-          dag alle woningaanbod websites zelf bezoeken om te reageren. Je
+          Gebruik WoningFinder en vind je perfecte huurwoning zonder elke dag
+          alle woningaanbod websites zelf te bezoeken om te reageren. Je
           reageert automatisch via WoningFinder op alle woningen die matchen met
           je zoekopdracht.
         </p>
