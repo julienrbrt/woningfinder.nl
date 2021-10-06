@@ -15,7 +15,15 @@
           >
             Kosten
           </h2>
-          <p class="text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl">
+          <p
+            class="
+              tracking-tight
+              text-3xl
+              font-extrabold
+              text-white
+              sm:text-4xl
+            "
+          >
             Probeer 14 dagen gratis
           </p>
           <p class="text-xl text-gray-300">
@@ -46,7 +54,7 @@
                   <h3 class="badge" id="tier-basis">Basis</h3>
                 </div>
                 <div class="mt-4 flex items-baseline text-6xl font-extrabold">
-                  €20
+                  €18
                   <span class="ml-1 text-2xl font-medium text-gray-500">
                     eenmalig
                   </span>

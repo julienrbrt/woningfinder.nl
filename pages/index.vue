@@ -16,13 +16,14 @@
             sm:text-5xl
           "
         >
-          Reageer automatisch op woningen
+          Reageer <span class="text-green-800">automatisch</span> op
+          huurwoningen
         </h1>
         <p class="mt-6 text-xl text-gray-500">
-          Bij WoningFinder creëer je één keer een zoekopdracht voor je
-          droomhuis. Daarna reageert WoningFinder automatisch op alle
-          huurwoningen die matchen met je zoekopdracht. Jij hoeft verder niets
-          meer te doen, makkelijk toch?
+          Gebruik WoningFinder en vind je perfecte huurwoning zonder elke dag
+          alle woningaanbod websites zelf te bezoeken om te reageren. Je
+          reageert automatisch via WoningFinder op alle woningen die matchen met
+          je zoekopdracht.
         </p>
       </div>
       <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
