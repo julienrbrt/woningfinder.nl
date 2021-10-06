@@ -20,10 +20,10 @@
           huurwoningen
         </h1>
         <p class="mt-6 text-xl text-gray-500">
-          Je hoeft niet meer elke dag op dozen websites zelf zoeken en reageren
-          op een woning. Gebruik WoningFinder en vind je perfecte huurwoning
-          zonder verder iets hoeven te doen. Creëer nu je persoonlijke
-          zoekopdracht en reageer automatisch met WoningFinder.
+          Zoek niet meer elke dag op dozijn websites voor het vinden van een
+          woning. Gebruik WoningFinder en vind je perfecte huurwoning zonder
+          verder iets hoeven te doen. Creëer nu je persoonlijke zoekopdracht en
+          reageer automatisch met WoningFinder.
         </p>
       </div>
       <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
