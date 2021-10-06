@@ -51,23 +51,29 @@
         />
       </svg>
 
-      <div class="relative">
+      <div class="relative text-center">
         <h2
           class="
-            text-center text-3xl
-            leading-8
-            font-extrabold
+            text-lg
+            leading-6
+            font-semibold
+            text-gray-700
+            uppercase
+            tracking-wider
+          "
+        >
+          Hoe werkt het
+        </h2>
+        <p
+          class="
             tracking-tight
+            text-3xl
+            font-extrabold
             text-gray-900
             sm:text-4xl
           "
         >
-          Bespaar tijd met WoningFinder
-        </h2>
-        <p class="mt-4 max-w-3xl mx-auto text-center text-xl text-gray-500">
-          Stop met elke dag zoeken en reageren. Creëer een zoekopdracht en vind
-          je nieuwe huurwoning zonder verder iets te doen. Je reageert
-          automatisch met WoningFinder.
+          Reageer op alle passende woningen
         </p>
       </div>
 
@@ -91,19 +97,19 @@
               sm:text-3xl
             "
           >
-            Reageer op alle passende woningen
+            Persoonlijke zoekopdracht
           </h3>
           <p class="mt-3 text-lg text-gray-500">
-            Wil je een tuin hebben, of in een appartement wonen? Zoek je een
-            huis met 6 slaapkamers? Met WoningFinder kun je een persoonlijke
-            zoekopdracht creëren, zodat jij automatisch reageert op elke woning
-            die aan je zoekopdracht voldoen.
+            Zoek je een huis met 4 slaapkamers, wil je een tuin hebben, of in
+            een specifieke wijk wonen? Creëer je persoonlijke zoekopdracht en
+            reageert automatisch op alle woningen die aan je zoekopdracht
+            voldoen.
           </p>
 
           <dl class="mt-10 space-y-10">
             <!-- using html tag here -->
             <LandingFeatureItem
-              title=" Reageer eerst"
+              title="Altijd eerst"
               description="Sommige woningcorporaties werken met „Wie het eerst komt, die
                 het eerst maalt”. WoningFinder zal precies na dat het aanbod is
                 gepubliceerd automatisch reageren. Je hebt zo dus heel veel kans
@@ -231,7 +237,7 @@
                 sm:text-3xl
               "
             >
-              Met WoningFinder kun je relaxen
+              Bespaar tijd met WoningFinder
             </h3>
             <p class="mt-3 text-lg text-gray-500">
               We doen ons best om een huis voor jou te vinden en we houden jou
@@ -249,7 +255,7 @@
               </LandingFeatureItem>
               <LandingFeatureItem
                 title="Toegankelijk"
-                description="Een WoningFinder zoekopdracht kost een eenmalig bedrag: Ons missie is het eenvoudiger maken voor iedereen, we weten dat het moeilijk is om een (sociale) huurwoning te vinden in Nederland, we willen er niet van profiteren."
+                description="Een WoningFinder zoekopdracht kost een eenmalig bedrag: Ons missie is het eenvoudiger maken voor iedereen, het is moeilijk om een (sociale) huurwoning te vinden in Nederland, we willen er niet van profiteren."
               >
                 <CurrencyEuroIcon class="h-6 w-6" />
               </LandingFeatureItem>

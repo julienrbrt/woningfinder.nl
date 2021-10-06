@@ -3,7 +3,7 @@ export default {
   ssr: false,
   target: 'static',
   head: {
-    title: 'WoningFinder - Reageer automatisch op woningen',
+    title: 'WoningFinder - Reageer automatisch op huurwoningen',
     htmlAttrs: {
       lang: 'nl',
     },
