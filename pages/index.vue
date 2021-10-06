@@ -16,7 +16,7 @@
             sm:text-5xl
           "
         >
-          Reageer <span class="text-green-800">automatisch</span> op
+          Reageer <span class="text-green-700">automatisch</span> op
           huurwoningen
         </h1>
         <p class="mt-6 text-xl text-gray-500">
