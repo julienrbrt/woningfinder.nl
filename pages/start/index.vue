@@ -189,6 +189,10 @@ export default {
             if (!this.error) {
               // register event
               this.$ga.event('start', 'signup', 'successful', 1)
+              fbq('track', 'CompleteRegistration', {
+                currency: 'EUR',
+                value: 1,
+              })
 
               // end loading bar
               this.$nuxt.$loading.finish()
