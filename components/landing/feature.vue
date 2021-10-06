@@ -100,9 +100,9 @@
             Persoonlijke zoekopdracht
           </h3>
           <p class="mt-3 text-lg text-gray-500">
-            Zoek je een huis met 4 slaapkamers, wil je een tuin hebben, of in
-            een specifieke wijk wonen? Creëer je persoonlijke zoekopdracht en
-            reageert automatisch op alle woningen die aan je zoekopdracht
+            Zoek je een huis met 4 slaapkamers, wil je een tuin hebben of in een
+            specifieke wijk wonen? Creëer dan je persoonlijke zoekopdracht en
+            reageer automatisch op alle woningen die aan je zoekopdracht
             voldoen.
           </p>
 
