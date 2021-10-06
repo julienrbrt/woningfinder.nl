@@ -43,6 +43,3 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 fbq('init', '602827790754910');
 fbq('track', 'PageView');
 </script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=602827790754910&ev=PageView&noscript=1"
-/></noscript>
