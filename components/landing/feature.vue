@@ -247,9 +247,8 @@
             <dl class="mt-10 space-y-10">
               <LandingFeatureItem
                 title="Wekelijkse update"
-                description="Je krijgt van ons een wekelijkse email update waarin je kan
-                  zien op welke passende woningen WoningFinder heeft gereageerd.
-                  Geen dagelijkse spam!"
+                description="Je krijgt van ons elke vrijdag een e-mail waarin je kan zien op welke passende woningen WoningFinder heeft gereageerd. 
+                Geen dagelijkse spam!"
               >
                 <BellIcon class="h-6 w-6" />
               </LandingFeatureItem>
