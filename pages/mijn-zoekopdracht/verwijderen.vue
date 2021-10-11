@@ -24,7 +24,7 @@
     <form class="mt-6 grid grid-cols-1 gap-y-4">
       <fieldset>
         <legend class="block text-base text-gray-700">
-          Heb je een huis gevonden dankzij WoningFinder?
+          Heb je een woning gevonden dankzij WoningFinder?
         </legend>
         <div class="mt-4 grid grid-cols-1 gap-y-4">
           <div class="flex items-center">
@@ -86,14 +86,14 @@
             border-gray-300
             rounded-md
           "
-          placeholder="Hebt je een klacht, opmerking of tip? Laat het ons weten. Met je hulp verbeteren wij onze diensten."
+          placeholder="Heb je een opmerking, tip of klacht? Laat het ons weten. Met je hulp verbeteren wij WoningFinder."
         ></textarea>
       </div>
     </form>
 
     <AlertInfo
       class="mt-4"
-      description="Je staat op het punt je account te verwijderen 😱. Al je gegevens worden dus compleet verwijderen van ons systeem."
+      description="Je staat op het punt je account te verwijderen 😱. Al je gegevens worden onmiddellijk verwijderd en kunnen niet worden hersteld."
     >
       <InformationCircleIcon class="h-5 w-5 text-gray-400" />
     </AlertInfo>
@@ -125,7 +125,7 @@ import { InformationCircleIcon } from '@vue-hero-icons/solid'
 export default {
   data() {
     return {
-      hasHouse: false,
+      hasHouse: true,
       feedback: '',
       error: false,
     }
