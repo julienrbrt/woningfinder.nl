@@ -80,33 +80,51 @@
 
     <!-- buttons -->
     <div class="items-center flex flex-col justify-center mt-5">
+      <div class="flex flex-row space-x-4">
+        <NuxtLink
+          to="/"
+          class="
+            cursor-pointer
+            btn
+            w-min
+            bg-gray-500
+            hover:bg-red-800
+            hover:ring-red-500
+            focus:ring-red-500
+            py-2
+          "
+          >Uitloggen
+        </NuxtLink>
+        <a
+          @click="edit()"
+          class="
+            cursor-pointer
+            btn
+            w-min
+            bg-wf-purple
+            hover:bg-wf-purple-dark
+            hover:ring-wf-purple
+            focus:ring-wf-purple
+            py-2
+          "
+        >
+          Bijwerken
+        </a>
+      </div>
       <a
-        @click="edit()"
+        @click="deleteUser()"
         class="
           cursor-pointer
-          btn
-          w-min
-          bg-wf-purple
-          hover:bg-wf-purple-dark
-          hover:ring-wf-purple
-          focus:ring-wf-purple
-          py-2
-        "
-      >
-        Bijwerken
-      </a>
-      <NuxtLink
-        to="/"
-        class="
-          mt-2
+          mt-4
           whitespace-nowrap
           text-base
           font-medium
           text-gray-500
-          hover:text-gray-900
+          hover:text-red-500
         "
-        >Uitloggen
-      </NuxtLink>
+      >
+        Account verwijderen
+      </a>
     </div>
   </HeroNoImg>
 </template>
@@ -184,6 +202,13 @@ export default {
       // push to route
       this.$router.push({
         path: '/mijn-zoekopdracht/bijwerken',
+        query: { jwt: this.$route.query.jwt },
+      })
+    },
+    deleteUser() {
+      // push to route
+      this.$router.push({
+        path: '/mijn-zoekopdracht/verwijderen',
         query: { jwt: this.$route.query.jwt },
       })
     },
