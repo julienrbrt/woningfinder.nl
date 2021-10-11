@@ -57,7 +57,7 @@ export default {
           question:
             'Ik heb mijn (droom)huis gevonden hoe stop ik WoningFinder?',
           answer:
-            'Allereerst, gefeliciteerd! Je betaalt WoningFinder alleen één keer voor één zoekopdracht, dus je hoeft niets te annuleren. Stuur ons een email en we gaan jouw account helemaal verwijderen. Let op: je zoekopdracht word automatisch verwijderd zodra je de eerste bent geworden voor een huis.',
+            'Allereerst, gefeliciteerd! Je betaalt WoningFinder alleen één keer voor één zoekopdracht, dus je hoeft niets te annuleren. Je kunt zelf je account verwijderen via je account pagina.',
         },
         {
           question: 'Mijn stad staat er niet tussen.',
