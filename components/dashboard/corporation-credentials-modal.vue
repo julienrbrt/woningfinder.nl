@@ -209,7 +209,7 @@ export default {
     XIcon,
     KeyIcon,
   },
-  props: ['credentials', 'jwt'],
+  props: ['credentials'],
   data() {
     return {
       login: {
@@ -223,10 +223,6 @@ export default {
     async sendCredentials(e) {
       e.preventDefault()
 
-      const params = {
-        jwt: this.$route.query.jwt,
-      }
-
       await this.$axios
         .$post(
           '/me/corporation-credentials',
@@ -235,7 +231,11 @@ export default {
             login: this.login.login,
             password: this.login.password,
           },
-          { params }
+          {
+            headers: {
+              Authorization: this.$cookies.get('auth'),
+            },
+          }
         )
         .then(() => {
           this.corporation_name = ''

@@ -50,7 +50,6 @@
             @close="showModal = ''"
             v-if="showModal == creds.corporation_name"
             :credentials="creds"
-            :jwt="$route.query.jwt"
           />
         </li>
       </ul>
@@ -88,6 +87,7 @@
     <div class="items-center flex flex-col justify-center mt-5">
       <div class="flex flex-row space-x-4">
         <NuxtLink
+          v-on:click.native="logout()"
           to="/"
           class="
             cursor-pointer
@@ -137,6 +137,7 @@
 
 <script>
 export default {
+  middleware: 'auth',
   data() {
     return {
       customer: {},
@@ -147,12 +148,14 @@ export default {
     }
   },
   methods: {
-    async getCorporationCredentials(params) {
+    async getCorporationCredentials() {
       const credentials = await this.$axios.$get(
         '/me/corporation-credentials',
         {
           progress: true,
-          params,
+          headers: {
+            Authorization: this.$cookies.get('auth'),
+          },
         }
       )
 
@@ -162,10 +165,12 @@ export default {
 
       return credentials
     },
-    async getCustomerInfo(params) {
+    async getCustomerInfo() {
       const customer = await this.$axios.$get('me', {
         progress: true,
-        params,
+        headers: {
+          Authorization: this.$cookies.get('auth'),
+        },
       })
 
       if (!customer) {
@@ -204,44 +209,28 @@ export default {
       )
 
       // push to route
-      this.$router.push({
-        path: '/mijn-zoekopdracht/bijwerken',
-        query: { jwt: this.$route.query.jwt },
-      })
+      this.$router.push('/mijn-zoekopdracht/bijwerken')
+    },
+    logout() {
+      this.$cookies.remove('auth')
     },
     deleteUser() {
-      // push to route
-      this.$router.push({
-        path: '/mijn-zoekopdracht/verwijderen',
-        query: { jwt: this.$route.query.jwt },
-      })
+      this.$router.push('/mijn-zoekopdracht/verwijderen')
     },
     hideAlert() {
       this.showInvalidPlanAlert = false
     },
   },
   async created() {
-    // check jwt and do not make request if not provided or empty
-    var jwt = this.$route.query.jwt
-    if (!jwt || jwt == '') {
-      return
-    }
-
-    this.customer = await this.getCustomerInfo({ jwt: jwt }).catch(() => {
+    this.customer = await this.getCustomerInfo().catch(() => {
+      this.logout()
       this.$router.push('/login')
     })
 
-    this.credentials = await this.getCorporationCredentials({ jwt: jwt }).catch(
-      () => {
-        this.$router.push('/login')
-      }
-    )
-  },
-  middleware({ route, redirect }) {
-    // If the customer is not authenticated return to login
-    if (!route.query.jwt || route.query.jwt == '') {
-      return redirect('/login')
-    }
+    this.credentials = await this.getCorporationCredentials().catch(() => {
+      this.logout()
+      this.$router.push('/login')
+    })
   },
 }
 </script>

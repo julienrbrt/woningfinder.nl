@@ -34,18 +34,18 @@
               </li>
               <li>
                 <NuxtLink
-                  to="/woningcorporaties"
+                  to="/mijn-zoekopdracht"
                   class="text-base text-gray-400 hover:text-gray-300"
                 >
-                  Woningcorporaties
+                  Mijn zoekopdracht
                 </NuxtLink>
               </li>
               <li>
                 <NuxtLink
-                  to="/wachtlijst"
+                  to="/woningcorporaties"
                   class="text-base text-gray-400 hover:text-gray-300"
                 >
-                  Wachtlijst
+                  Woningcorporaties
                 </NuxtLink>
               </li>
             </ul>
@@ -87,6 +87,14 @@
                   class="text-base text-gray-400 hover:text-gray-300"
                 >
                   Over ons
+                </NuxtLink>
+              </li>
+              <li>
+                <NuxtLink
+                  to="/wachtlijst"
+                  class="text-base text-gray-400 hover:text-gray-300"
+                >
+                  Wachtlijst
                 </NuxtLink>
               </li>
             </ul>
