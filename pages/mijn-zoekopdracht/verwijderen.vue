@@ -123,6 +123,7 @@
 import { InformationCircleIcon } from '@vue-hero-icons/solid'
 
 export default {
+  middleware: 'auth',
   data() {
     return {
       hasHouse: true,
@@ -142,10 +143,6 @@ export default {
         return
       }
 
-      const params = {
-        jwt: this.$route.query.jwt,
-      }
-
       await this.$axios
         .$post(
           '/me/delete',
@@ -153,10 +150,14 @@ export default {
             has_house: this.hasHouse,
             feedback: this.feedback,
           },
-          { params }
+          {
+            headers: {
+              Authorization: this.$cookies.get('auth'),
+            },
+          }
         )
         .then(() => {
-          // account delete, redirect
+          // account deleted redirect
           this.$router.push('/')
         })
         .catch(() => {
@@ -171,12 +172,6 @@ export default {
     validForm() {
       return this.feedback.trim().length > 0
     },
-  },
-  middleware({ route, redirect }) {
-    // If the customer is not authenticated return to login
-    if (!route.query.jwt || route.query.jwt == '') {
-      return redirect('/login')
-    }
   },
 }
 </script>

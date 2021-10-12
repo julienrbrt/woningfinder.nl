@@ -87,6 +87,7 @@
 
 <script>
 export default {
+  middleware: 'auth',
   async asyncData({ $axios }) {
     const offering = await $axios.$get('offering', { progress: true })
     return { offering }
@@ -157,10 +158,7 @@ export default {
               this.$nuxt.$loading.finish()
 
               // push to route
-              this.$router.push({
-                path: '/mijn-zoekopdracht',
-                query: { jwt: this.$route.query.jwt },
-              })
+              this.$router.push('/mijn-zoekopdracht')
               break
             }
           }
@@ -171,15 +169,15 @@ export default {
       this.next()
     },
     async submit() {
-      const params = {
-        jwt: this.$route.query.jwt,
-      }
-
       await this.$axios
         .$post(
           'me',
           this.$store.getters['register/getRegister'].housing_preferences,
-          { params }
+          {
+            headers: {
+              Authorization: this.$cookies.get('auth'),
+            },
+          }
         )
         .then((response) => {
           return response
@@ -194,12 +192,6 @@ export default {
       this.submitted = false
       this.error = false
     },
-  },
-  middleware({ route, redirect }) {
-    // If the customer is not authenticated return to login
-    if (!route.query.jwt || route.query.jwt == '') {
-      return redirect('/login')
-    }
   },
 }
 </script>

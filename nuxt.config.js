@@ -59,7 +59,12 @@ export default {
   plugins: [{ src: '~/plugins/vue-autocomplete.js', ssr: false }],
   components: true,
   buildModules: ['@nuxtjs/tailwindcss', '@nuxtjs/google-analytics'],
-  modules: ['@nuxtjs/axios', '@nuxtjs/sitemap', '@nuxt/content'],
+  modules: [
+    '@nuxtjs/axios',
+    '@nuxtjs/sitemap',
+    '@nuxt/content',
+    'cookie-universal-nuxt',
+  ],
   axios: {
     baseURL: 'https://woningfinder.nl/api/',
   },
