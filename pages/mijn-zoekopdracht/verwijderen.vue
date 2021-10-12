@@ -157,7 +157,7 @@ export default {
           }
         )
         .then(() => {
-          // account delete, redirect
+          // account deleted redirect
           this.$router.push('/')
         })
         .catch(() => {

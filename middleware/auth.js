@@ -10,10 +10,8 @@ export default function ({ app, route, redirect }) {
       secure: true,
     })
 
-    // remove query parameters from url
-    redirect(route.path)
-
-    return
+    // remove query parameters from url (using redirection)
+    return redirect(route.path)
   }
 
   if (app.$cookies.get(cookieName)) {
