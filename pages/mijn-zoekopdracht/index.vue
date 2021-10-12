@@ -71,6 +71,12 @@
       />
     </div>
 
+    <!-- housing matches -->
+    <DashboardHousingMatches
+      v-if="customer && customer.housing_preferences_match"
+      :housing_preferences_match="customer.housing_preferences_match"
+    />
+
     <!-- preferences -->
     <DashboardPreferences
       v-if="customer && customer.housing_preferences"
@@ -171,9 +177,7 @@ export default {
       }
 
       // build stats
-      if (customer.housing_preferences_match) {
-        this.stats.reactions = customer.housing_preferences_match.length
-      }
+      this.stats.reactions = customer.total_reaction
       this.stats.cities = customer.housing_preferences.city.length
       this.stats.plan =
         customer.plan.name.charAt(0).toUpperCase() + customer.plan.name.slice(1)
