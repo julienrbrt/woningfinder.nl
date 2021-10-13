@@ -19,7 +19,7 @@ export default {
         hid: 'description',
         name: 'description',
         content:
-          'Bij WoningFinder creëer je één keer een zoekopdracht voor je droomhuis. Daarna reageert WoningFinder automatisch op alle aanbod van woningcorporaties dat matcht met je zoekopdracht. Jij hoeft verder niets meer te doen, makkelijk toch?',
+          'Gebruik WoningFinder en vind je perfecte huurwoning zonder elke dag alle woningaanbod websites zelf te bezoeken om te reageren. Je reageert automatisch via WoningFinder op alle woningen die matchen met je zoekopdracht.',
       },
     ],
     link: [
