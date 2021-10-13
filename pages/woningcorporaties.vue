@@ -133,6 +133,31 @@
           image="mijande_wonen.png"
           website="https://www.mijande.nl"
         />
+        <LandingHousingCorporationLogo
+          name="Beter Wonen IJsselmuiden"
+          image="bwij.png"
+          website="https://bwij.nl"
+        />
+        <LandingHousingCorporationLogo
+          name="deltaWonen"
+          image="deltawonen.jpg"
+          website="https://www.deltawonen.nl"
+        />
+        <LandingHousingCorporationLogo
+          name="Openbaar Belang"
+          image="openbaarbelang.png"
+          website="https://www.openbaarbelang.nl"
+        />
+        <LandingHousingCorporationLogo
+          name="SWZ"
+          image="swz.png"
+          website="https://www.swz.nl"
+        />
+        <LandingHousingCorporationLogo
+          name="Wetland Wonen"
+          image="wetlandwonen.png"
+          website="https://www.wetlandwonen.nl"
+        />
       </div>
 
       <h2 class="mt-4 mb-2 text-xl text-gray-900">Regio Utrecht</h2>
