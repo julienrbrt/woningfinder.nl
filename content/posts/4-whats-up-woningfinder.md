@@ -25,7 +25,11 @@ Dank jullie feedback gaan we sturen vanaf nu ons wekelijkse update om 18:00 elke
 Mijn zoekopdracht pagina is geupdate en laat je nu zien je laaste 6 reacties. Voor meer moet jij nog steeds wachten voor je wekelijkse update, dus stop zorg maken over je woning je blijft op de hoogte ;) 
 We hebben ook de mogelijkheid toegevoed om je WoningFinder account te verwijderen direct in het pagina. Je hoeft niet meet contact met ons op te nemen als je een woning vindt om je account te verwijderen.
 
-## What's next
+## DeWoningZoeker
+
+Als je een huis zoekt in Zwolle en omgeving kan je, naast De Woonplaats, automatisch reageeren op alle aanbod van [DeWoningZoeker](https://dewoningzoeker.com)
+
+## What's coming
 
 WoningFinder zal binnenkort je laten reageren op alle huurwoningen en niet alleen woningen vanuit het aanbod van woningcorporaties.
 Denk aan snel en automatisch reageren op particulier huurwoningen van alle makelaar van je stad 😊
