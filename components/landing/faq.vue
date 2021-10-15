@@ -67,7 +67,7 @@ export default {
         {
           question: 'Ik ben niet tevreden. Ik wil mijn geld terug!',
           answer:
-            'Jammer om te horen. Je krijgt je geld terug. Stuur ons een e-mail binnen je eerste maand met je reden en sturen we jouw geld terug.',
+            'Jammer om te horen. Je krijgt je geld terug. Neem <a href="/contact" class="underline hover:text-gray-900">contact</a> met ons op binnen je eerste maand, vertel ons je reden en sturen we je jouw geld terug.',
         },
         {
           question: 'Ik wil meerdere zoekopdrachten hebben. Hoe werkt dat?',

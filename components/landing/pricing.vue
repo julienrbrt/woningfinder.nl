@@ -83,6 +83,24 @@
                       <CheckIcon class="h-6 w-6 text-green-500" />
                     </div>
                     <p class="ml-3 text-base text-gray-700">
+                      Sociale huurwoningen reacties
+                    </p>
+                  </li>
+
+                  <li class="flex items-start">
+                    <div class="flex-shrink-0">
+                      <XIcon class="h-6 w-6 text-gray-500" />
+                    </div>
+                    <p class="ml-3 text-base text-gray-700">
+                      Vrije sector huurwoningen reacties
+                    </p>
+                  </li>
+
+                  <li class="flex items-start">
+                    <div class="flex-shrink-0">
+                      <CheckIcon class="h-6 w-6 text-green-500" />
+                    </div>
+                    <p class="ml-3 text-base text-gray-700">
                       Persoonlijke zoekopdracht
                     </p>
                   </li>
@@ -93,15 +111,6 @@
                     </div>
                     <p class="ml-3 text-base text-gray-700">
                       Wekelijkse update
-                    </p>
-                  </li>
-
-                  <li class="flex items-start">
-                    <div class="flex-shrink-0">
-                      <CheckIcon class="h-6 w-6 text-green-500" />
-                    </div>
-                    <p class="ml-3 text-base text-gray-700">
-                      Sociale huurwoningen reacties
                     </p>
                   </li>
                 </ul>
@@ -159,24 +168,6 @@
                       <CheckIcon class="h-6 w-6 text-green-500" />
                     </div>
                     <p class="ml-3 text-base text-gray-700">
-                      Persoonlijke zoekopdracht
-                    </p>
-                  </li>
-
-                  <li class="flex items-start">
-                    <div class="flex-shrink-0">
-                      <CheckIcon class="h-6 w-6 text-green-500" />
-                    </div>
-                    <p class="ml-3 text-base text-gray-700">
-                      Wekelijkse update
-                    </p>
-                  </li>
-
-                  <li class="flex items-start">
-                    <div class="flex-shrink-0">
-                      <CheckIcon class="h-6 w-6 text-green-500" />
-                    </div>
-                    <p class="ml-3 text-base text-gray-700">
                       Sociale huurwoningen reacties
                     </p>
                   </li>
@@ -187,6 +178,24 @@
                     </div>
                     <p class="ml-3 text-base text-gray-700">
                       Vrije sector huurwoningen reacties
+                    </p>
+                  </li>
+
+                  <li class="flex items-start">
+                    <div class="flex-shrink-0">
+                      <CheckIcon class="h-6 w-6 text-green-500" />
+                    </div>
+                    <p class="ml-3 text-base text-gray-700">
+                      Persoonlijke zoekopdracht
+                    </p>
+                  </li>
+
+                  <li class="flex items-start">
+                    <div class="flex-shrink-0">
+                      <CheckIcon class="h-6 w-6 text-green-500" />
+                    </div>
+                    <p class="ml-3 text-base text-gray-700">
+                      Wekelijkse update
                     </p>
                   </li>
                 </ul>
@@ -216,11 +225,12 @@
 
 
 <script>
-import { CheckIcon } from '@vue-hero-icons/outline'
+import { CheckIcon, XIcon } from '@vue-hero-icons/outline'
 
 export default {
   components: {
     CheckIcon,
+    XIcon,
   },
   methods: {
     startEventBasis() {
