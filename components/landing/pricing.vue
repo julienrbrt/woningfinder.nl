@@ -24,11 +24,11 @@
               sm:text-4xl
             "
           >
-            Probeer 14 dagen gratis
+            Niet Tevreden, Geld Terug!
           </p>
           <p class="text-xl text-gray-300">
-            Daarna een eenmalig bedrag om te blijven reageren tot je een huis
-            vindt.
+            Als je niet tevreden bent na je eerste maand, krijg je je geld
+            terug.
           </p>
         </div>
       </div>
@@ -54,9 +54,9 @@
                   <h3 class="badge" id="tier-basis">Basis</h3>
                 </div>
                 <div class="mt-4 flex items-baseline text-6xl font-extrabold">
-                  €18
+                  Gratis
                   <span class="ml-1 text-2xl font-medium text-gray-500">
-                    eenmalig
+                    voor altijd
                   </span>
                 </div>
                 <p class="mt-5 text-lg text-gray-500">
@@ -131,9 +131,9 @@
                   <h3 class="badge" id="tier-pro">Pro</h3>
                 </div>
                 <div class="mt-4 flex items-baseline text-6xl font-extrabold">
-                  €30
+                  €15
                   <span class="ml-1 text-2xl font-medium text-gray-500">
-                    eenmalig
+                    per maand
                   </span>
                 </div>
                 <p class="mt-5 text-lg text-gray-500">

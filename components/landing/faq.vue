@@ -54,8 +54,7 @@ export default {
             'Zeker! We gebruiken versleuteling om je gegevens veilig te houden. Dat betekent dat we je inlog gegevens zelf ook niet kunnen zien.',
         },
         {
-          question:
-            'Ik heb mijn (droom)huis gevonden hoe stop ik WoningFinder?',
+          question: 'Ik heb een woning gevonden hoe stop ik WoningFinder?',
           answer:
             'Allereerst, gefeliciteerd! Je betaalt WoningFinder alleen één keer voor één zoekopdracht, dus je hoeft niets te annuleren. Je kunt zelf je account verwijderen via je account pagina.',
         },
@@ -66,9 +65,9 @@ export default {
               en we laten je weten wanneer we jouw stad toegevoegd hebben.`,
         },
         {
-          question: 'Waarom hebben jullie eenmalige kosten en geen abonnement?',
+          question: 'Ik ben niet tevreden. Ik wil mijn geld terug!',
           answer:
-            'De kosten zijn eenmalig bij WoningFinder omdat we abonnementen niet prettig vinden. Een huis vinden is al moeilijk in Nederland, dus we willen er niet van profiteren. Met eenmalige kosten weet je dat we ons best gaan doen om een woning voor jou te vinden: je weet dan dat hoe langer je zoekt hoe minder interessant het is voor jou en voor ons. Dat is niet het geval met een abonnement: hoe langer je zoekt, des te meer we eraan zouden verdienen — dat vinden we niet fijn.',
+            'Jammer om te horen. Je krijgt je geld terug. Stuur ons een e-mail binnen je eerste maand met je reden en sturen we jouw geld terug.',
         },
         {
           question: 'Ik wil meerdere zoekopdrachten hebben. Hoe werkt dat?',

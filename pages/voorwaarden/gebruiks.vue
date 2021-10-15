@@ -213,11 +213,11 @@
       <ul>
         <li>
           Het recht om gebruik te maken van de WoningFinder Webapplicatie is
-          onderworpen aan een eenmalige vergoeding die Gebruiker verschuldigd is
-          voor het algeheel gebruik maken van de diensten van WoningFinder. De
-          inhoud hiervan en de daarop van toepassing zijnde voorwaarden worden
-          voor het aangaan van de overeenkomst met WoningFinder aan Gebruiker
-          ter beschikking gesteld.
+          onderworpen aan een abonnement die Gebruiker verschuldigd is voor het
+          algeheel gebruik maken van de diensten van WoningFinder. De inhoud
+          hiervan en de daarop van toepassing zijnde voorwaarden worden voor het
+          aangaan van de overeenkomst met WoningFinder aan Gebruiker ter
+          beschikking gesteld.
         </li>
         <li>
           Indien Gebruiker niet aan haar (betalings)verplichtingen

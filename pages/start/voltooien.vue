@@ -1,27 +1,21 @@
 <template>
   <Hero>
-    <!-- payment flow -->
-    <div v-if="!$route.query.cancelled" class="mt-6 sm:max-w-xl">
-      <h1 class="text-4xl font-extrabold text-gray-900 tracking-tight">
+    <div class="mt-6 sm:max-w-xl">
+      <!-- payment flow -->
+      <h1
+        v-if="!$route.query.cancelled"
+        class="text-4xl font-extrabold text-gray-900 tracking-tight"
+      >
         Blijf automatisch reageren tot je een huis vindt
       </h1>
-
-      <p class="mt-6 text-lg text-gray-500">
-        Jouw gratis 14 dagen lopen af. Tegen een eenmalig bedrag kun je
-        automatisch blijven reageren tot je een huis vindt. Geen maandelijkse
-        kosten 👌
-      </p>
-    </div>
-
-    <!-- payment cancelled flow -->
-    <div v-else class="mt-6 sm:max-w-xl">
-      <h1 class="text-4xl font-extrabold text-gray-900 tracking-tight">
+      <!-- payment cancelled flow -->
+      <h1 v-else class="text-4xl font-extrabold text-gray-900 tracking-tight">
         Er is iets misgegaan met je betaling
       </h1>
 
       <p class="mt-6 text-lg text-gray-500">
         Je zoekopdracht is niet helemaal voltooid omdat er iets is misgegaan met
-        je betaling. Probeer het opnieuw om jouw zoekopdracht te voltooien.
+        je betaling. Probeer het opnieuw om (blijven) automatisch reageren.
       </p>
     </div>
 
