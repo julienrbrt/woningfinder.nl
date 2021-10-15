@@ -1,7 +1,7 @@
 ---
 title: "What's up WoningFinder #2 👀"
 topic: woningfinder
-date: 2021-09-01
+date: 2021-10-20
 description: 'Het laatste WoningFinder nieuws op een rij.'
 ---
 

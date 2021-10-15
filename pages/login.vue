@@ -6,8 +6,7 @@
         class="mb-6"
         v-if="alert && $route.query.thanks"
         @click="hideAlert"
-        alert=" Bedankt jouw betaling is gelukt! Je blijft automatisch reageren tot je
-        een huis vindt!"
+        alert=" Bedankt jouw betaling is gelukt! Je begint met automatisch reageren!"
       >
       </AlertOk>
 
