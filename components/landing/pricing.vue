@@ -27,7 +27,7 @@
             Niet Tevreden, Geld Terug!
           </p>
           <p class="text-xl text-gray-300">
-            Als je niet tevreden bent na je eerste maand, krijg je je geld
+            Als je niet tevreden bent binnen je eerste maand, krijg je je geld
             terug.
           </p>
         </div>

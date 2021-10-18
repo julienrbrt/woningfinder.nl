@@ -65,9 +65,9 @@ export default {
               en we laten je weten wanneer we jouw stad toegevoegd hebben.`,
         },
         {
-          question: 'Ik ben niet tevreden. Ik wil mijn geld terug!',
+          question: 'Ik ben niet tevreden.',
           answer:
-            'Jammer om te horen. Je krijgt je geld terug. Neem <a href="/contact" class="underline hover:text-gray-900">contact</a> met ons op binnen je eerste maand, vertel ons je reden en sturen we je jouw geld terug.',
+            'Dat is jammer 😞 Neem <a href="/contact" class="underline hover:text-gray-900">contact</a> met ons op binnen je eerste maand, je krijgt dan je geld terug!',
         },
         {
           question: 'Ik wil meerdere zoekopdrachten hebben. Hoe werkt dat?',
