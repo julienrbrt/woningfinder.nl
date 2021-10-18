@@ -41,7 +41,9 @@
 
     <div class="items-center inline-flex mt-4 space-x-4">
       <div class="rounded-md shadow">
-        <button @click="send" type="submit" class="btn">Probeer opnieuw</button>
+        <button @click="subscribe" type="submit" class="btn">
+          Probeer opnieuw
+        </button>
       </div>
     </div>
   </HeroNoImg>
@@ -54,10 +56,6 @@ export default {
   components: {
     InformationCircleIcon,
   },
-  async asyncData({ $axios }) {
-    const offering = await $axios.$get('offering', { progress: true })
-    return { offering }
-  },
   data() {
     return {
       email: '',
@@ -69,7 +67,7 @@ export default {
     hideAlert() {
       this.error = false
     },
-    async send() {
+    async subscribe() {
       if (!this.validForm) {
         this.error = true
         this.errorMsg =

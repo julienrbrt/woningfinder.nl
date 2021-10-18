@@ -135,20 +135,33 @@ export default {
             // start loading bar
             this.$nuxt.$loading.start()
 
+            // get data from vuex
+            var data = this.$store.getters['register/getRegister']
+
             // send request
-            await this.submit()
+            await this.submit(data)
             this.submitted = true
+            if (this.error) {
+              return
+            }
 
-            if (!this.error) {
-              // register event
-              this.$ga.event('start', 'signup', 'successful', 1)
-              fbq('track', 'CompleteRegistration', {
-                currency: 'EUR',
-                value: 1,
-              })
+            // register fb event
+            this.$ga.event('start', 'signup', 'successful', 1)
+            fbq('track', 'CompleteRegistration', {
+              currency: 'EUR',
+              value: 1,
+            })
 
-              // end loading bar
-              this.$nuxt.$loading.finish()
+            // end loading bar
+            this.$nuxt.$loading.finish()
+
+            // redirect to landing page of stripe (plan hardcoded for now)
+            if (data.plan.name == 'pro') {
+              await this.subscribe(data.email)
+              if (this.error) {
+                return
+              }
+            } else {
               this.$router.push({ path: '/', query: { thanks: true } })
             }
           }
@@ -158,11 +171,36 @@ export default {
 
       this.next()
     },
-    async submit() {
+    async submit(input) {
       await this.$axios
-        .$post('register', this.$store.getters['register/getRegister'])
+        .$post('register', input)
         .then((response) => {
           return response
+        })
+        .catch((error) => {
+          this.error = true
+          this.errorMsg =
+            'Er is iets misgegaan: "' + error.response.data.message + '".'
+        })
+    },
+    async subscribe(email) {
+      // send request
+      await this.$axios
+        .$post('payment', {
+          email: email,
+        })
+        .then((response) => {
+          return response
+        })
+        .then((data) => {
+          // redirect to stripe
+          if (data.stripe_session_id) {
+            var stripe = Stripe(process.env.stripeKey)
+
+            return stripe.redirectToCheckout({
+              sessionId: data.stripe_session_id,
+            })
+          }
         })
         .catch((error) => {
           this.error = true
