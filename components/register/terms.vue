@@ -32,8 +32,7 @@
       en
       <a class="underline" href="/voorwaarden/gebruiks" target="_blank"
         >Gebruiksvoorwaarden</a
-      >. Meer informatie over hoe we je gegevens gebruiken (en nooit delen),
-      vind je in ons
+      >. Meer informatie over hoe we je gegevens gebruiken vind je in ons
       <a class="underline" href="/voorwaarden/privacy" target="_blank"
         >Privacybeleid</a
       >.
@@ -52,12 +51,22 @@ export default {
   methods: {
     descriptionPrice() {
       for (var i = 0; i < this.plan.length; i++) {
-        if (this.plan[i].name == this.$store.getters['register/getPlan'].name) {
+        if (
+          this.plan[i].name == 'pro' &&
+          this.plan[i].name == this.$store.getters['register/getPlan'].name
+        ) {
           return (
-            'Je zoekopdracht is 14 dagen gratis. Daarna hoeft je maar één keer €' +
+            'Je betaal slecht €' +
             this.plan[i].price +
-            ' te betalen en je blijft automatisch onbeperkt reageren tot je een huis vindt.'
+            ' per maand. Je kunt opzeggen wanneer je wilt. Niet tevedren in je eerste maand? Krijg je je geld terug!'
           )
+        }
+
+        if (
+          this.plan[i].name == 'basis' &&
+          this.plan[i].name == this.$store.getters['register/getPlan'].name
+        ) {
+          return 'Je reageert met WoningFinder op alle sociale huurwoningen die aan je zoekopdracht voldoen.'
         }
       }
     },

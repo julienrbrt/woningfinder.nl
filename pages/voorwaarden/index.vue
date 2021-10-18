@@ -706,7 +706,7 @@
         </li>
         <li>
           WoningFinder voert haar dienstverlening uit conform het overeengekomen
-          tarief en worden eenmalig in rekening gebracht voorafgaand aan het
+          tarief en worden elke maand in rekening gebracht voorafgaand aan het
           verrichten van Diensten door WoningFinder.
         </li>
         <li>

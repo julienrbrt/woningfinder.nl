@@ -1,16 +1,6 @@
 <template>
   <HeroNoImg>
     <div class="mt-6 sm:max-w-xl">
-      <!-- payment validation alert -->
-      <AlertOk
-        class="mb-6"
-        v-if="alert && $route.query.thanks"
-        @click="hideAlert"
-        alert=" Bedankt jouw betaling is gelukt! Je blijft automatisch reageren tot je
-        een huis vindt!"
-      >
-      </AlertOk>
-
       <AlertOk
         class="my-4"
         v-if="submitted"

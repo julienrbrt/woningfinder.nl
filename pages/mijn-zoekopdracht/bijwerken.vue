@@ -29,7 +29,7 @@
     <RegisterHousing
       ref="registerHousing"
       v-show="currentStep == 3"
-      :supported_housing="offering.supported_housing_type"
+      :supported_housing="offering.supported_housing_types"
     />
 
     <RegisterHousingPreferences
@@ -37,51 +37,13 @@
       v-show="currentStep == 4"
     />
 
-    <!-- buttons -->
-    <div class="items-center w-full inline-flex mt-5">
-      <div class="mr-4">
-        <div v-if="currentStep == 1">
-          <BackButton />
-        </div>
-        <div v-else>
-          <a
-            @click="previous"
-            class="
-              cursor-pointer
-              whitespace-nowrap
-              text-base
-              font-medium
-              text-gray-500
-              hover:text-gray-900
-            "
-          >
-            Terug
-          </a>
-        </div>
-      </div>
-
-      <a
-        @click="validate"
-        class="btn max-w-min"
-        v-bind:class="
-          currentStep == totalStep
-            ? 'bg-wf-purple hover:bg-wf-purple-dark hover:ring-wf-purple focus:ring-wf-purple'
-            : ''
-        "
-        >{{ nextButtonText() }}</a
-      >
-      <p
-        class="
-          flex-1
-          whitespace-nowrap
-          text-sm
-          font-medium
-          text-gray-500 text-right
-        "
-      >
-        {{ currentStep }} / {{ totalStep }}
-      </p>
-    </div>
+    <Navigator
+      :currentStep="currentStep"
+      :totalStep="totalStep"
+      :buttonStr="buttonStr()"
+      @validate="validate"
+      @previous="previous"
+    />
   </Hero>
 </template>
 
@@ -103,7 +65,7 @@ export default {
     }
   },
   methods: {
-    nextButtonText() {
+    buttonStr() {
       if (this.currentStep == this.totalStep) {
         return 'Bijwerken'
       }

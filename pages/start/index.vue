@@ -1,10 +1,6 @@
 <template>
   <Hero>
-    <div class="mt-6 sm:max-w-xl">
-      <h1 class="text-3xl font-extrabold text-wf-purple tracking-tight">
-        Je WoningFinder zoekopdracht
-      </h1>
-    </div>
+    <RegisterTitle />
 
     <AlertError
       class="mt-4"
@@ -13,7 +9,6 @@
       :alert="errorMsg"
     />
 
-    <!-- registration steps -->
     <RegisterPlan
       ref="registerPlan"
       v-show="currentStep == 1"
@@ -35,7 +30,7 @@
     <RegisterHousing
       ref="registerHousing"
       v-show="currentStep == 4"
-      :supported_housing="offering.supported_housing_type"
+      :supported_housing="offering.supported_housing_types"
     />
 
     <RegisterHousingPreferences
@@ -55,49 +50,13 @@
       :plan="offering.plan"
     />
 
-    <RegisterConfirm ref="registerConfirm" v-show="currentStep == 8" />
-
-    <!-- buttons -->
-    <div class="items-center w-full inline-flex mt-5">
-      <div v-show="currentStep < this.totalStep" class="mr-4">
-        <div v-if="currentStep == 1">
-          <BackButton overwrite="/" />
-        </div>
-        <div v-else>
-          <a
-            @click="previous"
-            class="
-              cursor-pointer
-              whitespace-nowrap
-              text-base
-              font-medium
-              text-gray-500
-              hover:text-gray-900
-            "
-          >
-            Terug
-          </a>
-        </div>
-      </div>
-
-      <a
-        @click="validate"
-        class="btn"
-        v-bind:class="currentStep == totalStep ? 'flex-1' : 'max-w-min'"
-        >{{ nextButtonText() }}</a
-      >
-      <p
-        class="
-          flex-1
-          whitespace-nowrap
-          text-sm
-          font-medium
-          text-gray-500 text-right
-        "
-      >
-        {{ currentStep }} / {{ totalStep }}
-      </p>
-    </div>
+    <Navigator
+      :currentStep="currentStep"
+      :totalStep="totalStep"
+      :buttonStr="buttonStr()"
+      @validate="validate"
+      @previous="previous"
+    />
   </Hero>
 </template>
 
@@ -114,17 +73,13 @@ export default {
       errorMsg:
         'Er is iets misgegaan. Controleer het formulier nogmaals. Blijf dit gebeuren? Neem dan contact met ons op.',
       currentStep: 1,
-      totalStep: 8,
+      totalStep: 7,
     }
   },
   methods: {
-    nextButtonText() {
-      if (this.currentStep == this.totalStep - 1) {
-        return 'Aanmelden'
-      }
-
+    buttonStr() {
       if (this.currentStep == this.totalStep) {
-        return 'Begrijp ik'
+        return 'Aanmelden'
       }
 
       return 'Volgende'
@@ -139,9 +94,7 @@ export default {
         this.currentStep--
       }
     },
-    async validate(e) {
-      e.preventDefault()
-
+    async validate() {
       switch (this.currentStep) {
         case 1:
           if (!this.$refs.registerPlan.validate()) {
@@ -182,37 +135,72 @@ export default {
             // start loading bar
             this.$nuxt.$loading.start()
 
+            // get data from vuex
+            var data = this.$store.getters['register/getRegister']
+
             // send request
-            await this.submit()
+            await this.submit(data)
             this.submitted = true
+            if (this.error) {
+              return
+            }
 
-            if (!this.error) {
-              // register event
-              this.$ga.event('start', 'signup', 'successful', 1)
-              fbq('track', 'CompleteRegistration', {
-                currency: 'EUR',
-                value: 1,
-              })
+            // register fb event
+            this.$ga.event('start', 'signup', 'successful', 1)
+            fbq('track', 'CompleteRegistration', {
+              currency: 'EUR',
+              value: 1,
+            })
 
-              // end loading bar
-              this.$nuxt.$loading.finish()
-              break
+            // end loading bar
+            this.$nuxt.$loading.finish()
+
+            // redirect to landing page of stripe (plan hardcoded for now)
+            if (data.plan.name == 'pro') {
+              await this.subscribe(data.email)
+              if (this.error) {
+                return
+              }
+            } else {
+              this.$router.push({ path: '/', query: { thanks: true } })
             }
           }
 
-          return
-        case 8:
-          this.$router.push('/')
           return
       }
 
       this.next()
     },
-    async submit() {
+    async submit(input) {
       await this.$axios
-        .$post('register', this.$store.getters['register/getRegister'])
+        .$post('register', input)
         .then((response) => {
           return response
+        })
+        .catch((error) => {
+          this.error = true
+          this.errorMsg =
+            'Er is iets misgegaan: "' + error.response.data.message + '".'
+        })
+    },
+    async subscribe(email) {
+      // send request
+      await this.$axios
+        .$post('payment', {
+          email: email,
+        })
+        .then((response) => {
+          return response
+        })
+        .then((data) => {
+          // redirect to stripe
+          if (data.stripe_session_id) {
+            var stripe = Stripe(process.env.stripeKey)
+
+            return stripe.redirectToCheckout({
+              sessionId: data.stripe_session_id,
+            })
+          }
         })
         .catch((error) => {
           this.error = true

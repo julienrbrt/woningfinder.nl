@@ -24,11 +24,11 @@
               sm:text-4xl
             "
           >
-            Probeer 14 dagen gratis
+            Niet Tevreden, Geld Terug!
           </p>
           <p class="text-xl text-gray-300">
-            Daarna een eenmalig bedrag om te blijven reageren tot je een huis
-            vindt.
+            Als je niet tevreden bent binnen je eerste maand, krijg je je geld
+            terug.
           </p>
         </div>
       </div>
@@ -54,9 +54,9 @@
                   <h3 class="badge" id="tier-basis">Basis</h3>
                 </div>
                 <div class="mt-4 flex items-baseline text-6xl font-extrabold">
-                  €18
+                  Gratis
                   <span class="ml-1 text-2xl font-medium text-gray-500">
-                    eenmalig
+                    voor altijd
                   </span>
                 </div>
                 <p class="mt-5 text-lg text-gray-500">
@@ -83,6 +83,24 @@
                       <CheckIcon class="h-6 w-6 text-green-500" />
                     </div>
                     <p class="ml-3 text-base text-gray-700">
+                      Sociale huurwoningen reacties
+                    </p>
+                  </li>
+
+                  <li class="flex items-start">
+                    <div class="flex-shrink-0">
+                      <XIcon class="h-6 w-6 text-gray-500" />
+                    </div>
+                    <p class="ml-3 text-base text-gray-700">
+                      Vrije sector huurwoningen reacties
+                    </p>
+                  </li>
+
+                  <li class="flex items-start">
+                    <div class="flex-shrink-0">
+                      <CheckIcon class="h-6 w-6 text-green-500" />
+                    </div>
+                    <p class="ml-3 text-base text-gray-700">
                       Persoonlijke zoekopdracht
                     </p>
                   </li>
@@ -93,15 +111,6 @@
                     </div>
                     <p class="ml-3 text-base text-gray-700">
                       Wekelijkse update
-                    </p>
-                  </li>
-
-                  <li class="flex items-start">
-                    <div class="flex-shrink-0">
-                      <CheckIcon class="h-6 w-6 text-green-500" />
-                    </div>
-                    <p class="ml-3 text-base text-gray-700">
-                      Sociale huurwoningen reacties
                     </p>
                   </li>
                 </ul>
@@ -131,9 +140,9 @@
                   <h3 class="badge" id="tier-pro">Pro</h3>
                 </div>
                 <div class="mt-4 flex items-baseline text-6xl font-extrabold">
-                  €30
+                  €10
                   <span class="ml-1 text-2xl font-medium text-gray-500">
-                    eenmalig
+                    per maand
                   </span>
                 </div>
                 <p class="mt-5 text-lg text-gray-500">
@@ -159,24 +168,6 @@
                       <CheckIcon class="h-6 w-6 text-green-500" />
                     </div>
                     <p class="ml-3 text-base text-gray-700">
-                      Persoonlijke zoekopdracht
-                    </p>
-                  </li>
-
-                  <li class="flex items-start">
-                    <div class="flex-shrink-0">
-                      <CheckIcon class="h-6 w-6 text-green-500" />
-                    </div>
-                    <p class="ml-3 text-base text-gray-700">
-                      Wekelijkse update
-                    </p>
-                  </li>
-
-                  <li class="flex items-start">
-                    <div class="flex-shrink-0">
-                      <CheckIcon class="h-6 w-6 text-green-500" />
-                    </div>
-                    <p class="ml-3 text-base text-gray-700">
                       Sociale huurwoningen reacties
                     </p>
                   </li>
@@ -187,6 +178,24 @@
                     </div>
                     <p class="ml-3 text-base text-gray-700">
                       Vrije sector huurwoningen reacties
+                    </p>
+                  </li>
+
+                  <li class="flex items-start">
+                    <div class="flex-shrink-0">
+                      <CheckIcon class="h-6 w-6 text-green-500" />
+                    </div>
+                    <p class="ml-3 text-base text-gray-700">
+                      Persoonlijke zoekopdracht
+                    </p>
+                  </li>
+
+                  <li class="flex items-start">
+                    <div class="flex-shrink-0">
+                      <CheckIcon class="h-6 w-6 text-green-500" />
+                    </div>
+                    <p class="ml-3 text-base text-gray-700">
+                      Wekelijkse update
                     </p>
                   </li>
                 </ul>
@@ -216,11 +225,12 @@
 
 
 <script>
-import { CheckIcon } from '@vue-hero-icons/outline'
+import { CheckIcon, XIcon } from '@vue-hero-icons/outline'
 
 export default {
   components: {
     CheckIcon,
+    XIcon,
   },
   methods: {
     startEventBasis() {

@@ -2,8 +2,8 @@
   <div class="sm:max-w-xl">
     <p class="mt-6 text-lg text-gray-500">Welk plan neem je?</p>
     <p class="mt-2 text-base text-gray-500">
-      Je reageert automatisch met WoningFinder voor 14 dagen gratis, daarna kun
-      je met een eenmalig bedrag blijven reageren tot je een huis vindt 👍
+      Basis reageert alleen op sociale huurwonigen. Als je een vrije sector
+      woning zoekt neem dan ons Pro plan 👍
     </p>
 
     <AlertError
@@ -52,22 +52,21 @@
               <p class="font-medium text-gray-900">
                 {{ planTitle(plan.name) }}
               </p>
-              <div class="text-sm text-gray-500">14 dagen gratis</div>
             </div>
           </div>
           <div class="mt-2 flex text-sm sm:mt-0 sm:block sm:ml-4 sm:text-right">
-            <div class="font-medium text-gray-900">€{{ plan.price }}</div>
-            <div class="text-sm ml-1 text-gray-500 sm:ml-0">eenmalig</div>
+            <div class="font-medium text-gray-900">
+              {{ planPrice(plan)[0] }}
+            </div>
+            <div class="text-sm ml-1 text-gray-500 sm:ml-0">
+              {{ planPrice(plan)[1] }}
+            </div>
           </div>
         </label>
       </div>
     </fieldset>
 
-    <AlertInfo
-      class="mt-4"
-      description="Basis reageert alleen op sociale huurwonigen. Als je een vrije sector
-      woning zoekt neem dan ons Pro plan."
-    >
+    <AlertInfo class="mt-4" description="Je kunt opzeggen wanneer je wilt.">
       <InformationCircleIcon class="h-5 w-5 text-gray-400" />
     </AlertInfo>
   </div>
@@ -97,6 +96,13 @@ export default {
     },
     planTitle: (name) => {
       return name.charAt(0).toUpperCase() + name.slice(1)
+    },
+    planPrice: (plan) => {
+      if (plan.price > 0) {
+        return ['€' + plan.price, 'per maand']
+      }
+
+      return ['Gratis', 'voor altijd']
     },
     hideAlert() {
       this.error = false
