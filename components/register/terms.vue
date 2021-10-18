@@ -32,8 +32,7 @@
       en
       <a class="underline" href="/voorwaarden/gebruiks" target="_blank"
         >Gebruiksvoorwaarden</a
-      >. Meer informatie over hoe we je gegevens gebruiken (en nooit delen),
-      vind je in ons
+      >. Meer informatie over hoe we je gegevens gebruiken vind je in ons
       <a class="underline" href="/voorwaarden/privacy" target="_blank"
         >Privacybeleid</a
       >.
@@ -67,7 +66,7 @@ export default {
           this.plan[i].name == 'basis' &&
           this.plan[i].name == this.$store.getters['register/getPlan'].name
         ) {
-          return 'Je reageert met WoningFinder op alle sociale huurwoningen die aan jouw zoekopdracht voldoen.'
+          return 'Je reageert met WoningFinder op alle sociale huurwoningen die aan je zoekopdracht voldoen.'
         }
       }
     },

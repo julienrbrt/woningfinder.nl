@@ -98,6 +98,13 @@
       <InformationCircleIcon class="h-5 w-5 text-gray-400" />
     </AlertInfo>
 
+    <AlertInfo
+      class="mt-4"
+      description="Als je een Pro plan hebt, vergeet niet om je plan op te zeggen vóór dat je je account verwijdeerd."
+    >
+      <InformationCircleIcon class="h-5 w-5 text-gray-400" />
+    </AlertInfo>
+
     <div class="items-center inline-flex mt-5 space-x-4">
       <BackButton />
       <button

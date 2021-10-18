@@ -18,7 +18,7 @@
       class="mt-4"
       v-if="showInvalidPlanAlert"
       @click="hideAlert"
-      alert="Let op: Je hebt je zoekopdracht nog niet voltooid. Je reageert dus niet (meer) automatisch op woningen."
+      alert="Let op: Je hebt je zoekopdracht nog niet voltooid. Je reageert dus niet automatisch op woningen."
     />
 
     <!-- stats -->

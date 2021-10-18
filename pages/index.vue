@@ -1,6 +1,15 @@
 <template>
   <div class="bg-white">
     <Hero>
+      <!-- payment validation alert -->
+      <AlertOk
+        class="mb-6"
+        v-if="alert && $route.query.thanks"
+        @click="hideAlert"
+        alert="Gefeliciteerd, je zoekopdracht is ingesteld 🎉 je ontvangt een e-mail om je zoekopdracht te activeren met instructies over hoe je kunt beginnen met automatisch reageren. Krijg je geen mail binnen? Kijk dan ook even bij jouw ongewenste mail."
+      >
+      </AlertOk>
+
       <AlertNews
         title="Nieuws"
         :description="post[0].title"
@@ -61,9 +70,17 @@ export default {
 
     return { post }
   },
+  data() {
+    return {
+      alert: true,
+    }
+  },
   methods: {
     startEvent() {
       this.$ga.event('landing', 'click', 'button_start', 1)
+    },
+    hideAlert() {
+      this.alert = false
     },
   },
 }
