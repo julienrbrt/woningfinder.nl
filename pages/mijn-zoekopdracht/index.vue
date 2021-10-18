@@ -14,12 +14,7 @@
       </h1>
     </div>
 
-    <AlertError
-      class="mt-4"
-      v-if="showInvalidPlanAlert"
-      @click="hideAlert"
-      alert="Let op: Je hebt je zoekopdracht nog niet voltooid. Je reageert dus niet automatisch op woningen."
-    />
+    <DashboardAlertUnpaid v-if="showInvalidPlanAlert" :email="customer.email" />
 
     <!-- stats -->
     <div>
@@ -216,9 +211,6 @@ export default {
     },
     deleteUser() {
       this.$router.push('/mijn-zoekopdracht/verwijderen')
-    },
-    hideAlert() {
-      this.showInvalidPlanAlert = false
     },
   },
   async created() {

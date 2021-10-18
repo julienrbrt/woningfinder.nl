@@ -40,6 +40,7 @@
     />
 
     <div class="items-center inline-flex mt-4 space-x-4">
+      <BackButton />
       <div class="rounded-md shadow">
         <button @click="subscribe" type="submit" class="btn">
           Probeer opnieuw
