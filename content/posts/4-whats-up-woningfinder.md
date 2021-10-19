@@ -5,6 +5,8 @@ date: 2021-10-20
 description: 'Het laatste WoningFinder nieuws op een rij.'
 ---
 
+Sinds gisteren kun je automatish reageren op huurwoningen in over 100 steden 🎉
+
 ## WoningFinder beta eindigt  
 
 **Kosten**
