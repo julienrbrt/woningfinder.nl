@@ -20,7 +20,7 @@
       description="WoningFinder reageert op de woningen die je zou willen (je
         zoekopdracht). Maar uiteraard kunnen we niet garanderen dat jij sneller een huis
         krijgt, je reageert wel automatisch, maar het zijn altijd de
-        woningcorporaties die de selecties doen (loting, wie eerst komt wie
+        verhuurders die de selecties doen (loting, wie eerst komt wie
         eerst maalt of inschrijfperiode)."
     >
       <InformationCircleIcon class="h-5 w-5 text-gray-400" />

@@ -42,10 +42,10 @@
               </li>
               <li>
                 <NuxtLink
-                  to="/woningcorporaties"
+                  to="/aanbod"
                   class="text-base text-gray-400 hover:text-gray-300"
                 >
-                  Woningcorporaties
+                  Woningaanbod
                 </NuxtLink>
               </li>
             </ul>
@@ -149,9 +149,7 @@
           mt-8
           border-t border-gray-700
           pt-8
-          md:flex
-          md:items-center
-          md:justify-between
+          md:flex md:items-center md:justify-between
         "
       >
         <div class="flex space-x-6 md:order-2">

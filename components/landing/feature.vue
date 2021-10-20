@@ -81,10 +81,7 @@
         class="
           relative
           mt-12
-          lg:mt-24
-          lg:grid lg:grid-cols-2
-          lg:gap-8
-          lg:items-center
+          lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center
         "
       >
         <div class="relative">
@@ -110,7 +107,7 @@
             <!-- using html tag here -->
             <LandingFeatureItem
               title="Altijd eerst"
-              description="Sommige woningcorporaties werken met „Wie het eerst komt, die
+              description="Sommige verhuurders werken met „Wie het eerst komt, die
                 het eerst maalt”. WoningFinder zal precies na dat het aanbod is
                 gepubliceerd automatisch reageren. Je hebt zo dus heel veel kans
                  dat je de eerste bent. Handig toch?"
@@ -119,10 +116,10 @@
             </LandingFeatureItem>
 
             <LandingFeatureItem
-              title="Alle beschikbare woningcorporaties van jouw stad"
+              title="Alle woningaanbod websites van jouw stad"
               description='Als je een stad kiest, reageert WoningFinder op het aanbod van <a
-                href="/woningcorporaties" target="_blank" class="underline hover:text-gray-900">alle
-                woningcorporaties</a> van deze stad. Dit vergroot jouw kansen.'
+                href="/aanbod" target="_blank" class="underline hover:text-gray-900">alle
+                woningaanbod websites</a> van deze stad. Dit vergroot jouw kansen.'
             >
               <GlobeIcon class="h-6 w-6" />
             </LandingFeatureItem>
@@ -222,7 +219,9 @@
       <div class="relative mt-12 sm:mt-16 lg:mt-24">
         <div
           class="
-            lg:grid lg:grid-flow-row-dense lg:grid-cols-2
+            lg:grid
+            lg:grid-flow-row-dense
+            lg:grid-cols-2
             lg:gap-8
             lg:items-center
           "

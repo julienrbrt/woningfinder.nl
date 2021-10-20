@@ -7,8 +7,7 @@
       px-4
       divide-y-2 divide-gray-200
       sm:px-6
-      lg:py-16
-      lg:px-8
+      lg:py-16 lg:px-8
     "
   >
     <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
@@ -41,12 +40,12 @@ export default {
         {
           question: 'Hoe werkt het eigenlijk?',
           answer:
-            'WoningFinder zoekt elke dag in elke woningcorporaties websites hun nieuwe aanbod. Daarnaast matcht WoningFinder het aanbod met jouw zoekopdracht en reageert op passende woningen.',
+            'WoningFinder zoekt elke dag in elke woningcorporaties en andere verhuurders websites hun nieuwe aanbod. Daarnaast matcht WoningFinder het aanbod met jouw zoekopdracht en reageert op passende woningen.',
         },
         {
           question: 'Hoe kan WoningFinder voor mij reageren?',
           answer:
-            'Na dat je jouw zoekopdracht hebt gemaakt, sturen we een email met de passende woningcorporaties. Je kunt via deze email inloggen op elke woningcorporatie waarin je wilt reageren. Daarna gebruikt WoningFinder je inlog gegevens om voor jou te reageren.',
+            'Na dat je jouw zoekopdracht hebt gemaakt, sturen we een email met de passende woningaanbod websites. Je kunt via deze email inloggen op elke website waarin je wilt reageren. Daarna gebruikt WoningFinder je inlog gegevens om voor jou automatisch te reageren.',
         },
         {
           question: 'Is dat veilig?',

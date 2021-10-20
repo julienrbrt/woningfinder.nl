@@ -17,7 +17,7 @@
       }}</span>
       <img
         class="max-h-12"
-        :src="`https://static.woningfinder.nl/woningcorporaties/${image}`"
+        :src="`https://static.woningfinder.nl/corporations/${image}`"
         :alt="name"
       />
     </div>

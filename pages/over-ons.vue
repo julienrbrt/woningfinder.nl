@@ -15,10 +15,9 @@
       <p class="mt-6 text-lg text-gray-500">
         Het is onze missie mensen te helpen een huis te vinden zonder het gedoe
         en de stress eromheen. Het is irritant om elke dag naar websites van
-        meerdere woningcorporaties te gaan om een huis te zoeken. Elke dag
-        duizenden e-mails met het nieuwe aanbod. Daarom hebben we WoningFinder
-        gemaakt voor het automatiseren van reacties op het aanbod van
-        woningcorporaties.
+        meerdere woningcorporaties en verhuurders te gaan om een huis te zoeken.
+        Elke dag duizenden e-mails met het nieuwe aanbod. Daarom hebben we
+        WoningFinder gemaakt voor het automatiseren van woningreacties.
       </p>
 
       <AlertInfo
@@ -37,8 +36,7 @@
         class="
           btn
           bg-wf-purple
-          hover:bg-wf-purple-dark
-          hover:ring-wf-purple
+          hover:bg-wf-purple-dark hover:ring-wf-purple
           focus:ring-wf-purple
         "
       >

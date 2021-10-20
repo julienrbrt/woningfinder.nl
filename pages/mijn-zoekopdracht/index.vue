@@ -28,10 +28,12 @@
     <!-- housing credentials -->
     <div class="mt-6 bg-white overflow-hidden shadow rounded-lg">
       <div class="px-4 mt-4 mb-2 sm:px-6">
-        <h1 class="text-xl text-gray-900">Beschikbare woningcorporaties</h1>
+        <h1 class="text-xl text-gray-900">
+          Beschikbare woningcorporaties en verhuurders
+        </h1>
         <p class="mt-2 text-base text-gray-500">
           Om meer kans te hebben op een woning, adviseren we jou om in te loggen
-          op alle woningcorporaties.
+          op alle woningaanbod websites.
         </p>
       </div>
       <ul class="divide-y divide-gray-200">
@@ -89,8 +91,7 @@
             btn
             w-min
             bg-gray-500
-            hover:bg-red-800
-            hover:ring-red-500
+            hover:bg-red-800 hover:ring-red-500
             focus:ring-red-500
             py-2
           "
@@ -103,8 +104,7 @@
             btn
             w-min
             bg-wf-purple
-            hover:bg-wf-purple-dark
-            hover:ring-wf-purple
+            hover:bg-wf-purple-dark hover:ring-wf-purple
             focus:ring-wf-purple
             py-2
           "

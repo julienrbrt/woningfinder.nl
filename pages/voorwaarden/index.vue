@@ -37,7 +37,7 @@
           vorm van een Webapplicatie waarmee Opdrachtgever WoningFinder
           toestemming geeft om namens Opdrachtgever te reageren op huurwoningen
           op basis van zijn voorkeuren en wensen en Opdrachtgever gekoppeld kan
-          worden aan woningcorporaties.
+          worden aan woningcorporaties en verhuurders.
         </li>
         <li>
           <strong>WoningFinder</strong>: de dienstverlener die Diensten aan
