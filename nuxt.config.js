@@ -71,7 +71,12 @@ export default {
   sitemap: {
     hostname: 'https://woningfinder.nl',
     gzip: true,
-    exclude: ['/start/**', '/voorwaarden', '/voorwaarden/**'],
+    exclude: [
+      '/start/**',
+      '/voorwaarden',
+      '/voorwaarden/**',
+      '/mijn-zoekopdracht/**',
+    ],
   },
   tailwindcss: {
     mode: 'jit',
