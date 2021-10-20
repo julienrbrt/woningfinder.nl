@@ -60,7 +60,7 @@
           website="https://www.woningnetregioamsterdam.nl"
         />
         <LandingCorporationLogo
-          name="IkWilHuren"
+          name="Ikwilhuren"
           image="ikwilhuren.png"
           website="https://ikwilhuren.nu"
         />
@@ -107,9 +107,14 @@
           website="https://www.dewoningzoeker.nl"
         />
         <LandingCorporationLogo
-          name="IkWilHuren"
+          name="Ikwilhuren"
           image="ikwilhuren.png"
           website="https://ikwilhuren.nu"
+        />
+        <LandingCorporationLogo
+          name="Woonburo Almelo"
+          image="woonburoalmelo.png"
+          website="https://www.woonburoalmelo.nl"
         />
         <LandingCorporationLogo
           name="Roomspot"
@@ -134,7 +139,7 @@
           website="https://www.woningnetregioutrecht.nl"
         />
         <LandingCorporationLogo
-          name="IkWilHuren"
+          name="Ikwilhuren"
           image="ikwilhuren.png"
           website="https://ikwilhuren.nu"
         />
