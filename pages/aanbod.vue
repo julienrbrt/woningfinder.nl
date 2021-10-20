@@ -142,7 +142,7 @@
 
       <AlertInfo
         description="Let op: WoningFinder is zelf geen woninganbood websites maar een aggregator, alle namen en
-        logo's op deze pagina zijn eigendom van de websites zelf."
+        logo's op deze pagina zijn eigendom van de verhuurders zelf."
       >
         <InformationCircleIcon class="h-5 w-5 text-gray-400" />
       </AlertInfo>
