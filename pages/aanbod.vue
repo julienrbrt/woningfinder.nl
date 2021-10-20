@@ -152,7 +152,37 @@
         <InformationCircleIcon class="h-5 w-5 text-gray-400" />
       </AlertInfo>
 
-      <div class="items-center inline-flex mt-5 space-x-4">
+      <div
+        class="
+          mt-4
+          inline-flex
+          flex-col
+          sm:flex-row
+          w-max
+          items-start
+          sm:items-center
+          justify-center
+        "
+      >
+        <p class="text-gray-500">Reageer je nog steeds niet automatisch?</p>
+        <NuxtLink
+          class="
+            mt-2
+            sm:mt-0 sm:ml-4
+            w-auto
+            py-2
+            btn
+            bg-wf-purple
+            hover:bg-wf-purple-dark hover:ring-wf-purple
+            focus:ring-wf-purple
+          "
+          to="/start"
+        >
+          Begin nu
+        </NuxtLink>
+      </div>
+
+      <div class="items-center mt-5 space-x-4">
         <BackButton />
       </div>
     </div>

@@ -22,13 +22,12 @@
       <NuxtLink
         class="
           mt-2
-          sm:mt-0
-          sm:ml-4
+          sm:mt-0 sm:ml-4
           w-auto
+          py-2
           btn
           bg-wf-purple
-          hover:bg-wf-purple-dark
-          hover:ring-wf-purple
+          hover:bg-wf-purple-dark hover:ring-wf-purple
           focus:ring-wf-purple
         "
         to="/start"
