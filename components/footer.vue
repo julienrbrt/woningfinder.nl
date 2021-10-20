@@ -154,28 +154,6 @@
       >
         <div class="flex space-x-6 md:order-2">
           <a
-            href="https://fb.me/woningfinder"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-gray-400 hover:text-gray-300"
-          >
-            <span class="sr-only">Facebook</span>
-
-            <svg
-              class="h-6 w-6"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-              aria-hidden="true"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-3 7h-1.924c-.615 0-1.076.252-1.076.889v1.111h3l-.238 3h-2.762v8h-3v-8h-2v-3h2v-1.923c0-2.022 1.064-3.077 3.461-3.077h2.539v3z"
-                clip-rule="evenodd"
-              />
-            </svg>
-          </a>
-
-          <a
             href="https://instagram.com/woningfinder"
             target="_blank"
             rel="noopener noreferrer"
