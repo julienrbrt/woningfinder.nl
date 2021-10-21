@@ -15,6 +15,9 @@
     </div>
 
     <DashboardAlertUnpaid v-if="showInvalidPlanAlert" :email="customer.email" />
+    <DashboardAlertCorporationCredentialsMissing
+      v-if="showCorporationCredentialsMissingAlert"
+    />
 
     <!-- stats -->
     <div>
@@ -140,6 +143,7 @@ export default {
       stats: { plan: '', reactions: 0, cities: 0 },
       showModal: '',
       showInvalidPlanAlert: false,
+      showCorporationCredentialsMissingAlert: false,
     }
   },
   methods: {
@@ -157,6 +161,10 @@ export default {
       if (!credentials) {
         throw 'must login'
       }
+
+      // show alert if no corporation credentials available
+      this.showCorporationCredentialsMissingAlert =
+        this.hasMissingCorporationCredentials(credentials)
 
       return credentials
     },
@@ -211,6 +219,15 @@ export default {
     },
     deleteUser() {
       this.$router.push('/mijn-zoekopdracht/verwijderen')
+    },
+    hasMissingCorporationCredentials(credentials) {
+      for (var i = 0; i < credentials.length; i++) {
+        if (credentials[i].is_known) {
+          return false
+        }
+      }
+
+      return true
     },
   },
   async created() {
