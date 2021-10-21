@@ -7,7 +7,7 @@
         </div>
         <div class="ml-3">
           <p class="text-sm font-medium text-red-800">
-            Let op: Je bent nog niet ingelogd op woningaanbod websites. Je
+            Let op: Je bent nog niet ingelogd op verhuurders websites. Je
             reageert dus niet automatisch op woningen.
           </p>
         </div>
