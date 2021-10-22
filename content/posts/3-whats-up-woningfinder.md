@@ -7,7 +7,7 @@ description: 'Het laatste WoningFinder nieuws op een rij.'
 
 Dit is de eerste editie van **_What's up WoningFinder_**. Hier vindt je wat er is gebeurd met WoningFinder in de laatste maanden.
 
-## Gratis proefperiode
+## Tijdelijk gratis proefperiode
 
 Alleerst, je kunt sinds midden augustus WoningFinder gratis gebruiken voor 14 dagen. Geen betalingsgegevens nodig. Na de proefperiode, kun je met een eenmalig bedrag automatisch blijven reageren tot je een huis vindt.
 
