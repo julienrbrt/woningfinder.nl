@@ -9,6 +9,7 @@
 
     <div
       class="
+        m-2
         inline-flex
         flex-col
         sm:flex-row

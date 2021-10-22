@@ -28,4 +28,4 @@ De _Mijn zoekopdracht_ pagina is bijgewerkt en laat nu je laatste 6 reacties zie
 Zodra je een woning hebt gevonden kun je direct je WoningFinder-account verwijderen in je profiel, zonder contact met ons op te hoeven nemen.
 
 ### Meer verhuurders toegevoegd
-Als je een huis zoekt in Zwolle en omgeving kun je nu ook automatisch reageren op alle aanbod van [DeWoningZoeker](https://dewoningzoeker.com) en op het [Woonburo Almelo](https://woonburoalmelo.nl) in Almelo en omgeving 👀. Voor vrijesectorwoningen kun je ook automatisch reageren op woningen van [ikwilhuren.nu](https://ikwilhuren.nu).
+Als je een huis zoekt in Zwolle en omgeving kun je nu ook automatisch reageren op alle aanbod van [DeWoningZoeker](https://www.dewoningzoeker.nl) en op het [Woonburo Almelo](https://www.woonburoalmelo.nl) in Almelo en omgeving 👀. Voor vrijesectorwoningen kun je ook automatisch reageren op woningen van [ikwilhuren.nu](https://ikwilhuren.nu).
