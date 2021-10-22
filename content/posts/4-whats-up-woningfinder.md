@@ -1,28 +1,31 @@
 ---
 title: "What's up WoningFinder #2 👀"
 topic: woningfinder
-date: 2021-10-20
+date: 2021-10-22
 description: 'Het laatste WoningFinder nieuws op een rij.'
 ---
 
-WoningFinder groei, meer steden zijn toegevoegd, meer mogelijkheid voor je zoekopdracht zijn bijgewerkt.
+WoningFinder is aan het groeien, er zijn meer steden en meer mogelijkheden voor je zoekopdracht toegevoegd.
 
 ## Changelog
 
-Sinds gisteren kun je automatisch reageren op huurwoningen in over 100 steden 🎉
+Sinds ons vorige update kun je automatisch reageren op huurwoningen in 100 verschillende steden 🎉
 
 ### WoningFinder beta eindigt
-Dat betekent ook das we ons prijs verandert omdat ons product is klaar voor gebruik voor iedereen en niet alleen voor bèta-testeur.
+Dit betekend dat we de prijs gaan veranderen omdat het product nu klaar is voor gebruik.
 
-- De Basis plan is nu **gratis** in plaats van € 12.
-- De Pro plan is nu te krijgen voor slechts € 10 per maand.
+- Het Basis plan is nu **gratis** in plaats van € 12.
+- Het Pro plan is nu te krijgen voor slechts € 10 per maand.
+
+Let op: Als je niet tevreden bent binnen je eerste maand, krijg je je geld terug.
 
 ### Wekelijkse update
-Dank jullie feedback gaan we sturen vanaf nu ons wekelijkse update om 18:00 elke vrijdag in plaats van 20:00.
+Door middel van jullie feedback zullen we vanaf nu de wekelijkse update elke vrijdag om 18:00 sturen, in plaats van 20:00 uur.
 
 ### Mijn zoekopdracht
-Mijn zoekopdracht pagina is bijgewerkt en laat je nu zien je laatste 6 reacties. Voor meer moet jij nog steeds wachten voor je wekelijkse update, dus stop zorg maken over je woning je blijft op de hoogte 😊
-We hebben ook de mogelijkheid toegevoegd om je WoningFinder account te verwijderen direct in het pagina. Je hoeft niet meet contact met ons op te nemen als je een woning vindt om je account te verwijderen.
+De _Mijn zoekopdracht_ pagina is bijgewerkt en laat nu je laatste 6 reacties zien. Voor een overzicht van de reacties, hoef je alleen te wachten op de wekelijkse update. Dus maak je geen zorgen over je toekomstige woning, je blijft op de hoogte! 😊
+
+Zodra je een woning hebt gevonden kun je direct je WoningFinder-account verwijderen in je profiel, zonder contact met ons op te hoeven nemen.
 
 ### Meer verhuurders toegevoegd
 Als je een huis zoekt in Zwolle en omgeving kun je nu ook automatisch reageren op alle aanbod van [DeWoningZoeker](https://dewoningzoeker.com) en op het [Woonburo Almelo](https://woonburoalmelo.nl) in Almelo en omgeving 👀. Voor vrijesectorwoningen kun je ook automatisch reageren op woningen van [ikwilhuren.nu](https://ikwilhuren.nu).
