@@ -54,8 +54,8 @@
         </li>
       </ul>
       <p class="px-4 mt-2 mb-4 sm:px-6 text-sm text-gray-500">
-        Zodra je inlogt op een woningcorporatie via WoningFinder, ga je akkoord
-        met deze
+        Zodra je inlogt op een woningaanbod website via WoningFinder, ga je
+        akkoord met deze
         <span
           @click="showModal = 'volmacht'"
           class="underline hover:text-gray-900 cursor-pointer"
