@@ -27,8 +27,7 @@
         class="
           mt-2
           shadow-sm
-          focus:ring-wf-orange
-          focus:border-wf-orange
+          focus:ring-wf-orange focus:border-wf-orange
           block
           w-full
           sm:text-sm
@@ -44,28 +43,6 @@
           {{ bedroom }}+
         </option>
       </select>
-
-      <div class="relative flex items-start">
-        <div class="flex items-center h-5">
-          <input
-            v-model="preferences.has_attic"
-            id="attic"
-            name="attic"
-            type="checkbox"
-            class="
-              focus:ring-wf-orange
-              h-4
-              w-4
-              text-wf-orange-dark
-              border-gray-300
-              rounded
-            "
-          />
-        </div>
-        <label for="attic" class="block text-sm font-medium text-gray-900 ml-3"
-          >Zolder</label
-        >
-      </div>
 
       <div class="relative flex items-start">
         <div class="flex items-center h-5">
@@ -234,8 +211,7 @@
             name="price"
             id="price"
             class="
-              focus:ring-wf-orange
-              focus:border-wf-orange
+              focus:ring-wf-orange focus:border-wf-orange
               block
               w-full
               pl-7
