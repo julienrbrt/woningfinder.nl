@@ -16,7 +16,6 @@ export const state = () => ({
       has_garage: false,
       has_garden: false,
       has_elevator: false,
-      has_attic: false,
       is_accessible: false,
     },
   },
@@ -45,7 +44,6 @@ export const getters = {
       has_garage: state.register.housing_preferences.has_garage,
       has_garden: state.register.housing_preferences.has_garden,
       has_elevator: state.register.housing_preferences.has_elevator,
-      has_attic: state.register.housing_preferences.has_attic,
       is_accessible: state.register.housing_preferences.is_accessible,
     }
   },
@@ -115,7 +113,6 @@ export const mutations = {
     state.register.housing_preferences.has_garage = preferences.has_garage
     state.register.housing_preferences.has_garden = preferences.has_garden
     state.register.housing_preferences.has_elevator = preferences.has_elevator
-    state.register.housing_preferences.has_attic = preferences.has_attic
     state.register.housing_preferences.is_accessible = preferences.is_accessible
   },
   setCustomer(state, customer) {

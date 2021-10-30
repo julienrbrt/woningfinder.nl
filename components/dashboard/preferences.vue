@@ -61,7 +61,6 @@ export default {
     },
     hasExtras() {
       return (
-        this.housing_preferences.has_attic ||
         this.housing_preferences.is_accessible ||
         this.housing_preferences.has_balcony ||
         this.housing_preferences.has_garden ||
@@ -70,10 +69,6 @@ export default {
     },
     translateTitle() {
       var result = []
-      if (this.housing_preferences.has_attic) {
-        result.push('zolder')
-      }
-
       if (this.housing_preferences.is_accessible) {
         result.push('woning toegankelijkheid')
       }
