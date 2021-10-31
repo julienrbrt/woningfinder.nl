@@ -76,11 +76,6 @@
           image="dealliantie.png"
           website="https://www.de-alliantie.nl"
         />
-        <LandingCorporationLogo
-          name="WoningNet Stadsregio Amsterdam"
-          image="woningnet.png"
-          website="https://www.woningnetregioamsterdam.nl"
-        />
       </div>
 
       <h2 class="mt-4 mb-2 text-xl text-gray-900">Regio Overijssel</h2>
@@ -114,11 +109,6 @@
           website="https://www.mijande.nl"
         />
         <LandingCorporationLogo
-          name="WoningNet Hengelo-Borne"
-          image="woningnet.png"
-          website="https://www.woningnethengeloborne.nl"
-        />
-        <LandingCorporationLogo
           name="De WoningZoeker"
           image="dewoningzoeker.png"
           website="https://www.dewoningzoeker.nl"
@@ -132,23 +122,6 @@
           name="Roomspot"
           image="roomspot.png"
           website="https://www.roomspot.nl"
-        />
-      </div>
-
-      <h2 class="mt-4 mb-2 text-xl text-gray-900">Regio Utrecht</h2>
-      <div
-        class="
-          mt-8
-          grid grid-cols-2
-          gap-0.5
-          md:grid-cols-3
-          lg:mt-0 lg:grid-cols-2
-        "
-      >
-        <LandingCorporationLogo
-          name="WoningNet Regio Utrecht"
-          image="woningnet.png"
-          website="https://www.woningnetregioutrecht.nl"
         />
       </div>
 
