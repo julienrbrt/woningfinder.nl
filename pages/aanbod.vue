@@ -39,6 +39,28 @@
         </div>
       </div>
 
+      <h2 class="mt-4 mb-2 text-xl text-gray-900">Heel Nederland</h2>
+      <div
+        class="
+          mt-8
+          grid grid-cols-2
+          gap-0.5
+          md:grid-cols-3
+          lg:mt-0 lg:grid-cols-2
+        "
+      >
+        <LandingCorporationLogo
+          name="Ikwilhuren"
+          image="ikwilhuren.png"
+          website="https://ikwilhuren.nu"
+        />
+        <LandingCorporationLogo
+          name="WoningNet"
+          image="woningnet.png"
+          website="https://www.woningnet.nl"
+        />
+      </div>
+
       <h2 class="mt-4 mb-2 text-xl text-gray-900">Regio Noord-Holland</h2>
       <div
         class="
@@ -58,11 +80,6 @@
           name="WoningNet Stadsregio Amsterdam"
           image="woningnet.png"
           website="https://www.woningnetregioamsterdam.nl"
-        />
-        <LandingCorporationLogo
-          name="Ikwilhuren"
-          image="ikwilhuren.png"
-          website="https://ikwilhuren.nu"
         />
       </div>
 
@@ -107,11 +124,6 @@
           website="https://www.dewoningzoeker.nl"
         />
         <LandingCorporationLogo
-          name="Ikwilhuren"
-          image="ikwilhuren.png"
-          website="https://ikwilhuren.nu"
-        />
-        <LandingCorporationLogo
           name="Woonburo Almelo"
           image="woonburoalmelo.png"
           website="https://www.woonburoalmelo.nl"
@@ -137,11 +149,6 @@
           name="WoningNet Regio Utrecht"
           image="woningnet.png"
           website="https://www.woningnetregioutrecht.nl"
-        />
-        <LandingCorporationLogo
-          name="Ikwilhuren"
-          image="ikwilhuren.png"
-          website="https://ikwilhuren.nu"
         />
       </div>
 
