@@ -112,7 +112,7 @@ export default {
           .forwardGeocode({
             query: input,
             countries: ['nl'],
-            proximity: this.city.coordinates,
+            proximity: [this.city.longitude, this.city.latitude],
             types: ['neighborhood', 'locality'],
             autocomplete: true,
             language: ['nl-NL'],
