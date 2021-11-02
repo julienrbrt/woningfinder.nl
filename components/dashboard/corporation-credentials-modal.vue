@@ -15,8 +15,7 @@
         px-4
         pb-20
         text-center
-        sm:block
-        sm:p-0
+        sm:block sm:p-0
       "
     >
       <!-- Background overlay, show/hide based on modal state. -->
@@ -46,11 +45,7 @@
           shadow-xl
           transform
           transition-all
-          sm:my-8
-          sm:align-middle
-          sm:max-w-lg
-          sm:w-full
-          sm:p-6
+          sm:my-8 sm:align-middle sm:max-w-lg sm:w-full sm:p-6
         "
       >
         <div class="hidden sm:block absolute top-0 right-0 pt-4 pr-4">
@@ -63,7 +58,9 @@
               text-gray-400
               hover:text-gray-500
               focus:outline-none
-              focus:ring-2 focus:ring-offset-2 focus:ring-bg-wf-orange
+              focus:ring-2
+              focus:ring-offset-2
+              focus:ring-bg-wf-orange
             "
           >
             <span class="sr-only">Sluiten</span>
@@ -87,9 +84,10 @@
               Opnieuw inloggen op {{ credentials.corporation_name }}
             </h3>
             <p class="py-2 text-gray-500">
-              We hebben je {{ credentials.corporation_name }} inloggegevens
-              nodig. Je inloggegevens worden met versluiting opgeslagen op
-              WoningFinder. We kunnen zelf je gegevens niet zien.
+              Log in met je {{ credentials.corporation_name }} account. Je
+              reageert daarna automatisch op het
+              {{ credentials.corporation_name }} aanbod dat matcht met je
+              zoekopdracht.
             </p>
             <div class="py-2 items-center w-full">
               <label for="username" class="text-sm font-medium text-gray-900">
@@ -104,8 +102,7 @@
                 class="
                   mb-4
                   shadow-sm
-                  focus:ring-wf-orange
-                  focus:border-wf-orange
+                  focus:ring-wf-orange focus:border-wf-orange
                   w-full
                   sm:text-sm
                   border-gray-300
@@ -122,8 +119,7 @@
                 type="password"
                 class="
                   shadow-sm
-                  focus:ring-wf-orange
-                  focus:border-wf-orange
+                  focus:ring-wf-orange focus:border-wf-orange
                   w-full
                   sm:text-sm
                   border-gray-300
@@ -158,10 +154,10 @@
               text-white
               hover:bg-orange-dark
               focus:outline-none
-              focus:ring-2 focus:ring-offset-2 focus:ring-red-500
-              sm:ml-3
-              sm:w-auto
-              sm:text-sm
+              focus:ring-2
+              focus:ring-offset-2
+              focus:ring-red-500
+              sm:ml-3 sm:w-auto sm:text-sm
             "
           >
             Inloggen
@@ -187,10 +183,10 @@
               text-gray-700
               hover:text-gray-500
               focus:outline-none
-              focus:ring-2 focus:ring-offset-2 focus:ring-bg-wf-orange
-              sm:mt-0
-              sm:w-auto
-              sm:text-sm
+              focus:ring-2
+              focus:ring-offset-2
+              focus:ring-bg-wf-orange
+              sm:mt-0 sm:w-auto sm:text-sm
             "
           >
             Sluiten
