@@ -59,7 +59,7 @@
         <span
           @click="showModal = 'volmacht'"
           class="underline hover:text-gray-900 cursor-pointer"
-          >volmacht</span
+          >voorwaarden</span
         >. Hierdoor kun je automatisch reageren.
       </p>
 
