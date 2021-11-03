@@ -26,8 +26,7 @@
           </div>
           <div class="ml-3">
             <p class="text-sm font-medium text-gray-900">
-              Zoek je een woningaanbod websites die hier nog niet staat? Neem
-              dan
+              Zoek je een site die hier nog niet staat? Neem dan
               <NuxtLink
                 to="/contact"
                 class="underline text-gray-700 hover:text-gray-900"
@@ -126,7 +125,7 @@
       </div>
 
       <AlertInfo
-        description="Let op: WoningFinder is zelf geen woninganbood websites maar een aggregator, alle namen en
+        description="Let op: WoningFinder is zelf geen woninganbood website maar een aggregator, alle namen en
         logo's op deze pagina zijn eigendom van de verhuurders zelf."
       >
         <InformationCircleIcon class="h-5 w-5 text-gray-400" />
