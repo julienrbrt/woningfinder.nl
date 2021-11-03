@@ -129,8 +129,15 @@
             </div>
             <!-- error message -->
             <p v-if="error" class="text-sm text-red-400">
-              We kunnen je gegevens niet verifiëren. Controleer je gegevens of
-              probeer later nogmaals.
+              Deze combinatie van gebruikersnaam en/of wachtwoord is niet bekend
+              bij {{ credentials.corporation_name }}. Let op: Je moet dezelfde
+              inloggegevens gebruiken die je gebruikt om in te loggen op
+              <a
+                :href="credentials.corporation_url"
+                target="_blank"
+                class="underline text-sm hover:text-red-700"
+                >{{ corporationTitle(credentials.corporation_url) }}</a
+              >.
             </p>
           </div>
         </div>
@@ -246,6 +253,9 @@ export default {
         .catch((error) => {
           this.error = true
         })
+    },
+    corporationTitle(url) {
+      return url.substring('https://'.length)
     },
   },
 }
