@@ -125,6 +125,7 @@
       </div>
 
       <AlertInfo
+        class="mt-4"
         description="Let op: WoningFinder is zelf geen woninganbood website maar een aggregator, alle namen en
         logo's op deze pagina zijn eigendom van de verhuurders zelf."
       >

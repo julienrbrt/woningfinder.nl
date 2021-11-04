@@ -85,9 +85,8 @@
             </h3>
             <p class="py-2 text-gray-500">
               Log in met je {{ credentials.corporation_name }} account. Je
-              reageert daarna automatisch op het
-              {{ credentials.corporation_name }} aanbod dat matcht met je
-              zoekopdracht.
+              reageert daarna automatisch op het aanbod van
+              {{ credentials.corporation_name }} dat matcht met je zoekopdracht.
             </p>
             <div class="py-2 items-center w-full">
               <label for="username" class="text-sm font-medium text-gray-900">
