@@ -79,6 +79,9 @@ export const mutations = {
         (c) => c.name !== city.name
       )
   },
+  removeCities(state) {
+    state.register.housing_preferences.city = []
+  },
   addCityDistrict(state, cityDistrict) {
     // find city index
     var cityIdx = state.register.housing_preferences.city.findIndex(

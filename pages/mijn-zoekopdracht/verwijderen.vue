@@ -81,8 +81,7 @@
             py-3
             px-4
             placeholder-gray-500
-            focus:ring-wf-orange
-            focus:border-wf-orange
+            focus:ring-wf-orange focus:border-wf-orange
             border-gray-300
             rounded-md
           "
@@ -105,8 +104,7 @@
         class="
           btn
           bg-red-500
-          hover:bg-red-700
-          hover:ring-red-500
+          hover:bg-red-700 hover:ring-red-500
           focus:ring-red-500
           py-2
         "
@@ -135,9 +133,7 @@ export default {
     InformationCircleIcon,
   },
   methods: {
-    async submit(e) {
-      e.preventDefault()
-
+    async submit() {
       if (!this.validForm) {
         this.error = true
         return

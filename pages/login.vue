@@ -43,8 +43,7 @@
         my-4
         py-4
         shadow-sm
-        focus:ring-wf-orange
-        focus:border-wf-orange
+        focus:ring-wf-orange focus:border-wf-orange
         w-full
         text-base
         border-gray-300
@@ -88,9 +87,7 @@ export default {
     }
   },
   methods: {
-    async send(e) {
-      e.preventDefault()
-
+    async send() {
       if (!this.validForm) {
         this.error = true
         return

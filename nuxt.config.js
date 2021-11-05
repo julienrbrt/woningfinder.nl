@@ -63,6 +63,7 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/sitemap',
     '@nuxt/content',
+    '@nuxtjs/sentry',
     'cookie-universal-nuxt',
   ],
   axios: {
@@ -77,6 +78,9 @@ export default {
       '/voorwaarden/**',
       '/mijn-zoekopdracht/**',
     ],
+  },
+  sentry: {
+    dsn: process.env.SENTRY_DSN,
   },
   tailwindcss: {
     mode: 'jit',

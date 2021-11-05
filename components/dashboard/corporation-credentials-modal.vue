@@ -222,9 +222,7 @@ export default {
     }
   },
   methods: {
-    async sendCredentials(e) {
-      e.preventDefault()
-
+    async sendCredentials() {
       await this.$axios
         .$post(
           '/me/corporation-credentials',
