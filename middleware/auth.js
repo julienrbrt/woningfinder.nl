@@ -8,6 +8,7 @@ export default function ({ app, route, redirect }) {
       path: '/',
       maxAge: 60 * 60 * 2,
       secure: true,
+      sameSite: 'lax',
     })
 
     // remove query parameters from url (using redirection)
