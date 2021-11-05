@@ -193,6 +193,9 @@ export default {
       return customer
     },
     edit() {
+      // empty city list (other if users goes back it get duplicated)
+      this.$store.commit('register/removeCities')
+
       // set housing preferences in storage (so prefilled)
       for (var i = 0; i < this.customer.housing_preferences.city.length; i++) {
         this.$store.commit(

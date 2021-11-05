@@ -42,8 +42,7 @@
               py-3
               px-4
               placeholder-gray-500
-              focus:ring-wf-orange
-              focus:border-wf-orange
+              focus:ring-wf-orange focus:border-wf-orange
               border-gray-300
               rounded-md
             "
@@ -133,9 +132,7 @@ export default {
         this.city = selected
       }
     },
-    async send(e) {
-      e.preventDefault()
-
+    async send() {
       if (!this.validForm) {
         this.errorMsg =
           'We hebben al je gegevens nodig. Controleer het formulier nogmaals.'

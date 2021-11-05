@@ -82,9 +82,7 @@ export default {
         this.currentStep--
       }
     },
-    async validate(e) {
-      e.preventDefault()
-
+    async validate() {
       switch (this.currentStep) {
         case 1:
           if (!this.$refs.registerCity.validate()) {

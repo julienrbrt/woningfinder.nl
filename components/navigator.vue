@@ -2,7 +2,7 @@
   <div class="items-center w-full inline-flex mt-5">
     <div v-show="currentStep < totalStep" class="mr-4">
       <div v-if="currentStep == 1">
-        <BackButton overwrite="/" />
+        <BackButton />
       </div>
       <div v-else>
         <a

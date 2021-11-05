@@ -41,8 +41,7 @@
               py-3
               px-4
               placeholder-gray-500
-              focus:ring-wf-orange
-              focus:border-wf-orange
+              focus:ring-wf-orange focus:border-wf-orange
               border-gray-300
               rounded-md
             "
@@ -65,8 +64,7 @@
               py-3
               px-4
               placeholder-gray-500
-              focus:ring-wf-orange
-              focus:border-wf-orange
+              focus:ring-wf-orange focus:border-wf-orange
               border-gray-300
               rounded-md
             "
@@ -88,8 +86,7 @@
               py-3
               px-4
               placeholder-gray-500
-              focus:ring-wf-orange
-              focus:border-wf-orange
+              focus:ring-wf-orange focus:border-wf-orange
               border-gray-300
               rounded-md
             "
@@ -126,9 +123,7 @@ export default {
     }
   },
   methods: {
-    async send(e) {
-      e.preventDefault()
-
+    async send() {
       if (!this.validForm) {
         this.error = true
         return
