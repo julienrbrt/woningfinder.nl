@@ -24,8 +24,7 @@
             class="
               mt-2
               shadow-sm
-              focus:ring-wf-orange
-              focus:border-wf-orange
+              focus:ring-wf-orange focus:border-wf-orange
               block
               w-full
               sm:text-sm
@@ -52,8 +51,7 @@
             class="
               mt-2
               shadow-sm
-              focus:ring-wf-orange
-              focus:border-wf-orange
+              focus:ring-wf-orange focus:border-wf-orange
               block
               w-full
               sm:text-sm
@@ -75,8 +73,7 @@
         autocomplete="email"
         class="
           shadow-sm
-          focus:ring-wf-orange
-          focus:border-wf-orange
+          focus:ring-wf-orange focus:border-wf-orange
           block
           w-full
           sm:text-sm
@@ -111,8 +108,7 @@
               id="income"
               min="0"
               class="
-                focus:ring-wf-orange
-                focus:border-wf-orange
+                focus:ring-wf-orange focus:border-wf-orange
                 block
                 w-full
                 pl-7
@@ -121,7 +117,7 @@
                 border-gray-300
                 rounded-md
               "
-              placeholder="0"
+              placeholder="20000"
             />
             <div
               class="
@@ -154,8 +150,7 @@
             class="
               mt-2
               shadow-sm
-              focus:ring-wf-orange
-              focus:border-wf-orange
+              focus:ring-wf-orange focus:border-wf-orange
               block
               w-full
               sm:text-sm
