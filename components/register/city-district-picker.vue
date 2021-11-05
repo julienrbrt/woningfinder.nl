@@ -165,7 +165,12 @@ export default {
   },
   computed: {
     getCity() {
-      return this.$store.getters['register/getCity'](this.city)
+      var city = this.$store.getters['register/getCity'](this.city)
+      if (!city.district) {
+        city.district = []
+      }
+
+      return city
     },
   },
 }
