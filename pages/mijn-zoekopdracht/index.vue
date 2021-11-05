@@ -193,16 +193,13 @@ export default {
       return customer
     },
     edit() {
-      // empty city list (other if users goes back it get duplicated)
-      this.$store.commit('register/removeCities')
-
       // set housing preferences in storage (so prefilled)
-      for (var i = 0; i < this.customer.housing_preferences.city.length; i++) {
-        this.$store.commit(
-          'register/addCity',
-          this.customer.housing_preferences.city[i].name
-        )
-      }
+      this.$store.commit('register/setPlan', this.customer.plan.name)
+
+      this.$store.commit(
+        'register/addCitiesRaw',
+        this.customer.housing_preferences.city
+      )
 
       this.$store.commit(
         'register/setHousingType',

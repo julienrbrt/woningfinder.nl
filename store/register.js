@@ -79,8 +79,8 @@ export const mutations = {
         (c) => c.name !== city.name
       )
   },
-  removeCities(state) {
-    state.register.housing_preferences.city = []
+  addCitiesRaw(state, rawCities) {
+    state.register.housing_preferences.city = rawCities
   },
   addCityDistrict(state, cityDistrict) {
     // find city index
