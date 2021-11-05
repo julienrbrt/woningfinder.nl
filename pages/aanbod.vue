@@ -71,9 +71,9 @@
         "
       >
         <LandingCorporationLogo
-          name="De Alliantie"
-          image="dealliantie.png"
-          website="https://www.de-alliantie.nl"
+          name="Ben Op Zoek"
+          image="benopzoek.png"
+          website="https://www.benopzoek.nl"
         />
       </div>
 
@@ -121,6 +121,29 @@
           name="Roomspot"
           image="roomspot.png"
           website="https://www.roomspot.nl"
+        />
+      </div>
+
+      <h2 class="mt-4 mb-2 text-xl text-gray-900">Regio Zuid-Holland</h2>
+      <div
+        class="
+          mt-8
+          grid grid-cols-2
+          gap-0.5
+          md:grid-cols-3
+          lg:mt-0 lg:grid-cols-2
+        "
+      >
+        <LandingCorporationLogo
+          name="Woonnet Haaglanden"
+          image="woonnethaaglanden.png"
+          website="https://www.woonnet-haaglanden.nl"
+        />
+
+        <LandingCorporationLogo
+          name="Woonnet Rijnmond"
+          image="woonnetrijnmond.png"
+          website="https://www.woonnetrijnmond.nl/"
         />
       </div>
 
