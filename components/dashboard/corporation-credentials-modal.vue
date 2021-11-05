@@ -92,39 +92,59 @@
               <label for="username" class="text-sm font-medium text-gray-900">
                 Gebruikersnaam
               </label>
-              <input
-                v-model="login.login"
-                id="username"
-                name="username"
-                type="email"
-                autocomplete="username"
-                class="
-                  mb-4
-                  shadow-sm
-                  focus:ring-wf-orange focus:border-wf-orange
-                  w-full
-                  sm:text-sm
-                  border-gray-300
-                  rounded-md
-                "
-              />
+              <div class="mt-1 relative">
+                <input
+                  v-model="login.login"
+                  id="username"
+                  name="username"
+                  type="email"
+                  autocomplete="username"
+                  class="
+                    mb-4
+                    shadow-sm
+                    focus:ring-wf-orange focus:border-wf-orange
+                    w-full
+                    sm:text-sm
+                    border-gray-300
+                    rounded-md
+                  "
+                />
+              </div>
               <label for="password" class="text-sm font-medium text-gray-900">
                 Watchwoord
               </label>
-              <input
-                v-model="login.password"
-                id="password"
-                name="password"
-                type="password"
-                class="
-                  shadow-sm
-                  focus:ring-wf-orange focus:border-wf-orange
-                  w-full
-                  sm:text-sm
-                  border-gray-300
-                  rounded-md
-                "
-              />
+              <div class="mt-1 relative">
+                <input
+                  v-model="login.password"
+                  id="password"
+                  name="password"
+                  :type="!passwordShow ? 'password' : 'text'"
+                  class="
+                    shadow-sm
+                    focus:ring-wf-orange focus:border-wf-orange
+                    w-full
+                    sm:text-sm
+                    border-gray-300
+                    rounded-md
+                  "
+                />
+                <!-- password toggle -->
+                <button
+                  @click="togglePassword"
+                  class="
+                    cursor-pointer
+                    absolute
+                    inset-y-0
+                    right-0
+                    pr-3
+                    flex
+                    items-center
+                  "
+                >
+                  <EyeIcon v-if="!passwordShow" class="h-6 w-6 text-gray-500" />
+                  <EyeOffIcon v-else class="h-6 w-6 text-gray-500" />
+                </button>
+              </div>
             </div>
             <!-- error message -->
             <p v-if="error" class="text-sm text-red-400">
@@ -204,12 +224,14 @@
 </template>
 
 <script>
-import { XIcon, KeyIcon } from '@vue-hero-icons/outline'
+import { XIcon, KeyIcon, EyeIcon, EyeOffIcon } from '@vue-hero-icons/outline'
 
 export default {
   components: {
     XIcon,
     KeyIcon,
+    EyeIcon,
+    EyeOffIcon,
   },
   props: ['credentials'],
   data() {
@@ -219,6 +241,7 @@ export default {
         password: '',
       },
       error: false,
+      passwordShow: false,
     }
   },
   methods: {
@@ -253,6 +276,9 @@ export default {
     },
     corporationTitle(url) {
       return url.substring('https://'.length)
+    },
+    togglePassword() {
+      this.passwordShow = !this.passwordShow
     },
   },
 }
