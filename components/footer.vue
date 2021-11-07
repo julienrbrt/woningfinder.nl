@@ -45,7 +45,7 @@
                   to="/aanbod"
                   class="text-base text-gray-400 hover:text-gray-300"
                 >
-                  Woningaanbod
+                  Aanbod
                 </NuxtLink>
               </li>
             </ul>

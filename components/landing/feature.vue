@@ -98,9 +98,8 @@
           </h3>
           <p class="mt-3 text-lg text-gray-500">
             Zoek je een huis met 4 slaapkamers, wil je een tuin hebben of in een
-            specifieke wijk wonen? Creëer dan je persoonlijke zoekopdracht en
-            reageer automatisch op alle woningen die aan je zoekopdracht
-            voldoen.
+            specifieke wijk wonen? Met je WoningFinder zoekopdracht reageer je
+            automatisch op alle woningen die aan je wensen voldoen.
           </p>
 
           <dl class="mt-10 space-y-10">
@@ -119,7 +118,7 @@
               title="Alle woningaanbod websites van jouw stad"
               description='Als je een stad kiest, reageert WoningFinder op het aanbod van <a
                 href="/aanbod" target="_blank" class="underline hover:text-gray-900">alle
-                woningaanbod websites</a> van deze stad. Dit vergroot jouw kansen.'
+                woningaanbod websites</a> van deze stad: zodat je nooit een woning zal missen.'
             >
               <GlobeIcon class="h-6 w-6" />
             </LandingFeatureItem>
@@ -239,14 +238,23 @@
               Bespaar tijd met WoningFinder
             </h3>
             <p class="mt-3 text-lg text-gray-500">
-              We doen ons best om een huis voor jou te vinden en we houden jou
-              elke week op de hoogte.
+              Een woning zoeken duurt erg lang, je moet gemiddeld 5 jaar actief
+              zoeken voor het vinden van een sociale huurwoning (bron:
+              <a
+                href="https://app.nos.nl/op3/socialehuur"
+                target="_blank"
+                class="underline"
+              >
+                NOS</a
+              >). WoningFinder automatiseert het actief zoeken, zodat je dat
+              niet meer hoeft te doen. Je blijft altijd op de hoogte door ons
+              wekelijkse update.
             </p>
 
             <dl class="mt-10 space-y-10">
               <LandingFeatureItem
                 title="Wekelijkse update"
-                description="Je krijgt van ons elke vrijdag een e-mail waarin je kan zien op welke passende woningen WoningFinder heeft gereageerd. 
+                description="Elke vrijdag om 18:00 uur, krijg je van ons een e-mail waarin je kan zien op welke passende woningen WoningFinder heeft gereageerd. 
                 Geen dagelijkse spam!"
               >
                 <BellIcon class="h-6 w-6" />

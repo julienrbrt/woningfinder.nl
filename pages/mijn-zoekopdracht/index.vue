@@ -35,8 +35,8 @@
           Beschikbare woningcorporaties en verhuurders
         </h1>
         <p class="mt-2 text-base text-gray-500">
-          Om meer kans te hebben op een woning, adviseren we jou om in te loggen
-          op alle woningaanbod websites.
+          Om geen woningen te missen, adviseren we jou om in te loggen op alle
+          woningaanbod websites.
         </p>
       </div>
       <ul class="divide-y divide-gray-200">

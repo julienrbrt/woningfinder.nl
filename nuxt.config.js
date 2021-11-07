@@ -19,7 +19,7 @@ export default {
         hid: 'description',
         name: 'description',
         content:
-          'Gebruik WoningFinder en vind je perfecte huurwoning zonder elke dag alle woningaanbod websites zelf te bezoeken om te reageren. Je reageert automatisch via WoningFinder op alle woningen die matchen met je zoekopdracht.',
+          'Vind je perfecte huurwoning zonder elke dag alle woningaanbod websites zelf te bezoeken om te reageren. Je reageert automatisch via WoningFinder op alle woningen die matchen met je zoekopdracht.',
       },
     ],
     link: [
