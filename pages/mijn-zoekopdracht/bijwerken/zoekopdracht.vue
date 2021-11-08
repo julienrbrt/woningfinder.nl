@@ -2,7 +2,7 @@
   <Hero>
     <div class="mt-6 sm:max-w-xl">
       <h1 class="text-3xl font-extrabold text-wf-purple tracking-tight">
-        Zoekopdracht bijwerken
+        Je zoekopdracht bijwerken
       </h1>
     </div>
 
@@ -131,7 +131,7 @@ export default {
     async submit() {
       await this.$axios
         .$post(
-          'me',
+          '/me/housing-preferences',
           this.$store.getters['register/getRegister'].housing_preferences,
           {
             headers: {

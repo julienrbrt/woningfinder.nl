@@ -193,7 +193,7 @@ export default {
       return customer
     },
     edit() {
-      // set housing preferences in storage (so prefilled)
+      // set user data in storage (so edit is prefilled)
       this.$store.commit('register/setPlan', this.customer.plan.name)
 
       this.$store.commit(
@@ -210,6 +210,8 @@ export default {
         'register/setHousingPreferencesDetails',
         this.customer.housing_preferences
       )
+
+      this.$store.commit('register/setCustomer', this.customer)
 
       // push to route
       this.$router.push('/mijn-zoekopdracht/bijwerken')
