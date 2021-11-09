@@ -23,7 +23,6 @@
           "
         >
           <img
-            v-if="match.picture_url != ''"
             :src="
               match.picture_url != ''
                 ? 'https://static.woningfinder.nl/' + match.picture_url
