@@ -8,71 +8,70 @@
 
     <AlertError v-if="error" @click="hideAlert" :alert="errorMsg" />
 
-    <div class="mt-6 sm:max-w-xl">
-      <h1
-        class="
-          text-3xl
-          font-extrabold
-          text-wf-purple
-          tracking-tight
-          sm:text-4xl
-        "
-      >
-        Steden wachtlijst
-      </h1>
-      <p class="mt-6 text-lg text-gray-500">
-        We zijn hard bezig met alle Nederlandse steden toe te voegen aan
-        WoningFinder. Schrijf je in op onze wachtlijst en we laten je weten
-        wanneer we jouw stad toegevoegd hebben.
-      </p>
+    <h1
+      class="
+        mt-6
+        text-3xl
+        font-extrabold
+        text-wf-purple
+        tracking-tight
+        sm:text-4xl
+      "
+    >
+      Steden wachtlijst
+    </h1>
+    <p class="mt-6 text-lg text-gray-500">
+      We zijn hard bezig met alle Nederlandse steden toe te voegen aan
+      WoningFinder. Schrijf je in op onze wachtlijst en we laten je weten
+      wanneer we jouw stad hebben toegevoegd.
+    </p>
 
-      <form class="mt-6 grid grid-cols-1 gap-y-4">
-        <div>
-          <label for="email" class="sr-only">E-mailadres</label>
-          <input
-            v-model="email"
-            id="email"
-            name="email"
-            type="email"
-            autocomplete="email"
-            class="
-              block
-              w-full
-              shadow-sm
-              py-3
-              px-4
-              placeholder-gray-500
-              focus:ring-wf-orange focus:border-wf-orange
-              border-gray-300
-              rounded-md
-            "
-            placeholder="E-mailadres"
-            required
-          />
-        </div>
-        <autocomplete
-          :search="search"
-          ref="autocomplete"
-          type="text"
-          placeholder="Gewenste steden"
-          aria-label="Gewenste steden"
-          :debounce-time="500"
-          @submit="selectCity"
-          auto-select
-        ></autocomplete>
-      </form>
-
-      <div class="items-center inline-flex mt-5 space-x-4">
-        <BackButton />
-        <button
-          v-bind:disabled="error"
-          class="btn disabled:bg-gray-500"
-          type="submit"
-          @click="send"
-        >
-          Sturen
-        </button>
+    <form class="mt-6 grid grid-cols-1 gap-y-4">
+      <div>
+        <label for="email" class="sr-only">E-mailadres</label>
+        <input
+          v-model="email"
+          id="email"
+          name="email"
+          type="email"
+          autocomplete="email"
+          class="
+            block
+            w-full
+            shadow-sm
+            py-3
+            px-4
+            placeholder-gray-500
+            focus:ring-wf-orange focus:border-wf-orange
+            border-gray-300
+            rounded-md
+          "
+          placeholder="E-mailadres"
+          required
+        />
       </div>
+      <autocomplete
+        :search="search"
+        ref="autocomplete"
+        type="text"
+        placeholder="Gewenste steden"
+        aria-label="Gewenste steden"
+        :debounce-time="500"
+        @submit="selectCity"
+        auto-select
+      ></autocomplete>
+    </form>
+
+    <div class="items-center inline-flex mt-5 space-x-4">
+      <BackButton />
+      <button
+        v-bind:disabled="error"
+        class="btn disabled:bg-gray-500"
+        type="submit"
+        @click="send"
+      >
+        Aanmelden
+      </button>
     </div>
   </Hero>
 </template>

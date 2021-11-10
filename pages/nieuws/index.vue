@@ -2,7 +2,7 @@
   <Hero>
     <h1
       class="
-        mt-4
+        mt-6
         text-3xl
         font-extrabold
         text-wf-purple
