@@ -1,5 +1,5 @@
 ---
-title: Zoek je een huis in Enschede?
+title: Op zoek naar een huis in Nederland?
 topic: woningfinder
 date: 2021-05-01
 description: 'Een woning vinden in Nederland duurt erg lang 😢'

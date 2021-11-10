@@ -1,5 +1,5 @@
 <template>
-  <Hero>
+  <HeroNoImg>
     <article>
       <h1 class="text-3xl font-extrabold text-wf-purple tracking-tight mb-6">
         {{ post.title }}
@@ -9,7 +9,7 @@
 
     <div
       class="
-        m-2
+        mt-4
         inline-flex
         flex-col
         sm:flex-row
@@ -40,7 +40,7 @@
     <div class="w-max items-center mt-5 space-x-4">
       <BackButton />
     </div>
-  </Hero>
+  </HeroNoImg>
 </template>
 
 <script>

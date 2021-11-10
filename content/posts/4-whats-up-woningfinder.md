@@ -7,6 +7,8 @@ description: 'Het laatste WoningFinder nieuws op een rij.'
 
 WoningFinder is aan het groeien, er zijn meer steden en meer mogelijkheden voor je zoekopdracht toegevoegd.
 
+![houses](https://static.woningfinder.nl/news/houses.jpg)
+
 ## Changelog
 
 Sinds ons vorige update kun je automatisch reageren op huurwoningen in 100 verschillende steden 🎉

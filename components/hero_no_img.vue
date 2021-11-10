@@ -4,13 +4,8 @@
       class="
         hidden
         lg:block
-        sm:relative
-        sm:mt-12
-        sm:py-16
-        lg:absolute
-        lg:inset-y-0
-        lg:right-0
-        lg:w-1/2
+        sm:relative sm:mt-12 sm:py-16
+        lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2
       "
     >
       <div
@@ -21,9 +16,7 @@
           w-screen
           bg-gray-50
           rounded-l-3xl
-          lg:left-80
-          lg:right-0
-          lg:w-full
+          lg:left-80 lg:right-0 lg:w-full
         "
       ></div>
       <svg
