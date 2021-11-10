@@ -1,5 +1,5 @@
 <template>
-  <HeroNoImg>
+  <Hero>
     <div class="mt-6 sm:max-w-xl">
       <h1
         class="
@@ -163,7 +163,7 @@
     <div class="items-center inline-flex mt-5 space-x-4">
       <BackButton />
     </div>
-  </HeroNoImg>
+  </Hero>
 </template>
 
 <style scoped>

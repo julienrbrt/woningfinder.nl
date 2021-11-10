@@ -1,10 +1,21 @@
 <template>
-  <HeroNoImg>
+  <Hero>
     <h1
-      class="text-3xl font-extrabold text-wf-purple tracking-tight sm:text-4xl"
+      class="
+        mt-4
+        text-3xl
+        font-extrabold
+        text-wf-purple
+        tracking-tight
+        sm:text-4xl
+      "
     >
       Nieuws
     </h1>
+
+    <p class="mt-4 text-lg text-gray-500">
+      Hier vind je al het nieuws over WoningFinder.
+    </p>
 
     <div class="grid gap-2 lg:grid-cols-2 lg:gap-x-5 lg:gap-y-4">
       <div
@@ -12,15 +23,8 @@
         :key="post.title"
         class="mt-4 bg-white overflow-hidden shadow rounded-lg p-4"
       >
-        <NuxtLink :to="'nieuws/' + post.slug" class="block mt-2">
-          <p
-            class="
-              text-xl
-              font-semibold
-              text-gray-900
-              hover:text-gray-700 hover:underline
-            "
-          >
+        <NuxtLink :to="'/nieuws/' + post.slug" class="block mt-2">
+          <p class="text-xl font-semibold text-gray-900">
             {{ post.title }}
           </p>
 
@@ -54,7 +58,7 @@
     <div class="items-center inline-flex mt-5 space-x-4">
       <BackButton />
     </div>
-  </HeroNoImg>
+  </Hero>
 </template>
 
 <script>

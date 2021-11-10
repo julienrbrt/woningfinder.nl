@@ -1,5 +1,12 @@
 <template>
   <div class="bg-white">
+    <AlertBanner
+      v-if="news"
+      @click="hideNews"
+      :description="post[0].title"
+      :to="'nieuws/' + post[0].slug"
+    />
+
     <Hero>
       <!-- payment validation alert -->
       <AlertOk
@@ -10,11 +17,6 @@
       >
       </AlertOk>
 
-      <AlertNews
-        title="Nieuws"
-        :description="post[0].title"
-        :to="'nieuws/' + post[0].slug"
-      />
       <div class="mt-6 sm:max-w-xl">
         <h1
           class="
@@ -72,6 +74,7 @@ export default {
   data() {
     return {
       alert: true,
+      news: true,
     }
   },
   methods: {
@@ -80,6 +83,9 @@ export default {
     },
     hideAlert() {
       this.alert = false
+    },
+    hideNews() {
+      this.news = false
     },
   },
 }

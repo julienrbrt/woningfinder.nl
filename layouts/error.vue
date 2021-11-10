@@ -1,5 +1,5 @@
 <template>
-  <HeroNoImg>
+  <Hero>
     <div class="mt-6 sm:max-w-xl">
       <div v-if="error.statusCode === 404">
         <h1
@@ -37,7 +37,7 @@
         <BackButton />
       </div>
     </div>
-  </HeroNoImg>
+  </Hero>
 </template>
 
 <script>

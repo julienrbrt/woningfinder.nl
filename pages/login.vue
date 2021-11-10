@@ -1,5 +1,5 @@
 <template>
-  <HeroNoImg>
+  <Hero>
     <div class="mt-6 sm:max-w-xl">
       <AlertOk
         class="my-4"
@@ -26,7 +26,7 @@
       >
         Inloggen
       </h1>
-      <p class="mt-6 text-xl text-gray-500">
+      <p class="mt-6 text-lg text-gray-500">
         Inloggen met alleen jouw e-mailadres. Je krijgt een mail van ons met een
         linkje.
       </p>
@@ -68,7 +68,11 @@
       </span>
       Inloggen
     </button>
-  </HeroNoImg>
+
+    <div class="items-center inline-flex mt-5 space-x-4">
+      <BackButton />
+    </div>
+  </Hero>
 </template>
 
 <script>

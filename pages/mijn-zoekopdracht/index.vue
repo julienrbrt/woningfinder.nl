@@ -1,5 +1,5 @@
 <template>
-  <HeroNoImg>
+  <Hero>
     <div class="mt-6 sm:max-w-xl">
       <h1
         class="
@@ -130,7 +130,7 @@
         Account verwijderen
       </a>
     </div>
-  </HeroNoImg>
+  </Hero>
 </template>
 
 <script>

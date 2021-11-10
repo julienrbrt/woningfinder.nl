@@ -1,5 +1,5 @@
 <template>
-  <HeroNoImg>
+  <Hero>
     <div class="mt-6 sm:max-w-xl">
       <h1
         class="
@@ -114,7 +114,7 @@
         Verwijderen
       </button>
     </div>
-  </HeroNoImg>
+  </Hero>
 </template>
 
 <script>
