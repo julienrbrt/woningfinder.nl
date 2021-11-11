@@ -10,7 +10,7 @@
           sm:text-4xl
         "
       >
-        Privacybeleid
+        {{ title }}
       </h1>
 
       <p class="mt-6 text-xl text-gray-500">
@@ -169,9 +169,14 @@
 
 <script>
 export default {
-  head() {
+  data() {
     return {
       title: 'Privacybeleid',
+    }
+  },
+  head() {
+    return {
+      title: this.title,
     }
   },
 }

@@ -18,7 +18,7 @@
         sm:text-4xl
       "
     >
-      Contact
+      {{ title }}
     </h1>
 
     <p class="mt-6 text-lg text-gray-500">
@@ -112,18 +112,19 @@
 
 <script>
 export default {
-  head() {
-    return {
-      title: 'Contact',
-    }
-  },
   data() {
     return {
+      title: 'Contact',
       name: '',
       email: '',
       message: '',
       error: false,
       submitted: false,
+    }
+  },
+  head() {
+    return {
+      title: this.title,
     }
   },
   methods: {

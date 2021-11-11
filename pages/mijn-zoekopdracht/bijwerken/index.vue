@@ -10,7 +10,7 @@
           sm:text-4xl
         "
       >
-        Je gegevens bijwerken
+        {{ title }}
       </h1>
 
       <fieldset>
@@ -80,15 +80,16 @@
 <script>
 export default {
   middleware: 'auth',
-  head() {
-    return {
-      title: 'Je gegevens bijwerken',
-    }
-  },
   data() {
     return {
+      title: 'Mijn gegevens bijwerken',
       selectedAction: '',
       action: ['profiel', 'zoekopdracht'],
+    }
+  },
+  head() {
+    return {
+      title: this.title,
     }
   },
   methods: {

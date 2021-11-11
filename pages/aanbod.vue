@@ -10,7 +10,7 @@
           sm:text-4xl
         "
       >
-        Beschikbare woningcorporaties en verhuurders
+        {{ title }}
       </h1>
 
       <p class="mt-6 text-lg text-gray-500">
@@ -199,9 +199,14 @@ export default {
   components: {
     InformationCircleIcon,
   },
-  head() {
+  data() {
     return {
       title: 'Beschikbare woningcorporaties en verhuurders',
+    }
+  },
+  head() {
+    return {
+      title: this.title,
     }
   },
 }

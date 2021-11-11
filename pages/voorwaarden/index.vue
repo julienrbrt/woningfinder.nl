@@ -10,7 +10,7 @@
           sm:text-4xl
         "
       >
-        Algemene Voorwaarden
+        {{ title }}
       </h1>
       <p class="mt-6 text-xl text-gray-500">
         Besloten vennootschap met gewone structuur WoningFinder B.V. (hierna:
@@ -1117,9 +1117,14 @@
 
 <script>
 export default {
-  head() {
+  data() {
     return {
       title: 'Algemene Voorwaarden',
+    }
+  },
+  head() {
+    return {
+      title: this.title,
     }
   },
 }

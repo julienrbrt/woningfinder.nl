@@ -2,7 +2,7 @@
   <Hero>
     <div class="mt-6 sm:max-w-xl">
       <h1 class="text-4xl font-extrabold text-gray-900 tracking-tight">
-        Je zoekopdracht voltooien
+        {{ title }}
       </h1>
 
       <p class="mt-6 text-lg text-gray-500">
@@ -56,16 +56,17 @@ export default {
   components: {
     InformationCircleIcon,
   },
-  head() {
-    return {
-      title: 'Je zoekopdracht voltooien',
-    }
-  },
   data() {
     return {
+      title: 'Je zoekopdracht voltooien',
       email: '',
       error: false,
       errorMsg: '',
+    }
+  },
+  head() {
+    return {
+      title: this.title,
     }
   },
   methods: {

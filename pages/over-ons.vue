@@ -10,7 +10,7 @@
           sm:text-4xl
         "
       >
-        Wie zijn wij
+        {{ title }}
       </h1>
       <p class="mt-6 text-lg text-gray-500">
         Het is onze missie mensen te helpen een huis te vinden zonder het gedoe
@@ -53,9 +53,14 @@ export default {
   components: {
     InformationCircleIcon,
   },
+  data() {
+    return {
+      title: 'Wie zijn wij?',
+    }
+  },
   head() {
     return {
-      title: 'Wie zijn wij',
+      title: this.title,
     }
   },
 }

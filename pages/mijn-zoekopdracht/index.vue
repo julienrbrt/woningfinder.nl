@@ -10,7 +10,7 @@
           sm:text-4xl
         "
       >
-        Je zoekopdracht
+        {{ title }}
       </h1>
     </div>
 
@@ -136,19 +136,20 @@
 <script>
 export default {
   middleware: 'auth',
-  head() {
-    return {
-      title: 'Je zoekopdracht',
-    }
-  },
   data() {
     return {
+      title: 'Mijn zoekopdracht',
       customer: {},
       credentials: [],
       stats: { plan: '', reactions: 0, cities: 0 },
       showModal: '',
       showInvalidPlanAlert: false,
       showCorporationCredentialsMissingAlert: false,
+    }
+  },
+  head() {
+    return {
+      title: this.title,
     }
   },
   methods: {

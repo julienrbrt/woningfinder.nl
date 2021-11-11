@@ -1,6 +1,10 @@
 <template>
   <Hero>
-    <RegisterTitle />
+    <div class="mt-6 sm:max-w-xl">
+      <h1 class="text-3xl font-extrabold text-wf-purple tracking-tight">
+        {{ title }}
+      </h1>
+    </div>
 
     <AlertError
       class="mt-4"
@@ -80,13 +84,9 @@ export default {
     const offering = await $axios.$get('offering', { progress: true })
     return { offering }
   },
-  head() {
-    return {
-      title: 'Je WoningFinder zoekopdracht',
-    }
-  },
   data() {
     return {
+      title: 'Je WoningFinder zoekopdracht',
       submitted: false,
       error: false,
       errorMsg:
@@ -94,6 +94,11 @@ export default {
       currentStep: 1,
       totalStep: 7,
       selected_cities: [],
+    }
+  },
+  head() {
+    return {
+      title: this.title,
     }
   },
   methods: {

@@ -24,7 +24,7 @@
         sm:text-4xl
       "
     >
-      Inloggen
+      {{ title }}
     </h1>
     <p class="mt-6 text-lg text-gray-500">
       Inloggen met alleen jouw e-mailadres. Je krijgt een mail van ons met een
@@ -81,17 +81,18 @@ export default {
   components: {
     LockClosedIcon,
   },
-  head() {
-    return {
-      title: 'Inloggen',
-    }
-  },
   data() {
     return {
+      title: 'Inloggen',
       email: '',
       alert: true,
       error: false,
       submitted: false,
+    }
+  },
+  head() {
+    return {
+      title: this.title,
     }
   },
   methods: {

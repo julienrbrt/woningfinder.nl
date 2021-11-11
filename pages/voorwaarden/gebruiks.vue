@@ -10,7 +10,7 @@
           sm:text-4xl
         "
       >
-        Gebruiksvoorwaarden
+        {{ title }}
       </h1>
 
       <div class="text-gray-700">
@@ -431,9 +431,14 @@
 
 <script>
 export default {
-  head() {
+  data() {
     return {
       title: 'Gebruiksvoorwaarden',
+    }
+  },
+  head() {
+    return {
+      title: this.title,
     }
   },
 }

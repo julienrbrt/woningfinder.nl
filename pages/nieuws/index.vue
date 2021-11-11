@@ -10,7 +10,7 @@
         sm:text-4xl
       "
     >
-      Nieuws
+      {{ title }}
     </h1>
 
     <p class="mt-4 text-lg text-gray-500">
@@ -67,9 +67,14 @@ export default {
     const posts = await $content({ deep: true }).sortBy('date', 'desc').fetch()
     return { posts }
   },
-  head() {
+  data() {
     return {
       title: 'Nieuws',
+    }
+  },
+  head() {
+    return {
+      title: this.title,
     }
   },
 }

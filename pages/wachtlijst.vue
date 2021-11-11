@@ -18,7 +18,7 @@
         sm:text-4xl
       "
     >
-      Steden wachtlijst
+      {{ title }}
     </h1>
     <p class="mt-6 text-lg text-gray-500">
       We zijn hard bezig met alle Nederlandse steden toe te voegen aan
@@ -86,19 +86,20 @@ export default {
   components: {
     PlusIcon,
   },
-  head() {
-    return {
-      title: 'Steden wachtlijst',
-    }
-  },
   data() {
     return {
+      title: 'Steden wachtlijst',
       email: '',
       city: '',
       errorMsg:
         'Er is iets misgegaan. Controleer het formulier en probeer het nogmaals.',
       error: false,
       submitted: false,
+    }
+  },
+  head() {
+    return {
+      title: this.title,
     }
   },
   methods: {

@@ -59,6 +59,11 @@ export default {
     baseURL: 'https://woningfinder.nl/api/',
   },
   sitemap: {
+    defaults: {
+      changefreq: 'weekly',
+      priority: 1,
+      lastmod: new Date(),
+    },
     hostname: 'https://woningfinder.nl',
     gzip: true,
     exclude: [

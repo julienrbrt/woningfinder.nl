@@ -10,7 +10,7 @@
           sm:text-4xl
         "
       >
-        Je account verwijderen
+        {{ title }}
       </h1>
     </div>
 
@@ -122,20 +122,21 @@ import { InformationCircleIcon } from '@vue-hero-icons/solid'
 
 export default {
   middleware: 'auth',
-  head() {
-    return {
-      title: 'Je account verwijderen',
-    }
+  components: {
+    InformationCircleIcon,
   },
   data() {
     return {
+      title: 'Mijn account verwijderen',
       hasHouse: true,
       feedback: '',
       error: false,
     }
   },
-  components: {
-    InformationCircleIcon,
+  head() {
+    return {
+      title: this.title,
+    }
   },
   methods: {
     async submit() {

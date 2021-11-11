@@ -2,7 +2,7 @@
   <Hero>
     <div class="mt-6 sm:max-w-xl">
       <h1 class="text-3xl font-extrabold text-wf-purple tracking-tight">
-        Je profiel bijwerken
+        {{ title }}
       </h1>
     </div>
 
@@ -211,18 +211,19 @@ export default {
   components: {
     InformationCircleIcon,
   },
-  head() {
-    return {
-      title: 'Je profiel bijwerken',
-    }
-  },
   data() {
     return {
+      title: 'Mijn profiel bijwerken',
       customer: this.$store.getters['register/getCustomer'],
       submitted: false,
       error: false,
       errorMsg:
         'Er is iets misgegaan. Controleer het formulier nogmaals. Blijf dit gebeuren? Neem dan contact met ons op.',
+    }
+  },
+  head() {
+    return {
+      title: this.title,
     }
   },
   methods: {

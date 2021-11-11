@@ -2,7 +2,7 @@
   <Hero>
     <div class="mt-6 sm:max-w-xl">
       <h1 class="text-3xl font-extrabold text-wf-purple tracking-tight">
-        Je zoekopdracht bijwerken
+        {{ title }}
       </h1>
     </div>
 
@@ -67,19 +67,20 @@ export default {
     const offering = await $axios.$get('offering', { progress: true })
     return { offering }
   },
-  head() {
-    return {
-      title: 'Je zoekopdracht bijwerken',
-    }
-  },
   data() {
     return {
+      title: 'Mijn zoekopdracht bijwerken',
       submitted: false,
       error: false,
       errorMsg:
         'Er is iets misgegaan. Controleer het formulier nogmaals. Blijf dit gebeuren? Neem dan contact met ons op.',
       currentStep: 1,
       totalStep: 4,
+    }
+  },
+  head() {
+    return {
+      title: this.title,
     }
   },
   methods: {
