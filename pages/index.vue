@@ -8,6 +8,11 @@
     />
 
     <Hero>
+      <!-- map -->
+      <template v-slot:illustration>
+        <IllustrationMaps v-if="offering" :cities="offering.supported_cities" />
+      </template>
+
       <!-- payment validation alert -->
       <AlertOk
         class="mb-6"
@@ -61,7 +66,7 @@
 
 <script>
 export default {
-  async asyncData({ $content, params }) {
+  async asyncData({ $axios, $content }) {
     // fetch latest news and display it
     const post = await $content('posts')
       .sortBy('date', 'desc')
@@ -69,7 +74,10 @@ export default {
       .only(['title', 'slug'])
       .fetch()
 
-    return { post }
+    // get offering
+    const offering = await $axios.$get('offering', { progress: false })
+
+    return { post, offering }
   },
   data() {
     return {

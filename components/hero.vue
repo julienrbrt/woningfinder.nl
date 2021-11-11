@@ -1,9 +1,11 @@
 <template>
   <div>
     <Header />
-    <div class="bg-white overflow-hidden lg:relative">
+    <div class="bg-white lg:relative">
       <div
+        v-if="!$slots.illustration"
         class="
+          overflow-hidden
           hidden
           lg:block
           sm:relative sm:mt-12 sm:py-16
@@ -50,8 +52,26 @@
         </svg>
       </div>
 
-      <div class="mx-auto max-w-md px-6 sm:max-w-3xl relative">
-        <slot></slot>
+      <div
+        v-if="$slots.illustration"
+        class="
+          mx-auto
+          lg:max-w-7xl lg:grid lg:grid-cols-2 lg:gap-20
+          items-center
+        "
+      >
+        <div class="mt-6 mx-auto max-w-md px-6 sm:max-w-3xl relative">
+          <slot></slot>
+        </div>
+        <div class="hidden lg:block overflow-hidden">
+          <slot name="illustration"></slot>
+        </div>
+      </div>
+
+      <div v-else>
+        <div class="mt-6 mx-auto max-w-md px-6 sm:max-w-3xl relative">
+          <slot></slot>
+        </div>
       </div>
     </div>
   </div>
