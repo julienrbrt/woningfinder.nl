@@ -1,36 +1,35 @@
 <template>
-  <HeroNoImg>
-    <div class="mt-6 sm:max-w-xl">
-      <AlertOk
-        class="my-4"
-        v-if="submitted"
-        @click="hideAlert"
-        alert="Login link succesvol verstuurd!"
-      />
+  <Hero>
+    <AlertOk
+      class="my-4"
+      v-if="submitted"
+      @click="hideAlert"
+      alert="Login link succesvol verstuurd!"
+    />
 
-      <AlertError
-        class="my-4"
-        v-if="error"
-        @click="hideAlert"
-        alert="Er is iets misgegaan. Controleer je e-mailadres of probeer nogmaals."
-      />
+    <AlertError
+      class="my-4"
+      v-if="error"
+      @click="hideAlert"
+      alert="Er is iets misgegaan. Controleer je e-mailadres of probeer nogmaals."
+    />
 
-      <h1
-        class="
-          text-3xl
-          font-extrabold
-          text-wf-purple
-          tracking-tight
-          sm:text-4xl
-        "
-      >
-        Inloggen
-      </h1>
-      <p class="mt-6 text-xl text-gray-500">
-        Inloggen met alleen jouw e-mailadres. Je krijgt een mail van ons met een
-        linkje.
-      </p>
-    </div>
+    <h1
+      class="
+        mt-6
+        text-3xl
+        font-extrabold
+        text-wf-purple
+        tracking-tight
+        sm:text-4xl
+      "
+    >
+      Inloggen
+    </h1>
+    <p class="mt-6 text-lg text-gray-500">
+      Inloggen met alleen jouw e-mailadres. Je krijgt een mail van ons met een
+      linkje.
+    </p>
 
     <input
       v-model="email"
@@ -68,7 +67,11 @@
       </span>
       Inloggen
     </button>
-  </HeroNoImg>
+
+    <div class="items-center inline-flex mt-5 space-x-4">
+      <BackButton />
+    </div>
+  </Hero>
 </template>
 
 <script>

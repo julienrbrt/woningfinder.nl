@@ -10,12 +10,12 @@
     </p>
 
     <div class="mt-6 space-y-4">
-      <div v-for="city in getCities" :key="city.name">
+      <div v-for="city in selected_cities" :key="city.name">
         <h2 class="text-base font-medium text-gray-900">
           {{ city.name }}
         </h2>
 
-        <RegisterCityDistrictPicker :city="getCityFromOffering(city)" />
+        <RegisterCityDistrictPicker :city="city" />
       </div>
     </div>
   </div>
@@ -23,16 +23,6 @@
 
 <script>
 export default {
-  props: ['supported_cities'],
-  methods: {
-    getCityFromOffering(city) {
-      return this.supported_cities.find((c) => c.name === city.name)
-    },
-  },
-  computed: {
-    getCities() {
-      return this.$store.getters['register/getCities']
-    },
-  },
+  props: ['selected_cities'],
 }
 </script>

@@ -15,6 +15,18 @@
       :plan="offering.plan"
     />
 
+    <!-- map -->
+    <template v-slot:illustration>
+      <IllustrationMaps
+        v-if="offering && currentStep == 2"
+        :cities="
+          citiesSelection.length > 0
+            ? citiesSelection
+            : offering.supported_cities
+        "
+      />
+    </template>
+
     <RegisterCity
       ref="registerCity"
       v-show="currentStep == 2"
@@ -24,7 +36,7 @@
     <RegisterCityDistrict
       ref="registerCityDistrict"
       v-show="currentStep == 3"
-      :supported_cities="offering.supported_cities"
+      :selected_cities="citiesSelection"
     />
 
     <RegisterHousing
@@ -74,6 +86,7 @@ export default {
         'Er is iets misgegaan. Controleer het formulier nogmaals. Blijf dit gebeuren? Neem dan contact met ons op.',
       currentStep: 1,
       totalStep: 7,
+      selected_cities: [],
     }
   },
   methods: {
@@ -210,6 +223,20 @@ export default {
     hideAlert() {
       this.submitted = false
       this.error = false
+    },
+  },
+  computed: {
+    citiesSelection() {
+      var cities = this.$store.getters['register/getCities']
+      var citiesSelection = []
+
+      cities.forEach((city) => {
+        citiesSelection.push(
+          this.offering.supported_cities.find((c) => c.name == city.name)
+        )
+      })
+
+      return citiesSelection
     },
   },
 }

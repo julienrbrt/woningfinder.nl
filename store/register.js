@@ -67,6 +67,11 @@ export const mutations = {
     this._vm.$set(state.register.plan, 'name', plan)
   },
   addCity(state, city) {
+    // do not add duplicate city
+    if (state.register.housing_preferences.city.find((c) => c.name == city)) {
+      return
+    }
+
     this._vm.$set(
       state.register.housing_preferences.city,
       state.register.housing_preferences.city.length,

@@ -1,5 +1,5 @@
 <template>
-  <HeroNoImg>
+  <Hero>
     <div class="mt-6 sm:max-w-xl">
       <h1
         class="
@@ -189,7 +189,7 @@
         <BackButton />
       </div>
     </div>
-  </HeroNoImg>
+  </Hero>
 </template>
 
 <script>

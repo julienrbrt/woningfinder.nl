@@ -1,5 +1,5 @@
 <template>
-  <HeroNoImg>
+  <Hero>
     <div class="mt-6 sm:max-w-xl">
       <h1 class="text-4xl font-extrabold text-gray-900 tracking-tight">
         Je zoekopdracht voltooien
@@ -45,7 +45,7 @@
         </button>
       </div>
     </div>
-  </HeroNoImg>
+  </Hero>
 </template>
 
 <script>

@@ -1,6 +1,6 @@
 <template>
-  <div class="bg-white">
-    <Nuxt />
+  <div class="bg-white flex flex-col h-screen justify-between">
+    <Nuxt class="mb-auto" />
     <Footer />
   </div>
 </template>

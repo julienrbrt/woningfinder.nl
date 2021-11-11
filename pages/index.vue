@@ -1,6 +1,18 @@
 <template>
   <div class="bg-white">
+    <AlertBanner
+      v-if="news"
+      @click="hideNews"
+      :description="post[0].title"
+      :to="'nieuws/' + post[0].slug"
+    />
+
     <Hero>
+      <!-- map -->
+      <template v-slot:illustration>
+        <IllustrationMaps v-if="offering" :cities="offering.supported_cities" />
+      </template>
+
       <!-- payment validation alert -->
       <AlertOk
         class="mb-6"
@@ -10,11 +22,6 @@
       >
       </AlertOk>
 
-      <AlertNews
-        title="Nieuws"
-        :description="post[0].title"
-        :to="'nieuws/' + post[0].slug"
-      />
       <div class="mt-6 sm:max-w-xl">
         <h1
           class="
@@ -59,7 +66,7 @@
 
 <script>
 export default {
-  async asyncData({ $content, params }) {
+  async asyncData({ $axios, $content }) {
     // fetch latest news and display it
     const post = await $content('posts')
       .sortBy('date', 'desc')
@@ -67,11 +74,15 @@ export default {
       .only(['title', 'slug'])
       .fetch()
 
-    return { post }
+    // get offering
+    const offering = await $axios.$get('offering', { progress: false })
+
+    return { post, offering }
   },
   data() {
     return {
       alert: true,
+      news: true,
     }
   },
   methods: {
@@ -80,6 +91,9 @@ export default {
     },
     hideAlert() {
       this.alert = false
+    },
+    hideNews() {
+      this.news = false
     },
   },
 }

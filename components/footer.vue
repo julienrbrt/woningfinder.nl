@@ -16,36 +16,12 @@
               Ontdek
             </h3>
             <ul class="mt-4 space-y-4">
-              <li>
+              <li v-for="link in discover" :key="link.name">
                 <NuxtLink
-                  to="/start"
+                  :to="link.path"
                   class="text-base text-gray-400 hover:text-gray-300"
                 >
-                  Nu starten
-                </NuxtLink>
-              </li>
-              <li>
-                <NuxtLink
-                  to="/login"
-                  class="text-base text-gray-400 hover:text-gray-300"
-                >
-                  Inloggen
-                </NuxtLink>
-              </li>
-              <li>
-                <NuxtLink
-                  to="/mijn-zoekopdracht"
-                  class="text-base text-gray-400 hover:text-gray-300"
-                >
-                  Mijn zoekopdracht
-                </NuxtLink>
-              </li>
-              <li>
-                <NuxtLink
-                  to="/aanbod"
-                  class="text-base text-gray-400 hover:text-gray-300"
-                >
-                  Aanbod
+                  {{ link.name }}
                 </NuxtLink>
               </li>
             </ul>
@@ -63,38 +39,12 @@
               WoningFinder
             </h3>
             <ul class="mt-4 space-y-4">
-              <li>
+              <li v-for="link in woningfinder" :key="link.name">
                 <NuxtLink
-                  to="/nieuws"
+                  :to="link.path"
                   class="text-base text-gray-400 hover:text-gray-300"
                 >
-                  Nieuws
-                </NuxtLink>
-              </li>
-
-              <li>
-                <NuxtLink
-                  to="/contact"
-                  class="text-base text-gray-400 hover:text-gray-300"
-                >
-                  Contact
-                </NuxtLink>
-              </li>
-
-              <li>
-                <NuxtLink
-                  to="/over-ons"
-                  class="text-base text-gray-400 hover:text-gray-300"
-                >
-                  Over ons
-                </NuxtLink>
-              </li>
-              <li>
-                <NuxtLink
-                  to="/wachtlijst"
-                  class="text-base text-gray-400 hover:text-gray-300"
-                >
-                  Wachtlijst
+                  {{ link.name }}
                 </NuxtLink>
               </li>
             </ul>
@@ -114,30 +64,12 @@
               Voorwaarden
             </h3>
             <ul class="mt-4 space-y-4">
-              <li>
+              <li v-for="link in terms" :key="link.name">
                 <NuxtLink
-                  to="/voorwaarden"
+                  :to="link.path"
                   class="text-base text-gray-400 hover:text-gray-300"
                 >
-                  Algemene voorwaarden
-                </NuxtLink>
-              </li>
-
-              <li>
-                <NuxtLink
-                  to="/voorwaarden/gebruiks"
-                  class="text-base text-gray-400 hover:text-gray-300"
-                >
-                  Gebruiksvoorwaarden
-                </NuxtLink>
-              </li>
-
-              <li>
-                <NuxtLink
-                  to="/voorwaarden/privacy"
-                  class="text-base text-gray-400 hover:text-gray-300"
-                >
-                  Privacy
+                  {{ link.name }}
                 </NuxtLink>
               </li>
             </ul>
@@ -205,3 +137,28 @@
     </div>
   </footer>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      discover: [
+        { name: 'Nu starten', path: '/start' },
+        { name: 'Inloggen', path: '/login' },
+        { name: 'Aanbod', path: '/aanbod' },
+        { name: 'Wachtlijst', path: '/wachtlijst' },
+      ],
+      woningfinder: [
+        { name: 'Nieuws', path: '/nieuws' },
+        { name: 'Contact', path: '/contact' },
+        { name: 'Over ons', path: '/over-ons' },
+      ],
+      terms: [
+        { name: 'Algemene voorwaarden', path: '/voorwaarden' },
+        { name: 'Gebruiksvoorwaarden', path: '/voorwaarden/gebruiks' },
+        { name: 'Privacy', path: '/voorwaarden/privacy' },
+      ],
+    }
+  },
+}
+</script>

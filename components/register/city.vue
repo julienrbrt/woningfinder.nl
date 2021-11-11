@@ -2,7 +2,7 @@
   <div class="sm:max-w-xl">
     <p class="mt-6 text-lg text-gray-500">Waar zoek je jouw woning?</p>
     <p class="mt-2 text-base text-gray-500">
-      Je kunt één of meer steden selecteren en invullen tussen ons
+      Je kunt je gewenste steden selecteren en invullen tussen ons
       {{ supported_cities.length }} beschikbare steden.
     </p>
 
@@ -82,7 +82,6 @@
               <NuxtLink
                 to="/wachtlijst"
                 class="underline text-gray-700 hover:text-gray-900"
-                @click="waitingList"
                 >wachtlijst</NuxtLink
               >
               en we laten je weten wanneer we jouw stad toegevoegd hebben.
@@ -105,8 +104,11 @@ export default {
   props: ['supported_cities'],
   data() {
     return {
-      citiesList: this.supported_cities.sort((a, b) =>
-        a.name > b.name ? 1 : -1
+      selectedCities: [],
+      citiesList: new Map(
+        this.supported_cities
+          .sort((a, b) => (a.name > b.name ? 1 : -1))
+          .map((city) => [city.name, city])
       ),
       error: false,
     }
@@ -114,23 +116,16 @@ export default {
   methods: {
     selectCity(input) {
       var result = []
-
-      // add every city
       if (input.length == 0) {
-        for (var i = 0; i < this.citiesList.length; i++) {
-          result.push(this.citiesList[i].name)
-        }
+        this.citiesList.forEach((city, name) => {
+          result.push(name)
+        })
       } else {
-        // show selection only
-        for (var i = 0; i < this.citiesList.length; i++) {
-          if (
-            this.citiesList[i].name
-              .toLowerCase()
-              .startsWith(input.toLowerCase())
-          ) {
-            result.push(this.citiesList[i].name)
+        this.citiesList.forEach((city, name) => {
+          if (name.toLowerCase().startsWith(input.toLowerCase())) {
+            result.push(name)
           }
-        }
+        })
       }
 
       return result
@@ -138,17 +133,12 @@ export default {
     addCity(selected) {
       if (selected) {
         this.$store.commit('register/addCity', selected)
-        this.citiesList = this.citiesList.filter((c) => c.name !== selected)
         this.$refs.autocomplete.setValue('')
         document.activeElement.blur() // remove focus
       }
     },
     removeCity(selected) {
       this.$store.commit('register/removeCity', selected)
-      this.citiesList.push(selected)
-      this.citiesList = this.citiesList.sort((a, b) =>
-        a.name > b.name ? 1 : -1
-      )
     },
     validate() {
       if (this.$store.getters['register/getCities'].length == 0) {
@@ -158,9 +148,6 @@ export default {
 
       return true
     },
-    waitingList() {
-      this.$ga.event('waiting_list', 'click', 'form_clicked', 1)
-    },
   },
   computed: {
     citiesSelection() {
@@ -169,19 +156,6 @@ export default {
     hasSelection() {
       return this.citiesSelection.length > 0
     },
-  },
-  created() {
-    var cities = this.$store.getters['register/getCities']
-    if (
-      cities.length > 0 &&
-      this.citiesList.length == this.supported_cities.length
-    ) {
-      for (var i = 0; i < cities.length; i++) {
-        this.citiesList = this.citiesList.filter(
-          (c) => c.name !== cities[i].name
-        )
-      }
-    }
   },
 }
 </script>
