@@ -162,6 +162,30 @@
             "
           />
         </div>
+
+        <div class="col-span-6">
+          <div class="inline-flex">
+            <input
+              v-model="customer.has_alerts_enabled"
+              id="emailalerts"
+              name="emailalerts"
+              type="checkbox"
+              class="
+                focus:ring-wf-orange
+                h-4
+                w-4
+                text-wf-orange-dark
+                border-gray-300
+                rounded
+              "
+            />
+            <label
+              for="emailalerts"
+              class="block text-sm font-medium text-gray-900 ml-3"
+              >Stuur me een e-mail als een reactie niet succesvol was</label
+            >
+          </div>
+        </div>
       </div>
     </div>
 
@@ -237,6 +261,7 @@ export default {
             name: this.customer.name,
             family_size: this.customer.family_size,
             yearly_income: this.customer.yearly_income,
+            has_alerts_enabled: this.customer.has_alerts_enabled,
           },
           {
             headers: {

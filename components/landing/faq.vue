@@ -45,7 +45,7 @@ export default {
         {
           question: 'Hoe kan WoningFinder voor mij reageren?',
           answer:
-            'Na dat je jouw zoekopdracht hebt gemaakt, sturen we een email met de passende woningaanbod websites. Je kunt via deze email inloggen op elke website waarin je wilt reageren. Daarna gebruikt WoningFinder je inlog gegevens om voor jou automatisch te reageren.',
+            'Na dat je jouw zoekopdracht hebt gemaakt, sturen we een e-mail met de passende woningaanbod websites. Je kunt via deze e-mail inloggen op elke website waarin je wilt reageren. Daarna gebruikt WoningFinder je inlog gegevens om voor jou automatisch te reageren.',
         },
         {
           question: 'Is dat veilig?',
@@ -55,7 +55,7 @@ export default {
         {
           question: 'Ik heb een woning gevonden hoe stop ik WoningFinder?',
           answer:
-            'Allereerst, gefeliciteerd! Je betaalt WoningFinder alleen één keer voor één zoekopdracht, dus je hoeft niets te annuleren. Je kunt zelf je account verwijderen via je account pagina.',
+            'Allereerst, gefeliciteerd 🎉 Je kunt zelf je account verwijderen via je account pagina. Als je een abonnement hebt, die wordt dan automatisch opgezegd.',
         },
         {
           question: 'Mijn stad staat er niet tussen.',
@@ -72,6 +72,11 @@ export default {
           question: 'Ik wil meerdere zoekopdrachten hebben. Hoe werkt dat?',
           answer:
             'Bij WoningFinder kun je één zoekopdracht hebben per e-mailadres, als jij meer dan één zoekopdracht wilt, moet je een nieuw account aanmaken met een ander e-mailadres.',
+        },
+        {
+          question: 'Wat als WoningFinder niet automatisch kan reageren?',
+          answer:
+            'Als WoningFinder niet automatisch kan reageren op een woning, krijg je een e-mail van ons dat de reactie niet succesvol was. Je kunt deze e-mails inschakelen via je zoekopdracht als je je profiel bijwerkt.',
         },
       ],
     }
