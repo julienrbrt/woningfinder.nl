@@ -29,13 +29,13 @@ export default {
         href: '/favicon.png',
       },
       {
-        rel: 'stylesheet',
+        as: 'style',
+        rel: 'stylesheet preload',
         href: 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap',
       },
     ],
     script: [
       {
-        // Cookiebot consent banner
         id: 'Cookiebot',
         src: 'https://consent.cookiebot.com/uc.js',
         'data-cbid': '7df61b83-2819-4bae-9f32-86971fea4bc5',
@@ -43,12 +43,6 @@ export default {
         async: true,
       },
     ],
-    noscript: [
-      {
-        innerHTML: 'This website requires JavaScript.',
-      },
-    ],
-    __dangerouslyDisableSanitizers: ['noscript'],
   },
   css: ['@/assets/css/main.css'],
   plugins: [{ src: '~/plugins/vue-autocomplete.js', ssr: false }],
