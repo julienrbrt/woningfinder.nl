@@ -136,6 +136,11 @@
 <script>
 export default {
   middleware: 'auth',
+  head() {
+    return {
+      title: 'Je zoekopdracht',
+    }
+  },
   data() {
     return {
       customer: {},

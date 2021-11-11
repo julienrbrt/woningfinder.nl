@@ -81,6 +81,11 @@ export default {
   components: {
     LockClosedIcon,
   },
+  head() {
+    return {
+      title: 'Inloggen',
+    }
+  },
   data() {
     return {
       email: '',

@@ -1115,6 +1115,16 @@
   </Hero>
 </template>
 
+<script>
+export default {
+  head() {
+    return {
+      title: 'Algemene Voorwaarden',
+    }
+  },
+}
+</script>
+
 <style scoped>
 h2 {
   @apply mt-6 text-xl text-gray-900;

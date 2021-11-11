@@ -80,6 +80,11 @@
 <script>
 export default {
   middleware: 'auth',
+  head() {
+    return {
+      title: 'Je gegevens bijwerken',
+    }
+  },
   data() {
     return {
       selectedAction: '',

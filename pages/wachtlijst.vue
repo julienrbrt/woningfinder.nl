@@ -86,6 +86,11 @@ export default {
   components: {
     PlusIcon,
   },
+  head() {
+    return {
+      title: 'Steden wachtlijst',
+    }
+  },
   data() {
     return {
       email: '',

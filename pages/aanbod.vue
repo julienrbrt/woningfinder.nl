@@ -199,5 +199,10 @@ export default {
   components: {
     InformationCircleIcon,
   },
+  head() {
+    return {
+      title: 'Beschikbare woningcorporaties en verhuurders',
+    }
+  },
 }
 </script>

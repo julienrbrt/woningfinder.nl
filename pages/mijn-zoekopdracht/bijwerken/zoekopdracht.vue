@@ -67,6 +67,11 @@ export default {
     const offering = await $axios.$get('offering', { progress: true })
     return { offering }
   },
+  head() {
+    return {
+      title: 'Je zoekopdracht bijwerken',
+    }
+  },
   data() {
     return {
       submitted: false,

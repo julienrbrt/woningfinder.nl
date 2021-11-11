@@ -67,5 +67,10 @@ export default {
     const posts = await $content({ deep: true }).sortBy('date', 'desc').fetch()
     return { posts }
   },
+  head() {
+    return {
+      title: 'Nieuws',
+    }
+  },
 }
 </script>

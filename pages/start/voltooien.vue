@@ -56,6 +56,11 @@ export default {
   components: {
     InformationCircleIcon,
   },
+  head() {
+    return {
+      title: 'Je zoekopdracht voltooien',
+    }
+  },
   data() {
     return {
       email: '',

@@ -70,7 +70,7 @@
 
 <script>
 export default {
-  async asyncData({ $axios, $content }) {
+  async asyncData({ $axios, $content, $sentry }) {
     // fetch latest news and display it
     const post = await $content('posts')
       .sortBy('date', 'desc')
@@ -79,7 +79,11 @@ export default {
       .fetch()
 
     // get offering
-    const offering = await $axios.$get('offering', { progress: false })
+    const offering = await $axios
+      .$get('offering', { progress: false })
+      .catch((error) => {
+        $sentry.captureException(error) // map won't show
+      })
 
     return { post, offering }
   },
