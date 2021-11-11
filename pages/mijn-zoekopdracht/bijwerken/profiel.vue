@@ -207,10 +207,15 @@
 import { InformationCircleIcon } from '@vue-hero-icons/solid'
 
 export default {
+  middleware: 'auth',
   components: {
     InformationCircleIcon,
   },
-  middleware: 'auth',
+  head() {
+    return {
+      title: 'Je profiel bijwerken',
+    }
+  },
   data() {
     return {
       customer: this.$store.getters['register/getCustomer'],

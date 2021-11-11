@@ -167,6 +167,16 @@
   </Hero>
 </template>
 
+<script>
+export default {
+  head() {
+    return {
+      title: 'Privacybeleid',
+    }
+  },
+}
+</script>
+
 <style scoped>
 h2 {
   @apply mt-6 text-xl text-gray-900;

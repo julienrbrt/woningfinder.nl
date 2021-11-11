@@ -53,5 +53,10 @@ export default {
   components: {
     InformationCircleIcon,
   },
+  head() {
+    return {
+      title: 'Wie zijn wij',
+    }
+  },
 }
 </script>

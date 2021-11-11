@@ -122,6 +122,11 @@ import { InformationCircleIcon } from '@vue-hero-icons/solid'
 
 export default {
   middleware: 'auth',
+  head() {
+    return {
+      title: 'Je account verwijderen',
+    }
+  },
   data() {
     return {
       hasHouse: true,
