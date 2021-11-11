@@ -73,6 +73,10 @@
 </template>
 
 <script>
+import { loadStripe } from '@stripe/stripe-js'
+
+const stripe = await loadStripe(process.env.stripeKey)
+
 export default {
   async asyncData({ $axios }) {
     const offering = await $axios.$get('offering', { progress: true })
@@ -204,8 +208,6 @@ export default {
         .then((data) => {
           // redirect to stripe
           if (data.stripe_session_id) {
-            var stripe = Stripe(process.env.stripeKey)
-
             return stripe.redirectToCheckout({
               sessionId: data.stripe_session_id,
             })

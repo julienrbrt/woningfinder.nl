@@ -35,11 +35,6 @@ export default {
     ],
     script: [
       {
-        // Stripe recommends loading the script on every page 'to best leverage Stripe's advanced fraud functionality'
-        src: 'https://js.stripe.com/v3',
-        defer: true,
-      },
-      {
         // Cookiebot consent banner
         id: 'Cookiebot',
         src: 'https://consent.cookiebot.com/uc.js',
