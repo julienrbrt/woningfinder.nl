@@ -14,6 +14,19 @@
     />
 
     <!-- registration steps -->
+
+    <!-- map -->
+    <template v-slot:illustration>
+      <IllustrationMaps
+        v-if="offering && currentStep == 1"
+        :cities="
+          citiesSelection.length > 0
+            ? citiesSelection
+            : offering.supported_cities
+        "
+      />
+    </template>
+
     <RegisterCity
       ref="registerCity"
       v-show="currentStep == 1"
@@ -23,7 +36,7 @@
     <RegisterCityDistrict
       ref="registerCityDistrict"
       v-show="currentStep == 2"
-      :supported_cities="offering.supported_cities"
+      :selected_cities="citiesSelection"
     />
 
     <RegisterHousing
@@ -151,6 +164,20 @@ export default {
     hideAlert() {
       this.submitted = false
       this.error = false
+    },
+  },
+  computed: {
+    citiesSelection() {
+      var cities = this.$store.getters['register/getCities']
+      var citiesSelection = []
+
+      cities.forEach((city) => {
+        citiesSelection.push(
+          this.offering.supported_cities.find((c) => c.name == city.name)
+        )
+      })
+
+      return citiesSelection
     },
   },
 }
