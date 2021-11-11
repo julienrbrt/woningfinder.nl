@@ -6,6 +6,7 @@ export const state = () => ({
     yearly_income: 0,
     family_size: 1,
     has_children_same_housing: false,
+    has_alerts_enabled: false,
     plan: { name: '' },
     housing_preferences: {
       city: [], // { name: '', district: [''] }
@@ -55,6 +56,7 @@ export const getters = {
       yearly_income: state.register.yearly_income,
       family_size: state.register.family_size,
       has_children_same_housing: state.register.has_children_same_housing,
+      has_alerts_enabled: state.register.has_alerts_enabled,
     }
   },
   getRegister: (state) => {
@@ -131,5 +133,6 @@ export const mutations = {
     state.register.family_size = customer.family_size
     state.register.has_children_same_housing =
       customer.has_children_same_housing
+    state.register.has_alerts_enabled = customer.has_alerts_enabled
   },
 }

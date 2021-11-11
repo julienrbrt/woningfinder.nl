@@ -10,7 +10,11 @@
     <Hero>
       <!-- map -->
       <template v-slot:illustration>
-        <IllustrationMaps v-if="offering" :cities="offering.supported_cities" />
+        <IllustrationMaps
+          class="my-12"
+          v-if="offering"
+          :cities="offering.supported_cities"
+        />
       </template>
 
       <!-- payment validation alert -->
