@@ -86,30 +86,39 @@ export const mutations = {
         (c) => c.name !== city.name
       )
   },
-  addCitiesRaw(state, rawCities) {
-    state.register.housing_preferences.city = rawCities
+  addCitiesRaw(state, cities) {
+    state.register.housing_preferences.city = cities
   },
-  addCityDistrict(state, cityDistrict) {
+  addCityDistrict(state, input) {
     // find city index
     var cityIdx = state.register.housing_preferences.city.findIndex(
-      (c) => c.name == cityDistrict.city.name
+      (c) => c.name == input.city.name
     )
+
+    // do not add duplicate city district
+    if (
+      state.register.housing_preferences.city[cityIdx].district.find(
+        (d) => d == input.district
+      )
+    ) {
+      return
+    }
 
     // add district
     state.register.housing_preferences.city[cityIdx].district.push(
-      cityDistrict.district
+      input.district
     )
   },
-  removeCityDistrict(state, cityDistrict) {
+  removeCityDistrict(state, input) {
     // find city index
     var cityIdx = state.register.housing_preferences.city.findIndex(
-      (c) => c.name == cityDistrict.city.name
+      (c) => c.name == input.city.name
     )
 
     // remove district
     state.register.housing_preferences.city[cityIdx].district =
       state.register.housing_preferences.city[cityIdx].district.filter(
-        (d) => d !== cityDistrict.district
+        (d) => d !== input.district
       )
   },
   setHousingType(state, type) {

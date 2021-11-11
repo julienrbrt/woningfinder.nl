@@ -60,7 +60,7 @@ export default {
   },
   sitemap: {
     defaults: {
-      changefreq: 'weekly',
+      changefreq: 'monthly',
       priority: 1,
       lastmod: new Date(),
     },

@@ -78,7 +78,7 @@ export default {
   props: ['city'],
   data() {
     return {
-      districtsList: this.city.district,
+      suggestedDistricts: this.city.district,
     }
   },
   methods: {
@@ -86,21 +86,23 @@ export default {
       var result = []
 
       // use city districts from offering
-      if (this.districtsList) {
+      if (this.suggestedDistricts) {
         if (input.length == 0) {
           // show everything
-          for (var i = 0; i < this.districtsList.length; i++) {
-            result.push(this.districtsList[i])
+          for (var i = 0; i < this.suggestedDistricts.length; i++) {
+            result.push(this.suggestedDistricts[i])
           }
 
           return result
         } else {
           // show selection only
-          for (var i = 0; i < this.districtsList.length; i++) {
+          for (var i = 0; i < this.suggestedDistricts.length; i++) {
             if (
-              this.districtsList[i].toLowerCase().includes(input.toLowerCase())
+              this.suggestedDistricts[i]
+                .toLowerCase()
+                .includes(input.toLowerCase())
             ) {
-              result.push(this.districtsList[i])
+              result.push(this.suggestedDistricts[i])
             }
           }
         }
@@ -139,12 +141,9 @@ export default {
           district: selected,
         })
 
-        if (this.districtsList) {
-          this.districtsList = this.districtsList.filter((d) => d !== selected)
-        }
-
         this.$refs.autocomplete.setValue('')
         document.activeElement.blur() // remove focus
+        this.$forceUpdate() // force update (required as not reactive when editing)
       }
     },
     removeCityDistrict(selected) {
@@ -153,14 +152,8 @@ export default {
           city: this.city,
           district: selected,
         })
-
-        if (this.districtsList) {
-          this.districtsList.push(selected)
-          this.districtsList = this.districtsList.sort((d1, d2) =>
-            d1 > d2 ? 1 : -1
-          )
-        }
       }
+      this.$forceUpdate() // force update (required as not reactive when editing)
     },
   },
   computed: {
