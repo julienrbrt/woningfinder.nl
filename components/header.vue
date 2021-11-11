@@ -19,9 +19,9 @@
           </div>
         </div>
         <div v-if="!isLoggedIn()" class="ml-10 space-x-4 inline-flex">
-          <NuxtLink to="/login" class="btn w-max py-2">Inloggen</NuxtLink>
+          <NuxtLink to="/start" class="btn w-max py-2">Aanmelden</NuxtLink>
           <NuxtLink
-            to="/start"
+            to="/login"
             class="
               hidden
               sm:block
@@ -32,7 +32,7 @@
               focus:ring-wf-purple
               py-2
             "
-            >Aanmelden</NuxtLink
+            >Inloggen</NuxtLink
           >
         </div>
         <div v-else class="ml-10 space-x-4">
