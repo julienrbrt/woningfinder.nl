@@ -19,12 +19,12 @@
           </div>
         </div>
         <div v-if="!isLoggedIn()" class="ml-10 space-x-4 inline-flex">
-          <NuxtLink to="/start" class="btn w-max py-2">Aanmelden</NuxtLink>
+          <NuxtLink to="/start" class="hidden sm:block btn w-max py-2"
+            >Aanmelden</NuxtLink
+          >
           <NuxtLink
             to="/login"
             class="
-              hidden
-              sm:block
               btn
               w-max
               bg-wf-purple
