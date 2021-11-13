@@ -113,7 +113,7 @@
             rel="noopener noreferrer"
             class="text-gray-400 hover:text-gray-300"
           >
-            <span class="sr-only">Linkedin</span>
+            <span class="sr-only">LinkedIn</span>
             <svg
               class="h-6 w-6"
               fill="currentColor"
