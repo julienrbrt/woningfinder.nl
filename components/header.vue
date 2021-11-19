@@ -49,7 +49,7 @@
 export default {
   data() {
     return {
-      route: $nuxt.$route.path,
+      route: this.$nuxt.$route.path,
       navigation: [
         { name: 'Hoe werkt het', path: '/' },
         { name: 'Aanbod', path: '/aanbod' },
