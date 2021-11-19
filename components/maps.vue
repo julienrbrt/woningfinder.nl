@@ -26,16 +26,8 @@
 </template>
 
 <script>
-import MapboxMap from '@studiometa/vue-mapbox-gl/dist/components/MapboxMap'
-import MapboxMarker from '@studiometa/vue-mapbox-gl/dist/components/MapboxMarker'
-import 'mapbox-gl/dist/mapbox-gl.css'
-
 export default {
   props: ['cities'],
-  components: {
-    MapboxMap,
-    MapboxMarker,
-  },
   data() {
     return {
       accessToken: process.env.mapboxKey,
