@@ -1,22 +1,13 @@
-name: ci
-
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
-
+on: [push]
+name: Test & Build
 jobs:
-  ci:
-    runs-on: ${{ matrix.os }}
-
+  build:
+    runs-on: ubuntu-latest
+    env:
+      MAPBOX_API_KEY: ${{ secrets.MAPBOX_API_KEY }}
     strategy:
       matrix:
-        os: [ubuntu-latest]
         node: [14]
-
     steps:
       - name: Checkout 🛎
         uses: actions/checkout@master
@@ -35,7 +26,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
-      - name: Install dependencies 👨🏻‍💻
+      - name: Install dependencies 🏗
         run: npm ci
 
       - name: Generate website 👨🏻‍💻
