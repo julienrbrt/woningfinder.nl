@@ -9,6 +9,7 @@
     "generate": "nuxt generate --fail-on-error"
   },
   "dependencies": {
+    "@mapbox/mapbox-gl-geocoder": "^4.7.4",
     "@mapbox/mapbox-sdk": "^0.13.2",
     "@nuxt/content": "^1.15.1",
     "@nuxtjs/axios": "^5.13.1",

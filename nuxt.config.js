@@ -1,6 +1,6 @@
 // https://nuxtjs.org/docs/2.x/directory-structure/nuxt-config
 export default {
-  ssr: false,
+  ssr: true,
   target: 'static',
   head: {
     title: 'WoningFinder - Reageer automatisch op huurwoningen',
@@ -45,7 +45,10 @@ export default {
     ],
   },
   css: ['@/assets/css/main.css'],
-  plugins: [{ src: '~/plugins/vue-autocomplete.js', ssr: false }],
+  plugins: [
+    { src: '~/plugins/vue-autocomplete.js', ssr: false },
+    { src: '~/plugins/vue-mapbox.js', ssr: false },
+  ],
   components: true,
   buildModules: ['@nuxtjs/tailwindcss', '@nuxtjs/google-analytics'],
   modules: [
