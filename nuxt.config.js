@@ -95,6 +95,9 @@ export default {
   },
   build: {},
   generate: {
+    exclude: [
+      /^\/mijn-zoekopdracht/, // path starts with /mijn-zoekopdracht
+    ],
     fallback: '404.html',
   },
 }
