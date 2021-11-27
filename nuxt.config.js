@@ -50,7 +50,7 @@ export default {
     { src: '~/plugins/vue-mapbox.js', ssr: false },
   ],
   components: true,
-  buildModules: ['@nuxtjs/tailwindcss', '@nuxtjs/google-analytics'],
+  buildModules: ['@nuxtjs/tailwindcss'],
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/sitemap',
@@ -82,9 +82,6 @@ export default {
   tailwindcss: {
     mode: 'jit',
   },
-  googleAnalytics: {
-    id: 'UA-202002328-1',
-  },
   loading: {
     color: '#e46948',
     height: '5px',
@@ -96,7 +93,7 @@ export default {
   build: {},
   generate: {
     exclude: [
-      /^\/mijn-zoekopdracht/, // path starts with /mijn-zoekopdracht
+      /^\/mijn-zoekopdracht/, // path starting with /mijn-zoekopdracht
     ],
     fallback: '404.html',
   },
