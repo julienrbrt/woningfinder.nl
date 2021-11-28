@@ -172,9 +172,6 @@ export default {
               return
             }
 
-            // register event
-            this.$ga.event('start', 'signup', 'successful', 1)
-
             // end loading bar
             this.$nuxt.$loading.finish()
 
