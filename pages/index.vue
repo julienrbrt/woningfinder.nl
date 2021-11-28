@@ -1,11 +1,11 @@
 <template>
   <div class="bg-white">
-    <AlertBanner
+    <!-- <AlertBanner
       v-if="news"
       @click="hideNews"
       :description="post[0].title"
       :to="'nieuws/' + post[0].slug"
-    />
+    /> -->
 
     <Hero>
       <!-- map -->
