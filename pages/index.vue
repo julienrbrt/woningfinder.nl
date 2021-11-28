@@ -49,9 +49,7 @@
       </div>
       <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
         <div class="rounded-md shadow">
-          <NuxtLink to="/start" @click.native="startEvent" class="btn">
-            Nu starten
-          </NuxtLink>
+          <NuxtLink to="/start" class="btn"> Nu starten </NuxtLink>
         </div>
       </div>
     </Hero>
@@ -96,9 +94,6 @@ export default {
     }
   },
   methods: {
-    startEvent() {
-      this.$ga.event('landing', 'click', 'button_start', 1)
-    },
     hideAlert() {
       this.alert = false
     },

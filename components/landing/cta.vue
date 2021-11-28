@@ -49,8 +49,7 @@
           bg-wf-orange-light
           overflow-hidden
           shadow-xl
-          sm:px-12
-          sm:py-20
+          sm:px-12 sm:py-20
         "
       >
         <div
@@ -103,11 +102,9 @@
                 class="
                   btn
                   bg-wf-orange
-                  hover:bg-wf-orange-dark
-                  hover:ring-wf-orange
+                  hover:bg-wf-orange-dark hover:ring-wf-orange
                   focus:ring-wf-orange
                 "
-                @click.native="startEvent"
               >
                 Nu starten
               </NuxtLink>
@@ -118,13 +115,11 @@
                 class="
                   btn
                   bg-wf-purple
-                  hover:bg-wf-purple-dark
-                  hover:ring-wf-purple
+                  hover:bg-wf-purple-dark hover:ring-wf-purple
                   focus:ring-wf-purple
                   mt-2
                   md:mt-0
                 "
-                @click.native="contactEvent"
               >
                 Contact
               </NuxtLink>
@@ -135,16 +130,3 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  methods: {
-    startEvent() {
-      this.$ga.event('landing', 'click', 'button_start', 1)
-    },
-    contactEvent() {
-      this.$ga.event('landing', 'click', 'button_contact', 1)
-    },
-  },
-}
-</script>

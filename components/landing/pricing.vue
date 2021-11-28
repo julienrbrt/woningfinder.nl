@@ -42,10 +42,7 @@
               max-w-md
               mx-auto
               space-y-4
-              lg:max-w-5xl
-              lg:grid lg:grid-cols-2
-              lg:gap-5
-              lg:space-y-0
+              lg:max-w-5xl lg:grid lg:grid-cols-2 lg:gap-5 lg:space-y-0
             "
           >
             <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
@@ -73,8 +70,7 @@
                   pb-8
                   bg-gray-50
                   space-y-6
-                  sm:p-10
-                  sm:pt-6
+                  sm:p-10 sm:pt-6
                 "
               >
                 <ul class="space-y-4">
@@ -121,11 +117,9 @@
                       class="
                         btn
                         bg-wf-orange
-                        hover:bg-wf-orange-dark
-                        hover:ring-wf-orange
+                        hover:bg-wf-orange-dark hover:ring-wf-orange
                         focus:ring-wf-orange
                       "
-                      @click.native="startEventBasis"
                     >
                       Nu starten
                     </NuxtLink>
@@ -158,8 +152,7 @@
                   pb-8
                   bg-gray-50
                   space-y-6
-                  sm:p-10
-                  sm:pt-6
+                  sm:p-10 sm:pt-6
                 "
               >
                 <ul class="space-y-4">
@@ -205,11 +198,9 @@
                     class="
                       btn
                       bg-wf-orange
-                      hover:bg-wf-orange-dark
-                      hover:ring-wf-orange
+                      hover:bg-wf-orange-dark hover:ring-wf-orange
                       focus:ring-wf-orange
                     "
-                    @click.native="startEventPro"
                   >
                     Nu starten
                   </NuxtLink>
@@ -231,14 +222,6 @@ export default {
   components: {
     CheckIcon,
     XIcon,
-  },
-  methods: {
-    startEventBasis() {
-      this.$ga.event('landing', 'click', 'button_start_basis', 1)
-    },
-    startEventPro() {
-      this.$ga.event('landing', 'click', 'button_start_pro', 1)
-    },
   },
 }
 </script>
