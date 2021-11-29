@@ -1,11 +1,11 @@
 <template>
   <div class="bg-white">
-    <!-- <AlertBanner
+    <AlertBanner
       v-if="news"
       @click="hideNews"
       :description="post[0].title"
       :to="'nieuws/' + post[0].slug"
-    /> -->
+    />
 
     <Hero>
       <!-- map -->
@@ -42,9 +42,10 @@
           huurwoningen
         </h1>
         <p class="mt-6 text-xl text-gray-500">
-          Vind je perfecte huurwoning zonder elke dag alle woningaanbod websites
-          zelf te bezoeken om te reageren. Je reageert automatisch via
-          WoningFinder op alle woningen die matchen met je zoekopdracht.
+          Mis nooit meer een woning. Vind je perfecte huurwoning zonder elke dag
+          alle woningaanbod websites zelf te bezoeken om te reageren. Je
+          reageert automatisch via WoningFinder op alle woningen die matchen met
+          je zoekopdracht.
         </p>
       </div>
       <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
@@ -75,7 +76,7 @@ export default {
     const post = await $content('posts')
       .sortBy('date', 'desc')
       .limit(1)
-      .only(['title', 'slug'])
+      .only(['date', 'title', 'slug'])
       .fetch()
 
     // get offering
@@ -90,7 +91,7 @@ export default {
   data() {
     return {
       alert: true,
-      news: true,
+      news: false,
     }
   },
   methods: {
@@ -100,6 +101,16 @@ export default {
     hideNews() {
       this.news = false
     },
+    displayNews() {
+      var today = new Date()
+      var d = new Date(this.post[0].date)
+
+      // do not show about news if it is older than 7 days
+      this.news = Math.abs(today.getTime() - d.getTime()) < 604800000
+    },
+  },
+  mounted() {
+    this.displayNews()
   },
 }
 </script>

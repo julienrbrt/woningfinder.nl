@@ -73,7 +73,7 @@
             sm:text-4xl
           "
         >
-          Reageer op alle passende woningen
+          Nooit meer een woning missen
         </p>
       </div>
 
