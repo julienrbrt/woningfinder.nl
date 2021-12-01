@@ -1,4 +1,15 @@
 // https://nuxtjs.org/docs/2.x/directory-structure/nuxt-config
+
+const createSitemapRoutes = async () => {
+  var routes = []
+  const { $content } = require('@nuxt/content')
+  const posts = await $content('posts').fetch()
+  for (const post of posts) {
+    routes.push(`nieuws/${post.slug}`)
+  }
+  return routes
+}
+
 export default {
   ssr: true,
   target: 'static',
@@ -44,9 +55,9 @@ export default {
   buildModules: ['@nuxtjs/tailwindcss'],
   modules: [
     '@nuxtjs/axios',
-    '@nuxtjs/sitemap',
     '@nuxt/content',
     '@nuxtjs/sentry',
+    '@nuxtjs/sitemap',
     'cookie-universal-nuxt',
   ],
   axios: {
@@ -60,12 +71,8 @@ export default {
     },
     hostname: 'https://woningfinder.nl',
     gzip: true,
-    exclude: [
-      '/start/**',
-      '/voorwaarden',
-      '/voorwaarden/**',
-      '/mijn-zoekopdracht/**',
-    ],
+    routes: createSitemapRoutes,
+    exclude: ['/start/**', '/voorwaarden/**', '/mijn-zoekopdracht/**'],
   },
   sentry: {
     dsn: process.env.SENTRY_DSN,
