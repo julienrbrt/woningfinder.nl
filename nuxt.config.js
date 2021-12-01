@@ -34,15 +34,6 @@ export default {
         href: 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap',
       },
     ],
-    script: [
-      {
-        id: 'Cookiebot',
-        src: 'https://consent.cookiebot.com/uc.js',
-        'data-cbid': '7df61b83-2819-4bae-9f32-86971fea4bc5',
-        type: 'text/javascript',
-        async: true,
-      },
-    ],
   },
   css: ['@/assets/css/main.css'],
   plugins: [
