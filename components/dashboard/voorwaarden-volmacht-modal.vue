@@ -15,8 +15,7 @@
         px-4
         pb-20
         text-center
-        sm:block
-        sm:p-0
+        sm:block sm:p-0
       "
     >
       <!-- Background overlay, show/hide based on modal state. -->
@@ -46,11 +45,7 @@
           shadow-xl
           transform
           transition-all
-          sm:my-8
-          sm:align-middle
-          sm:max-w-lg
-          sm:w-full
-          sm:p-6
+          sm:my-8 sm:align-middle sm:max-w-lg sm:w-full sm:p-6
         "
       >
         <div class="hidden sm:block absolute top-0 right-0 pt-4 pr-4">
@@ -63,7 +58,9 @@
               text-gray-400
               hover:text-gray-500
               focus:outline-none
-              focus:ring-2 focus:ring-offset-2 focus:ring-bg-wf-orange
+              focus:ring-2
+              focus:ring-offset-2
+              focus:ring-bg-wf-orange
             "
           >
             <span class="sr-only">Sluiten</span>
@@ -83,7 +80,7 @@
               <br />
               1. Besloten vennootschap met gewone structuur WoningFinder B.V. is
               ingeschreven bij de Kamer van Koophandel onder nummer 81619766 en
-              is gevestigd aan Stroinksbleekweg 27 (7523ZK) te Enschede
+              is gevestigd aan Oldenzaalsestraat 23-107 (7551AM) te Hengelo
               vertegenwoordigd door Julien Robert, hierna te noemen
               <strong>"Gevolmachtigde"</strong>;
               <br />
@@ -236,10 +233,10 @@
               text-gray-700
               hover:text-gray-500
               focus:outline-none
-              focus:ring-2 focus:ring-offset-2 focus:ring-bg-wf-orange
-              sm:mt-0
-              sm:w-auto
-              sm:text-sm
+              focus:ring-2
+              focus:ring-offset-2
+              focus:ring-bg-wf-orange
+              sm:mt-0 sm:w-auto sm:text-sm
             "
           >
             Sluiten

@@ -14,9 +14,9 @@
       </h1>
 
       <p class="mt-6 text-xl text-gray-500">
-        WoningFinder B.V, gevestigd aan Stroinksbleekweg 27, 7523ZK Enschede, is
-        verantwoordelijk voor de verwerking van persoonsgegevens zoals
-        weergegeven in deze privacyverklaring.
+        WoningFinder B.V, gevestigd aan Oldenzaalsestraat 23-107 (7551AM) te
+        Hengelo, is verantwoordelijk voor de verwerking van persoonsgegevens
+        zoals weergegeven in deze privacyverklaring.
       </p>
 
       <div class="text-gray-700">

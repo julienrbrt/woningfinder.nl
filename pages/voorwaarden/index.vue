@@ -15,7 +15,8 @@
       <p class="mt-6 text-xl text-gray-500">
         Besloten vennootschap met gewone structuur WoningFinder B.V. (hierna:
         WoningFinder) is ingeschreven bij de Kamer van Koophandel onder nummer
-        81619766 en is gevestigd aan Stroinksbleekweg 27 (7523ZK) te Enschede.
+        81619766 en is gevestigd aan Oldenzaalsestraat 23-107 (7551AM) te
+        Hengelo
       </p>
 
       <div class="text-gray-700">
