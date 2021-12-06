@@ -21,16 +21,14 @@
 
     <!-- map -->
     <template v-slot:illustration>
-      <client-only placeholder="Map aan het laden...">
-        <Maps
-          v-if="offering && currentStep == 2"
-          :cities="
-            citiesSelection.length > 0
-              ? citiesSelection
-              : offering.supported_cities
-          "
-        />
-      </client-only>
+      <Maps
+        v-if="offering && currentStep == 2"
+        :cities="
+          citiesSelection.length > 0
+            ? citiesSelection
+            : offering.supported_cities
+        "
+      />
     </template>
 
     <RegisterCity
