@@ -78,15 +78,17 @@
       </div>
       <div
         class="
-          mt-8
+          flex
+          mt-4
           border-t border-gray-700
-          pt-8
-          md:flex md:items-center md:justify-between
+          pt-4
+          items-center
+          justify-center
         "
       >
-        <p class="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
+        <p class="text-base text-gray-400">
           &copy; {{ new Date().getFullYear() }}
-          <a href="https://julien.rbrt.fr">julien.rbrt.fr</a>
+          <a href="https://julien.rbrt.fr" target="_blank">julien.rbrt.fr</a>
         </p>
       </div>
     </div>
