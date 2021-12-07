@@ -61,7 +61,7 @@ export default {
     'cookie-universal-nuxt',
   ],
   axios: {
-    baseURL: 'https://woningfinder.nl/api/',
+    baseURL: 'https://api.woningfinder.nl/',
   },
   sitemap: {
     defaults: {
