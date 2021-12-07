@@ -85,7 +85,6 @@ export default {
     height: '5px',
   },
   env: {
-    stripeKey: process.env.STRIPE_PUBLISHABLE_KEY,
     mapboxKey: process.env.MAPBOX_API_KEY,
   },
   build: {},

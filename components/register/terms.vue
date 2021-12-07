@@ -4,7 +4,10 @@
       Je zoekopdracht is bijna ingesteld, hier is wat jij moet weten
     </p>
 
-    <AlertInfo class="mt-6" :description="descriptionPrice()">
+    <AlertInfo
+      class="mt-6"
+      description="Je reageert met WoningFinder op alle huurwoningen die aan je zoekopdracht voldoen."
+    >
       <InformationCircleIcon class="h-5 w-5 text-gray-400" />
     </AlertInfo>
 
@@ -46,30 +49,6 @@ import { InformationCircleIcon } from '@vue-hero-icons/solid'
 export default {
   components: {
     InformationCircleIcon,
-  },
-  props: ['plan'],
-  methods: {
-    descriptionPrice() {
-      for (var i = 0; i < this.plan.length; i++) {
-        if (
-          this.plan[i].name == 'pro' &&
-          this.plan[i].name == this.$store.getters['register/getPlan'].name
-        ) {
-          return (
-            'Je betaal slecht €' +
-            this.plan[i].price +
-            ' per maand. Je kunt opzeggen wanneer je wilt. Niet tevedren in je eerste maand? Krijg je je geld terug!'
-          )
-        }
-
-        if (
-          this.plan[i].name == 'basis' &&
-          this.plan[i].name == this.$store.getters['register/getPlan'].name
-        ) {
-          return 'Je reageert met WoningFinder op alle sociale huurwoningen die aan je zoekopdracht voldoen.'
-        }
-      }
-    },
   },
 }
 </script>

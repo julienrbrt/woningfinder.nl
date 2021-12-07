@@ -261,7 +261,7 @@
               </LandingFeatureItem>
               <LandingFeatureItem
                 title="Toegankelijk"
-                description="Een WoningFinder zoekopdracht is gratis als je een sociale huurwoning zoekt: het is al moeilijk om een sociale huurwoning te vinden in Nederland, we willen er niet van profiteren."
+                description="Een WoningFinder zoekopdracht is gratis: het is al moeilijk om een sociale huurwoning te vinden in Nederland, we willen er niet van profiteren."
               >
                 <CurrencyEuroIcon class="h-6 w-6" />
               </LandingFeatureItem>

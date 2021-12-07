@@ -221,7 +221,6 @@ export default {
   components: {
     InformationCircleIcon,
   },
-  props: ['plan'],
   data() {
     return {
       error: false,
@@ -235,17 +234,6 @@ export default {
       this.customer.yearly_income = parseInt(this.customer.yearly_income)
       this.customer.family_size = parseInt(this.customer.family_size)
       this.customer.birth_year = parseInt(this.customer.birth_year)
-
-      if (
-        this.$store.getters['register/getPlan'].name == 'basis' &&
-        this.customer.yearly_income >
-          this.plan.find((p) => p.name === 'basis').maximum_income
-      ) {
-        this.error = true
-        this.errorMsg =
-          'Je verdient te veel voor sociale huurwonigen en dus kun je ons Basis plan niet gebruiken. Kies voor ons Pro plan.'
-        return false
-      }
 
       // check error
       if (
@@ -274,10 +262,7 @@ export default {
       return new Date().getFullYear()
     },
     showHasChildren() {
-      return (
-        this.currentYear - this.customer.birth_year < 23 &&
-        this.$store.getters['register/getPlan'].name == 'basis'
-      )
+      return this.currentYear - this.customer.birth_year < 23
     },
   },
 }

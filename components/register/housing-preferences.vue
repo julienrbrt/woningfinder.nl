@@ -168,26 +168,7 @@
 
       <!-- geld -->
       <h2 class="text-base font-medium text-gray-900">Geld</h2>
-
-      <div v-if="this.$store.getters['register/getPlan'].name == 'basis'">
-        <div class="rounded-md bg-gray-50 p-4">
-          <div class="flex">
-            <div class="flex-shrink-0">
-              <CurrencyEuroIcon class="h-5 w-5 text-gray-400" />
-            </div>
-            <div class="ml-3">
-              <p class="text-sm font-medium text-gray-900">
-                Omdat je een sociale huurwoning zoekt, kun je geen maximale
-                huurprijs invullen. Je maximale huurprijs is afhankelijk van
-                jouw jaarlijks inkomen. Maak je geen zorgen je reageert altijd
-                alleen op passende woningen.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div v-else>
+      <div>
         <label for="price" class="block text-sm font-medium text-gray-900"
           >Maximaal huurprijs</label
         >
@@ -279,9 +260,7 @@ export default {
   methods: {
     // called from parent component
     validate() {
-      var plan = this.$store.getters['register/getPlan'].name
-
-      if (plan == 'pro' && this.preferences.maximum_price <= 0) {
+      if (this.preferences.maximum_price <= 0) {
         this.error = true
         this.errorMsg = 'De maximale huurprijs moet hoger dan €0,- zijn.'
 
@@ -297,7 +276,7 @@ export default {
 
       if (
         isNaN(this.preferences.number_bedroom) ||
-        (plan == 'pro' && isNaN(this.preferences.maximum_price))
+        isNaN(this.preferences.maximum_price)
       ) {
         this.error = true
         this.errorMsg =
