@@ -19,7 +19,7 @@
           class="text-gray-900 hover:text-wf-purple"
           href="https://julien.rbrt.fr"
           target="_blank"
-          >julien.rbrt.fr </a
+          >julien.rbrt.fr</a
         >. Deze service wordt geleverd op een 'as-is' basis zonder enigerlei
         garanties. Nu de saaie legale dingen:
       </p>
