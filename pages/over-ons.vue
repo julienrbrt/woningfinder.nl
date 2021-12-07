@@ -19,14 +19,6 @@
         Elke dag duizenden e-mails met het nieuwe aanbod. Daarom hebben we
         WoningFinder gemaakt voor het automatiseren van woningreacties.
       </p>
-
-      <AlertInfo
-        class="mt-4"
-        description=" Wist je dat ons oprichter, Julien, zelf gebruik heeft gemaakt van
-            WoningFinder en zo zijn huis heeft gevonden in zijn gewenste wijk?"
-      >
-        <InformationCircleIcon class="h-5 w-5 text-gray-400" />
-      </AlertInfo>
     </div>
 
     <div class="items-center inline-flex mt-5 space-x-4">
