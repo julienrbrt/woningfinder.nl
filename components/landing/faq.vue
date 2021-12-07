@@ -55,18 +55,13 @@ export default {
         {
           question: 'Ik heb een woning gevonden hoe stop ik WoningFinder?',
           answer:
-            'Allereerst, gefeliciteerd 🎉 Je kunt zelf je account verwijderen via je account pagina. Als je een abonnement hebt, die wordt dan automatisch opgezegd.',
+            'Allereerst, gefeliciteerd 🎉 Je kunt zelf je account verwijderen via je account pagina.',
         },
         {
           question: 'Mijn stad staat er niet tussen.',
           answer: `Dat is jammer. We zijn hard bezig alle steden van Nederland toe te voegen. Schrijf je in op onze
               <a href="/wachtlijst" class="underline hover:text-gray-900">wachtlijst</a>
               en we laten je weten wanneer we jouw stad toegevoegd hebben.`,
-        },
-        {
-          question: 'Ik ben niet tevreden.',
-          answer:
-            'Dat is jammer 😞 Neem <a href="/contact" class="underline hover:text-gray-900">contact</a> met ons op binnen je eerste maand, je krijgt dan je geld terug!',
         },
         {
           question: 'Ik wil meerdere zoekopdrachten hebben. Hoe werkt dat?',

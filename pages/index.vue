@@ -10,11 +10,13 @@
     <Hero>
       <!-- map -->
       <template v-slot:illustration>
-        <Maps
-          class="my-12"
-          v-if="offering"
-          :cities="offering.supported_cities"
-        />
+        <client-only placeholder="Map aan het laden...">
+          <Maps
+            class="my-12"
+            v-if="offering"
+            :cities="offering.supported_cities"
+          />
+        </client-only>
       </template>
 
       <!-- payment validation alert -->

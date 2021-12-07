@@ -14,7 +14,6 @@
       </h1>
     </div>
 
-    <DashboardAlertUnpaid v-if="showInvalidPlanAlert" :email="customer.email" />
     <DashboardAlertCorporationCredentialsMissing
       v-if="showCorporationCredentialsMissingAlert"
     />
@@ -22,7 +21,6 @@
     <!-- stats -->
     <div>
       <dl class="mt-5 grid grid-cols-3 gap-5">
-        <DashboardStats title="Plan" :text="stats.plan" />
         <DashboardStats title="Reacties" :text="stats.reactions" />
         <DashboardStats title="Steden" :text="stats.cities" />
       </dl>
@@ -141,9 +139,8 @@ export default {
       title: 'Mijn zoekopdracht',
       customer: {},
       credentials: [],
-      stats: { plan: '', reactions: 0, cities: 0 },
+      stats: { reactions: 0, cities: 0 },
       showModal: '',
-      showInvalidPlanAlert: false,
       showCorporationCredentialsMissingAlert: false,
     }
   },
@@ -186,22 +183,13 @@ export default {
         throw 'must login'
       }
 
-      if (!customer.valid_plan) {
-        this.showInvalidPlanAlert = true
-      }
-
       // build stats
       this.stats.reactions = customer.total_reaction
       this.stats.cities = customer.housing_preferences.city.length
-      this.stats.plan =
-        customer.plan.name.charAt(0).toUpperCase() + customer.plan.name.slice(1)
 
       return customer
     },
     edit() {
-      // set user data in storage (so edit is prefilled)
-      this.$store.commit('register/setPlan', this.customer.plan.name)
-
       this.$store.commit(
         'register/addCitiesRaw',
         this.customer.housing_preferences.city

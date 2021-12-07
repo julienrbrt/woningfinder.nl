@@ -14,12 +14,8 @@ WoningFinder is aan het groeien, er zijn meer steden en meer mogelijkheden voor 
 Sinds ons vorige update kun je automatisch reageren op huurwoningen in 100 verschillende steden 🎉
 
 ### WoningFinder beta eindigt
-Dit betekend dat we de prijs gaan veranderen omdat het product nu klaar is voor gebruik.
-
-- Het Basis plan is nu **gratis** in plaats van € 12.
-- Het Pro plan is nu te krijgen voor slechts € 10 per maand.
-
-Let op: Als je niet tevreden bent binnen je eerste maand, krijg je je geld terug.
+Dit betekend dat we de prijs gaan veranderen omdat het product nu klaar is voor gebruik:
+**WoningFinder is nu gratis voor iederen** 🎉
 
 ### Wekelijkse update
 Door middel van jullie feedback zullen we vanaf nu de wekelijkse update elke vrijdag om 18:00 sturen, in plaats van 20:00 uur.

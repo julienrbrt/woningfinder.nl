@@ -13,16 +13,10 @@
       :alert="errorMsg"
     />
 
-    <RegisterPlan
-      ref="registerPlan"
-      v-show="currentStep == 1"
-      :plan="offering.plan"
-    />
-
     <!-- map -->
     <template v-slot:illustration>
       <Maps
-        v-if="offering && currentStep == 2"
+        v-if="offering && currentStep == 1"
         :cities="
           citiesSelection.length > 0
             ? citiesSelection
@@ -33,38 +27,30 @@
 
     <RegisterCity
       ref="registerCity"
-      v-show="currentStep == 2"
+      v-show="currentStep == 1"
       :supported_cities="offering.supported_cities"
     />
 
     <RegisterCityDistrict
       ref="registerCityDistrict"
-      v-show="currentStep == 3"
+      v-show="currentStep == 2"
       :selected_cities="citiesSelection"
     />
 
     <RegisterHousing
       ref="registerHousing"
-      v-show="currentStep == 4"
+      v-show="currentStep == 3"
       :supported_housing="offering.supported_housing_types"
     />
 
     <RegisterHousingPreferences
       ref="registerHousingPreferences"
-      v-show="currentStep == 5"
+      v-show="currentStep == 4"
     />
 
-    <RegisterCustomer
-      ref="registerCustomer"
-      v-show="currentStep == 6"
-      :plan="offering.plan"
-    />
+    <RegisterCustomer ref="registerCustomer" v-show="currentStep == 5" />
 
-    <RegisterTerms
-      ref="registerTerms"
-      v-show="currentStep == 7"
-      :plan="offering.plan"
-    />
+    <RegisterTerms ref="registerTerms" v-show="currentStep == 6" />
 
     <Navigator
       :currentStep="currentStep"
@@ -77,8 +63,6 @@
 </template>
 
 <script>
-import { loadStripe } from '@stripe/stripe-js'
-
 export default {
   async asyncData({ $axios }) {
     const offering = await $axios.$get('offering', { progress: true })
@@ -122,40 +106,34 @@ export default {
     async validate() {
       switch (this.currentStep) {
         case 1:
-          if (!this.$refs.registerPlan.validate()) {
-            return
-          }
-          break
-
-        case 2:
           if (!this.$refs.registerCity.validate()) {
             return
           }
           break
 
-        case 3:
+        case 2:
           // no need to validate because city district
           break
 
-        case 4:
+        case 3:
           if (!this.$refs.registerHousing.validate()) {
             return
           }
           break
 
-        case 5:
+        case 4:
           if (!this.$refs.registerHousingPreferences.validate()) {
             return
           }
           break
 
-        case 6:
+        case 5:
           if (!this.$refs.registerCustomer.validate()) {
             return
           }
           break
 
-        case 7:
+        case 6:
           if (!this.submitted) {
             // start loading bar
             this.$nuxt.$loading.start()
@@ -173,15 +151,8 @@ export default {
             // end loading bar
             this.$nuxt.$loading.finish()
 
-            // redirect to landing page of stripe (plan hardcoded for now)
-            if (data.plan.name == 'pro') {
-              await this.subscribe(data.email)
-              if (this.error) {
-                return
-              }
-            } else {
-              this.$router.push({ path: '/', query: { thanks: true } })
-            }
+            // redirect to thank you page
+            this.$router.push({ path: '/', query: { thanks: true } })
           }
 
           return
@@ -200,34 +171,6 @@ export default {
           this.errorMsg =
             'Er is iets misgegaan: "' + error.response.data.message + '".'
         })
-    },
-    async subscribe(email) {
-      const stripe = await loadStripe(process.env.stripeKey)
-
-      // send request
-      await this.$axios
-        .$post('payment', {
-          email: email,
-        })
-        .then((response) => {
-          return response
-        })
-        .then((data) => {
-          // redirect to stripe
-          if (data.stripe_session_id) {
-            return stripe.redirectToCheckout({
-              sessionId: data.stripe_session_id,
-            })
-          }
-        })
-        .catch((error) => {
-          this.error = true
-          this.errorMsg =
-            'Er is iets misgegaan: "' + error.response.data.message + '".'
-        })
-    },
-    planTitle: (name) => {
-      return name.charAt(0).toUpperCase() + name.slice(1)
     },
     hideAlert() {
       this.submitted = false

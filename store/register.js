@@ -7,7 +7,6 @@ export const state = () => ({
     family_size: 1,
     has_children_same_housing: false,
     has_alerts_enabled: false,
-    plan: { name: '' },
     housing_preferences: {
       city: [], // { name: '', district: [''] }
       type: [],
@@ -23,9 +22,6 @@ export const state = () => ({
 })
 
 export const getters = {
-  getPlan: (state) => {
-    return state.register.plan
-  },
   getCities: (state) => {
     return state.register.housing_preferences.city
   },
@@ -65,9 +61,6 @@ export const getters = {
 }
 
 export const mutations = {
-  setPlan(state, plan) {
-    this._vm.$set(state.register.plan, 'name', plan)
-  },
   addCity(state, city) {
     // do not add duplicate city
     if (state.register.housing_preferences.city.find((c) => c.name == city)) {
