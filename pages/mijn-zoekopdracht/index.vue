@@ -20,7 +20,7 @@
 
     <!-- stats -->
     <div>
-      <dl class="mt-5 grid grid-cols-3 gap-5">
+      <dl class="mt-5 grid grid-cols-2 gap-5">
         <DashboardStats title="Reacties" :text="stats.reactions" />
         <DashboardStats title="Steden" :text="stats.cities" />
       </dl>
