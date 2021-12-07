@@ -76,7 +76,7 @@ export default {
       errorMsg:
         'Er is iets misgegaan. Controleer het formulier nogmaals. Blijf dit gebeuren? Neem dan contact met ons op.',
       currentStep: 1,
-      totalStep: 7,
+      totalStep: 6,
       selected_cities: [],
     }
   },
