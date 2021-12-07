@@ -78,10 +78,8 @@
             <p class="text-gray-700">
               <span class="text-gray-900 font-bold">Ondergetekenden:</span>
               <br />
-              1. Besloten vennootschap met gewone structuur WoningFinder B.V. is
-              ingeschreven bij de Kamer van Koophandel onder nummer 81619766 en
-              is gevestigd aan Oldenzaalsestraat 23-107 (7551AM) te Hengelo
-              vertegenwoordigd door Julien Robert, hierna te noemen
+              1. De ontwikkelaar van WoningFinder, Julien Robert, hierna te
+              noemen
               <strong>"Gevolmachtigde"</strong>;
               <br />
               en

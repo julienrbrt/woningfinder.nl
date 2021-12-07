@@ -9,9 +9,11 @@
               v-for="link in navigation"
               :key="link.name"
               :to="link.path"
-              class="text-base font-medium text-wf-purple hover:text-wf-orange"
+              class="text-base font-medium text-gray-900"
               v-bind:class="
-                link.path == route ? 'text-wf-orange hover:text-wf-purple' : ''
+                link.path == route
+                  ? 'text-wf-orange hover:text-wf-purple'
+                  : 'hover:text-wf-orange'
               "
             >
               {{ link.name }}

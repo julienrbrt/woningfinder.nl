@@ -13,10 +13,14 @@
         {{ title }}
       </h1>
       <p class="mt-6 text-xl text-gray-500">
-        Besloten vennootschap met gewone structuur WoningFinder B.V. (hierna:
-        WoningFinder) is ingeschreven bij de Kamer van Koophandel onder nummer
-        81619766 en is gevestigd aan Oldenzaalsestraat 23-107 (7551AM) te
-        Hengelo
+        WoningFinder is een project van
+        <a
+          class="text-gray-900 hover:text-wf-purple"
+          href="https://julien.rbrt.fr"
+          target="_blank"
+          >julien.rbrt.fr </a
+        >. Deze service wordt geleverd op een 'as-is' basis zonder enigerlei
+        garanties. Nu de saaie legale dingen:
       </p>
 
       <div class="text-gray-700">
