@@ -55,7 +55,7 @@
       </div>
       <div class="sm:flex sm:justify-center lg:justify-start">
         <div class="min-w-0 text-sm text-gray-500 sm:py-3">
-          Gratis voor altijd.
+          En dat helemaal gratis!
         </div>
       </div>
     </Hero>
