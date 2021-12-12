@@ -56,7 +56,7 @@ export default {
         { name: 'Hoe werkt het', path: '/' },
         { name: 'Aanbod', path: '/aanbod' },
         { name: 'Nieuws', path: '/nieuws' },
-        { name: 'Contact', path: '/contact' },
+        { name: 'Over ons', path: '/over-ons' },
       ],
     }
   },

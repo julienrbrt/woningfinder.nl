@@ -1,13 +1,6 @@
 <template>
   <div
-    class="
-      mt-5
-      py-16
-      bg-gray-50
-      overflow-hidden
-      lg:py-24
-      rounded-l-3xl rounded-r-3xl
-    "
+    class="mt-5 py-16 bg-gray-50 overflow-hidden rounded-l-3xl rounded-r-3xl"
   >
     <div class="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
       <svg
@@ -97,9 +90,9 @@
             Persoonlijke zoekopdracht
           </h3>
           <p class="mt-3 text-lg text-gray-500">
-            Zoek je een huis met 4 slaapkamers, wil je een tuin hebben of in een
-            specifieke wijk wonen? Met je WoningFinder zoekopdracht reageer je
-            automatisch op alle woningen die aan je wensen voldoen.
+            Zoek je een huis met 2+ slaapkamers, wil je een tuin hebben of in
+            een specifieke wijk wonen? Met je WoningFinder zoekopdracht reageer
+            je automatisch op alle woningen die aan je wensen voldoen.
           </p>
 
           <dl class="mt-10 space-y-10">
@@ -261,7 +254,7 @@
               </LandingFeatureItem>
               <LandingFeatureItem
                 title="Toegankelijk"
-                description="Een WoningFinder zoekopdracht is gratis: het is al moeilijk om een sociale huurwoning te vinden in Nederland, we willen er niet van profiteren."
+                description="Een WoningFinder zoekopdracht is <span class='font-medium'>gratis</span>: het is al moeilijk om een sociale huurwoning te vinden in Nederland, we willen er niet van profiteren."
               >
                 <CurrencyEuroIcon class="h-6 w-6" />
               </LandingFeatureItem>

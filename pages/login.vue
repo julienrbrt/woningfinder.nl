@@ -27,7 +27,7 @@
       {{ title }}
     </h1>
     <p class="mt-6 text-lg text-gray-500">
-      Inloggen met alleen jouw e-mailadres. Je krijgt een mail van ons met een
+      Inloggen met alleen jouw e-mailadres. Je krijgt een e-mail van ons met een
       linkje.
     </p>
 

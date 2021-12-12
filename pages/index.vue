@@ -53,13 +53,15 @@
           <NuxtLink to="/start" class="btn"> Nu starten </NuxtLink>
         </div>
       </div>
+      <div class="sm:flex sm:justify-center lg:justify-start">
+        <div class="min-w-0 text-sm text-gray-500 sm:py-3">
+          Gratis voor altijd.
+        </div>
+      </div>
     </Hero>
 
     <!-- Features section -->
     <LandingFeature ref="feature" id="feature" />
-
-    <!-- Pricing section -->
-    <LandingPricing id="pricing" />
 
     <!-- FAQ section -->
     <LandingFaq id="faq" />
