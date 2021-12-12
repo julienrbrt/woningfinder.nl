@@ -20,7 +20,7 @@
           target="_blank"
           >julien.rbrt.fr</a
         >. Deze service wordt geleverd op een 'as-is' basis zonder enigerlei
-        garanties. Nu de saaie legale dingen:
+        garanties.
       </p>
 
       <div class="text-gray-700">
