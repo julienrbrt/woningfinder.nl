@@ -1,6 +1,13 @@
 <template>
   <div
-    class="mt-5 py-16 bg-gray-50 overflow-hidden rounded-l-3xl rounded-r-3xl"
+    class="
+      mt-5
+      pt-16
+      pb-8
+      bg-gray-50
+      overflow-hidden
+      rounded-l-3xl rounded-r-3xl
+    "
   >
     <div class="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
       <svg
