@@ -33,20 +33,6 @@
         ik besloten om WoningFinder gratis en eenvoudig door iedereen te laten
         gebruiken 😊.
       </p>
-
-      <p class="mt-6 text-lg text-gray-500">
-        Gebruik maken van WoningFinder is gratis, maar als je toch wilt helpen
-        kun je dat doen via de onderstaande knop.
-      </p>
-    </div>
-
-    <div class="items-center inline-flex mt-5 space-x-4">
-      <BackButton />
-      <a href="https://www.buymeacoffee.com/woningfinder" target="_blank">
-        <img
-          src="https://img.buymeacoffee.com/button-api/?text=Buy me a pizza&amp;emoji=🍕&amp;slug=woningfinder&amp;button_colour=de4921&amp;font_colour=ffffff&amp;font_family=Inter&amp;outline_colour=ffffff&amp;coffee_colour=FFDD00"
-        />
-      </a>
     </div>
   </Hero>
 </template>
