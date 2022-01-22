@@ -34,6 +34,10 @@
         gebruiken 😊.
       </p>
     </div>
+
+    <div class="items-center inline-flex mt-5 space-x-4">
+      <BackButton />
+    </div>
   </Hero>
 </template>
 
