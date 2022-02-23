@@ -1,5 +1,4 @@
 // https://nuxtjs.org/docs/2.x/directory-structure/nuxt-config
-
 const createSitemapRoutes = async () => {
   var routes = []
   const { $content } = require('@nuxt/content')
@@ -76,9 +75,6 @@ export default {
   },
   sentry: {
     dsn: process.env.SENTRY_DSN,
-  },
-  tailwindcss: {
-    mode: 'jit',
   },
   loading: {
     color: '#e46948',
