@@ -1,7 +1,7 @@
 <template>
   <div class="navbar bg-white p-6 md:px-16">
     <div class="navbar-start">
-      <div class="dropdown">
+      <div class="dropdown lg:hidden">
         <label tabindex="0" class="btn btn-ghost">
           <MenuAlt1Icon class="h-6 w-6 text-gray-900" />
         </label>
@@ -16,15 +16,25 @@
           </li>
         </ul>
       </div>
+      <Logo class="hidden lg:flex" />
     </div>
-    <div class="navbar-center">
-      <NuxtLink to="/">
-        <img
-          class="h-12 md:h-16"
-          src="~/assets/img/woningfinder.svg"
-          alt="WonginFinder"
-        />
-      </NuxtLink>
+
+    <div class="navbar-center flex lg:hidden">
+      <Logo />
+    </div>
+
+    <div class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal p-0">
+        <li v-for="link in navigation" :key="link.name">
+          <NuxtLink
+            :to="link.path"
+            class="text-gray-900"
+            v-bind:class="link.path == route ? 'text-wf-orange ' : ''"
+          >
+            {{ link.name }}
+          </NuxtLink>
+        </li>
+      </ul>
     </div>
     <div class="navbar-end">
       <NuxtLink v-if="!isLoggedIn()" to="/login" class="btn btn-secondary">
