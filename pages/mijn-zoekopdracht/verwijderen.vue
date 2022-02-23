@@ -92,7 +92,7 @@
 
     <AlertInfo
       class="mt-4"
-      description="Je staat op het punt je account te verwijderen 😱. Al je gegevens worden onmiddellijk verwijderd en kunnen niet worden hersteld."
+      alert="Je staat op het punt je account te verwijderen 😱. Al je gegevens worden onmiddellijk verwijderd en kunnen niet worden hersteld."
     >
       <InformationCircleIcon class="h-5 w-5 text-gray-400" />
     </AlertInfo>

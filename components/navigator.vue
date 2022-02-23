@@ -5,17 +5,7 @@
         <BackButton />
       </div>
       <div v-else>
-        <a
-          @click="$emit('previous')"
-          class="
-            cursor-pointer
-            whitespace-nowrap
-            text-base
-            font-medium
-            text-gray-500
-            hover:text-gray-900
-          "
-        >
+        <a @click="$emit('previous')" class="btn btn-ghost text-gray-500">
           Terug
         </a>
       </div>
@@ -23,7 +13,7 @@
 
     <a
       @click="$emit('validate')"
-      class="btn"
+      class="btn btn-primary"
       v-bind:class="currentStep == totalStep ? 'flex-1' : 'max-w-min'"
     >
       {{ buttonStr }}

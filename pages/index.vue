@@ -47,9 +47,9 @@
         </p>
       </div>
       <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-        <div class="rounded-md shadow">
-          <NuxtLink to="/start" class="btn"> Nu starten </NuxtLink>
-        </div>
+        <NuxtLink to="/start" class="btn btn-primary btn-block">
+          Nu starten
+        </NuxtLink>
       </div>
       <div class="sm:flex sm:justify-center lg:justify-start">
         <div class="min-w-0 text-sm text-gray-500 sm:py-3">

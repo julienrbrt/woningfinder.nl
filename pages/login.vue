@@ -53,7 +53,7 @@
     <button
       @click="send"
       type="submit"
-      class="btn group relative md:w-min pl-12"
+      class="btn btn-primary btn-block group relative md:w-min pl-12"
     >
       <span class="absolute left-0 inset-y-0 flex items-center pl-3">
         <LockClosedIcon
@@ -67,10 +67,6 @@
       </span>
       Inloggen
     </button>
-
-    <div class="items-center inline-flex mt-5 space-x-4">
-      <BackButton />
-    </div>
   </Hero>
 </template>
 

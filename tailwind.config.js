@@ -28,5 +28,33 @@ module.exports = {
       },
     },
   },
-  plugins: [require('@tailwindcss/forms')],
+  plugins: [require('daisyui'), require('@tailwindcss/forms')],
+  daisyui: {
+    themes: [
+      {
+        mytheme: {
+          primary: '#e46948',
+          'primary-focus': '#de4921',
+          'primary-content': '#ffffff',
+          secondary: '#28003a',
+          'secondary-focus': '#230033',
+          'secondary-content': '#ffffff',
+          accent: '#37cdbe',
+          'accent-focus': '#2aa79b',
+          'accent-content': '#ffffff',
+          neutral: '#3d4451',
+          'neutral-focus': '#2a2e37',
+          'neutral-content': '#ffffff',
+          'base-100': '#000000', // default background color
+          'base-200': '#f9fafb',
+          'base-300': '#d1d5db',
+          'base-content': 'rgb(17, 24, 39)',
+          info: '#2094f3',
+          success: '#009485',
+          warning: '#ff9900',
+          error: '#ff5724',
+        },
+      },
+    ],
+  },
 }

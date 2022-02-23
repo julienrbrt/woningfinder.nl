@@ -220,25 +220,17 @@
       </div>
     </div>
 
-    <!-- info alert -->
-    <div class="mt-4 rounded-md bg-gray-50 p-4">
-      <div class="flex">
-        <div class="flex-shrink-0">
-          <InformationCircleIcon class="h-5 w-5 text-gray-400" />
-        </div>
-        <div class="ml-3">
-          <p class="text-sm font-medium text-gray-900">
-            Heb jij een wens die niet in ons zoekopdracht staat? Neem dan
-            <NuxtLink
+    <AlertInfo
+      class="mt-4"
+      alert='Heb jij een wens die niet in ons zoekopdracht staat? Neem dan
+            <a
               to="/contact"
               class="underline text-gray-700 hover:text-gray-900"
-              >contact</NuxtLink
-            >
-            met ons op.
-          </p>
-        </div>
-      </div>
-    </div>
+              >contact</a>
+            met ons op.'
+    >
+      <InformationCircleIcon class="h-5 w-5 text-gray-400" />
+    </AlertInfo>
   </div>
 </template>
 
