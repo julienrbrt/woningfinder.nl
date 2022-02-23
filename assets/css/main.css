@@ -1,5 +1,7 @@
 @tailwind base;
 @tailwind components;
+@tailwind utilities;
+
 .btn {
   @apply cursor-pointer w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white hover:ring-2 hover:ring-offset-2 focus:ring-2 focus:ring-offset-2 md:py-4 md:text-lg bg-wf-orange hover:bg-wf-orange-dark hover:ring-wf-orange focus:ring-wf-orange;
 }

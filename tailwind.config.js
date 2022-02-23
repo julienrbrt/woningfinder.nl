@@ -1,15 +1,13 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-  mode: 'jit',
-  purge: [
+  content: [
     'components/**/*.vue',
     'layouts/**/*.vue',
     'pages/**/*.vue',
     'plugins/**/*.js',
     'nuxt.config.js',
   ],
-  darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       colors: {
@@ -28,16 +26,6 @@ module.exports = {
           lightest: '#f8dbd3',
         },
       },
-    },
-  },
-  variants: {
-    extend: {
-      backgroundColor: ['checked', 'disabled'],
-      borderColor: ['checked'],
-      ringWidth: ['hover'],
-      ringOffsetWidth: ['hover'],
-      ringColor: ['hover'],
-      ringOffsetColor: ['hover'],
     },
   },
   plugins: [require('@tailwindcss/forms')],
