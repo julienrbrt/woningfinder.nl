@@ -4,7 +4,7 @@
 
 /* autocomplete style */
 .autocomplete-input {
-  @apply block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-wf-orange focus:border-wf-orange border-gray-300 rounded-md;
+  @apply bg-white input input-bordered w-full focus:ring-wf-orange focus:border-wf-orange;
 }
 
 .autocomplete-result-list {
