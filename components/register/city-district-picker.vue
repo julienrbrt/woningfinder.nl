@@ -57,7 +57,7 @@
     <AlertInfo
       class="mt-4"
       v-else
-      description="Je hebt nog geen wijk voorkeur. WoningFinder reageert daarom over de hele stad."
+      alert="Je hebt nog geen wijk voorkeur. WoningFinder reageert daarom over de hele stad."
     >
       <InformationCircleIcon class="h-5 w-5 text-gray-400" />
     </AlertInfo>

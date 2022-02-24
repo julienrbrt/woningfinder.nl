@@ -1,24 +1,16 @@
 <template>
-  <div class="rounded-md bg-red-50 p-4">
-    <div class="flex">
-      <div class="flex-shrink-0">
-        <XCircleIcon class="h-5 w-5 text-red-400" />
+  <div class="alert shadow-md alert-error">
+    <div class="text-gray-900">
+      <div class="w-max">
+        <XCircleIcon class="h-6 w-6" />
       </div>
-      <div class="ml-3">
-        <p class="text-sm font-medium text-red-800">{{ alert }}</p>
-      </div>
-      <div class="ml-auto pl-3">
-        <div class="-mx-1.5 -my-1.5">
-          <button
-            @click="$emit('click')"
-            type="button"
-            class="inline-flex bg-red-50 rounded-md p-1.5 text-red-500 hover:bg-red-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-red-50 focus:ring-red-600"
-          >
-            <span class="sr-only">Ok</span>
-            <XIcon />
-          </button>
-        </div>
-      </div>
+      <span v-html="alert" />
+    </div>
+    <div class="flex-none">
+      <button @click="$emit('click')" class="btn btn-sm btn-ghost">
+        <span class="sr-only">Ok</span>
+        <XIcon />
+      </button>
     </div>
   </div>
 </template>

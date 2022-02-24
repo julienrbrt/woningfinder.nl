@@ -66,7 +66,7 @@
       <BackButton />
       <button
         v-bind:disabled="error"
-        class="btn disabled:bg-gray-500"
+        class="btn btn-primary disabled:bg-ghost"
         type="submit"
         @click="send"
       >

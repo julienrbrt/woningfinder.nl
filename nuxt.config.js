@@ -90,4 +90,9 @@ export default {
     ],
     fallback: '404.html',
   },
+  watchers: {
+    webpack: {
+      ignored: /(node_modules)|(.git)/,
+    },
+  },
 }

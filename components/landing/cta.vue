@@ -97,29 +97,14 @@
             class="mt-5 sm:mt-8 sm:flex flex-row justify-center md:space-x-8"
           >
             <div class="rounded-md shadow">
-              <NuxtLink
-                to="/start"
-                class="
-                  btn
-                  bg-wf-orange
-                  hover:bg-wf-orange-dark hover:ring-wf-orange
-                  focus:ring-wf-orange
-                "
-              >
+              <NuxtLink to="/start" class="btn btn-primary btn-block">
                 Nu starten
               </NuxtLink>
             </div>
             <div class="rounded-md shadow">
               <NuxtLink
                 to="/contact"
-                class="
-                  btn
-                  bg-wf-purple
-                  hover:bg-wf-purple-dark hover:ring-wf-purple
-                  focus:ring-wf-purple
-                  mt-2
-                  md:mt-0
-                "
+                class="btn btn-secondary btn-block mt-2 md:mt-0"
               >
                 Contact
               </NuxtLink>

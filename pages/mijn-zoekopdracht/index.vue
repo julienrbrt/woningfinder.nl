@@ -27,12 +27,12 @@
     </div>
 
     <!-- housing credentials -->
-    <div class="mt-6 bg-white overflow-hidden shadow rounded-lg">
-      <div class="px-4 mt-4 mb-2 sm:px-6">
-        <h1 class="text-xl text-gray-900">
+    <div class="mt-6 card bg-white shadow">
+      <div class="card-body">
+        <h1 class="card-title text-xl font-medium">
           Beschikbare woningcorporaties en verhuurders
         </h1>
-        <p class="mt-2 text-base text-gray-500">
+        <p class="text-base text-gray-500">
           Om geen woningen te missen, adviseren we jou om in te loggen op alle
           woningaanbod websites.
         </p>
@@ -84,34 +84,10 @@
     <!-- buttons -->
     <div class="items-center flex flex-col justify-center mt-5">
       <div class="flex flex-row space-x-4">
-        <NuxtLink
-          v-on:click.native="logout()"
-          to="/"
-          class="
-            cursor-pointer
-            btn
-            w-min
-            bg-gray-500
-            hover:bg-red-800 hover:ring-red-500
-            focus:ring-red-500
-            py-2
-          "
+        <NuxtLink v-on:click.native="logout()" to="/" class="btn"
           >Uitloggen
         </NuxtLink>
-        <a
-          @click="edit()"
-          class="
-            cursor-pointer
-            btn
-            w-min
-            bg-wf-purple
-            hover:bg-wf-purple-dark hover:ring-wf-purple
-            focus:ring-wf-purple
-            py-2
-          "
-        >
-          Bijwerken
-        </a>
+        <a @click="edit()" class="btn btn-secondary"> Bijwerken </a>
       </div>
       <a
         @click="deleteUser()"

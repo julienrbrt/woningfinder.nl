@@ -48,7 +48,7 @@
           sm:my-8 sm:align-middle sm:max-w-lg sm:w-full sm:p-6
         "
       >
-        <div class="hidden sm:block absolute top-0 right-0 pt-4 pr-4">
+        <div class="absolute top-0 right-0 pt-4 pr-4">
           <button
             @click="$emit('close')"
             type="button"
@@ -83,11 +83,19 @@
             >
               Opnieuw inloggen op {{ credentials.corporation_name }}
             </h3>
+
             <p class="py-2 text-gray-500">
               Log in met je {{ credentials.corporation_name }} account. Je
               reageert daarna automatisch op het aanbod van
               {{ credentials.corporation_name }} dat matcht met je zoekopdracht.
             </p>
+
+            <AlertError
+              v-if="error"
+              @click="hideAlert"
+              :alert="getAlertMsg(credentials)"
+            />
+
             <div class="py-2 items-center w-full">
               <label for="username" class="text-sm font-medium text-gray-900">
                 Gebruikersnaam
@@ -146,76 +154,15 @@
                 </button>
               </div>
             </div>
-            <!-- error message -->
-            <p v-if="error" class="text-sm text-red-400">
-              Deze combinatie van gebruikersnaam en/of wachtwoord is niet bekend
-              bij {{ credentials.corporation_name }}. Let op: Je moet dezelfde
-              inloggegevens gebruiken die je gebruikt om in te loggen op
-              <a
-                :href="credentials.corporation_url"
-                target="_blank"
-                class="underline text-sm hover:text-red-700"
-                >{{ corporationTitle(credentials.corporation_url) }}</a
-              >.
-            </p>
           </div>
         </div>
-        <div class="mt-5 sm:mt-4 sm:flex sm:flex-row-reverse">
+        <div class="mt-5 sm:mt-4 sm:flex flex-row-reverse">
           <button
             @click="sendCredentials"
             type="button"
-            class="
-              btn
-              w-full
-              inline-flex
-              justify-center
-              rounded-md
-              border border-transparent
-              shadow-sm
-              px-4
-              py-2
-              bg-wf-orange
-              text-base
-              font-medium
-              text-white
-              hover:bg-orange-dark
-              focus:outline-none
-              focus:ring-2
-              focus:ring-offset-2
-              focus:ring-red-500
-              sm:ml-3 sm:w-auto sm:text-sm
-            "
+            class="sm:ml-3 btn btn-primary btn-block"
           >
             Inloggen
-          </button>
-          <button
-            @click="$emit('close')"
-            type="button"
-            class="
-              btn
-              mt-3
-              w-full
-              inline-flex
-              justify-center
-              rounded-md
-              border border-gray-300
-              shadow-sm
-              px-4
-              py-2
-              bg-white
-              hover:bg-white
-              text-base
-              font-medium
-              text-gray-700
-              hover:text-gray-500
-              focus:outline-none
-              focus:ring-2
-              focus:ring-offset-2
-              focus:ring-bg-wf-orange
-              sm:mt-0 sm:w-auto sm:text-sm
-            "
-          >
-            Sluiten
           </button>
         </div>
       </div>
@@ -279,6 +226,20 @@ export default {
     },
     togglePassword() {
       this.passwordShow = !this.passwordShow
+    },
+    hideAlert() {
+      this.error = false
+    },
+    getAlertMsg(credentials) {
+      return (
+        'Deze combinatie van gebruikersnaam en/of wachtwoord is niet bekend bij ' +
+        credentials.corporation_name +
+        '. Let op: Je moet dezelfde inloggegevens gebruiken die je gebruikt om in te loggen op <a href="' +
+        credentials.corporation_url +
+        '"  target="_blank" class="underline text-sm hover:text-red-700">' +
+        this.corporationTitle(credentials.corporation_url) +
+        '</a>.'
+      )
     },
   },
 }

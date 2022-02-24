@@ -191,7 +191,7 @@
 
     <AlertInfo
       class="mt-4"
-      description="Neem contact met ons op om je e-mailadres of geboorte jaar te wijzigen"
+      alert="Neem contact met ons op om je e-mailadres of geboorte jaar te wijzigen"
     >
       <InformationCircleIcon class="h-5 w-5 text-gray-400" />
     </AlertInfo>

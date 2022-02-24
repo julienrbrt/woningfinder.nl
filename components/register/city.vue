@@ -18,12 +18,11 @@
       auto-select
     ></autocomplete>
 
-    <!-- alert info -->
     <AlertInfo
       v-if="!hasSelection"
       class="mt-4"
       v-bind:class="error ? 'bg-red-50' : 'bg-gray-50'"
-      description="Je hebt geen steden geselecteerd."
+      alert="Je hebt geen steden geselecteerd."
     >
       <InformationCircleIcon
         class="h-5 w-5"
@@ -69,27 +68,17 @@
       </div>
     </div>
 
-    <!-- alert info-->
-    <div class="mt-4 space-y-4">
-      <div class="rounded-md p-4 bg-gray-50">
-        <div class="flex">
-          <div class="flex-shrink-0">
-            <InformationCircleIcon class="h-5 w-5 text-gray-400" />
-          </div>
-          <div class="ml-3">
-            <p class="text-sm font-medium text-gray-900">
-              Staat je stad er niet tussen? Schrijf je in op onze
-              <NuxtLink
+    <AlertInfo
+      class="mt-4"
+      alert='Staat je stad er niet tussen? Schrijf je in op onze
+               <a
                 to="/wachtlijst"
                 class="underline text-gray-700 hover:text-gray-900"
-                >wachtlijst</NuxtLink
-              >
-              en we laten je weten wanneer we jouw stad toegevoegd hebben.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
+                >wachtlijst</a>
+              en we laten je weten wanneer we jouw stad toegevoegd hebben.'
+    >
+      <InformationCircleIcon class="h-5 w-5 text-gray-400" />
+    </AlertInfo>
   </div>
 </template>
 

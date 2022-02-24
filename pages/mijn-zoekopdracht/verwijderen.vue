@@ -92,7 +92,7 @@
 
     <AlertInfo
       class="mt-4"
-      description="Je staat op het punt je account te verwijderen 😱. Al je gegevens worden onmiddellijk verwijderd en kunnen niet worden hersteld."
+      alert="Je staat op het punt je account te verwijderen 😱. Al je gegevens worden onmiddellijk verwijderd en kunnen niet worden hersteld."
     >
       <InformationCircleIcon class="h-5 w-5 text-gray-400" />
     </AlertInfo>
@@ -101,13 +101,7 @@
       <BackButton />
       <button
         v-bind:disabled="error"
-        class="
-          btn
-          bg-red-500
-          hover:bg-red-700 hover:ring-red-500
-          focus:ring-red-500
-          py-2
-        "
+        class="btn btn-error"
         type="submit"
         @click="submit"
       >

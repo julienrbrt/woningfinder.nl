@@ -29,28 +29,25 @@
           </p>
 
           <div class="mt-2 inline-block">
-            <span class="badge px-2 text-xs bg-gray-200 text-gray-900">
+            <span class="badge badge-outline">
               {{ new Date(post.date).toISOString().slice(0, 10) }}
             </span>
-            <span class="badge px-2 text-xs"> {{ post.topic }} </span>
+            <span
+              class="
+                badge badge-primary badge-outline
+                uppercase
+                text-xs
+                font-bold
+              "
+            >
+              {{ post.topic }}
+            </span>
           </div>
 
           <p class="mt-3 text-base text-gray-500">
             {{ post.description }}
           </p>
-          <p
-            class="
-              py-2
-              mt-3
-              text-sm
-              btn
-              bg-wf-purple
-              hover:bg-wf-purple-dark hover:ring-wf-purple
-              focus:ring-wf-purple
-            "
-          >
-            Lees meer
-          </p>
+          <p class="mt-4 btn btn-secondary btn-block">Lees meer</p>
         </NuxtLink>
       </div>
     </div>

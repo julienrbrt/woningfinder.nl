@@ -6,13 +6,13 @@
 
     <AlertInfo
       class="mt-6"
-      description="Je reageert met WoningFinder op alle huurwoningen die aan je zoekopdracht voldoen."
+      alert="Je reageert met WoningFinder op alle huurwoningen die aan je zoekopdracht voldoen."
     >
       <InformationCircleIcon class="h-5 w-5 text-gray-400" />
     </AlertInfo>
 
     <AlertInfo
-      description="WoningFinder kan alleen op beschikbare woningen reageren. Zijn er geen woningen
+      alert="WoningFinder kan alleen op beschikbare woningen reageren. Zijn er geen woningen
         beschikbaar die matchen met jouw zoekopdracht dan kan WoningFinder ook nergens op
         reageren. Je ontvangt wel altijd een wekelijkse update van ons."
     >
@@ -20,7 +20,7 @@
     </AlertInfo>
 
     <AlertInfo
-      description="WoningFinder reageert op de woningen die je zou willen (je
+      alert="WoningFinder reageert op de woningen die je zou willen (je
         zoekopdracht). Maar uiteraard kunnen we niet garanderen dat jij sneller een huis
         krijgt, je reageert wel automatisch, maar het zijn altijd de
         verhuurders die de selecties doen (loting, wie eerst komt wie

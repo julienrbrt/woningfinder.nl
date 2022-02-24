@@ -18,25 +18,17 @@
         met WoningFinder.
       </p>
 
-      <!-- info alert with link -->
-      <div class="mt-6 rounded-md bg-gray-50 p-4">
-        <div class="flex">
-          <div class="flex-shrink-0">
-            <InformationCircleIcon class="h-5 w-5 text-gray-400" />
-          </div>
-          <div class="ml-3">
-            <p class="text-sm font-medium text-gray-900">
-              Zoek je een site die hier nog niet staat? Neem dan
-              <NuxtLink
+      <AlertInfo
+        class="mt-6"
+        alert='Zoek je een site die hier nog niet staat? Neem dan
+              <a
                 to="/contact"
                 class="underline text-gray-700 hover:text-gray-900"
-                >contact</NuxtLink
-              >
-              met ons op.
-            </p>
-          </div>
-        </div>
-      </div>
+                >contact</a>
+              met ons op.'
+      >
+        <InformationCircleIcon class="h-5 w-5 text-gray-400" />
+      </AlertInfo>
 
       <h2 class="mt-4 mb-2 text-xl text-gray-900">Heel Nederland</h2>
       <div
@@ -126,7 +118,7 @@
 
       <AlertInfo
         class="mt-4"
-        description="Let op: WoningFinder is zelf geen woninganbood website maar een aggregator, alle namen en
+        alert="Let op: WoningFinder is zelf geen woninganbood website maar een aggregator, alle namen en
         logo's op deze pagina zijn eigendom van de verhuurders zelf."
       >
         <InformationCircleIcon class="h-5 w-5 text-gray-400" />
@@ -146,16 +138,7 @@
       >
         <p class="text-gray-500">Reageer je nog steeds niet automatisch?</p>
         <NuxtLink
-          class="
-            mt-2
-            sm:mt-0 sm:ml-4
-            w-auto
-            py-2
-            btn
-            bg-wf-purple
-            hover:bg-wf-purple-dark hover:ring-wf-purple
-            focus:ring-wf-purple
-          "
+          class="mt-2 sm:mt-0 sm:ml-4 w-auto py-2 btn btn-secondary"
           to="/start"
         >
           Begin nu

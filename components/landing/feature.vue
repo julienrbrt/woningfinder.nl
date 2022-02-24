@@ -268,7 +268,15 @@
             </dl>
           </div>
 
-          <div class="mt-10 -mx-4 relative lg:mt-0 lg:col-start-1">
+          <div
+            class="
+              mt-10
+              flex
+              items-center
+              justify-center
+              lg:mt-0 lg:col-start-1
+            "
+          >
             <svg
               class="
                 absolute
@@ -309,11 +317,8 @@
                 fill="url(#e80155a9-dfde-425a-b5ea-1f6fadd20131)"
               />
             </svg>
-            <img
-              class="relative mx-auto lg:mr-20"
-              src="~/assets/img/subscriber.svg"
-              alt="subscriber illustration"
-            />
+
+            <IllustrationMail class="relative" />
           </div>
         </div>
       </div>

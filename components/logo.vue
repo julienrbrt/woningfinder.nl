@@ -1,7 +1,7 @@
 <template>
   <NuxtLink to="/">
     <img
-      class="h-16 w-auto"
+      class="h-12 md:h-16"
       src="~/assets/img/woningfinder.svg"
       alt="WonginFinder"
     />

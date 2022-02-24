@@ -1,59 +1,68 @@
 <template>
-  <header class="bg-white">
-    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Top">
-      <div class="w-full py-6 flex items-center justify-between">
-        <div class="inline-flex items-center">
-          <Logo />
-          <div class="hidden ml-10 mt-2 space-x-8 lg:block">
-            <NuxtLink
-              v-for="link in navigation"
-              :key="link.name"
-              :to="link.path"
-              class="text-base font-medium text-gray-900"
-              v-bind:class="
-                link.path == route
-                  ? 'text-wf-orange hover:text-wf-purple'
-                  : 'hover:text-wf-orange'
-              "
-            >
+  <div class="navbar bg-white p-6 md:px-16">
+    <div class="navbar-start">
+      <div class="dropdown lg:hidden">
+        <label tabindex="0" class="btn btn-ghost">
+          <MenuAlt1Icon class="h-6 w-6 text-gray-900" />
+        </label>
+        <ul
+          tabindex="0"
+          class="p-2 shadow menu dropdown-content bg-gray-50 rounded-box w-52"
+        >
+          <li v-for="link in navigation" :key="link.name">
+            <NuxtLink :to="link.path" class="text-gray-500">
               {{ link.name }}
             </NuxtLink>
-          </div>
-        </div>
-        <div v-if="!isLoggedIn()" class="ml-10 space-x-4 inline-flex">
-          <NuxtLink to="/start" class="hidden sm:block btn w-max py-2"
-            >Aanmelden</NuxtLink
-          >
-          <NuxtLink
-            to="/login"
-            class="
-              btn
-              w-max
-              bg-wf-purple
-              hover:bg-wf-purple-dark hover:ring-wf-purple
-              focus:ring-wf-purple
-              py-2
-            "
-            >Inloggen</NuxtLink
-          >
-        </div>
-        <div v-else class="ml-10 space-x-4">
-          <NuxtLink to="/mijn-zoekopdracht" class="btn w-max py-2"
-            >Mijn zoekopdracht</NuxtLink
-          >
-        </div>
+          </li>
+        </ul>
       </div>
-    </nav>
-  </header>
+      <Logo class="hidden lg:flex" />
+    </div>
+
+    <div class="navbar-center flex lg:hidden">
+      <Logo />
+    </div>
+
+    <div class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal p-0">
+        <li v-for="link in navigation" :key="link.name">
+          <NuxtLink
+            :to="link.path"
+            class="text-gray-900"
+            v-bind:class="link.path == route ? 'text-wf-orange ' : ''"
+          >
+            {{ link.name }}
+          </NuxtLink>
+        </li>
+      </ul>
+    </div>
+    <div class="navbar-end">
+      <NuxtLink v-if="!isLoggedIn()" to="/login" class="btn btn-secondary">
+        <span class="hidden sm:block">Inloggen</span>
+        <LoginIcon class="block sm:hidden h-6 w-6 text-white" />
+      </NuxtLink>
+      <NuxtLink v-else to="/mijn-zoekopdracht" class="btn btn-secondary">
+        <span class="hidden sm:block">Mijn zoekopdracht</span>
+        <UserIcon class="block sm:hidden h-6 w-6 text-white" />
+      </NuxtLink>
+    </div>
+  </div>
 </template>
 
 <script>
+import { MenuAlt1Icon, LoginIcon, UserIcon } from '@vue-hero-icons/outline'
+
 export default {
+  components: {
+    MenuAlt1Icon,
+    LoginIcon,
+    UserIcon,
+  },
   data() {
     return {
       route: this.$nuxt.$route.path,
       navigation: [
-        { name: 'Hoe werkt het', path: '/' },
+        { name: 'Homepagina', path: '/' },
         { name: 'Aanbod', path: '/aanbod' },
         { name: 'Nieuws', path: '/nieuws' },
         { name: 'Over ons', path: '/over-ons' },
