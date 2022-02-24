@@ -16,7 +16,9 @@
             <div class="card-body">
               <h2 class="card-title">Overtuigd?</h2>
               <div class="justify-end card-actions">
-                <button class="btn btn-primary">Begin nu</button>
+                <NuxtLink to="/start" class="btn btn-primary"
+                  >Begin nu</NuxtLink
+                >
               </div>
             </div>
           </div>
