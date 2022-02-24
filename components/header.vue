@@ -37,31 +37,37 @@
       </ul>
     </div>
     <div class="navbar-end">
-      <NuxtLink v-if="!isLoggedIn()" to="/login" class="btn btn-secondary">
-        <span class="hidden sm:block">Inloggen</span>
-        <UserIcon class="block sm:hidden h-6 w-6 text-white" />
+      <NuxtLink
+        v-if="!isLoggedIn()"
+        to="/login"
+        class="btn btn-secondary hidden sm:flex"
+      >
+        <span>Inloggen</span>
       </NuxtLink>
-      <NuxtLink v-else to="/mijn-zoekopdracht" class="btn btn-secondary">
-        <span class="hidden sm:block">Mijn zoekopdracht</span>
-        <UserIcon class="block sm:hidden h-6 w-6 text-white" />
+      <NuxtLink
+        v-else
+        to="/mijn-zoekopdracht"
+        class="btn btn-secondary hidden sm:flex"
+      >
+        <span>Mijn zoekopdracht</span>
       </NuxtLink>
     </div>
   </div>
 </template>
 
 <script>
-import { MenuAlt1Icon, UserIcon } from '@vue-hero-icons/outline'
+import { MenuAlt1Icon } from '@vue-hero-icons/outline'
 
 export default {
   components: {
     MenuAlt1Icon,
-    UserIcon,
   },
   data() {
     return {
       route: this.$nuxt.$route.path,
       navigation: [
         { name: 'Homepagina', path: '/' },
+        { name: 'Mijn zoekopdracht', path: '/mijn-zoekopdracht' },
         { name: 'Aanbod', path: '/aanbod' },
         { name: 'Nieuws', path: '/nieuws' },
         { name: 'Over ons', path: '/over-ons' },

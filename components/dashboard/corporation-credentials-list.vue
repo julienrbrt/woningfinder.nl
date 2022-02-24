@@ -1,6 +1,6 @@
 <template>
   <a @click="$emit('click')" class="block hover:bg-gray-50 cursor-pointer">
-    <div class="px-4 py-4 flex items-center sm:px-6">
+    <div class="px-6 py-4 flex items-center">
       <div class="min-w-0 flex-1 sm:flex sm:items-center sm:justify-between">
         <div class="truncate">
           <p class="font-medium text-wf-orange truncate">
@@ -31,7 +31,7 @@
         <CheckCircleIcon
           v-if="credentials.is_known"
           size="2x"
-          class="text-green-400"
+          class="text-green-500"
         />
         <ChevronRightIcon v-else class="h-5 w-5 text-gray-500" />
       </div>
