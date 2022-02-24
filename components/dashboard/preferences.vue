@@ -1,22 +1,18 @@
 <template>
-  <div class="mt-6 bg-white overflow-hidden shadow rounded-lg">
-    <div class="px-4 mt-4 mb-2 sm:px-6">
-      <h1 class="text-xl text-wf-puple">Je profiel</h1>
-    </div>
-    <div class="text-gray-500 mt-2 mb-4 px-4 flex flex-col sm:px-6">
-      <ul class="text-base grid grid-rows-2 grid-cols-2">
+  <div class="mt-6 card bg-white shadow">
+    <div class="card-body">
+      <h1 class="card-title text-xl text-wf-puple">Je profiel</h1>
+      <ul class="text-gray-500 text-base grid grid-rows-2 grid-cols-2">
         <li class="mb-2">👤 {{ customer.name }}</li>
         <li class="mb-2 break-all">✉️ {{ customer.email }}</li>
         <li class="mb-2">🗓 {{ customer.birth_year }}</li>
         <li class="mb-2">💰 €{{ customer.yearly_income }} per jaar</li>
         <li class="mb-2">👪 {{ customer.family_size }} inwoner(s)</li>
       </ul>
-    </div>
-    <div class="px-4 mt-4 mb-2 sm:px-6">
-      <h1 class="text-xl text-wf-puple">Je zoekopdracht in het kort</h1>
-    </div>
-    <div class="text-gray-500 mt-2 mb-4 px-4 flex flex-col sm:px-6">
-      <ul class="text-base grid grid-rows-2 grid-cols-2">
+      <h1 class="card-title text-xl text-wf-puple">
+        Je zoekopdracht in het kort
+      </h1>
+      <ul class="text-gray-500 text-base grid grid-rows-2 grid-cols-2">
         <li class="mb-2">🏠 {{ housingTypeTitle() }}</li>
         <li class="mb-2">📍 {{ cityTitle() }}</li>
         <li v-if="housing_preferences.maximum_price > 0" class="mb-2">
