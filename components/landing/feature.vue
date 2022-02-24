@@ -268,7 +268,15 @@
             </dl>
           </div>
 
-          <div class="mt-10 relative lg:mt-0 lg:col-start-1">
+          <div
+            class="
+              mt-10
+              flex
+              items-center
+              justify-center
+              lg:mt-0 lg:col-start-1
+            "
+          >
             <svg
               class="
                 absolute
@@ -310,7 +318,7 @@
               />
             </svg>
 
-            <IllustrationMail class="relative mx-auto" />
+            <IllustrationMail class="relative" />
           </div>
         </div>
       </div>

@@ -1,8 +1,10 @@
 <template>
   <div class="alert shadow-md alert-error">
     <div class="text-gray-900">
-      <XCircleIcon class="h-6 w-6" />
-      <span>{{ alert }}</span>
+      <div class="w-max">
+        <XCircleIcon class="h-6 w-6" />
+      </div>
+      <span v-html="alert" />
     </div>
     <div class="flex-none">
       <button @click="$emit('click')" class="btn btn-sm btn-ghost">

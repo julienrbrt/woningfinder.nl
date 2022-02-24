@@ -1,7 +1,9 @@
 <template>
-  <div class="alert shadow-lg alert-success">
-    <div>
-      <CheckCircleIcon class="h-5 w-5 text-green-400" />
+  <div class="alert shadow-md alert-success">
+    <div class="text-gray-900">
+      <div class="w-max">
+        <CheckCircleIcon class="h-5 w-5" />
+      </div>
       <span>{{ alert }}</span>
     </div>
     <div class="flex-none">

@@ -101,13 +101,7 @@
       <BackButton />
       <button
         v-bind:disabled="error"
-        class="
-          btn
-          bg-red-500
-          hover:bg-red-700 hover:ring-red-500
-          focus:ring-red-500
-          py-2
-        "
+        class="btn btn-error"
         type="submit"
         @click="submit"
       >

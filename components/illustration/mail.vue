@@ -16,7 +16,7 @@
             <div class="card-body">
               <h2 class="card-title">Overtuigd?</h2>
               <div class="justify-end card-actions">
-                <button class="btn">Begin nu</button>
+                <button class="btn btn-primary">Begin nu</button>
               </div>
             </div>
           </div>

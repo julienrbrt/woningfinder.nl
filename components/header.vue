@@ -41,20 +41,22 @@
         <span class="hidden sm:block">Inloggen</span>
         <LoginIcon class="block sm:hidden h-6 w-6 text-white" />
       </NuxtLink>
-      <NuxtLink v-else to="/mijn-zoekopdracht" class="btn"
-        >Mijn zoekopdracht</NuxtLink
-      >
+      <NuxtLink v-else to="/mijn-zoekopdracht" class="btn btn-secondary">
+        <span class="hidden sm:block">Mijn zoekopdracht</span>
+        <UserIcon class="block sm:hidden h-6 w-6 text-white" />
+      </NuxtLink>
     </div>
   </div>
 </template>
 
 <script>
-import { MenuAlt1Icon, LoginIcon } from '@vue-hero-icons/outline'
+import { MenuAlt1Icon, LoginIcon, UserIcon } from '@vue-hero-icons/outline'
 
 export default {
   components: {
     MenuAlt1Icon,
     LoginIcon,
+    UserIcon,
   },
   data() {
     return {
