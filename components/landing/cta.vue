@@ -97,12 +97,15 @@
             class="mt-5 sm:mt-8 sm:flex flex-row justify-center md:space-x-8"
           >
             <div class="rounded-md shadow">
-              <NuxtLink to="/start" class="btn btn-primary">
+              <NuxtLink to="/start" class="btn btn-primary btn-block">
                 Nu starten
               </NuxtLink>
             </div>
             <div class="rounded-md shadow">
-              <NuxtLink to="/contact" class="btn btn-secondary mt-2 md:mt-0">
+              <NuxtLink
+                to="/contact"
+                class="btn btn-secondary btn-block mt-2 md:mt-0"
+              >
                 Contact
               </NuxtLink>
             </div>
