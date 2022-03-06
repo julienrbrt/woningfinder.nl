@@ -14,16 +14,20 @@ WoningFinder is aan het groeien, er zijn meer steden en meer mogelijkheden voor 
 Sinds ons vorige update kun je automatisch reageren op huurwoningen in 100 verschillende steden 🎉
 
 ### WoningFinder beta eindigt
+
 Dit betekend dat we de prijs gaan veranderen omdat het product nu klaar is voor gebruik:
 **WoningFinder is nu gratis voor iederen** 🎉
 
 ### Wekelijkse update
+
 Door middel van jullie feedback zullen we vanaf nu de wekelijkse update elke vrijdag om 18:00 sturen, in plaats van 20:00 uur.
 
 ### Mijn zoekopdracht
+
 De _Mijn zoekopdracht_ pagina is bijgewerkt en laat nu je laatste 6 reacties zien. Voor een overzicht van de reacties, hoef je alleen te wachten op de wekelijkse update. Dus maak je geen zorgen over je toekomstige woning, je blijft op de hoogte! 😊
 
 Zodra je een woning hebt gevonden kun je direct je WoningFinder-account verwijderen in je profiel, zonder contact met ons op te hoeven nemen.
 
 ### Meer verhuurders toegevoegd
+
 Als je een huis zoekt in Zwolle en omgeving kun je nu ook automatisch reageren op alle aanbod van [DeWoningZoeker](https://www.dewoningzoeker.nl) en op het [Woonburo Almelo](https://www.woonburoalmelo.nl) in Almelo en omgeving 👀. Voor vrijesectorwoningen kun je ook automatisch reageren op woningen van [ikwilhuren.nu](https://ikwilhuren.nu).

@@ -17,13 +17,9 @@
 
     <!-- map -->
     <template v-slot:illustration>
-      <Maps
+      <IllustrationMap
         v-if="offering && currentStep == 1"
-        :cities="
-          citiesSelection.length > 0
-            ? citiesSelection
-            : offering.supported_cities
-        "
+        :cities="citiesSelection"
       />
     </template>
 

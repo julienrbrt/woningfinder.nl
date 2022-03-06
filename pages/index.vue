@@ -8,13 +8,8 @@
     />
 
     <Hero>
-      <!-- map -->
       <template v-slot:illustration>
-        <Maps
-          class="my-12"
-          v-if="offering"
-          :cities="offering.supported_cities"
-        />
+        <IllustrationCitiesList />
       </template>
 
       <!-- payment validation alert -->
@@ -79,14 +74,7 @@ export default {
       .only(['date', 'title', 'slug'])
       .fetch()
 
-    // get offering
-    const offering = await $axios
-      .$get('offering', { progress: false })
-      .catch((error) => {
-        $sentry.captureException(error) // map won't show
-      })
-
-    return { post, offering }
+    return { post }
   },
   data() {
     return {

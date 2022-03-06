@@ -17,12 +17,7 @@
             :lng-lat="[city.longitude, city.latitude]"
             popup
           >
-            <div
-              class="w-4 h-4 bg-wf-orange rounded-full"
-              v-bind:class="
-                cities.length > 20 ? 'bg-opacity-20' : 'bg-opacity-50'
-              "
-            />
+            <div class="w-6 h-6 bg-wf-orange rounded-full bg-opacity-50" />
             <template v-slot:popup>
               <p>{{ city.name }}</p>
             </template>
