@@ -1,0 +1,42 @@
+on:
+  push:
+    branches:
+      - main
+name: Deploy
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    env:
+      MAPBOX_API_KEY: ${{ secrets.MAPBOX_API_KEY }}
+    strategy:
+      matrix:
+        node: [14]
+    steps:
+      - name: Checkout 🛎
+        uses: actions/checkout@master
+
+      - name: Setup node env 🏗
+        uses: actions/setup-node@v3.1.1
+        with:
+          node-version: ${{ matrix.node }}
+          check-latest: true
+
+      - name: Cache node_modules 📦
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Generate website 👨🏻‍💻
+        run: |
+          npm install
+          npm run generate --fail-on-error
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4.3.3
+        with:
+          branch: gh-pages
+          folder: ~/.dist
+          single-commit: true
