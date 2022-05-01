@@ -7,7 +7,7 @@ jobs:
       MAPBOX_API_KEY: ${{ secrets.MAPBOX_API_KEY }}
     strategy:
       matrix:
-        node: [14]
+        node: [16]
     steps:
       - name: Checkout 🛎
         uses: actions/checkout@master
