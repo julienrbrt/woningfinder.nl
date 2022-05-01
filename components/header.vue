@@ -69,7 +69,6 @@ export default {
         { name: 'Homepagina', path: '/' },
         { name: 'Mijn zoekopdracht', path: '/mijn-zoekopdracht' },
         { name: 'Aanbod', path: '/aanbod' },
-        { name: 'Nieuws', path: '/nieuws' },
         { name: 'Over ons', path: '/over-ons' },
       ],
     }

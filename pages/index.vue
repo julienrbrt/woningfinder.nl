@@ -1,18 +1,11 @@
 <template>
   <div class="bg-white">
-    <AlertBanner
-      v-if="news"
-      @click="hideNews"
-      :description="post[0].title"
-      :to="'nieuws/' + post[0].slug"
-    />
-
     <Hero>
       <template v-slot:illustration>
         <IllustrationCitiesList />
       </template>
 
-      <!-- payment validation alert -->
+      <!-- registration alert -->
       <AlertOk
         class="mb-6"
         v-if="alert && $route.query.thanks"
@@ -66,39 +59,15 @@
 
 <script>
 export default {
-  async asyncData({ $axios, $content, $sentry }) {
-    // fetch latest news and display it
-    const post = await $content('posts')
-      .sortBy('date', 'desc')
-      .limit(1)
-      .only(['date', 'title', 'slug'])
-      .fetch()
-
-    return { post }
-  },
   data() {
     return {
       alert: true,
-      news: false,
     }
   },
   methods: {
     hideAlert() {
       this.alert = false
     },
-    hideNews() {
-      this.news = false
-    },
-    displayNews() {
-      var today = new Date()
-      var d = new Date(this.post[0].date)
-
-      // do not show about news if it is older than 7 days
-      this.news = Math.abs(today.getTime() - d.getTime()) < 604800000
-    },
-  },
-  mounted() {
-    this.displayNews()
   },
 }
 </script>

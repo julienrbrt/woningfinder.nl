@@ -60,7 +60,6 @@ export default {
         { name: 'Wachtlijst', path: '/wachtlijst' },
       ],
       woningfinder: [
-        { name: 'Nieuws', path: '/nieuws' },
         { name: 'Contact', path: '/contact' },
         { name: 'Over ons', path: '/over-ons' },
       ],
