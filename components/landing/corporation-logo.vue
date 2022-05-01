@@ -15,7 +15,7 @@
     >
       <img
         class="max-h-12"
-        :src="`https://static.woningfinder.nl/corporations/${image}`"
+        :src="require(`~/assets/img/corporation/${image}`)"
         :alt="name"
       />
     </div>

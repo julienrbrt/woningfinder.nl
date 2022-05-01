@@ -23,8 +23,8 @@
             <img
               :src="
                 match.picture_url != ''
-                  ? 'https://static.woningfinder.nl/' + match.picture_url
-                  : 'https://static.woningfinder.nl/email/img-1.png'
+                  ? 'https://api.woningfinder.nl/match/' + match.picture_url
+                  : 'https://woningfinder.nl/img-1.png'
               "
               alt="img"
               class="
