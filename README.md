@@ -1,6 +1,6 @@
 # woningfinder.nl
 
-The site is staticaly generated. This means that a deploy is required in order to udpate the site (for instance when a new city is added).
+The site is staticaly generated. This means that a deploy is required in order to update the site (for instance when a new city is added).
 
 ## Build Setup
 
