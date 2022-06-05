@@ -38,7 +38,6 @@
       </footer>
       <footer class="px-10 py-4 border-t footer border-gray-700 justify-center">
         <div class="items-center grid-flow-col">
-          <img class="h-12 rounded-md" src="/favicon.png" alt="WonginFinder" />
           <p class="text-base">
             &copy; {{ new Date().getFullYear() }}
             <a href="https://julien.rbrt.fr" target="_blank">julien.rbrt.fr</a>
