@@ -30,7 +30,7 @@ jobs:
             ${{ runner.os }}-node-
 
       - name: Install dependencies 🏗
-        run: npm ci
+        run: npm ci --force
 
       - name: Generate website 👨🏻‍💻
         run: npm run generate --fail-on-error

@@ -31,7 +31,7 @@ jobs:
 
       - name: Generate website 👨🏻‍💻
         run: |
-          npm install
+          npm install --force
           npm run generate --fail-on-error
 
       - name: Deploy 🚀
