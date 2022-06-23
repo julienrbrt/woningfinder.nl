@@ -23,7 +23,7 @@
     "@vue-hero-icons/solid": "^1.7.2",
     "cookie-universal-nuxt": "^2.2.1",
     "core-js": "^3.23.1",
-    "daisyui": "^2.15.2",
+    "daisyui": "^2.17.0",
     "mapbox-gl": "^2.9.1",
     "nuxt": "^2.15.8"
   },
