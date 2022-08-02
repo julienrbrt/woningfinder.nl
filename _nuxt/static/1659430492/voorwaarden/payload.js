@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/voorwaarden", {data:[{}],fetch:{},mutations:[]});
