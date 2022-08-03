@@ -1,5 +1,8 @@
 # woningfinder.nl
 
+> This is the repository powering the [woningfinder.nl](https://woningfinder.nl) website.
+> The live version of WoningFinder has been sunset. More information on the project and its source code is still available on [GitHub](https://github.com/julienrbrt/woningfinder).
+
 The site is staticaly generated. This means that a deploy is required in order to update the site (for instance when a new city is added).
 
 ## Build Setup
